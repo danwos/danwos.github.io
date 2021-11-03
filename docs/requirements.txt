@@ -1,0 +1,9 @@
+sphinx>=3.4
+sphinxcontrib-plantuml
+sphinxcontrib-needs
+sphinx-copybutton
+sphinxcontrib-programoutput
+sphinx-panels
+pydata-sphinx-theme
+ablog
+MyST-Parser
