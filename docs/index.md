@@ -1,3 +1,12 @@
+---
+html_meta:
+  "description lang=en": "metadata description"
+  "keywords": "Sphinx, MyST"
+  "property=og:locale": "en_US"
+---
+```{title} Daniel Woste personal page
+```
+
 
 # Knock Knock. Who's There?
 

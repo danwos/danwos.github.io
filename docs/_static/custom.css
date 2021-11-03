@@ -18,7 +18,7 @@ div.profile-pic {
 }
 
 div.profile-pic img {
-    border-radius: 500px;
+    /*border-radius: 500px;*/
     width: 80%;
     max-width: 190px;
     margin: 0 auto;

@@ -1,6 +1,6 @@
 ---
 author: Daniel Woste
-tags: test
+tags: page, blog, sphinx
 date: 2021-11-02
 ---
 
@@ -17,3 +17,20 @@ But for now, enough! I have work to do.
 So after all extensions are configured, custom css is written, CI is ready and deployment works, I plan to update
 this post with some more technical details. Stay tuned.
 
+
+## Technical hints
+
+### MyST
+
+Setting HTML meta data per page / file:
+```markdown
+---
+html_meta:
+  "description lang=en": "metadata description"
+  "keywords": "Sphinx, MyST"
+  "property=og:locale": "en_US"
+---
+\```{title} Daniel Woste personal page
+\```
+
+```
