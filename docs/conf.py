@@ -29,7 +29,8 @@ author = 'Daniel Woste'
 # ones.
 extensions = [
     'ablog',
-    'myst_parser'
+    'myst_parser',
+    'sphinx_panels'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -87,6 +88,8 @@ panels_add_bootstrap_css = False
 blog_baseurl = "https://daniel-woste.de"
 blog_title = "danwos"
 blog_path = "blog"
+disqus_shortname = "danwos"
+
 fontawesome_included = True
 blog_post_pattern = "posts/*/*"
 post_redirect_refresh = 1
