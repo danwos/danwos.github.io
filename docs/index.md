@@ -29,6 +29,7 @@ I'm Daniel, and I'm a passionated Software developer for topics round about
 :maxdepth: 2
 :hidden:
 about
+projects
 blog
 ```
 
