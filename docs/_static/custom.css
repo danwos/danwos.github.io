@@ -1,7 +1,17 @@
 /* Most styles are coming from https://github.com/choldgraf/choldgraf.github.io/blob/main/_static/custom.css
 https://predictablynoisy.com/#
 
-Text and link details at the end!
+/* Sphinx-Needs css */
+table.needs_layout_usecase td.side {
+    text-orientation: upright;
+    writing-mode: sideways-lr;
+    font-size: small;
+    background-color: rgba(0,0,0,0.1);
+}
+
+
+
+/*Text and link details at the end!
 */
 
 /* NavBar */
