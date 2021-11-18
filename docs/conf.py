@@ -105,7 +105,7 @@ html_theme_options = {
   "github_url": "https://github.com/danwos/",
   "twitter_url": "https://twitter.com/danwos",
   "search_bar_text": "Search this site...",
-  "google_analytics_id": "",
+  "google_analytics_id": "G-0MZ0221M7W",
   "navbar_end": ["search-field.html", "navbar-icon-links"],
 }
 
