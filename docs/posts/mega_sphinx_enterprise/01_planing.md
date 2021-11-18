@@ -67,7 +67,7 @@ Others may have some time to set up their tool environment and discuss some proc
 
 But all I want to tell you with this example: **Documentation is a living object**, which grows 
 and needs to transform rapidly in a more or less changing (often even chaotic) environment.
-And this tutorial tries to you help you by finding the most efficient way for your company/team
+And this tutorial tries to help you by finding the most efficient way for your company/team
 by using a Docs-as-Code approach with a bunch of great Open-Source tools and some smart
 configurations.
 
