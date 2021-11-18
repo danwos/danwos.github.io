@@ -164,5 +164,9 @@ sphinx-collection tag support
 Different config files/part (e.g. other sphinx-needs layouts)
 
 **Code language support**
+
+All with extra post about Sphinx-Needs integration
+
 1. Python docstring
 2. C docstring via Breathe
+3. JS with sphinx-js
