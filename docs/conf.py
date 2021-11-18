@@ -102,11 +102,36 @@ html_logo = "_static/danwos_white.png"
 # html_extra_path = ["feed.xml"]
 
 html_theme_options = {
-  "github_url": "https://github.com/danwos/",
-  "twitter_url": "https://twitter.com/danwos",
-  "search_bar_text": "Search this site...",
-  "google_analytics_id": "G-0MZ0221M7W",
-  "navbar_end": ["search-field.html", "navbar-icon-links"],
+    "search_bar_text": "Search this site...",
+    "google_analytics_id": "G-0MZ0221M7W",
+    "navbar_end": ["search-field.html", "navbar-icon-links"],
+    "icon_links": [
+        {
+            "name": "GitHub",
+            "url": "https://github.com/danwos/",
+            "icon": "fab fa-github-square",
+        },
+        {
+            "name": "Twitter",
+            "url": "https://twitter.com/danwos",
+            "icon": "fab fa-twitter-square",
+        },
+        {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/in/daniel-woste-362b6252/",
+            "icon": "fab fa-linkedin",
+        },
+        {
+            "name": "Xing",
+            "url": "https://www.xing.com/profile/Daniel_Woste/",
+            "icon": "fab fa-xing",
+        },
+        {
+            "name": "My company useblocks",
+            "url": "https://useblocks.com",
+            "icon": "fab fa-briefcase",
+        },
+    ],
 }
 
 html_sidebars = {

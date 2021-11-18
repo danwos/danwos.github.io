@@ -17,11 +17,10 @@ I'm Daniel, and I'm a passionated Software developer for topics round about
 * 📚 Smart Documentation and
 * 🔨 Continuous Integration and 📦 Delivery 
 
-## Recent Blog Posts
 
 ```{postlist}
 :date: "%Y-%m-%d"
-:format: "{date} - {title}"
+:format: "{title} ({date})"
 :excerpts:
 ```
 
