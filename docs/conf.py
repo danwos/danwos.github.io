@@ -56,7 +56,20 @@ needs_global_options = {
    'layout': ('usecase', 'type == "uc"')
 }
 
+needs_extra_options = [
+    'github' # Used by string2link post
+]
 
+# Now some configuration, so that the number gets transformed to a link to the isse page of sphinx-needs
+needs_string_links = {
+    # Links to the related github issue
+    'github_link': {  # Used by string2link post
+        'regex': r'^(?P<value>\w+)$',
+        'link_url': 'https://github.com/useblocks/sphinxcontrib-needs/issues/{{value}}',
+        'link_name': 'GitHub #{{value}}',
+        'options': ['github']
+    }
+}
 
 
 # Add any paths that contain templates here, relative to this directory.

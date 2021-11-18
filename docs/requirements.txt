@@ -1,6 +1,9 @@
 sphinx>=3.4
 sphinxcontrib-plantuml
-sphinxcontrib-needs
+
+# Always use latest code from master
+git+git://github.com/useblocks/sphinxcontrib-needs@master
+
 sphinx-copybutton
 sphinxcontrib-programoutput
 sphinx-panels
