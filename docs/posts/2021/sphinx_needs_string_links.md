@@ -18,6 +18,7 @@ This makes it really easy to use a docs-as-code solution like sphinx and referen
 
 ## Example
 
+
 **conf.py**
 
 ```python

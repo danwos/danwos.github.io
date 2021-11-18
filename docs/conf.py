@@ -34,14 +34,16 @@ extensions = [
     'sphinxcontrib.needs',
 ]
 
+needs_title_optional = True
 needs_id_regex = r'^[A-Z0-9_]{2,}'
 
 needs_types = [dict(directive="req", title="Requirement", prefix="R_", color="#BFD8D2", style="node"),
                dict(directive="spec", title="Specification", prefix="S_", color="#FEDCD2", style="node"),
                dict(directive="impl", title="Implementation", prefix="I_", color="#DF744A", style="node"),
                dict(directive="test", title="Test Case", prefix="T_", color="#DCB239", style="node"),
-               dict(directive="uc", title="Use case", prefix="UC_", color="#9856a5", style="node")
-           ]
+               dict(directive="uc", title="Use case", prefix="UC_", color="#9856a5", style="node"),
+               dict(directive="metadata", title="Meta data", prefix="M_", color="#9856a5", style="node"),
+               ]
 
 needs_layouts = {
     'usecase': {
@@ -53,11 +55,16 @@ needs_layouts = {
 }
 
 needs_global_options = {
-   'layout': ('usecase', 'type == "uc"')
+    'layout': ('usecase', 'type == "uc"'),
+    'title': ('[[copy("section_name")]]', 'type == "metadata"'),  # Used by meta data post
+    'pre_template': ('metadata_template', 'type == "metadata" and "dropdown" in tags')   # Used by meta data post
 }
 
+
 needs_extra_options = [
-    'github' # Used by string2link post
+    'github',  # Used by string2link post
+    'last_changed',  # Used by meta_data post
+    'author',  # Used by meta_data post
 ]
 
 # Now some configuration, so that the number gets transformed to a link to the isse page of sphinx-needs
@@ -70,7 +77,6 @@ needs_string_links = {
         'options': ['github']
     }
 }
-
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -161,7 +167,24 @@ post_auto_image = 1
 post_auto_excerpt = 2
 
 # MyST config
+# https://myst-parser.readthedocs.io/en/latest/syntax/optional.html
 myst_enable_extensions = [
-    "deflist",
+    "amsmath",
     "colon_fence",
+    "deflist",
+    "dollarmath",
+    "html_admonition",
+    "html_image",
+    "replacements",
+    "smartquotes",
+    "substitution",
+    "tasklist",
 ]
+
+# https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#substitutions-with-jinja2
+myst_substitutions = {
+  "sphinx": "[Sphinx](https://www.sphinx-doc.org)",
+  "sphinx_needs": "[Sphinx-Needs](<https://sphinx-needs.com)",
+  "sphinx_needs_docs": "[Sphinx-Needs Docs](https://sphinxcontrib-needs.readthedocs.io/en/latest/)",
+  "sphinx_panels": "[Sphinx-Panels](https://sphinx-panels.readthedocs.io)",
+}
