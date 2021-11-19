@@ -48,12 +48,10 @@ General theory of relativity
 .. concept details ..
 ```
 
-## Need data
-
 {{sphinx_needs}} already provides the fields `id`, `tags`. It also handles the `title` and the `content`
 for us.
 
-The used need type `meta` is new, so we need to configure it in our `conf.py` file.
+The used need type `metadata` is new, so we need to configure it in our `conf.py` file.
 We also need to create the additional fields.
 
 By default, Sphinx-Needs forces the user to set a title for a need. This we need to deactivate as well.
@@ -82,7 +80,7 @@ and [Global Options](https://sphinxcontrib-needs.readthedocs.io/en/latest/config
 
 We use the `copy` function to use the values of the already collected `section` name also for `title`.
 ```rst
-.. meta:: {{copy("section")}}
+.. meta:: {{copy("section_name")}}
 ```
 
 As we do not want to set this ``copy``-line on every meta-need by hand, we can configure a global option:
@@ -92,11 +90,10 @@ needs_global_options = {
 }
 ```
 
-## Intermediate result
-The above config sets the `title` only for needs of type `meta` and if the title is not set.
+The above config sets the `title` only for needs of type `metadata` and if the title is not set.
 So the user is still able to manually set a specific title.
 
-Let's see how a current meta-need would look like.
+Let's see how a current metadata-need would look like.
 ```rst
 .. metadata::
    :id: META_DATA
@@ -118,72 +115,136 @@ Let's see how a current meta-need would look like.
    
    Explains how to set meta data for a Sphinx page.
 ```
-
-## Dropdown
 
 This already looks good, regarding the data. 
-But layout and style is not so nice. Also we to hide it from the user.
+But layout and style is not so nice. Also we want to hide it from the user.
 
-First, lets hide it by using {{sphinx_panels}} and its
-[Dropwdown feature](https://sphinx-panels.readthedocs.io/en/latest/#dropdown-usage).
+Both problems can be solved by configuring and using a custom
+[Sphinx-Needs layout](https://sphinxcontrib-needs.readthedocs.io/en/latest/layout_styles.html)
+, which hides all unnecessary options and gives us full control fo the content.
 
-```rst
-.. dropdown:: Page meta data
-
-    .. metadata::
-       :id: META_DATA_2
-       :author: danwos
-       :tags: sphinx, sphinx-needs, meta
-       :last_changed: 18.11.2021 
-       
-       Explains how to set meta data for a Sphinx page.
-
+```python
+# conf.py
+needs_layouts = {
+ 'meta': {
+        'grid': 'content_footer',
+        'layout': {
+            'footer': [
+                '<<collapse_button("content", '
+                'collapsed="Hide metadata", visible="Show metadata", initial=False)>> ']
+        }
+    }
+}
 ```
-**Result**:
+
+The grid `content_footer` contains 2 areas for content and a footer only.
+So no area for a title or for the option values is available.
+
+We will use the content-area to show the needed data only.
+The footer is used to show or hide the content part.
+
+All we need to do, is to set ``meta`` as value for `layout` for each `metadata` need.
+
+```python
+needs_global_options = {
+   'title': ('{{copy("section_name")}}', 'type == "metadata" and title is False'),
+   'layout': ('meta', 'type == "metadata"')  # This line is new
+}
+```
+
 ```{eval-rst}
-.. dropdown:: Page meta data
-
-    .. metadata::
-       :id: META_DATA_2
-       :author: danwos
-       :tags: sphinx, sphinx-needs, meta
-       :last_changed: 18.11.2021 
-       
-       Explains how to set meta data for a Sphinx page.
+.. metadata::
+   :id: META_DATA_2
+   :author: danwos
+   :tags: sphinx, sphinx-needs, meta, collapse
+   :last_changed: 18.11.2021 
+   
+   Explains how to set meta data for a Sphinx page.
 ```
-## Need Template
+Okay, the collapse feature works, if you click on "show metadata".
 
-But we do not want to set the `dropdown` directive by hand on each page, so that we can use the
-[Sphinx-Needs template feature](https://sphinxcontrib-needs.readthedocs.io/en/latest/directives/need.html?highlight=pre%20content#template)
-to do it for use.
+But the content area is only showing the content of the need.
+We need to replace it with some more information.
+Lets use the 
+[Sphinx-Needs template feature](https://sphinxcontrib-needs.readthedocs.io/en/latest/directives/need.html#need-template)
+to define the correct content.
 
 Create a folder ``needs_templates`` on the root folder of your sphinx project.
 Then add a file called ``metadata_template.need`` with the following content:
 ```rst
-.. dropdown:: Page meta data
+:Title: {{title}}
+:Author: {{author}}
+:Tags: {{tags|join(", ")}}
+:Last changed: {{last_changed}}
 
-   
+{{content}}
 ```
-
-To use this template, ``pre_template`` must be set. We do this again by setting it via
- [Global Options](https://sphinxcontrib-needs.readthedocs.io/en/latest/configuration.html#needs-global-options).
+And again we need to use 
+[Global Options](https://sphinxcontrib-needs.readthedocs.io/en/latest/configuration.html#needs-global-options)
+to activate it for all `metadata` needs.
 ```python
-# conf.py
 needs_global_options = {
    'title': ('{{copy("section_name")}}', 'type == "metadata" and title is False'),
-   'pre_template': ('metadata_template', 'type == "metadata"') # This line is new
-   }  
-
+   'layout': ('meta', 'type == "metadata"'),
+   'template': ('metadata_template', 'type == "metadata"')  # This line is new
+}
 ```
 
+**Result**
 ```{eval-rst}
 .. metadata::
    :id: META_DATA_3
    :author: danwos
-   :tags: sphinx, sphinx-needs, meta, dropdown
-   :last_changed: 18.11.2021 
+   :tags: sphinx, sphinx-needs, meta, collapse, content
+   :last_changed: 18.11.2021
+   
+   Explains how to set meta data for a Sphinx page.
+```
+Nice, now the metadata need shows required data only.
+
+Last thing we can do is to present the metadata not so prominent, so that it does not
+disturb the reader.
+
+For this we can use the `style` `clean`.
+```python
+needs_global_options = {
+   'title': ('{{copy("section_name")}}', 'type == "metadata" and title is False'),
+   'layout': ('meta', 'type == "metadata"'),
+   'template': ('metadata_template', 'type == "metadata"'),
+   'style': ('clean', 'type == "metadata"')  # This line is new
+}
+```
+
+**Result**
+```{eval-rst}
+.. metadata::
+   :id: META_DATA_4
+   :author: danwos
+   :tags: sphinx, sphinx-needs, meta, collapse, content, style
+   :last_changed: 18.11.2021
    
    Explains how to set meta data for a Sphinx page.
 ```
 
+That's it. We now have a discreet `metadata` need, which shows required data only.
+
+
+## Headlines
+Another nice thing is, that we can use the ``metadata`` need also for additional headlines/chapters
+on the same page, because the title is always set to the last headline.
+
+So we can define different authors and other data in a single file.
+
+### Headlines Example
+
+**Example**
+```{eval-rst}
+.. metadata::
+   :id: META_DATA_5
+   :author: Mr. Nice Guy
+   :tags: sphinx, sphinx-needs, meta, collapse, content, style
+   :last_changed: 21.21.2020
+   
+   Chapter to explain the usage of ``metadata`` on headline/chapter level.
+```
 

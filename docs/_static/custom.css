@@ -9,6 +9,10 @@ table.needs_layout_usecase td.side {
     background-color: rgba(0,0,0,0.1);
 }
 
+/* Fix for pydata theme to show collapse button for needs */
+span.needs.collapse {
+    display: inherit;
+}
 
 
 /*Text and link details at the end!

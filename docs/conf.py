@@ -51,13 +51,24 @@ needs_layouts = {
         'layout': {
             'side': ['Use Case'],
         }
+    },
+    'meta': {
+        'grid': 'content_footer',
+        'layout': {
+            'footer': [
+                '<<collapse_button("content", '
+                'collapsed="Hide metadata", visible="Show metadata", initial=True)>> ']
+        }
     }
 }
 
 needs_global_options = {
-    'layout': ('usecase', 'type == "uc"'),
+    'layout': [('usecase', 'type == "uc"'),
+               ('meta', 'type == "metadata" and "collapse" in tags')  # Used by meta data post
+               ],
     'title': ('[[copy("section_name")]]', 'type == "metadata"'),  # Used by meta data post
-    'pre_template': ('metadata_template', 'type == "metadata" and "dropdown" in tags')   # Used by meta data post
+    'template': ('metadata_template', 'type == "metadata" and "content" in tags'),  # Used by meta data post
+    'style': ('clean', 'type == "metadata" and "style" in tags'),  # Used by meta data post
 }
 
 
@@ -184,7 +195,7 @@ myst_enable_extensions = [
 # https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#substitutions-with-jinja2
 myst_substitutions = {
   "sphinx": "[Sphinx](https://www.sphinx-doc.org)",
-  "sphinx_needs": "[Sphinx-Needs](<https://sphinx-needs.com)",
+  "sphinx_needs": "[Sphinx-Needs](https://sphinx-needs.com)",
   "sphinx_needs_docs": "[Sphinx-Needs Docs](https://sphinxcontrib-needs.readthedocs.io/en/latest/)",
   "sphinx_panels": "[Sphinx-Panels](https://sphinx-panels.readthedocs.io)",
 }
