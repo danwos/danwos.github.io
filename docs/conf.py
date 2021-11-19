@@ -93,7 +93,12 @@ needs_string_links = {
 
 # PlantUML configuration
 local_plantuml_path = os.path.join(os.path.dirname(__file__), "utils", "plantuml.jar")
-plantuml = 'java -jar {}'.format(local_plantuml_path)
+on_ci = os.environ.get('ON_CI') == 'True'
+if on_ci:
+    plantuml = 'plantuml'
+else:
+    plantuml = 'java -jar {}'.format(local_plantuml_path)
+
 plantuml_output_format = 'svg_img'
 
 # Add any paths that contain templates here, relative to this directory.
