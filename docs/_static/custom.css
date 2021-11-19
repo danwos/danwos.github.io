@@ -37,6 +37,9 @@ div.dataTables_filter input {
     max-width: 150px;
 }
 
+.navbar-brand img {
+    padding-left: 10px;
+}
 
 /*Text and link details at the end!
 */
