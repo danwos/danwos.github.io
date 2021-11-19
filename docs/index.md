@@ -8,7 +8,13 @@ html_meta:
 ```
 
 
-# Knock Knock. Who's There?
+# Big business and Docs-as-code
+
+```{image} _static/danwos_intro.png
+:align: center
+:width: 100%
+```
+
 
 Welcome dear friend 👋,
 
