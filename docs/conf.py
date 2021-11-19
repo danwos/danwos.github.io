@@ -43,7 +43,7 @@ needs_types = [dict(directive="req", title="Requirement", prefix="R_", color="#B
                dict(directive="test", title="Test Case", prefix="T_", color="#DCB239", style="node"),
                dict(directive="uc", title="Use case", prefix="UC_", color="#9856a5", style="node"),
                dict(directive="metadata", title="Meta data", prefix="M_", color="#9856a5", style="node"),
-               ]
+              ]
 
 needs_layouts = {
     'usecase': {
@@ -174,7 +174,7 @@ disqus_shortname = "danwos"
 fontawesome_included = True
 blog_post_pattern = "posts/*/*"
 post_redirect_refresh = 1
-post_auto_image = 1
+post_auto_image = 2
 post_auto_excerpt = 2
 
 # MyST config

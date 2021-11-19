@@ -1,14 +1,20 @@
 ---
 author: Daniel Woste
 tags: sphinx, sphinx-needs, meta
+date: 2021-11-19
 ---
 
 # Page meta data in Sphinx
-
-In bigger Sphinx projects, written hundreds of authors, you often need to store additional data to somehow
+```{image} _images/post_icons/page_meta_data.png
+:align: center
+```
+   
+In bigger Sphinx projects, written by hundreds of authors, you often need to store additional data to somehow
 have the overall page creation and update process under control.
 
-The main questions about page are often:
+This data can be stored and maintained as meta-data on top of each rst file.
+
+The main questions about a page are often:
 
 * Who is responsible?
 * Who has made the last changes?
@@ -31,22 +37,30 @@ So what are our goals?
 4. It shall be possible to write a short excerpt
 5. The user can hide/show the related object details
 
-So the final result in a rst file would look like:
+So the final result in a rst file may look like:
 
 ```rst   
-General theory of relativity
-============================
+Page Meta Data in Sphinx 
+========================
 
 .. metadata::
-   :id: PAGE_001
-   :author: Mr. Einstein
-   :last_changed: 24.12.2021
-   :tags: sphinx, meta, awesome
-   
-   This page explains a concept of really complex physical stuff.
+   :id: META_DATA
+   :author: Mr. Nicc Guy
+   :tags: sphinx, sphinx-needs, meta, collapse, content, style
+   :last_changed: 21.21.2020
 
-.. concept details ..
+   Chapter to explain the usage of ``metadata`` on headline/chapter level.
+
+.. and more ..
+
 ```
+
+And in our documentation it will be presented as:
+```{image} _images/page_meta_data/page_meta_data_final.png
+:align: center
+:width: 70%
+```
+
 
 {{sphinx_needs}} already provides the fields `id`, `tags`. It also handles the `title` and the `content`
 for us.
@@ -64,7 +78,7 @@ needs_title_optional = True
 
 # Meta need type
 needs_types = [dict(directive="metadata", title="Meta data", prefix="M_", color="#BFD8D2", style="node"),
-               # Other directives
+               # Other need types
               ]
 
 # author and last_changed option
@@ -78,7 +92,7 @@ For this we can use the Sphinx-Needs feature
 [Dynamic functions](https://sphinxcontrib-needs.readthedocs.io/en/latest/dynamic_functions.html)
 and [Global Options](https://sphinxcontrib-needs.readthedocs.io/en/latest/configuration.html#needs-global-options).
 
-We use the `copy` function to use the values of the already collected `section` name also for `title`.
+We use the `copy` function to use the values of the already collected `section_name` also for `title`.
 ```rst
 .. meta:: {{copy("section_name")}}
 ```
@@ -121,12 +135,12 @@ But layout and style is not so nice. Also we want to hide it from the user.
 
 Both problems can be solved by configuring and using a custom
 [Sphinx-Needs layout](https://sphinxcontrib-needs.readthedocs.io/en/latest/layout_styles.html)
-, which hides all unnecessary options and gives us full control fo the content.
+, which hides all unnecessary options and gives us full control of the content.
 
 ```python
 # conf.py
 needs_layouts = {
- 'meta': {
+    'meta': {
         'grid': 'content_footer',
         'layout': {
             'footer': [
@@ -143,7 +157,7 @@ So no area for a title or for the option values is available.
 We will use the content-area to show the needed data only.
 The footer is used to show or hide the content part.
 
-All we need to do, is to set ``meta`` as value for `layout` for each `metadata` need.
+All we need to do is to set ``meta`` as value for `layout` for each `metadata` need.
 
 ```python
 needs_global_options = {
@@ -161,7 +175,7 @@ needs_global_options = {
    
    Explains how to set meta data for a Sphinx page.
 ```
-Okay, the collapse feature works, if you click on "show metadata".
+Okay, the collapse feature works, if you click on "Show metadata".
 
 But the content area is only showing the content of the need.
 We need to replace it with some more information.
@@ -228,6 +242,34 @@ needs_global_options = {
 
 That's it. We now have a discreet `metadata` need, which shows required data only.
 
+But we can also use some css-customization to get a nice "button" for the "Show metadata" text:
+```python
+# conf.py
+html_css_files = [
+    'custom.css'
+]
+```
+
+```css
+/* _static/custom.css */
+table.needs_layout_meta span.collapse span {
+    color: #555;
+    border: 2px solid #aaa;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+ ```
+**Result**
+```{eval-rst}
+.. metadata::
+   :id: META_DATA_5
+   :author: danwos
+   :tags: sphinx, sphinx-needs, meta, collapse, content, style
+   :last_changed: 18.11.2021
+   
+   Explains how to set meta data for a Sphinx page.
+```
+
 
 ## Headlines
 Another nice thing is, that we can use the ``metadata`` need also for additional headlines/chapters
@@ -240,11 +282,26 @@ So we can define different authors and other data in a single file.
 **Example**
 ```{eval-rst}
 .. metadata::
-   :id: META_DATA_5
+   :id: META_DATA_6
    :author: Mr. Nice Guy
    :tags: sphinx, sphinx-needs, meta, collapse, content, style
    :last_changed: 21.21.2020
-   
+
    Chapter to explain the usage of ``metadata`` on headline/chapter level.
 ```
+
+## Forecast
+Right now, nearly all the data must be set by hand, e.g. the author.
+As Sphinx and Sphinx-Needs are following the docs-as-code approach, you normally
+have the doc-project stored on some version control system like **git**.
+
+And **git** already as some information, which may be nice.
+Last commit on this file? Last author? Last change? All this information is there.
+
+So an update of this ``metadata`` concept would be to catch this information automatically from git.
+But this topic will be part of another blog post. So stay tuned...
+
+
+
+
 

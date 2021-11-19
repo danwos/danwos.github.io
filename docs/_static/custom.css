@@ -1,5 +1,18 @@
 /* Most styles are coming from https://github.com/choldgraf/choldgraf.github.io/blob/main/_static/custom.css
 https://predictablynoisy.com/#
+*/
+
+/* POST SPECIFIC */
+
+/*meta_dta post */
+#META_DATA_5 span.collapse span,
+#META_DATA_6 span.collapse span {
+    color: #555;
+    border: 2px solid #aaa;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+
 
 /* Sphinx-Needs css */
 table.needs_layout_usecase td.side {
