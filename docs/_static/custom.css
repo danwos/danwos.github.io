@@ -32,6 +32,11 @@ span.needs.collapse {
     display: inherit;
 }
 
+/*DataTables smaller search input field  */
+div.dataTables_filter input {
+    max-width: 150px;
+}
+
 
 /*Text and link details at the end!
 */
