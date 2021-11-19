@@ -1,11 +1,11 @@
 ---
 author: Daniel Woste
 tags: sphinx, sphinx-needs, meta
-date: 2021-11-19
+date: 2021-11-18
 ---
 
 # Page meta data in Sphinx
-```{image} _images/post_icons/page_meta_data.png
+```{figure} _images/post_icons/page_meta_data.png
 :align: center
 ```
    

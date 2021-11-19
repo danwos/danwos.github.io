@@ -1,7 +1,7 @@
 ---
 author: Daniel Woste
 tags: sphinx, sphinx-needs, links
-date: 2021-11-18
+date: 2021-11-16
 ---
 
 # String2Link transformation with Sphinx-Needs

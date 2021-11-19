@@ -10,7 +10,7 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
+import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
@@ -28,6 +28,8 @@ author = 'Daniel Woste'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    'sphinx.ext.intersphinx',
+    'sphinxcontrib.plantuml',
     'ablog',
     'myst_parser',
     'sphinx_panels',
@@ -89,6 +91,11 @@ needs_string_links = {
     }
 }
 
+# PlantUML configuration
+local_plantuml_path = os.path.join(os.path.dirname(__file__), "utils", "plantuml.jar")
+plantuml = 'java -jar {}'.format(local_plantuml_path)
+plantuml_output_format = 'svg_img'
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -119,6 +126,7 @@ html_logo = "_static/danwos_white.png"
 # html_extra_path = ["feed.xml"]
 
 html_theme_options = {
+    "show_toc_level": 3,
     "search_bar_text": "Search this site...",
     "google_analytics_id": "G-0MZ0221M7W",
     "navbar_end": ["search-field.html", "navbar-icon-links"],
@@ -174,7 +182,7 @@ disqus_shortname = "danwos"
 fontawesome_included = True
 blog_post_pattern = "posts/*/*"
 post_redirect_refresh = 1
-post_auto_image = 2
+post_auto_image = 1
 post_auto_excerpt = 2
 
 # MyST config

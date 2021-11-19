@@ -4,7 +4,7 @@ https://predictablynoisy.com/#
 
 /* POST SPECIFIC */
 
-/*meta_dta post */
+/*meta_data post */
 #META_DATA_5 span.collapse span,
 #META_DATA_6 span.collapse span {
     color: #555;
@@ -13,6 +13,11 @@ https://predictablynoisy.com/#
     padding: 2px 10px;
 }
 
+/*docs-as-code enhanced post*/
+div.needs-json-example pre{
+    max-height: 250px;
+
+}
 
 /* Sphinx-Needs css */
 table.needs_layout_usecase td.side {
