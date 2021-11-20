@@ -5,6 +5,7 @@ date: 2021-11-18
 ---
 
 # Page meta data in Sphinx
+
 ```{figure} _images/post_icons/page_meta_data.png
 :align: center
 ```
@@ -125,7 +126,8 @@ Let's see how a current metadata-need would look like.
    :id: META_DATA
    :author: danwos
    :tags: sphinx, sphinx-needs, meta
-   :last_changed: 18.11.2021 
+   :last_changed: 18.11.2021
+   :example: True
    
    Explains how to set meta data for a Sphinx page.
 ```
@@ -171,7 +173,9 @@ needs_global_options = {
    :id: META_DATA_2
    :author: danwos
    :tags: sphinx, sphinx-needs, meta, collapse
-   :last_changed: 18.11.2021 
+   :last_changed: 18.11.2021
+   :example: True
+   :layout: meta_example
    
    Explains how to set meta data for a Sphinx page.
 ```
@@ -211,6 +215,8 @@ needs_global_options = {
    :author: danwos
    :tags: sphinx, sphinx-needs, meta, collapse, content
    :last_changed: 18.11.2021
+   :layout: meta_example
+   :example: content
    
    Explains how to set meta data for a Sphinx page.
 ```
@@ -236,10 +242,12 @@ needs_global_options = {
    :author: danwos
    :tags: sphinx, sphinx-needs, meta, collapse, content, style
    :last_changed: 18.11.2021
+   :example: style
+   :layout: meta_example
+   :template: metadata_template
    
    Explains how to set meta data for a Sphinx page.
 ```
-
 That's it. We now have a discreet `metadata` need, which shows required data only.
 
 But we can also use some css-customization to get a nice "button" for the "Show metadata" text:
@@ -266,6 +274,8 @@ table.needs_layout_meta span.collapse span {
    :author: danwos
    :tags: sphinx, sphinx-needs, meta, collapse, content, style
    :last_changed: 18.11.2021
+   :layout: meta_example
+   :template: metadata_template
    
    Explains how to set meta data for a Sphinx page.
 ```
@@ -301,7 +311,12 @@ Last commit on this file? Last author? Last change? All this information is ther
 So an update of this ``metadata`` concept would be to catch this information automatically from git.
 But this topic will be part of another blog post. So stay tuned...
 
-
-
-
-
+```{eval-rst}
+.. metadata::
+   :id: PAGE_META_DATA
+   :author: danwos
+   :tags: sphinx, sphinx-needs, meta, collapse
+   :last_changed: 20.11.2021
+   
+   Explains how to set meta data for a Sphinx page.
+```

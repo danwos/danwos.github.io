@@ -128,3 +128,11 @@ Quite old and unmaintained. But I put some months into it, so it is worth beeing
 [Groundwork Documentation](https://groundwork.readthedocs.io/en/latest/)
 ````
 
+```{eval-rst}
+.. metadata::
+   :id: PROJECTS
+   :author: danwos
+   :last_changed: 20.11.2021
+   
+   Short list of my projects
+```

@@ -38,5 +38,16 @@ projects
 blog
 ```
 
+## Page meta data objects
 
+
+```{eval-rst}
+.. metadata::
+   :id: INDEX
+   :author: danwos
+   :last_changed: 20.11.2021
+   
+   Start page of this website
+   
+```
 

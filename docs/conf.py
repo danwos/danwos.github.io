@@ -59,6 +59,14 @@ needs_layouts = {
         'layout': {
             'footer': [
                 '<<collapse_button("content", '
+                'collapsed="Hide page metadata", visible="Show page metadata", initial=True)>> ']
+        }
+    },
+    'meta_example': {
+        'grid': 'content_footer',
+        'layout': {
+            'footer': [
+                '<<collapse_button("content", '
                 'collapsed="Hide metadata", visible="Show metadata", initial=True)>> ']
         }
     }
@@ -66,11 +74,13 @@ needs_layouts = {
 
 needs_global_options = {
     'layout': [('usecase', 'type == "uc"'),
-               ('meta', 'type == "metadata" and "collapse" in tags')  # Used by meta data post
+               ('meta', 'type == "metadata" and example in [""]')  # Used by meta data post
                ],
     'title': ('[[copy("section_name")]]', 'type == "metadata"'),  # Used by meta data post
-    'template': ('metadata_template', 'type == "metadata" and "content" in tags'),  # Used by meta data post
-    'style': ('clean', 'type == "metadata" and "style" in tags'),  # Used by meta data post
+    'template': ('metadata_template', 'type == "metadata" and example in ["","content"]'),
+    'pre_template': ('hr_line_template', 'type == "metadata" and example in ["","content"]'),
+    'post_template': ('hr_line_template', 'type == "metadata" and example in ["","content"]'),
+    'style': ('clean', 'type == "metadata" and example in ["", "style"]'),  # Used by meta data post
 }
 
 
@@ -78,9 +88,10 @@ needs_extra_options = [
     'github',  # Used by string2link post
     'last_changed',  # Used by meta_data post
     'author',  # Used by meta_data post
+    'example',  # Used to identify example needs, which shall act differently
 ]
 
-# Now some configuration, so that the number gets transformed to a link to the isse page of sphinx-needs
+# Now some configuration, so that the number gets transformed to a link to the issue page of sphinx-needs
 needs_string_links = {
     # Links to the related github issue
     'github_link': {  # Used by string2link post

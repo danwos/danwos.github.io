@@ -6,7 +6,8 @@ https://predictablynoisy.com/#
 
 /*meta_data post */
 #META_DATA_5 span.collapse span,
-#META_DATA_6 span.collapse span {
+#META_DATA_6 span.collapse span,
+table.needs_layout_meta span.collapse span{
     color: #555;
     border: 2px solid #aaa;
     border-radius: 10px;

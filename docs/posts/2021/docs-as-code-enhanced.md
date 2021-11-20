@@ -68,6 +68,7 @@ So here is an embedded requirement object:
    :status: done
    :tags: objects, documentation, sphinx-needs
    :collapse: True
+   :example: True
    
    For our overall SW development documentation we need a way to create and reuse objects.
    
@@ -122,6 +123,7 @@ And for sure objects can be linked to each other:
 :status: done
 :tags: objects, documentation, sphinx-needs
 :links: REQ_001
+:example: True
 
 Objects must be linkable and all incoming and outgoing links shall get documented.
 
@@ -280,6 +282,15 @@ So **Object orientated documentation** has come to stay :)
 :align: center
 ```
 
+```{eval-rst}
+.. metadata::
+   :id: DACE
+   :author: danwos
+   :tags: sphinx, sphinx-needs, objects
+   :last_changed: 20.11.2021
+   
+   Explains the reason for and features of object orientated documentations.
+```
 
 
 

@@ -5,7 +5,6 @@ date: 2021-11-02
 ---
 
 # Job advertisement for Sphinx-Needs
-
 I just have detected the first job advertisement, which asks for [Sphinx-Needs](https://sphinx-needs.com)as skill. 
 Yeah 🥳
 
@@ -22,4 +21,12 @@ For the case Bosch takes the job advertisement offline, her a rough screenshot:
 :target: https://www.bosch.de/karriere/job/REF113902H-docs-as-code-development-engineer
 ```
 
-
+```{eval-rst}
+.. metadata::
+   :id: JOB
+   :author: danwos
+   :tags: sphinx-needs, job
+   :last_changed: 20.11.2021
+   
+   First job advertisement, which requires Sphinx-Needs as skill.
+```

@@ -5,7 +5,6 @@ date: 2021-11-16
 ---
 
 # String2Link transformation with Sphinx-Needs
-
 [Sphinx-Needs](https://www.sphinx-needs.com/) got a new cool feature to easily create links of a given string for 
 options. The [string-links feature](https://sphinxcontrib-needs.readthedocs.io/en/latest/configuration.html#needs-string-links).
 
@@ -65,8 +64,6 @@ See above issue on github for a detailed specification
 ````
 `````
 
-
-
 **Result**
 
 ```{spec} Implement the string2linkfeature
@@ -75,6 +72,14 @@ See above issue on github for a detailed specification
 See above issue on github for a detailed specification
 ```
 
-
+```{eval-rst}
+.. metadata::
+   :id: S2L
+   :author: danwos
+   :tags: page
+   :last_changed: 20.11.2021
+   
+   Sphinx-Needs String2Link feature details 
+```
 
 

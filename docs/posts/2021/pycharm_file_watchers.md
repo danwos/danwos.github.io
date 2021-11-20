@@ -5,7 +5,6 @@ date: 2021-11-05
 ---
 
 # PyCharm File Watchers for Sphinx projects
-
 I often have the case that I want to see my documentation as fast as possible. 
 
 And I know there are "Preview" IDE-Extensions available, which want to solve this problem. 
@@ -81,3 +80,13 @@ trust all project file watchers in general.
 
 That's it. For sure, you still need to open the generated page in your browser by hand. 
 
+```{eval-rst}
+.. metadata::
+   :id: WATCHERS
+   :author: danwos
+   :tags: pycharm, watchers, automation, sphinx
+   :last_changed: 20.11.2021
+   
+   How to configure and use PyCharm file watchers to generate Sphinx documentation with
+   ech file change
+```
