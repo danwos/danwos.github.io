@@ -10,10 +10,11 @@ image: 1
 ```{image} _images/post_icons/docs_as_code_enhanced.png
 :align: center
 ```
-For most of us "Docs-as-Code" means to store the documentation files beside the project sources in git. 
-And we also want to be able to edit it with our already used IDE and use the CI system to build it.
+For most of us "Docs-as-Code" mostly means to store the documentation files beside the project sources in git. 
+Also editing the sources in an already used IDE and using the CI system to build it, are 2 important use cases why
+docs-as-code is chosen to create documentation.
 
-But this has nothing to do with the documentation content itself.
+But these features have nothing to do with the documentation content itself.
 What if the content itself can be treated as code? What if the content / documentation language provides features, 
 which we already know from our programming languages?
 
@@ -273,7 +274,7 @@ Their benefit for using a docs-as-code approach are:
 * Im/Export of data from external systems.
 * Single documentation, which can be deployed and safely archived for the next 10-20 years.
 
-So **Object orientated documentation** is come to stay :)
+So **Object orientated documentation** has come to stay :)
 
 ```{image} _images/post_icons/docs_as_code_enhanced_end.png
 :align: center
