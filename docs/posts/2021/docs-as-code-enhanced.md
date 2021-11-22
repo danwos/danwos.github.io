@@ -36,7 +36,7 @@ an object. E.g. you can't add headlines between issue objects. You can have diff
 a page with 10 headlines, each filled with a different amount of objects.
 You don't have the freedom to organize your content the way a **textual representation** has. 
 
-## Object included documentation 
+## Objects included documentation 
 But what, if you can have both?
 
 The freedom to structure your documentation the way you need it.
@@ -276,7 +276,7 @@ Their benefit for using a docs-as-code approach are:
 * Im/Export of data from external systems.
 * Single documentation, which can be deployed and safely archived for the next 10-20 years.
 
-So **Object included documentation** is come to stay :)
+So **Objects included documentation** is come to stay :)
 
 ```{image} _images/post_icons/docs_as_code_enhanced_end.png
 :align: center
