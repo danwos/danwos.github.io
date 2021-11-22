@@ -32,7 +32,7 @@ The **technical representation** makes all this possible.
 Add additional data to an object, link it to another object. Filter for it and react programmatically on data changes.
 All this is possible, with the drawback that you as writer only have objects.
 You can change the object itself, but there is no way to add information, which are not following the rules of 
-an object. E.g. you can't add headlines between issue objects. You can have different filters. But not create 
+an object. E.g. you can't add headlines between issue objects. You can have different filters. But you can not create 
 a page with 10 headlines, each filled with a different amount of objects.
 You don't have the freedom to organize your content the way a **textual representation** has. 
 
