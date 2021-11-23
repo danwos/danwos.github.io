@@ -4,6 +4,8 @@ tags: sphinx, pycharm, watchers
 date: 2021-11-05
 ---
 
+(pycharm_file_watchers)=
+
 # PyCharm File Watchers for Sphinx projects
 I often have the case that I want to see my documentation as fast as possible. 
 

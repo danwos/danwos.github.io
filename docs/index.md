@@ -33,9 +33,10 @@ I'm Daniel, and I'm a passionated Software developer for topics round about
 ```{toctree}
 :maxdepth: 2
 :hidden:
+blog
 about
 projects
-blog
+ideas
 ```
 
 ## Page meta data objects

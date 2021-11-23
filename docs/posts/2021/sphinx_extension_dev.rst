@@ -39,6 +39,36 @@ The reason is simple: Your are not the only Sphinx extension in the current proj
 The user is free to use as many extension as he/she likes. So you should really be sure to not
 overwrite anything, or get overwritten :)
 
+Parallel build support
+----------------------
+You should consider to provide parallel build support for your extension.
+And this means to support both directions: ``write`` and ``read``.
+
+``write`` is activated by default.
+``read`` needs to be defined by your extension in its return value:
+
+.. code-block:: python
+
+    return {
+        "version": VERSION,
+        "parallel_read_safe": True,
+        "parallel_write_safe": True,
+    }
+
+Depending on your extension functionality you may need to write a merge-function to support parallel ``read``.
+This is because Sphinx starts multiple workers and the collected data is isolated from each other.
+So you need to merge the data from each worker to a shared data object.
+
+Parallel build is normally not needed for smaller projects. But if your extension shall be used inside
+company projects, please take into account that these projects often have hundreds of pages.
+And a parallel build reduces the build time often to <20%. So e.g. <10 min instead of a complete hour.
+
+So if your extension is the only one which does not not support parallel build, it will not have any chance to be used
+in bigger projects.
+
+See `details in the Sphinx docs <https://www.sphinx-doc.org/en/1.3.1/extdev/index.html#extension-metadata>`_.
+
+
 Content manipulation mechanisms
 -------------------------------
 Normally your extension will change somehow the content, when one of your registered directives or roles is used.
