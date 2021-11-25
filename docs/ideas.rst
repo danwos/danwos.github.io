@@ -8,6 +8,15 @@ Feel free to contact me, if you have any ideas or want to join the party for a n
 Projects
 --------
 
+Sphinx-Data-Viewer
+~~~~~~~~~~~~~~~~~~
+Small Sphinx extension, which allows to present data structures in a tree-like view.
+Can be based on https://www.cssscript.com/json-data-tree-view/ (MIT License) or other libs.
+
+Data sources: content area (json-string), json file, conf var
+
+**Use case**: I need to present json-data, which is too big to show it as plain text in sphinx (> 500 lines).
+
 Sphinx-Metrics
 ~~~~~~~~~~~~~~
 Extension for Sphinx to collect and present metrics from different sources like Google Analytics, Grafana and co.
