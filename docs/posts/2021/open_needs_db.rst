@@ -2,8 +2,8 @@
 :tags: openneeds, requirements, sphinx
 :date: 2025-11-28
 
-Open-Needs-DB got funded
-========================
+Open-Needs-DB gets funded
+=========================
 
 The `Prototype Fund <https://prototypefund.de/>`_ supports and finances Open-Needs-DB from March to September 2022.
 
