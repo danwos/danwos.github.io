@@ -45,6 +45,10 @@ div.dataTables_filter input {
 /*Text and link details at the end!
 */
 
+main {
+    text-align: justify;
+}
+
 /* NavBar */
 .navbar-light {
     background: #333 !important;
