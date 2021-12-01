@@ -96,6 +96,32 @@ found test case in a `junit-based` xml file.
 +++
 [Sphinx-Test-Reports Documentation](https://sphinx-test-reports.readthedocs.io/en/latest/)
 
+
+---
+
+**Sphinx-Data-Viewer** {badge}`created,badge-success` {badge}`maintained,badge-primary`
+^^^^^^^^^^^^^^^^^^^
+A simple data viewer for data of type json or python object, which shows the data in an interactive 
+list-view on HTML pages.
+
+```{image}  https://img.shields.io/github/stars/useblocks/sphinx-data-viewer?style=social
+:target: https://github.com/useblocks/sphinx-data-viewer
+:alt: Sphinx-Data-Viewer github stars
+```
+
+```{image}  https://img.shields.io/pypi/dd/sphinx-data-viewer.svg
+:target: https://pypistats.org/packages/sphinx-data-viewer
+:alt: Sphinx-Data-Viewer downloads daily
+```
+
+```{image}  https://img.shields.io/pypi/dm/sphinx-data-viewer.svg
+:target: https://pypistats.org/packages/sphinx-data-viewer
+:alt: Sphinx-Data-Viewer downloads monthly
+```
+
++++
+[Sphinx-Data-Viewer Documentation](https://sphinx-data-viewer.readthedocs.io/en/latest/)
+
 ````
 
 ### Deprecated projects
@@ -128,11 +154,60 @@ Quite old and unmaintained. But I put some months into it, so it is worth beeing
 [Groundwork Documentation](https://groundwork.readthedocs.io/en/latest/)
 ````
 
+## Customer internal
+````{panels}
+:card: border-1
+---
+**ReleaseNotes Creator** {badge}`created,badge-dark` 
+^^^^^^^^^^
+A script to create a HTML/PDF report of content between two given git tags.
+
+Collects and reports also all related JIRA issues, GitHub PRs and Commits and touched files.
+
+---
+
+**DeltaReport** {badge}`created,badge-dark` 
+^^^^^^^^^^
+Creates a delta report of commit-based content on different, technical unrelated  branches.
+
+Compares commits based on content, author and other indicators to identify matching commits.
+
+Report is an interactive but static HTML page.
+
+---
+**SyncMonitor** {badge}`created,badge-dark` 
+^^^^^^^^^^
+Compares the planned dates of JIRA issues with the related commits and their "release tags".
+
+Identifies problems like:
+
+* Issue was planned for release X but related commits got integrated into release Y.
+* Issue is already closed but there are not integrated commits referencing this issue.
+* Issue is open but release date is in the past.
+* Commit with no linked issues got integrated into a release.  
+
+---
+
+**AWS Integration**  
+^^^^^^^^^^
+Integration of several scripts and apps into AWS cloud.
+
+Used and configuread services: EC2, DoucumentDB, DynamoDB, CloudWatch, S3, ApiGateway, Cognito.
+
+Used infrastructure-as-code frameworks: 
+
+* serverless
+* AWS CloudFormation
+ 
+
+````
+
+
 ```{eval-rst}
 .. metadata::
    :id: PROJECTS
    :author: danwos
-   :last_changed: 20.11.2021
+   :last_changed: 01.12.2021
    
    Short list of my projects
 ```

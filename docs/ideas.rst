@@ -98,9 +98,9 @@ Project content setup
 
 **Cookiecutter for default structures**
 
-** ARC 42 for sw architecture**
+**ARC 42 for sw architecture**
 
-| ** Meta-Data presentation**
+| **Meta-Data presentation**
 | Resp. Person, tags
 | Page / folder specific sidebars (E.g show specific team/module infos)
 
