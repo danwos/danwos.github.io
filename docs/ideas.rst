@@ -8,8 +8,10 @@ Feel free to contact me, if you have any ideas or want to join the party for a n
 Projects
 --------
 
-Sphinx-Data-Viewer
-~~~~~~~~~~~~~~~~~~
+Sphinx-Data-Viewer [DONE]
+~~~~~~~~~~~~~~~~~~~~~~~~~
+Website: https://sphinx-data-viewer.readthedocs.io/
+
 Small Sphinx extension, which allows to present data structures in a tree-like view.
 Can be based on https://www.cssscript.com/json-data-tree-view/ (MIT License) or other libs.
 
@@ -36,6 +38,22 @@ or by `nbsphinx <https://nbsphinx.readthedocs.io/en/0.8.7/>`_ to code via Jupyte
 **Use case**: My blog posts shall always have an image as introduction.
 Some background plus some text. Should be quite easy to generate by just giving an image url and the final
 text. Would save some time.
+
+Sphinx-Smart-Code-Block
+~~~~~~~~~~~~~~~~~~~~~~~
+I often have to document rst code and show the result of it.
+This means I need to duplicate the used code. First time for the code-block, the second time for the rst-file itself,
+so that it gets executed.
+
+I want to have a "smart" code-block, which automatically create the code-block **and** the result, so that
+I only need to maintain one source of code.
+
+It could also use Sphinx-Panels to create automatically 2 tabs: result and code.
+
+Hint: I could also store the code in a separate file and use code-block and include. But this would make documenting
+code a little bit more annoying, as I have to deal with additonal files.
+
+
 
 Sphinx-Autosar
 ~~~~~~~~~~~~~~
