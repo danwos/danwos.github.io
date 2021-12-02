@@ -392,7 +392,7 @@ Example Metrics and Problems
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. hint::
 
-   Is use `Sphinx-Panels <https://sphinx-panels.readthedocs.io>`_ a lot here, to provide also the rst code of the
+   I use `Sphinx-Panels <https://sphinx-panels.readthedocs.io>`_ a lot here, to provide also the rst code of the
    showed features.
    In reality this "report" would not have any *tabs* and would look much smoother.
 
