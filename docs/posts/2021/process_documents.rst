@@ -341,7 +341,7 @@ In our workflow we need to work with the following artifacts:
 
 activities
 ~~~~~~~~~~
-And final here are our activities, which are needed to finish the above workflow.
+And finally here are our activities, which are needed to finish the above workflow.
 
 .. act:: Get documentation
    :id: ACT_002
