@@ -18,7 +18,7 @@ html_meta:
 
 Welcome dear friend 👋,
 
-I'm Daniel, and I'm a passionated Software developer for topics round about 
+I'm Daniel, and I'm a passionate Software developer for topics round about 
 * 📊 Business Insights
 * 📚 Smart Documentation and
 * 🔨 Continuous Integration and 📦 Delivery 
