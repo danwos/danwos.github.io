@@ -122,6 +122,31 @@ list-view on HTML pages.
 +++
 [Sphinx-Data-Viewer Documentation](https://sphinx-data-viewer.readthedocs.io/en/latest/)
 
+---
+
+**Sphinx-Preview** {badge}`created,badge-success` {badge}`maintained,badge-primary`
+^^^^^^^^^^^^^^^^^^^
+A simple data viewer for data of type json or python object, which shows the data in an interactive 
+list-view on HTML pages.
+
+```{image}  https://img.shields.io/github/stars/useblocks/sphinx-preview?style=social
+:target: https://github.com/useblocks/sphinx-preview
+:alt: Sphinx-Preview github stars
+```
+
+```{image}  https://img.shields.io/pypi/dd/sphinx-preview.svg
+:target: https://pypistats.org/packages/sphinx-preview
+:alt: Sphinx-Preview downloads daily
+```
+
+```{image}  https://img.shields.io/pypi/dm/sphinx-preview.svg
+:target: https://pypistats.org/packages/sphinx-preview
+:alt: Sphinx-Preview downloads monthly
+```
+
++++
+[Sphinx-Preview Documentation](https://sphinx-preview.readthedocs.io/en/latest/)
+
 ````
 
 ### Deprecated projects
