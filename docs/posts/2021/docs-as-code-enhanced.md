@@ -82,7 +82,7 @@ The code for this object is embedded inside the normal rst/md documentation code
 ```rst
 Some text before the requirement object.
 
-.. req: Objects in documentation
+.. req:: Objects in documentation
    :id: REQ_001
    :status: done
    :tags: objects, documentation, sphinx-needs
