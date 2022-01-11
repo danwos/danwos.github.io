@@ -1,0 +1,616 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Sphinx Extension Development: Tips &amp; Tricks &#8212; danwos  documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/assets/jsonview.bundle.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/libs/html/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/styles.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/modern.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/assets/jsonview.bundle.js"></script>
+    <script src="../../_static/assets/jsonview_loader.js"></script>
+    <script src="../../_static/sphinx-needs/libs/html/datatables.min.js"></script>
+    <script src="../../_static/sphinx-needs/libs/html/datatables_loader.js"></script>
+    <script src="../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js"></script>
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-0MZ0221M7W"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-0MZ0221M7W');
+                </script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="danwos"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../index.html">
+  <img src="../../_static/danwos_white.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../blog.html">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../about.html">
+  About me
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../projects.html">
+  Projects
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../ideas.html">
+  Ideas
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site..." aria-label="Search this site..." autocomplete="off" >
+</form>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/danwos/" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/danwos" rel="noopener" target="_blank" title="Twitter">
+            <span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.linkedin.com/in/daniel-woste-362b6252/" rel="noopener" target="_blank" title="LinkedIn">
+            <span><i class="fab fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.xing.com/profile/Daniel_Woste/" rel="noopener" target="_blank" title="Xing">
+            <span><i class="fab fa-xing"></i></span>
+            <label class="sr-only">Xing</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://useblocks.com" rel="noopener" target="_blank" title="My company useblocks">
+            <span><i class="fab fa-briefcase"></i></span>
+            <label class="sr-only">My company useblocks</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  22 November 2021 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../blog/author/daniel-woste.html">Daniel Woste</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="../../blog/tag/docs-as-code.html">docs-as-code</a>   
+  <a href="../../blog/tag/sphinx.html">sphinx</a>   
+  <a href="../../blog/tag/extensions.html">extensions</a>   
+  <a href="../../blog/tag/tips.html">tips</a>  
+</li>
+ 
+<li id="comments">
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = "danwos"; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+      var s = document.createElement("script");
+      s.async = true;
+      s.type = "text/javascript";
+      s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+      (
+        document.getElementsByTagName("HEAD")[0] ||
+        document.getElementsByTagName("BODY")[0]
+      ).appendChild(s);
+    })();
+  </script>
+  <i class="fa-fw fa fa-comments"></i>
+  <a
+    href="#disqus_thread"
+    data-disqus-identifier="/posts/2021/sphinx_extension_dev/"
+  >
+    </a
+  >
+</li>
+
+</ul>
+
+<h3>
+  <a href="../../blog.html">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="process_documents.html"
+      >02 December - Process documents with Sphinx-Needs</a
+    >
+  </li>
+  
+  <li>
+    <a href="open_needs_db.html"
+      >29 November - Open-Needs-DB gets funded</a
+    >
+  </li>
+  
+  <li>
+    <a href="docs-as-code-enhanced.html"
+      >19 November - Docs-as-Code Enhanced</a
+    >
+  </li>
+  
+  <li>
+    <a href="meta_data_per_page.html"
+      >18 November - Page meta data in Sphinx</a
+    >
+  </li>
+  
+  <li>
+    <a href="sphinx_needs_string_links.html"
+      >16 November - String2Link transformation with Sphinx-Needs</a
+    >
+  </li>
+  
+</ul>
+
+<h3>
+  <a href="../../blog/archive.html">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../blog/2021.html">2021 (9)</a>
+  </li>
+   
+</ul>
+
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#copy-and-learn">
+   Copy and Learn
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#namespace">
+   Namespace
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#parallel-build-support">
+   Parallel build support
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#content-manipulation-mechanisms">
+   Content manipulation mechanisms
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#documentation-as-main-test-case">
+   Documentation as main test case
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#test-widely">
+   Test widely
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#correct-dependency-handling">
+   Correct dependency handling
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#documentation-as-show-case">
+   Documentation as show case
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#curated-lists">
+   Curated lists
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#github-keywords">
+   github keywords
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <section id="sphinx-extension-development-tips-tricks">
+<h1>Sphinx Extension Development: Tips &amp; Tricks<a class="headerlink" href="#sphinx-extension-development-tips-tricks" title="Permalink to this headline">¶</a></h1>
+<img alt="../../_images/sphinx_extension_dev.png" class="align-center" src="../../_images/sphinx_extension_dev.png" />
+<p>In the last year I have written some Sphinx extensions and figured out some stuff, which I want to share here.</p>
+<section id="copy-and-learn">
+<h2>Copy and Learn<a class="headerlink" href="#copy-and-learn" title="Permalink to this headline">¶</a></h2>
+<p>First of all, the documentation for Sphinx extension development is not so detailed.
+There is a <a class="reference external" href="https://www.sphinx-doc.org/en/1.0/extensions.html">tutorial available</a> by the Sphinx team,
+but the used example project is quite simple.</p>
+<p>Also some important information is only described on the API pages of Sphinx.
+For instance the <a class="reference external" href="https://www.sphinx-doc.org/en/master/extdev/appapi.html#sphinx-core-events">Sphinx core events</a>,
+which are the entry point for a lot of handlers you may write.</p>
+<p>To be honest, I learned most from other extensions.
+I was asking my self, which extensions are solving a similar problem to mine, and then I tried to understand
+their code.</p>
+<p>But be a little careful. Sphinx allows to solve some problems in 2-3 different ways.
+Some may be outdated or have some drawbacks. So try to take a look in 3-4 extensions, to understand how different
+solutions may look like.</p>
+</section>
+<section id="namespace">
+<h2>Namespace<a class="headerlink" href="#namespace" title="Permalink to this headline">¶</a></h2>
+<p>You often need to register own configuration parameters, store values on the Sphinx environment (env) or
+application (app) object and set classes, which later are configured via CSS.</p>
+<p>In <strong>all</strong> these cases, use a prefix! E.g. <code class="docutils literal notranslate"><span class="pre">my_plugin_config</span></code>.</p>
+<p>The reason is simple: Your are not the only Sphinx extension in the current project.
+The user is free to use as many extension as he/she likes. So you should really be sure to not
+overwrite anything, or get overwritten :)</p>
+</section>
+<section id="parallel-build-support">
+<h2>Parallel build support<a class="headerlink" href="#parallel-build-support" title="Permalink to this headline">¶</a></h2>
+<p>You should consider to provide parallel build support for your extension.
+And this means to support both directions: <code class="docutils literal notranslate"><span class="pre">write</span></code> and <code class="docutils literal notranslate"><span class="pre">read</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">write</span></code> is activated by default.
+<code class="docutils literal notranslate"><span class="pre">read</span></code> needs to be defined by your extension in its return value:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">return</span> <span class="p">{</span>
+    <span class="s2">&quot;version&quot;</span><span class="p">:</span> <span class="n">VERSION</span><span class="p">,</span>
+    <span class="s2">&quot;parallel_read_safe&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;parallel_write_safe&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Depending on your extension functionality you may need to write a merge-function to support parallel <code class="docutils literal notranslate"><span class="pre">read</span></code>.
+This is because Sphinx starts multiple workers and the collected data is isolated from each other.
+So you need to merge the data from each worker to a shared data object.</p>
+<p>Parallel build is normally not needed for smaller projects. But if your extension shall be used inside
+company projects, please take into account that these projects often have hundreds of pages.
+And a parallel build reduces the build time often to &lt;20%. So e.g. &lt;10 min instead of a complete hour.</p>
+<p>So if your extension is the only one which does not not support parallel build, it will not have any chance to be used
+in bigger projects.</p>
+<p>See <a class="reference external" href="https://www.sphinx-doc.org/en/1.3.1/extdev/index.html#extension-metadata">details in the Sphinx docs</a>.</p>
+</section>
+<section id="content-manipulation-mechanisms">
+<h2>Content manipulation mechanisms<a class="headerlink" href="#content-manipulation-mechanisms" title="Permalink to this headline">¶</a></h2>
+<p>Normally your extension will change somehow the content, when one of your registered directives or roles is used.</p>
+<p>As far as I know, there are 3 three ways how you can do it.</p>
+<ol class="arabic simple">
+<li><p>Add rst-code to the state machine</p></li>
+<li><p>Manipulate the final docutils node-tree</p></li>
+<li><p>Provide an output specific <cite>visitor</cite> function</p></li>
+</ol>
+<p>The first one, using the state machine, is the easiest one. Simply because you can just give Sphinx additional rst-code,
+which it will render and place it at the current position of your directive/role.</p>
+<p>The drawback is, that you can only use rst-code. This may be enough, if your extension shall save some time for the
+user, by e.g. providing a better/shorter way to describe a table.
+Also the rst-code must be valid, which is sometimes not so easy because of a correct whitespace-handling.</p>
+<p>The last one, a <cite>visitor</cite> function, gives you full access and allows everything, what the final output format allows.
+You can do amazing stuff with it. But it has one big drawback, the function supports only one output format.
+So if your extension shall work with e.g. PDF and HTML, then you have to implement your functionality twice (at least
+the output part). And believe me, this costs a lot of motivation, as you need to maintain more, but nearly similar code.</p>
+<p>Manipulating the docutils node-tree is the way to go.
+It allows you more flexibility as the state machine solution. And as long as the docutils node tree is valid, every
+builder can handle it and your extension directly supports HTML, PDF, JSON and more.
+Just make sure, that you replace all of your extension specific nodes with common docutils nodes.</p>
+</section>
+<section id="documentation-as-main-test-case">
+<h2>Documentation as main test case<a class="headerlink" href="#documentation-as-main-test-case" title="Permalink to this headline">¶</a></h2>
+<p>On short point, which saves you a lot of time.
+Your extension documentation is already your best (and maybe only) test case.</p>
+<p>My Sphinx extension projects are the only projects, where I use a test-driven / test-first approach.
+I normally start by writing the documentation, which becomes some kind of a specification and helps me to find
+problems in my concept. Then I add real code examples for each function, which gets rendered by Sphinx.
+So Sphinx already executes all my functions and presents the results in the project documentation.</p>
+<p>So if your project documentation gets build, your extension looks fine.</p>
+</section>
+<section id="test-widely">
+<h2>Test widely<a class="headerlink" href="#test-widely" title="Permalink to this headline">¶</a></h2>
+<p>Even if functional testing can be somehow shorten (see above), testing your code with different Python and Sphinx versions
+is mandatory. Try to use <a class="reference external" href="https://tox.wiki/en/latest/index.html">tox</a> or <a class="reference external" href="https://nox.thea.codes/en/stable/">nox</a>
+on your CI to get this done. Luckily this configuration can be copied often nicely from other projects ;)</p>
+<p>Ohh, and please test your extension with different themes!
+There are themes out there, which do their own voodoo on HTML objects.</p>
+<p><strong>ReadTheDocs</strong> theme is manipulating <strong>all tables</strong> via JavaScript, which may destroy your layout or function.
+No way to get this deactivated right now (But PR is waiting for merge).</p>
+<p><strong>Sphinx-Material</strong> deletes most CSS classes from <strong>all tables</strong>, if a table does not contain a specific class, which
+deactivates this behavior for this specific table.</p>
+<p>So there is some risk, that you need to implement theme specific solutions / workarounds.</p>
+</section>
+<section id="correct-dependency-handling">
+<h2>Correct dependency handling<a class="headerlink" href="#correct-dependency-handling" title="Permalink to this headline">¶</a></h2>
+<p>Please be so unspecific as possible with your dependency pinning.</p>
+<p>If you e.g. pin your project to a specific Sphinx version like <code class="docutils literal notranslate"><span class="pre">4.1.1</span></code>, you exclude other dependencies from being
+installable, if they have pinned Sphinx to another version.</p>
+<p>Even if you have tested it only for a specific version, please trust the semantic versioning scheme.
+So if there is no raise in the <em>major</em> number, the newer version should work.</p>
+<p>Also other users will contact you to update the dependency number everytime a new version is out there.</p>
+<p>You can also use a matrix-test build on your CI, to make sure certain versions are supported.</p>
+</section>
+<section id="documentation-as-show-case">
+<h2>Documentation as show case<a class="headerlink" href="#documentation-as-show-case" title="Permalink to this headline">¶</a></h2>
+<p>As you write a Sphinx extension and use Sphinx for your documentation, you can easily use the docs as show case.</p>
+<p>So your index page should already show an overwhelming example instead of going directly into technical details.</p>
+</section>
+<section id="curated-lists">
+<h2>Curated lists<a class="headerlink" href="#curated-lists" title="Permalink to this headline">¶</a></h2>
+<p>There are curated list out there, which collect Sphinx extensions. You should mention your extension also there.</p>
+<p>One is <a class="reference external" href="https://github.com/yoloseem/awesome-sphinxdoc">https://github.com/yoloseem/awesome-sphinxdoc</a></p>
+</section>
+<section id="github-keywords">
+<h2>github keywords<a class="headerlink" href="#github-keywords" title="Permalink to this headline">¶</a></h2>
+<p>If your project is hosted ony github / gitlab.
+Set the right keywords for your project, e.g. <cite>python</cite> and <cite>sphinx</cite>.</p>
+<p>There are users out there, who are following these topics and are watching for new entries.</p>
+</section>
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     
+    <a href="docs-as-code-enhanced.html">
+      <i class="fa fa-arrow-circle-left"></i> Docs-as-Code Enhanced
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     
+    <a href="open_needs_db.html">
+      Open-Needs-DB gets funded <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
+    </a>
+    
+  </span>
+</div>
+  
+  <div class="section">
+    <h2>Comments</h2>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = "danwos";
+      var disqus_identifier = "/posts/2021/sphinx_extension_dev/";
+      var disqus_title = "Sphinx Extension Development: Tips &amp;amp; Tricks";
+      var disqus_url = "https://daniel-woste.de/posts/2021/sphinx_extension_dev";
+
+      (function () {
+        var dsq = document.createElement("script");
+        dsq.type = "text/javascript";
+        dsq.async = true;
+        dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+        (
+          document.getElementsByTagName("head")[0] ||
+          document.getElementsByTagName("body")[0]
+        ).appendChild(dsq);
+      })();
+    </script>
+    <noscript
+      >Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript"
+        >comments powered by Disqus.</a
+      ></noscript
+    >
+    <a href="https://disqus.com" class="dsq-brlink"
+      >comments powered by <span class="logo-disqus">Disqus</span></a
+    >
+  </div>
+  
+</div>
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Daniel Woste.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.2.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

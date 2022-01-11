@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://daniel-woste.de</id>
+  <title>danwos</title>
+  <updated>2022-01-11T07:27:21.036502+00:00</updated>
+  <link href="https://daniel-woste.de"/>
+  <link href="https://daniel-woste.de/blog/atom.xml" rel="self"/>
+  <generator uri="https://ablog.readthedocs.org/" version="0.10.23">ABlog</generator>
+  <entry>
+    <id>https://daniel-woste.de/posts/2021/job_advertisement_sphinx_needs.html</id>
+    <title>Job advertisement for Sphinx-Needs</title>
+    <updated>2021-11-02T00:00:00+00:00</updated>
+    <author>
+      <name>Daniel Woste</name>
+    </author>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;I just have detected the first job advertisement, which asks for &lt;a class="reference external" href="https://sphinx-needs.com"&gt;Sphinx-Needs&lt;/a&gt;as skill.
+Yeah 🥳&lt;/p&gt;
+&lt;p&gt;The job is for a
+&lt;a class="reference external" href="https://www.bosch.de/karriere/job/REF113902H-docs-as-code-development-engineer"&gt;Docs-As-Code Development engineer&lt;/a&gt;
+at Bosch in Leonberg, Germany.&lt;/p&gt;
+&lt;img alt="_images/bosch-sphinx-needs.png" class="align-center" src="_images/bosch-sphinx-needs.png" style="width: 70%;" /&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://daniel-woste.de/posts/2021/job_advertisement_sphinx_needs.html" rel="alternate"/>
+    <summary>I just have detected the first job advertisement, which asks for Sphinx-Needsas skill.
+Yeah 🥳The job is for a
+Docs-As-Code Development engineer
+at Bosch in Leonberg, Germany.</summary>
+    <category term="sphinx-needs" label="sphinx-needs"/>
+    <category term="sphinx" label="sphinx"/>
+    <category term="job" label="job"/>
+    <published>2021-11-02T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel-woste.de/posts/2021/page_reactivation.html</id>
+    <title>Page reactivation</title>
+    <updated>2021-11-02T00:00:00+00:00</updated>
+    <author>
+      <name>Daniel Woste</name>
+    </author>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;For a long, long time I had no private representation on the internet, as most of my work was done for open-source
+projects, so that I added my thoughts to their websites and documentation pages.&lt;/p&gt;
+&lt;p&gt;Now, I’m planing something big ;)&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://daniel-woste.de/posts/2021/page_reactivation.html" rel="alternate"/>
+    <summary>For a long, long time I had no private representation on the internet, as most of my work was done for open-source
+projects, so that I added my thoughts to their websites and documentation pages.Now, I’m planing something big ;)</summary>
+    <category term="page" label="page"/>
+    <category term="blog" label="blog"/>
+    <category term="sphinx" label="sphinx"/>
+    <published>2021-11-02T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel-woste.de/posts/2021/pycharm_file_watchers.html</id>
+    <title>PyCharm File Watchers for Sphinx projects</title>
+    <updated>2021-11-05T00:00:00+00:00</updated>
+    <author>
+      <name>Daniel Woste</name>
+    </author>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;I often have the case that I want to see my documentation as fast as possible.&lt;/p&gt;
+&lt;p&gt;And I know there are “Preview” IDE-Extensions available, which want to solve this problem.&lt;/p&gt;
+&lt;img alt="_images/1_general_settings.png" src="_images/1_general_settings.png" style="width: 80%;" /&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://daniel-woste.de/posts/2021/pycharm_file_watchers.html" rel="alternate"/>
+    <summary>I often have the case that I want to see my documentation as fast as possible.And I know there are “Preview” IDE-Extensions available, which want to solve this problem.</summary>
+    <category term="sphinx" label="sphinx"/>
+    <category term="pycharm" label="pycharm"/>
+    <category term="watchers" label="watchers"/>
+    <published>2021-11-05T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel-woste.de/posts/2021/sphinx_needs_string_links.html</id>
+    <title>String2Link transformation with Sphinx-Needs</title>
+    <updated>2021-11-16T00:00:00+00:00</updated>
+    <author>
+      <name>Daniel Woste</name>
+    </author>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;&lt;a class="reference external" href="https://www.sphinx-needs.com/"&gt;Sphinx-Needs&lt;/a&gt; got a new cool feature to easily create links of a given string for
+options. The &lt;a class="reference external" href="https://sphinxcontrib-needs.readthedocs.io/en/latest/configuration.html#needs-string-links"&gt;string-links feature&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This allows to just set e.g. a github issue id and get a link to exactly this issue in the final docs.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://daniel-woste.de/posts/2021/sphinx_needs_string_links.html" rel="alternate"/>
+    <summary>Sphinx-Needs got a new cool feature to easily create links of a given string for
+options. The string-links feature.This allows to just set e.g. a github issue id and get a link to exactly this issue in the final docs.</summary>
+    <category term="sphinx" label="sphinx"/>
+    <category term="sphinx-needs" label="sphinx-needs"/>
+    <category term="links" label="links"/>
+    <published>2021-11-16T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel-woste.de/posts/2021/meta_data_per_page.html</id>
+    <title>Page meta data in Sphinx</title>
+    <updated>2021-11-18T00:00:00+00:00</updated>
+    <author>
+      <name>Daniel Woste</name>
+    </author>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;In bigger Sphinx projects, written by hundreds of authors, you often need to store additional data to somehow
+have the overall page creation and update process under control.&lt;/p&gt;
+&lt;p&gt;This data can be stored and maintained as meta-data on top of each rst file.&lt;/p&gt;
+&lt;img alt="_images/page_meta_data.png" src="_images/page_meta_data.png" /&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://daniel-woste.de/posts/2021/meta_data_per_page.html" rel="alternate"/>
+    <summary>In bigger Sphinx projects, written by hundreds of authors, you often need to store additional data to somehow
+have the overall page creation and update process under control.This data can be stored and maintained as meta-data on top of each rst file.</summary>
+    <category term="sphinx" label="sphinx"/>
+    <category term="sphinx-needs" label="sphinx-needs"/>
+    <category term="meta" label="meta"/>
+    <published>2021-11-18T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel-woste.de/posts/2021/docs-as-code-enhanced.html</id>
+    <title>Docs-as-Code Enhanced</title>
+    <updated>2021-11-19T00:00:00+00:00</updated>
+    <author>
+      <name>Daniel Woste</name>
+    </author>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;For most of us “Docs-as-Code” mostly means to store the documentation files beside the project sources in git.
+Also editing the sources in an already used IDE and using the CI system to build it, are 2 important use cases why
+docs-as-code is chosen to create documentation.&lt;/p&gt;
+&lt;p&gt;But these features have nothing to do with the documentation content itself.
+What if the content itself can be treated as code? What if the content / documentation language provides features,
+which we already know from our programming languages?&lt;/p&gt;
+&lt;img alt="_images/docs_as_code_enhanced.png" class="align-center" src="_images/docs_as_code_enhanced.png" /&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://daniel-woste.de/posts/2021/docs-as-code-enhanced.html" rel="alternate"/>
+    <summary>For most of us “Docs-as-Code” mostly means to store the documentation files beside the project sources in git.
+Also editing the sources in an already used IDE and using the CI system to build it, are 2 important use cases why
+docs-as-code is chosen to create documentation.But these features have nothing to do with the documentation content itself.
+What if the content itself can be treated as code? What if the content / documentation language provides features,
+which we already know from our programming languages?</summary>
+    <category term="docs-as-code" label="docs-as-code"/>
+    <category term="sphinx" label="sphinx"/>
+    <category term="sphinx-needs" label="sphinx-needs"/>
+    <published>2021-11-19T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel-woste.de/posts/2021/sphinx_extension_dev.html</id>
+    <title>Sphinx Extension Development: Tips &amp; Tricks</title>
+    <updated>2021-11-22T00:00:00+00:00</updated>
+    <author>
+      <name>Daniel Woste</name>
+    </author>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;In the last year I have written some Sphinx extensions and figured out some stuff, which I want to share here.&lt;/p&gt;
+&lt;p&gt;First of all, the documentation for Sphinx extension development is not so detailed.
+There is a &lt;a class="reference external" href="https://www.sphinx-doc.org/en/1.0/extensions.html"&gt;tutorial available&lt;/a&gt; by the Sphinx team,
+but the used example project is quite simple.&lt;/p&gt;
+&lt;img alt="_images/sphinx_extension_dev.png" class="align-center" src="_images/sphinx_extension_dev.png" /&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://daniel-woste.de/posts/2021/sphinx_extension_dev.html" rel="alternate"/>
+    <summary>In the last year I have written some Sphinx extensions and figured out some stuff, which I want to share here.First of all, the documentation for Sphinx extension development is not so detailed.
+There is a tutorial available by the Sphinx team,
+but the used example project is quite simple.</summary>
+    <category term="docs-as-code" label="docs-as-code"/>
+    <category term="sphinx" label="sphinx"/>
+    <category term="extensions" label="extensions"/>
+    <category term="tips" label="tips"/>
+    <published>2021-11-22T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel-woste.de/posts/2021/open_needs_db.html</id>
+    <title>Open-Needs-DB gets funded</title>
+    <updated>2021-11-29T00:00:00+00:00</updated>
+    <author>
+      <name>Daniel Woste</name>
+    </author>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;The &lt;a class="reference external" href="https://prototypefund.de/"&gt;Prototype Fund&lt;/a&gt; supports and finances Open-Needs-DB from March to September 2022.&lt;/p&gt;
+&lt;p&gt;The &lt;a class="reference external" href="https://www.bmbf.de/bmbf/en/home/home_node.html"&gt;Federal Ministry of Education and Research&lt;/a&gt; created this program
+to support developers in Germany during the creation of digital prototypes for topics in the area of
+Civic Tech, Data Literacy, IT Security and Software Infrastructure.&lt;/p&gt;
+&lt;img alt="_images/open_needs_funded.png" class="align-center" src="_images/open_needs_funded.png" /&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://daniel-woste.de/posts/2021/open_needs_db.html" rel="alternate"/>
+    <summary>The Prototype Fund supports and finances Open-Needs-DB from March to September 2022.The Federal Ministry of Education and Research created this program
+to support developers in Germany during the creation of digital prototypes for topics in the area of
+Civic Tech, Data Literacy, IT Security and Software Infrastructure.</summary>
+    <category term="openneeds" label="openneeds"/>
+    <category term="requirements" label="requirements"/>
+    <category term="sphinx" label="sphinx"/>
+    <published>2021-11-29T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel-woste.de/posts/2021/process_documents.html</id>
+    <title>Process documents with Sphinx-Needs</title>
+    <updated>2021-12-02T00:00:00+00:00</updated>
+    <author>
+      <name>Daniel Woste</name>
+    </author>
+    <content type="html">&lt;div class="ablog-post-excerpt docutils container"&gt;
+&lt;p&gt;Documenting processes is often a separate task in companies. Done by an extra department/team for processes, workflows
+and tools (PMT). And published in specific formats, which are not reusable or referencable by project specific
+documentations. But being able to link project requirements to process steps would help developers to understand
+the need for such requirements.&lt;/p&gt;
+&lt;p&gt;This post explains how the docs-as-code approach can be used to document processes and workflows.&lt;/p&gt;
+&lt;img alt="_images/processes_with_sphinx_needs.png" class="align-center" src="_images/processes_with_sphinx_needs.png" /&gt;
+&lt;/div&gt;
+</content>
+    <link href="https://daniel-woste.de/posts/2021/process_documents.html" rel="alternate"/>
+    <summary>Documenting processes is often a separate task in companies. Done by an extra department/team for processes, workflows
+and tools (PMT). And published in specific formats, which are not reusable or referencable by project specific
+documentations. But being able to link project requirements to process steps would help developers to understand
+the need for such requirements.This post explains how the docs-as-code approach can be used to document processes and workflows.</summary>
+    <category term="sphinx" label="sphinx"/>
+    <category term="sphinx-needs" label="sphinx-needs"/>
+    <category term="process" label="process"/>
+    <category term="workflow" label="workflow"/>
+    <published>2021-12-02T00:00:00+00:00</published>
+  </entry>
+</feed>

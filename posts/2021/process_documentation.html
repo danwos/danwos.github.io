@@ -1,0 +1,1413 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Process documentation with Sphinx-Needs &#8212; danwos  documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/assets/jsonview.bundle.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/libs/html/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/styles.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/modern.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/assets/jsonview.bundle.js"></script>
+    <script src="../../_static/assets/jsonview_loader.js"></script>
+    <script src="../../_static/sphinx-needs/libs/html/datatables.min.js"></script>
+    <script src="../../_static/sphinx-needs/libs/html/datatables_loader.js"></script>
+    <script src="../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js"></script>
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-0MZ0221M7W"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-0MZ0221M7W');
+                </script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="danwos"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../index.html">
+  <img src="../../_static/danwos_white.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../blog.html">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../about.html">
+  About me
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../projects.html">
+  Projects
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../ideas.html">
+  Ideas
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site..." aria-label="Search this site..." autocomplete="off" >
+</form>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/danwos/" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/danwos" rel="noopener" target="_blank" title="Twitter">
+            <span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.linkedin.com/in/daniel-woste-362b6252/" rel="noopener" target="_blank" title="LinkedIn">
+            <span><i class="fab fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.xing.com/profile/Daniel_Woste/" rel="noopener" target="_blank" title="Xing">
+            <span><i class="fab fa-xing"></i></span>
+            <label class="sr-only">Xing</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://useblocks.com" rel="noopener" target="_blank" title="My company useblocks">
+            <span><i class="fab fa-briefcase"></i></span>
+            <label class="sr-only">My company useblocks</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  02 December 2021 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../blog/author/daniel-woste.html">Daniel Woste</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="../../blog/tag/sphinx.html">sphinx</a>   
+  <a href="../../blog/tag/sphinx-needs.html">sphinx-needs</a>   
+  <a href="../../blog/tag/process.html">process</a>   
+  <a href="../../blog/tag/workflow.html">workflow</a>  
+</li>
+ 
+<li id="comments">
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = "danwos"; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+      var s = document.createElement("script");
+      s.async = true;
+      s.type = "text/javascript";
+      s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+      (
+        document.getElementsByTagName("HEAD")[0] ||
+        document.getElementsByTagName("BODY")[0]
+      ).appendChild(s);
+    })();
+  </script>
+  <i class="fa-fw fa fa-comments"></i>
+  <a
+    href="#disqus_thread"
+    data-disqus-identifier="/posts/2021/process_documentation/"
+  >
+    </a
+  >
+</li>
+
+</ul>
+
+<h3>
+  <a href="../../blog.html">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="open_needs_db.html"
+      >29 November - Open-Needs-DB gets funded</a
+    >
+  </li>
+  
+  <li>
+    <a href="sphinx_extension_dev.html"
+      >22 November - Sphinx Extension Development: Tips & Tricks</a
+    >
+  </li>
+  
+  <li>
+    <a href="docs-as-code-enhanced.html"
+      >19 November - Docs-as-Code Enhanced</a
+    >
+  </li>
+  
+  <li>
+    <a href="meta_data_per_page.html"
+      >18 November - Page meta data in Sphinx</a
+    >
+  </li>
+  
+  <li>
+    <a href="sphinx_needs_string_links.html"
+      >16 November - String2Link transformation with Sphinx-Needs</a
+    >
+  </li>
+  
+</ul>
+
+<h3>
+  <a href="../../blog/archive.html">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../blog/2021.html">2021 (9)</a>
+  </li>
+   
+</ul>
+
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#process-model">
+   Process Model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-configuration">
+   Model configuration
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#model-documentation">
+   Model documentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#process-hardening">
+   Process hardening
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#better-process-model">
+   Better process model
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example">
+   Example
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#workflows">
+     workflows
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#storages">
+     storages
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#artifacts">
+     artifacts
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#activities">
+     activities
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-metrics-and-problems">
+     Example Metrics and Problems
+    </a>
+    <ul class="visible nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#metrics">
+       Metrics
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#problems">
+       Problems
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#final-words">
+   Final words
+  </a>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <section id="process-documentation-with-sphinx-needs">
+<h1>Process documentation with Sphinx-Needs<a class="headerlink" href="#process-documentation-with-sphinx-needs" title="Permalink to this headline">¶</a></h1>
+<p>Documenting processes is often a separate task in companies. Done by an extra department/team for processes, workflows
+and tools (PMT). And published in specific formats, which are not reusable or referencable by project specific
+documentations. But being able to link project requirements to process steps would help developers to understand
+the need for such requirements.</p>
+<p>This post explains how the docs-as-code approach can be used to document processes and workflows.</p>
+<p>In most cases process descriptions are often not so detailed. They are tool-unspecific and it shall be the task
+of a project specific team to define the used tools and break down the high level processes to tool specific workflows.</p>
+<p>For such a break-down is makes sense to have all information from each level of process definition available in one
+single documentation, so that everything can be linked, referenced and becoming level by level more project specific.</p>
+<section id="process-model">
+<h2>Process Model<a class="headerlink" href="#process-model" title="Permalink to this headline">¶</a></h2>
+<p>The used process model is a simplified one, which is used this way inside development departs of a german
+automotive company. It has the following elements:</p>
+<ul class="simple">
+<li><p><strong>workflow</strong>: Defines a collection of activities, which must be performed in a specific order to get the needed result</p></li>
+<li><p><strong>activity</strong>: Atomic tasks description, which can be used in different workflows.</p></li>
+<li><p><strong>artifact</strong>: Some resource, which can be used as input for or output by activities.</p></li>
+<li><p><strong>storage</strong>: The location of a resource where it can be accessed or must be stored.</p></li>
+</ul>
+<p>And there are relationships between these elements:</p>
+<ul class="simple">
+<li><p>Workflow:</p>
+<ul>
+<li><p>Can have one or more activities</p></li>
+<li><p>Can use the same activity multiple times</p></li>
+<li><p>Can have multiple storages</p></li>
+<li><p>Needed artifacts are defined by the used activities</p></li>
+</ul>
+</li>
+<li><p>Activity:</p>
+<ul>
+<li><p>Is used by one or multiple workflows</p></li>
+<li><p>Uses 0-n artifacts as input or output</p></li>
+<li><p>Uses workflow specific or activity specific storages</p></li>
+</ul>
+</li>
+<li><p>Artifacts:</p>
+<ul>
+<li><p>Can be used by 0-n activities</p></li>
+<li><p>Is not related to a storage (this is defined by workflow or activity)</p></li>
+</ul>
+</li>
+<li><p>Storage</p>
+<ul>
+<li><p>Is defined / used by workflow or activity</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="model-configuration">
+<h2>Model configuration<a class="headerlink" href="#model-configuration" title="Permalink to this headline">¶</a></h2>
+<p>Lets configure Sphinx-Needs to provide these <strong>need types</strong> for our documentation:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">needs_types</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="nb">dict</span><span class="p">(</span><span class="n">directive</span><span class="o">=</span><span class="s2">&quot;wor&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Workflow&quot;</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;W_&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#FFCC00&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;node&quot;</span><span class="p">),</span>
+    <span class="nb">dict</span><span class="p">(</span><span class="n">directive</span><span class="o">=</span><span class="s2">&quot;act&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Activity&quot;</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;ACT_&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#BFD8D2&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;node&quot;</span><span class="p">),</span>
+    <span class="nb">dict</span><span class="p">(</span><span class="n">directive</span><span class="o">=</span><span class="s2">&quot;art&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Artifact&quot;</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;ART_&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#FEDCD2&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;node&quot;</span><span class="p">),</span>
+    <span class="nb">dict</span><span class="p">(</span><span class="n">directive</span><span class="o">=</span><span class="s2">&quot;sto&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Storage&quot;</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;STO_&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#DF744A&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;node&quot;</span><span class="p">),</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>I also want to <strong>identify the different object</strong> quite easily.
+So lets set a colorful border as well:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">needs_global_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;style&#39;</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s1">&#39;yellow_border&#39;</span><span class="p">,</span> <span class="s1">&#39;type == &quot;wor&quot;&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;green_border&#39;</span><span class="p">,</span> <span class="s1">&#39;type == &quot;act&quot;&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;red_border&#39;</span><span class="p">,</span> <span class="s1">&#39;type == &quot;art&quot;&#39;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s1">&#39;blue_border&#39;</span><span class="p">,</span> <span class="s1">&#39;type == &quot;sto&quot;&#39;</span><span class="p">)</span>
+   <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>We also want to be sure, that the user provides an ID for each created need.
+And also each ID must contain a specific prefix followed by a number.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">needs_id_required</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1"># Must start with WOR or ACT or .. followed by a &quot;_&quot; and min. 3 digits.</span>
+<span class="c1"># E.g. ART_143</span>
+<span class="n">needs_id_regex</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;^(WOR|ACT|ART|STO)_[\d]{3,}&#39;</span>
+</pre></div>
+</div>
+<p>Also the relationships have been described, so lets set specific link types as well:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">needs_extra_links</span> <span class="o">=</span> <span class="p">[</span>
+   <span class="p">{</span>
+      <span class="c1"># workflow -&gt; activity</span>
+      <span class="s2">&quot;option&quot;</span><span class="p">:</span> <span class="s2">&quot;executes&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;incoming&quot;</span><span class="p">:</span> <span class="s2">&quot;is executed by&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;outgoing&quot;</span><span class="p">:</span> <span class="s2">&quot;executes&quot;</span>
+      <span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="s2">&quot;#777777&quot;</span>
+   <span class="p">},</span>
+   <span class="p">{</span>
+      <span class="c1"># activity -&gt; artifact</span>
+      <span class="s2">&quot;option&quot;</span><span class="p">:</span> <span class="s2">&quot;produces&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;incoming&quot;</span><span class="p">:</span> <span class="s2">&quot;is produced by&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;outgoing&quot;</span><span class="p">:</span> <span class="s2">&quot;produces&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="s2">&quot;#AA0000&quot;</span>
+   <span class="p">},</span>
+   <span class="p">{</span>
+      <span class="c1"># activity &lt;- artifact</span>
+      <span class="s2">&quot;option&quot;</span><span class="p">:</span> <span class="s2">&quot;consumes&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;incoming&quot;</span><span class="p">:</span> <span class="s2">&quot;is consumed by&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;outgoing&quot;</span><span class="p">:</span> <span class="s2">&quot;consumes&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="s2">&quot;#00AA00&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;style_start&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;-&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;style_end&quot;</span><span class="p">:</span> <span class="s2">&quot;-&quot;</span><span class="p">,</span>
+   <span class="p">},</span>
+   <span class="p">{</span>
+      <span class="c1"># storage -&gt; artifact</span>
+      <span class="s2">&quot;option&quot;</span><span class="p">:</span> <span class="s2">&quot;stores&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;incoming&quot;</span><span class="p">:</span> <span class="s2">&quot;stored inside&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;outgoing&quot;</span><span class="p">:</span> <span class="s2">&quot;stores&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="s2">&quot;#0000AA&quot;</span>
+   <span class="p">},</span>
+   <span class="p">{</span>
+      <span class="c1"># workflow/activity -&gt; storage</span>
+      <span class="s2">&quot;option&quot;</span><span class="p">:</span> <span class="s2">&quot;uses&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;incoming&quot;</span><span class="p">:</span> <span class="s2">&quot;used by&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;outgoing&quot;</span><span class="p">:</span> <span class="s2">&quot;uses&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="s2">&quot;#000000&quot;</span>
+   <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="model-documentation">
+<h2>Model documentation<a class="headerlink" href="#model-documentation" title="Permalink to this headline">¶</a></h2>
+<p>This whole configuration allows us to describe our model with the help of Sphinx-Needs.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="14aef66b-8fcf-4cdd-96e3-701f09c29c7a" name="aa408e7d-85a9-4d79-8f0c-4991c8c4205c" type="radio">
+</input><label class="tabbed-label" for="14aef66b-8fcf-4cdd-96e3-701f09c29c7a">
+result</label><div class="tabbed-content docutils">
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_yellow_border needs_type_wor table" id="WOR_001">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Workflow</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">Workflow object</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#WOR_001" title="WOR_001">WOR_001</a></span>  <span class="needs collapse" id="target__hide__meta"><span class="needs collapsed"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-down-circle.svg" class="needs_image" src="../../_images/arrow-down-circle.svg" width="17px" /></a></span><span class="needs visible"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-right-circle.svg" class="needs_image" src="../../_images/arrow-right-circle.svg" width="17px" /></a></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">post_process</span></span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">yellow_border</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">executes: <span class="executes"><span><a class="reference internal" href="#ACT_001" title="WOR_001">ACT_001</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Defines a collection of activities, which must be performed in a specific order to get the needed result.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_green_border needs_type_act table" id="ACT_001">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Activity</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">Activity object</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#ACT_001" title="ACT_001">ACT_001</a></span>  <span class="needs collapse" id="target__hide__meta"><span class="needs collapsed"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-down-circle.svg" class="needs_image" src="../../_images/arrow-down-circle.svg" width="17px" /></a></span><span class="needs visible"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-right-circle.svg" class="needs_image" src="../../_images/arrow-right-circle.svg" width="17px" /></a></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">post_process</span></span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">green_border</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">is executed by: <span class="executes"><span><a class="reference internal" href="#WOR_001" title="ACT_001">WOR_001</a></span></span></div>
+<div class="line">produces: <span class="produces"><span><a class="reference internal" href="#ART_001" title="ACT_001">ART_001</a></span></span></div>
+<div class="line">consumes: <span class="consumes"><span><a class="reference internal" href="#ART_001" title="ACT_001">ART_001</a></span></span></div>
+<div class="line">uses: <span class="uses"><span><a class="reference internal" href="#STO_001" title="ACT_001">STO_001</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Atomic tasks description, which can be used in different workflows.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_border needs_type_art table" id="ART_001">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Artifact</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">Artifact object</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#ART_001" title="ART_001">ART_001</a></span>  <span class="needs collapse" id="target__hide__meta"><span class="needs collapsed"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-down-circle.svg" class="needs_image" src="../../_images/arrow-down-circle.svg" width="17px" /></a></span><span class="needs visible"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-right-circle.svg" class="needs_image" src="../../_images/arrow-right-circle.svg" width="17px" /></a></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">post_process</span></span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_border</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">is produced by: <span class="produces"><span><a class="reference internal" href="#ACT_001" title="ART_001">ACT_001</a></span></span></div>
+<div class="line">is consumed by: <span class="consumes"><span><a class="reference internal" href="#ACT_001" title="ART_001">ACT_001</a></span></span></div>
+<div class="line">stored inside: <span class="stores"><span><a class="reference internal" href="#STO_001" title="ART_001">STO_001</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Some resource, which can be used as input for or output by activities.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_blue_border needs_type_sto table" id="STO_001">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Storage</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">Storage object</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#STO_001" title="STO_001">STO_001</a></span>  <span class="needs collapse" id="target__hide__meta"><span class="needs collapsed"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-down-circle.svg" class="needs_image" src="../../_images/arrow-down-circle.svg" width="17px" /></a></span><span class="needs visible"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-right-circle.svg" class="needs_image" src="../../_images/arrow-right-circle.svg" width="17px" /></a></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">post_process</span></span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">blue_border</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">stores: <span class="stores"><span><a class="reference internal" href="#ART_001" title="STO_001">ART_001</a></span></span></div>
+<div class="line">used by: <span class="uses"><span><a class="reference internal" href="#ACT_001" title="STO_001">ACT_001</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The location of a resource where it can be access or must be stored.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="7fe5d702-e9db-4e69-b176-f773c1159e51" name="aa408e7d-85a9-4d79-8f0c-4991c8c4205c" type="radio">
+</input><label class="tabbed-label" for="7fe5d702-e9db-4e69-b176-f773c1159e51">
+rst code</label><div class="tabbed-content docutils">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">wor</span><span class="p">::</span> Workflow object
+   <span class="nc">:id:</span> WOR_001
+   <span class="nc">:executes:</span> ACT_001
+   <span class="nc">:tags:</span> post_process
+
+   Defines a collection of activities, which must be performed in a specific order to get the needed result.
+
+<span class="p">..</span> <span class="ow">act</span><span class="p">::</span> Activity object
+   <span class="nc">:id:</span> ACT_001
+   <span class="nc">:uses:</span> STO_001
+   <span class="nc">:consumes:</span> ART_001
+   <span class="nc">:produces:</span> ART_001
+   <span class="nc">:tags:</span> post_process
+
+   Atomic tasks description, which can be used in different workflows.
+
+<span class="p">..</span> <span class="ow">art</span><span class="p">::</span> Artifact object
+   <span class="nc">:id:</span> ART_001
+   <span class="nc">:tags:</span> post_process
+
+   Some resource, which can be used as input for or output by activities.
+
+<span class="p">..</span> <span class="ow">sto</span><span class="p">::</span> Storage object
+   <span class="nc">:id:</span> STO_001
+   <span class="nc">:tags:</span> post_process
+   <span class="nc">:stores:</span> ART_001
+
+   The location of a resource where it can be access or must be stored.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Looks all good, lets see how a graphical representation looks like:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="6cdb250a-729d-44b3-8741-247d7969bce1" name="f13ad411-b28a-4485-81eb-bb0cf547e8cf" type="radio">
+</input><label class="tabbed-label" for="6cdb250a-729d-44b3-8741-247d7969bce1">
+result</label><div class="tabbed-content docutils">
+<figure class="align-center" id="needflow-posts/2021/process_documentation-0">
+<p class="plantuml">
+<img src="../../_images/plantuml-a50b46af7277ccfad960c165087a5b81db6485f3.svg" alt="&#64;startuml
+
+' Nodes definition 
+
+node &quot;&lt;size:12&gt;Workflow&lt;/size&gt;\n**Workflow object**\n&lt;size:10&gt;WOR_001&lt;/size&gt;&quot; as WOR_001 [[../posts/2021/process_documentation.html#WOR_001]] #FFCC00 
+rectangle &quot;&lt;size:12&gt;Activity&lt;/size&gt;\n**Activity object**\n&lt;size:10&gt;ACT_001&lt;/size&gt;&quot; as ACT_001 [[../posts/2021/process_documentation.html#ACT_001]] #BFD8D2 
+artifact &quot;&lt;size:12&gt;Artifact&lt;/size&gt;\n**Artifact object**\n&lt;size:10&gt;ART_001&lt;/size&gt;&quot; as ART_001 [[../posts/2021/process_documentation.html#ART_001]] #FEDCD2 
+database &quot;&lt;size:12&gt;Storage&lt;/size&gt;\n**Storage object**\n&lt;size:10&gt;STO_001&lt;/size&gt;&quot; as STO_001 [[../posts/2021/process_documentation.html#STO_001]] #DF744A 
+
+' Connection definition 
+
+WOR_001 -[#777777]-&gt; ACT_001: executes
+ACT_001 -[#AA0000]-&gt; ART_001: produces
+ACT_001 &lt;-[#00AA00]- ART_001: consumes
+ACT_001 -[#000000]-&gt; STO_001: uses
+STO_001 -[#0000AA]&gt; ART_001: stores
+
+&#64;enduml"/></p>
+</figure>
+</div>
+<input id="5025457e-7182-43c4-a9e9-c2d72e66bdc3" name="f13ad411-b28a-4485-81eb-bb0cf547e8cf" type="radio">
+</input><label class="tabbed-label" for="5025457e-7182-43c4-a9e9-c2d72e66bdc3">
+rst code</label><div class="tabbed-content docutils">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">needflow</span><span class="p">::</span>
+   <span class="nc">:tags:</span> post_process
+   <span class="nc">:show_link_names:</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="process-hardening">
+<h2>Process hardening<a class="headerlink" href="#process-hardening" title="Permalink to this headline">¶</a></h2>
+<p>Sphinx-Needs allows to define regular expressions for need IDs or the definition of additional link types.
+But these configurations are not forced to be used for a specific need type only.
+So I can create a need from type <strong>workflow</strong>, set as id <strong>ART_123</strong> and use the link type <strong>stores</strong>.</p>
+<p>Lets use <code class="docutils literal notranslate"><span class="pre">needs_warnings</span></code> to throw warnings, if such internal rules are not followed:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">needs_warnings</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="c1"># Check for wrong ID prefixes</span>
+   <span class="s1">&#39;workflow_with_wrong_prefix&#39;</span><span class="p">:</span> <span class="s2">&quot;type == &#39;wor&#39; and not id.startswith(&#39;WOR_&#39;)&quot;</span><span class="p">,</span>
+   <span class="s1">&#39;activity_with_wrong_prefix&#39;</span><span class="p">:</span> <span class="s2">&quot;type == &#39;act&#39; and not id.startswith(&#39;ACT_&#39;)&quot;</span><span class="p">,</span>
+   <span class="s1">&#39;artifact_with_wrong_prefix&#39;</span><span class="p">:</span> <span class="s2">&quot;type == &#39;art&#39; and not id.startswith(&#39;ART_&#39;)&quot;</span><span class="p">,</span>
+   <span class="s1">&#39;storage_with_wrong_prefix&#39;</span><span class="p">:</span> <span class="s2">&quot;type == &#39;sto&#39; and not id.startswith(&#39;STO_&#39;)&quot;</span><span class="p">,</span>
+   <span class="c1"># Check for wrong used links</span>
+   <span class="s1">&#39;workflows_with_wrong_link_types&#39;</span><span class="p">:</span> <span class="s2">&quot;type == &#39;wor&#39; and any([produces, consumes, stores, uses])&quot;</span><span class="p">,</span>
+   <span class="s1">&#39;activity_with_wrong_link_types&#39;</span><span class="p">:</span> <span class="s2">&quot;type == &#39;act&#39; and any([executes, stores])&quot;</span><span class="p">,</span>
+   <span class="s1">&#39;artifact_with_wrong_link_types&#39;</span><span class="p">:</span> <span class="s2">&quot;type == &#39;art&#39; and any([executes, produces, consumes, stores, uses])&quot;</span><span class="p">,</span>
+   <span class="s1">&#39;storage_with_wrong_link_types&#39;</span><span class="p">:</span> <span class="s2">&quot;type == &#39;stor&#39; and any([executes, produces, consumes, uses])&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>A violation of our process rules looks on the console like this:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Checking sphinx-needs warnings
+workflow_with_wrong_prefix: passed
+workflow_with_wrong_link_types: failed
+        failed needs: 1 (WOR_001)
+        used filter: type == &#39;wor&#39; and any([produces, consumes, stores, uses])
+WARNING: Sphinx-Needs warnings were raised. See console / log output for details.
+</pre></div>
+</div>
+<p>If the <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> command is used to build the documentation, the option <code class="docutils literal notranslate"><span class="pre">-W</span></code> can be set. This handles
+all warnings as errors, so that the build gets stopped.</p>
+<p>So this can be used inside an CI build, to stop the user from integrating of a not process compliant documentation.</p>
+</section>
+<section id="better-process-model">
+<h2>Better process model<a class="headerlink" href="#better-process-model" title="Permalink to this headline">¶</a></h2>
+<p>For sure this process model is not complete and does not follow any standards.</p>
+<p>One important point, which we also have not configured are additional options like a “role”, which executes an
+activity. Or an “artifact_type” like “document” or  “binary”.</p>
+<p>So here are some ideas:</p>
+<ul class="simple">
+<li><p>Additional <strong>need types</strong>:</p>
+<ul>
+<li><p><strong>employee</strong>: Assign people to activities or clarify ownership</p></li>
+<li><p><strong>process</strong> and <strong>process step</strong>: A level above workflows and co.</p></li>
+</ul>
+</li>
+<li><p>Additional <strong>need options</strong>:</p>
+<ul>
+<li><p><strong>duration</strong>: time window for activity execution</p></li>
+<li><p><strong>path/url</strong>: Location of a storage</p></li>
+<li><p><strong>name</strong>: Name schema to use for an artifact</p></li>
+</ul>
+</li>
+<li><p>Additional <strong>link types</strong>:</p>
+<ul>
+<li><p><strong>employee</strong>: Link to an “employee” need type</p></li>
+<li><p><strong>department</strong>: Link to a “department” need type</p></li>
+<li><p><strong>tools</strong>: Links to “tools”, which are used by an activity</p></li>
+</ul>
+</li>
+</ul>
+<p>As you see, there is a lot of room for optimization.</p>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>We have our model configured, so we can start to play with it.
+Lets describe a <em>documentation update and build workflow</em>.</p>
+<section id="workflows">
+<h3>workflows<a class="headerlink" href="#workflows" title="Permalink to this headline">¶</a></h3>
+<p>This is an small example, so we only have one workflow:</p>
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_yellow_border needs_type_wor table" id="WOR_002">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Workflow</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">Documentation update, build and deploy</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#WOR_002" title="WOR_002">WOR_002</a></span>  <span class="needs collapse" id="target__hide__meta"><span class="needs collapsed"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-down-circle.svg" class="needs_image" src="../../_images/arrow-down-circle.svg" width="17px" /></a></span><span class="needs visible"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-right-circle.svg" class="needs_image" src="../../_images/arrow-right-circle.svg" width="17px" /></a></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">post_process_example</span></span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">yellow_border</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">executes: <span class="executes"><span><a class="reference internal" href="#ACT_002" title="WOR_002">ACT_002</a>, <a class="reference internal" href="#ACT_003" title="WOR_002">ACT_003</a>, <a class="reference internal" href="#ACT_004" title="WOR_002">ACT_004</a>, <a class="reference internal" href="#ACT_005" title="WOR_002">ACT_005</a>, <a class="reference internal" href="#ACT_006" title="WOR_002">ACT_006</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Describes how to update our project handbook and how build and deploy looks like.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="storages">
+<h3>storages<a class="headerlink" href="#storages" title="Permalink to this headline">¶</a></h3>
+<p>We need to store somewhere your source files and the final HTML documentation:</p>
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_blue_border needs_type_sto table" id="STO_002">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Storage</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">Git repo github.company.com/team_x/project_y</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#STO_002" title="STO_002">STO_002</a></span>  <span class="needs collapse" id="target__hide__meta"><span class="needs collapsed"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-down-circle.svg" class="needs_image" src="../../_images/arrow-down-circle.svg" width="17px" /></a></span><span class="needs visible"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-right-circle.svg" class="needs_image" src="../../_images/arrow-right-circle.svg" width="17px" /></a></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">post_process_example</span></span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">blue_border</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">stores: <span class="stores"><span><a class="reference internal" href="#ART_002" title="STO_002">ART_002</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>All files for project Y are available at github.company.com/team_x/project_y.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_blue_border needs_type_sto table" id="STO_003">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Storage</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">Apache Documentation Webserver</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#STO_003" title="STO_003">STO_003</a></span>  <span class="needs collapse" id="target__hide__meta"><span class="needs collapsed"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-down-circle.svg" class="needs_image" src="../../_images/arrow-down-circle.svg" width="17px" /></a></span><span class="needs visible"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-right-circle.svg" class="needs_image" src="../../_images/arrow-right-circle.svg" width="17px" /></a></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">post_process_example</span></span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">blue_border</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">stores: <span class="stores"><span><a class="reference internal" href="#ART_003" title="STO_003">ART_003</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Stores all HTML documentations.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="artifacts">
+<h3>artifacts<a class="headerlink" href="#artifacts" title="Permalink to this headline">¶</a></h3>
+<p>In our workflow we need to work with the following artifacts:</p>
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_border needs_type_art table" id="ART_002">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Artifact</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">Sphinx documentation sources</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#ART_002" title="ART_002">ART_002</a></span>  <span class="needs collapse" id="target__hide__meta"><span class="needs collapsed"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-down-circle.svg" class="needs_image" src="../../_images/arrow-down-circle.svg" width="17px" /></a></span><span class="needs visible"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-right-circle.svg" class="needs_image" src="../../_images/arrow-right-circle.svg" width="17px" /></a></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">post_process_example</span></span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_border</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">is produced by: <span class="produces"><span><a class="reference internal" href="#ACT_003" title="ART_002">ACT_003</a></span></span></div>
+<div class="line">is consumed by: <span class="consumes"><span><a class="reference internal" href="#ACT_002" title="ART_002">ACT_002</a>, <a class="reference internal" href="#ACT_003" title="ART_002">ACT_003</a>, <a class="reference internal" href="#ACT_005" title="ART_002">ACT_005</a></span></span></div>
+<div class="line">stored inside: <span class="stores"><span><a class="reference internal" href="#STO_002" title="ART_002">STO_002</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>All data inside <code class="docutils literal notranslate"><span class="pre">/docs/</span></code> of the project files.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_red_border needs_type_art table" id="ART_003">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Artifact</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">Sphinx documentation HTML files</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#ART_003" title="ART_003">ART_003</a></span>  <span class="needs collapse" id="target__hide__meta"><span class="needs collapsed"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-down-circle.svg" class="needs_image" src="../../_images/arrow-down-circle.svg" width="17px" /></a></span><span class="needs visible"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-right-circle.svg" class="needs_image" src="../../_images/arrow-right-circle.svg" width="17px" /></a></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">post_process_example</span></span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">red_border</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">is produced by: <span class="produces"><span><a class="reference internal" href="#ACT_005" title="ART_003">ACT_005</a></span></span></div>
+<div class="line">is consumed by: <span class="consumes"><span><a class="reference internal" href="#ACT_006" title="ART_003">ACT_006</a></span></span></div>
+<div class="line">stored inside: <span class="stores"><span><a class="reference internal" href="#STO_003" title="ART_003">STO_003</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>The generated, final documentation as HTML page.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="activities">
+<h3>activities<a class="headerlink" href="#activities" title="Permalink to this headline">¶</a></h3>
+<p>And final here are our activities, which are needed to finish the above workflow.</p>
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_green_border needs_type_act table" id="ACT_002">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Activity</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">Get documentation</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#ACT_002" title="ACT_002">ACT_002</a></span>  <span class="needs collapse" id="target__hide__meta"><span class="needs collapsed"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-down-circle.svg" class="needs_image" src="../../_images/arrow-down-circle.svg" width="17px" /></a></span><span class="needs visible"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-right-circle.svg" class="needs_image" src="../../_images/arrow-right-circle.svg" width="17px" /></a></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">post_process_example</span></span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">green_border</span></span></div>
+<div class="line"><span class="needs_role"><span class="needs_label">role: </span><span class="needs_data">developer</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">is executed by: <span class="executes"><span><a class="reference internal" href="#WOR_002" title="ACT_002">WOR_002</a></span></span></div>
+<div class="line">is needed by: <span class="needs"><span><a class="reference internal" href="#ACT_003" title="ACT_002">ACT_003</a></span></span></div>
+<div class="line">consumes: <span class="consumes"><span><a class="reference internal" href="#ART_002" title="ACT_002">ART_002</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Use <cite>git</cite> to clone the project files</p></td>
+</tr>
+</tbody>
+</table>
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_green_border needs_type_act table" id="ACT_003">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Activity</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">Update documentation</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#ACT_003" title="ACT_003">ACT_003</a></span>  <span class="needs collapse" id="target__hide__meta"><span class="needs collapsed"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-down-circle.svg" class="needs_image" src="../../_images/arrow-down-circle.svg" width="17px" /></a></span><span class="needs visible"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-right-circle.svg" class="needs_image" src="../../_images/arrow-right-circle.svg" width="17px" /></a></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">post_process_example</span></span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">green_border</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">is executed by: <span class="executes"><span><a class="reference internal" href="#WOR_002" title="ACT_003">WOR_002</a></span></span></div>
+<div class="line">needs: <span class="needs"><span><a class="reference internal" href="#ACT_002" title="ACT_003">ACT_002</a></span></span></div>
+<div class="line">is needed by: <span class="needs"><span><a class="reference internal" href="#ACT_004" title="ACT_003">ACT_004</a></span></span></div>
+<div class="line">produces: <span class="produces"><span><a class="reference internal" href="#ART_002" title="ACT_003">ART_002</a></span></span></div>
+<div class="line">consumes: <span class="consumes"><span><a class="reference internal" href="#ART_002" title="ACT_003">ART_002</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Use our IDE <code class="docutils literal notranslate"><span class="pre">PyCharm</span></code> to change needed files under <code class="docutils literal notranslate"><span class="pre">/docs/</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_green_border needs_type_act table" id="ACT_004">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Activity</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">Upload documentation</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#ACT_004" title="ACT_004">ACT_004</a></span>  <span class="needs collapse" id="target__hide__meta"><span class="needs collapsed"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-down-circle.svg" class="needs_image" src="../../_images/arrow-down-circle.svg" width="17px" /></a></span><span class="needs visible"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-right-circle.svg" class="needs_image" src="../../_images/arrow-right-circle.svg" width="17px" /></a></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">post_process_example</span></span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">green_border</span></span></div>
+<div class="line"><span class="needs_role"><span class="needs_label">role: </span><span class="needs_data">developer</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">is executed by: <span class="executes"><span><a class="reference internal" href="#WOR_002" title="ACT_004">WOR_002</a></span></span></div>
+<div class="line">needs: <span class="needs"><span><a class="reference internal" href="#ACT_003" title="ACT_004">ACT_003</a></span></span></div>
+<div class="line">is needed by: <span class="needs"><span><a class="reference internal" href="#ACT_005" title="ACT_004">ACT_005</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> to upload all commits, which include the documentation changes.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_green_border needs_type_act table" id="ACT_005">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Activity</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">Build and test doc change</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#ACT_005" title="ACT_005">ACT_005</a></span>  <span class="needs collapse" id="target__hide__meta"><span class="needs collapsed"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-down-circle.svg" class="needs_image" src="../../_images/arrow-down-circle.svg" width="17px" /></a></span><span class="needs visible"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-right-circle.svg" class="needs_image" src="../../_images/arrow-right-circle.svg" width="17px" /></a></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">post_process_example</span></span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">green_border</span></span></div>
+<div class="line"><span class="needs_role"><span class="needs_label">role: </span><span class="needs_data">CI</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">is executed by: <span class="executes"><span><a class="reference internal" href="#WOR_002" title="ACT_005">WOR_002</a></span></span></div>
+<div class="line">needs: <span class="needs"><span><a class="reference internal" href="#ACT_004" title="ACT_005">ACT_004</a></span></span></div>
+<div class="line">is needed by: <span class="needs"><span><a class="reference internal" href="#ACT_006" title="ACT_005">ACT_006</a></span></span></div>
+<div class="line">produces: <span class="produces"><span><a class="reference internal" href="#ART_003" title="ACT_005">ART_003</a></span></span></div>
+<div class="line">consumes: <span class="consumes"><span><a class="reference internal" href="#ART_002" title="ACT_005">ART_002</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Builds the documentation and runs some checks on it.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="need needs_grid_simple needs_layout_clean rtd-exclude-wy-table no-sphinx-material-strip needs_style_green_border needs_type_act table" id="ACT_006">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Activity</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">Deploy docs</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#ACT_006" title="ACT_006">ACT_006</a></span>  <span class="needs collapse" id="target__hide__meta"><span class="needs collapsed"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-down-circle.svg" class="needs_image" src="../../_images/arrow-down-circle.svg" width="17px" /></a></span><span class="needs visible"><a class="no_link reference external" href="#"><img alt="../../_images/arrow-right-circle.svg" class="needs_image" src="../../_images/arrow-right-circle.svg" width="17px" /></a></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">post_process_example</span></span></span></div>
+<div class="line"><span class="needs_style"><span class="needs_label">style: </span><span class="needs_data">green_border</span></span></div>
+<div class="line"><span class="needs_role"><span class="needs_label">role: </span><span class="needs_data">CI</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">is executed by: <span class="executes"><span><a class="reference internal" href="#WOR_002" title="ACT_006">WOR_002</a></span></span></div>
+<div class="line">needs: <span class="needs"><span><a class="reference internal" href="#ACT_005" title="ACT_006">ACT_005</a></span></span></div>
+<div class="line">consumes: <span class="consumes"><span><a class="reference internal" href="#ART_003" title="ACT_006">ART_003</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Deploys the documentation to _need:<cite>STO_003</cite></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="example-metrics-and-problems">
+<h3>Example Metrics and Problems<a class="headerlink" href="#example-metrics-and-problems" title="Permalink to this headline">¶</a></h3>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Is use <a class="reference external" href="https://sphinx-panels.readthedocs.io">Sphinx-Panels</a> a lot here, to provide also the rst code of the
+showed features.
+In reality this “report” would not have any <em>tabs</em> and would look much smoother.</p>
+</div>
+<div class="tabbed-set docutils">
+<input checked="checked" id="3cfec259-19fd-4cdc-bc1d-374977047c54" name="a02a425a-9b24-4fc2-8c8a-dd250b9d1dd8" type="radio">
+</input><label class="tabbed-label" for="3cfec259-19fd-4cdc-bc1d-374977047c54">
+result</label><div class="tabbed-content docutils">
+<p>The numbers here are for <a class="reference internal" href="#WOR_002" title="WOR_002"><em class="xref need">Documentation update, build... (WOR_002)</em></a>, which includes
+5
+activities and 2 artifacts, stored on
+2 storages.</p>
+</div>
+<input id="e7f9e43f-f8f1-48b9-939d-54fb26566f0f" name="a02a425a-9b24-4fc2-8c8a-dd250b9d1dd8" type="radio">
+</input><label class="tabbed-label" for="e7f9e43f-f8f1-48b9-939d-54fb26566f0f">
+rst code</label><div class="tabbed-content docutils">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>The numbers here are for <span class="na">:need:</span><span class="nv">`WOR_002`</span>,
+which includes :need_count:<span class="nv">`type==&quot;act&quot; and &quot;post_process_example&quot; in tags`</span>
+activities and :need_count:<span class="nv">`type==&quot;art&quot; and &quot;post_process_example&quot; in tags`</span> artifacts,
+stored on :need_count:<span class="nv">`type==&quot;sto&quot; and &quot;post_process_example&quot; in tags`</span> storages.
+</pre></div>
+</div>
+</div>
+</div>
+<p>The overall workflow diagram is:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="04d7d59b-3e8b-4bd9-86e6-78f6a993b7ef" name="a305c262-24cf-4e20-986a-8cac315ac8e5" type="radio">
+</input><label class="tabbed-label" for="04d7d59b-3e8b-4bd9-86e6-78f6a993b7ef">
+result</label><div class="tabbed-content docutils">
+<figure class="align-center" id="needflow-posts/2021/process_documentation-1">
+<p class="plantuml">
+<img src="../../_images/plantuml-1a3c62bbd16b89e9004819cef8c604506b7052b8.svg" alt="&#64;startuml
+
+' Nodes definition 
+
+node &quot;&lt;size:12&gt;Workflow&lt;/size&gt;\n**Documentation**\n**update, build**\n**and deploy**\n&lt;size:10&gt;WOR_002&lt;/size&gt;&quot; as WOR_002 [[../posts/2021/process_documentation.html#WOR_002]] #FFCC00 
+database &quot;&lt;size:12&gt;Storage&lt;/size&gt;\n**Git repo github**\n**.company.com/te**\n**am_x/project_y**\n&lt;size:10&gt;STO_002&lt;/size&gt;&quot; as STO_002 [[../posts/2021/process_documentation.html#STO_002]] #DF744A 
+database &quot;&lt;size:12&gt;Storage&lt;/size&gt;\n**Apache**\n**Documentation**\n**Webserver**\n&lt;size:10&gt;STO_003&lt;/size&gt;&quot; as STO_003 [[../posts/2021/process_documentation.html#STO_003]] #DF744A 
+artifact &quot;&lt;size:12&gt;Artifact&lt;/size&gt;\n**Sphinx**\n**documentation**\n**sources**\n&lt;size:10&gt;ART_002&lt;/size&gt;&quot; as ART_002 [[../posts/2021/process_documentation.html#ART_002]] #FEDCD2 
+artifact &quot;&lt;size:12&gt;Artifact&lt;/size&gt;\n**Sphinx**\n**documentation**\n**HTML files**\n&lt;size:10&gt;ART_003&lt;/size&gt;&quot; as ART_003 [[../posts/2021/process_documentation.html#ART_003]] #FEDCD2 
+rectangle &quot;&lt;size:12&gt;Activity&lt;/size&gt;\n**Get**\n**documentation**\n&lt;size:10&gt;ACT_002&lt;/size&gt;&quot; as ACT_002 [[../posts/2021/process_documentation.html#ACT_002]] #BFD8D2 
+rectangle &quot;&lt;size:12&gt;Activity&lt;/size&gt;\n**Update**\n**documentation**\n&lt;size:10&gt;ACT_003&lt;/size&gt;&quot; as ACT_003 [[../posts/2021/process_documentation.html#ACT_003]] #BFD8D2 
+rectangle &quot;&lt;size:12&gt;Activity&lt;/size&gt;\n**Upload**\n**documentation**\n&lt;size:10&gt;ACT_004&lt;/size&gt;&quot; as ACT_004 [[../posts/2021/process_documentation.html#ACT_004]] #BFD8D2 
+rectangle &quot;&lt;size:12&gt;Activity&lt;/size&gt;\n**Build and test**\n**doc change**\n&lt;size:10&gt;ACT_005&lt;/size&gt;&quot; as ACT_005 [[../posts/2021/process_documentation.html#ACT_005]] #BFD8D2 
+rectangle &quot;&lt;size:12&gt;Activity&lt;/size&gt;\n**Deploy docs**\n&lt;size:10&gt;ACT_006&lt;/size&gt;&quot; as ACT_006 [[../posts/2021/process_documentation.html#ACT_006]] #BFD8D2 
+
+' Connection definition 
+
+WOR_002 -[#777777]-&gt; ACT_002: executes
+WOR_002 -[#777777]-&gt; ACT_003: executes
+WOR_002 -[#777777]-&gt; ACT_004: executes
+WOR_002 -[#777777]-&gt; ACT_005: executes
+WOR_002 -[#777777]-&gt; ACT_006: executes
+STO_002 -[#0000AA]&gt; ART_002: stores
+STO_003 -[#0000AA]&gt; ART_003: stores
+ACT_002 &lt;-[#00AA00]- ART_002: consumes
+ACT_003 -[#AA4444]&gt; ACT_002: needs
+ACT_003 -[#AA0000]-&gt; ART_002: produces
+ACT_003 &lt;-[#00AA00]- ART_002: consumes
+ACT_004 -[#AA4444]&gt; ACT_003: needs
+ACT_005 -[#AA4444]&gt; ACT_004: needs
+ACT_005 -[#AA0000]-&gt; ART_003: produces
+ACT_005 &lt;-[#00AA00]- ART_002: consumes
+ACT_006 -[#AA4444]&gt; ACT_005: needs
+ACT_006 &lt;-[#00AA00]- ART_003: consumes
+
+&#64;enduml"/></p>
+</figure>
+<p>Hint: Open the image in a new tab. Each “box” is then a link to the related need in the documentation.</p>
+</div>
+<input id="46a5826e-5c60-4601-ac8d-3ff29e98ce55" name="a305c262-24cf-4e20-986a-8cac315ac8e5" type="radio">
+</input><label class="tabbed-label" for="46a5826e-5c60-4601-ac8d-3ff29e98ce55">
+rst code</label><div class="tabbed-content docutils">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">needflow</span><span class="p">::</span>
+   <span class="nc">:tags:</span> post_process_example
+   <span class="nc">:show_link_names:</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Table with all objects:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="09677e3e-ca6c-496a-976a-e1e7048823b4" name="f3119d9a-4f5d-4424-bf5a-cc794402bcfc" type="radio">
+</input><label class="tabbed-label" for="09677e3e-ca6c-496a-976a-e1e7048823b4">
+result</label><div class="tabbed-content docutils">
+<table class="NEEDS_DATATABLES rtd-exclude-wy-table no-sphinx-material-strip table" id="needtable-posts/2021/process_documentation-0">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 50%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ID</p></th>
+<th class="head"><p>Title</p></th>
+<th class="head"><p>Type Name</p></th>
+<th class="head"><p>Role</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference external" href="#ACT_002">ACT_002</a></p></td>
+<td class="needs_title"><p>Get documentation</p></td>
+<td class="needs_type_name"><p>Activity</p></td>
+<td class="needs_role"><p>developer</p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference external" href="#ACT_003">ACT_003</a></p></td>
+<td class="needs_title"><p>Update documentation</p></td>
+<td class="needs_type_name"><p>Activity</p></td>
+<td class="needs_role"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference external" href="#ACT_004">ACT_004</a></p></td>
+<td class="needs_title"><p>Upload documentation</p></td>
+<td class="needs_type_name"><p>Activity</p></td>
+<td class="needs_role"><p>developer</p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference external" href="#ACT_005">ACT_005</a></p></td>
+<td class="needs_title"><p>Build and test doc change</p></td>
+<td class="needs_type_name"><p>Activity</p></td>
+<td class="needs_role"><p>CI</p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference external" href="#ACT_006">ACT_006</a></p></td>
+<td class="needs_title"><p>Deploy docs</p></td>
+<td class="needs_type_name"><p>Activity</p></td>
+<td class="needs_role"><p>CI</p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference external" href="#ART_002">ART_002</a></p></td>
+<td class="needs_title"><p>Sphinx documentation sources</p></td>
+<td class="needs_type_name"><p>Artifact</p></td>
+<td class="needs_role"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference external" href="#ART_003">ART_003</a></p></td>
+<td class="needs_title"><p>Sphinx documentation HTML files</p></td>
+<td class="needs_type_name"><p>Artifact</p></td>
+<td class="needs_role"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference external" href="#STO_002">STO_002</a></p></td>
+<td class="needs_title"><p>Git repo github.company.com/team_x/project_y</p></td>
+<td class="needs_type_name"><p>Storage</p></td>
+<td class="needs_role"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference external" href="#STO_003">STO_003</a></p></td>
+<td class="needs_title"><p>Apache Documentation Webserver</p></td>
+<td class="needs_type_name"><p>Storage</p></td>
+<td class="needs_role"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference external" href="#WOR_002">WOR_002</a></p></td>
+<td class="needs_title"><p>Documentation update, build and deploy</p></td>
+<td class="needs_type_name"><p>Workflow</p></td>
+<td class="needs_role"><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="fb22acbb-5f61-4a18-bf85-be4f5c6b4500" name="f3119d9a-4f5d-4424-bf5a-cc794402bcfc" type="radio">
+</input><label class="tabbed-label" for="fb22acbb-5f61-4a18-bf85-be4f5c6b4500">
+rst code</label><div class="tabbed-content docutils">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">needtable</span><span class="p">::</span>
+   <span class="nc">:tags:</span> post_process_example
+   <span class="nc">:columns:</span> id, title, type_name, role
+</pre></div>
+</div>
+</div>
+</div>
+<section id="metrics">
+<h4>Metrics<a class="headerlink" href="#metrics" title="Permalink to this headline">¶</a></h4>
+<div class="tabbed-set docutils">
+<input checked="checked" id="bd0e4e48-35b5-47dc-86ea-0b9469dd98e0" name="a0ad614c-d15b-4eaf-b0dd-faaf0d8b35b5" type="radio">
+</input><label class="tabbed-label" for="bd0e4e48-35b5-47dc-86ea-0b9469dd98e0">
+result</label><div class="tabbed-content docutils">
+<img alt="../../_images/need_pie_09c96.png" id="needpie-posts/2021/process_documentation-0" src="../../_images/need_pie_09c96.png" />
+</div>
+<input id="1a230856-f19f-43c5-b237-9f0fba38a52c" name="a0ad614c-d15b-4eaf-b0dd-faaf0d8b35b5" type="radio">
+</input><label class="tabbed-label" for="1a230856-f19f-43c5-b237-9f0fba38a52c">
+rst code</label><div class="tabbed-content docutils">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">needpie</span><span class="p">::</span> Comparison of used need types
+   <span class="nc">:shadow:</span>
+   <span class="nc">:labels:</span> Workflow, Activity, Artifact, Storage
+
+   type==&quot;wor&quot; and &quot;post_process_example&quot; in tags
+   type==&quot;act&quot; and &quot;post_process_example&quot; in tags
+   type==&quot;art&quot; and &quot;post_process_example&quot; in tags
+   type==&quot;sto&quot; and &quot;post_process_example&quot; in tags
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tabbed-set docutils">
+<input checked="checked" id="704700b7-40dc-4ff0-87f7-5f9027c7421b" name="640d4ed0-22bf-420d-ad62-dad0463723c6" type="radio">
+</input><label class="tabbed-label" for="704700b7-40dc-4ff0-87f7-5f9027c7421b">
+result</label><div class="tabbed-content docutils">
+<p>Overall 33.3 % of activities are done by <strong>developer</strong>.
+And 33.3 % by <strong>CI</strong>.</p>
+</div>
+<input id="a12886ea-e7aa-49e0-a525-8530314e898a" name="640d4ed0-22bf-420d-ad62-dad0463723c6" type="radio">
+</input><label class="tabbed-label" for="a12886ea-e7aa-49e0-a525-8530314e898a">
+rst code</label><div class="tabbed-content docutils">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Overall :need_count:<span class="nv">`type==&quot;act&quot; and role==&quot;developer&quot; ? type==&quot;act&quot;`</span> % of activities are done by <span class="gs">**developer**</span>.
+And :need_count:<span class="nv">`type==&quot;act&quot; and role==&quot;CI&quot; ? type==&quot;act&quot;`</span> % by <span class="gs">**CI**</span>.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Hint: See <strong>problems</strong> to identify, why the sum of the above numbers is not 100%.</p>
+</section>
+<section id="problems">
+<h4>Problems<a class="headerlink" href="#problems" title="Permalink to this headline">¶</a></h4>
+<div class="tabbed-set docutils">
+<input checked="checked" id="1fd37714-3b5a-49df-863c-d3d4cc9256c4" name="b1358537-e5ef-4018-b2ab-3e8e04ff75d1" type="radio">
+</input><label class="tabbed-label" for="1fd37714-3b5a-49df-863c-d3d4cc9256c4">
+result</label><div class="tabbed-content docutils">
+<p><strong>Activities</strong> without a set role: 1</p>
+<div class="needstable_wrapper docutils container" id="needtable-posts/2021/process_documentation-1">
+<table class="NEEDS_TABLE table">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 50%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ID</p></th>
+<th class="head"><p>Title</p></th>
+<th class="head"><p>Needs</p></th>
+<th class="head"><p>Role</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference external" href="#ACT_003">ACT_003</a></p></td>
+<td class="needs_title"><p>Update documentation</p></td>
+<td class="needs_needs"><p><a class="reference external" href="#ACT_002">ACT_002</a></p></td>
+<td class="needs_role"><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<input id="750fb837-d688-469e-9f8e-4365ab21a8cf" name="b1358537-e5ef-4018-b2ab-3e8e04ff75d1" type="radio">
+</input><label class="tabbed-label" for="750fb837-d688-469e-9f8e-4365ab21a8cf">
+rst code</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>**Activities** without a set role: :need_count:`type==&quot;act&quot; and not role and &quot;post_process_example&quot; in tags`s
+
+.. needtable::
+   :filter: type==&quot;act&quot; and not role and &quot;post_process_example&quot; in tags
+   :style: table
+   :columns: id, title, needs, role
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="final-words">
+<h2>Final words<a class="headerlink" href="#final-words" title="Permalink to this headline">¶</a></h2>
+<p>I hope the above example and the described configuration is helpful for your use cases and gives you some
+impressions about Sphinx-Needs and its features.</p>
+<p>And for sure, this configuration can be easily extended to build the documentation of a sw development project.
+Sphinx-Needs supports by default requirements, specification and test cases.</p>
+<p>And with the above configuration, you can easily link sw requirements to activities and other elements.</p>
+</section>
+</section>
+
+<div class="section">
+     
+<div class="section">
+  <span style="float: left">
+     
+    <a href="open_needs_db.html">
+      <i class="fa fa-arrow-circle-left"></i> Open-Needs-DB gets funded
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+    
+  </span>
+</div>
+  
+  <div class="section">
+    <h2>Comments</h2>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = "danwos";
+      var disqus_identifier = "/posts/2021/process_documentation/";
+      var disqus_title = "Process documentation with Sphinx-Needs";
+      var disqus_url = "https://daniel-woste.de/posts/2021/process_documentation";
+
+      (function () {
+        var dsq = document.createElement("script");
+        dsq.type = "text/javascript";
+        dsq.async = true;
+        dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+        (
+          document.getElementsByTagName("head")[0] ||
+          document.getElementsByTagName("body")[0]
+        ).appendChild(dsq);
+      })();
+    </script>
+    <noscript
+      >Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript"
+        >comments powered by Disqus.</a
+      ></noscript
+    >
+    <a href="https://disqus.com" class="dsq-brlink"
+      >comments powered by <span class="logo-disqus">Disqus</span></a
+    >
+  </div>
+  
+</div>
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Daniel Woste.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

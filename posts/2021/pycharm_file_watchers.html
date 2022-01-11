@@ -1,0 +1,527 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>PyCharm File Watchers for Sphinx projects &#8212; danwos  documentation</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/assets/jsonview.bundle.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/libs/html/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/styles.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/modern.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/assets/jsonview.bundle.js"></script>
+    <script src="../../_static/assets/jsonview_loader.js"></script>
+    <script src="../../_static/sphinx-needs/libs/html/datatables.min.js"></script>
+    <script src="../../_static/sphinx-needs/libs/html/datatables_loader.js"></script>
+    <script src="../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js"></script>
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-0MZ0221M7W"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-0MZ0221M7W');
+                </script>
+ 
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="danwos"
+/>
+ 
+<style type="text/css">
+  ul.ablog-archive {
+    list-style: none;
+    overflow: auto;
+    margin-left: 0px;
+  }
+  ul.ablog-archive li {
+    float: left;
+    margin-right: 5px;
+    font-size: 80%;
+  }
+  ul.postlist a {
+    font-style: italic;
+  }
+  ul.postlist-style-disc {
+    list-style-type: disc;
+  }
+  ul.postlist-style-none {
+    list-style-type: none;
+  }
+  ul.postlist-style-circle {
+    list-style-type: circle;
+  }
+</style>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="../../index.html">
+  <img src="../../_static/danwos_white.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../blog.html">
+  Blog
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../about.html">
+  About me
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../projects.html">
+  Projects
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../ideas.html">
+  Ideas
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this site..." aria-label="Search this site..." autocomplete="off" >
+</form>
+      </div>
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/danwos/" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/danwos" rel="noopener" target="_blank" title="Twitter">
+            <span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.linkedin.com/in/daniel-woste-362b6252/" rel="noopener" target="_blank" title="LinkedIn">
+            <span><i class="fab fa-linkedin"></i></span>
+            <label class="sr-only">LinkedIn</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://www.xing.com/profile/Daniel_Woste/" rel="noopener" target="_blank" title="Xing">
+            <span><i class="fab fa-xing"></i></span>
+            <label class="sr-only">Xing</label>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://useblocks.com" rel="noopener" target="_blank" title="My company useblocks">
+            <span><i class="fab fa-briefcase"></i></span>
+            <label class="sr-only">My company useblocks</label>
+          </a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">  
+<h2>
+   <i class="fa fa-calendar"></i>
+  05 November 2021 
+</h2>
+
+<ul>
+   
+<li id="author">
+  <span
+    ><i class="fa-fw fa fa-user"></i></span
+  >
+   
+  <a href="../../blog/author/daniel-woste.html">Daniel Woste</a>  
+</li>
+    
+<li id="tags">
+  <span
+    ><i class="fa-fw fa fa-tags"></i> </span
+  >
+   
+  <a href="../../blog/tag/sphinx.html">sphinx</a>   
+  <a href="../../blog/tag/pycharm.html">pycharm</a>   
+  <a href="../../blog/tag/watchers.html">watchers</a>  
+</li>
+ 
+<li id="comments">
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = "danwos"; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+      var s = document.createElement("script");
+      s.async = true;
+      s.type = "text/javascript";
+      s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+      (
+        document.getElementsByTagName("HEAD")[0] ||
+        document.getElementsByTagName("BODY")[0]
+      ).appendChild(s);
+    })();
+  </script>
+  <i class="fa-fw fa fa-comments"></i>
+  <a
+    href="#disqus_thread"
+    data-disqus-identifier="/posts/2021/pycharm_file_watchers/"
+  >
+    </a
+  >
+</li>
+
+</ul>
+
+<h3>
+  <a href="../../blog.html">Recent Posts</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="process_documents.html"
+      >02 December - Process documents with Sphinx-Needs</a
+    >
+  </li>
+  
+  <li>
+    <a href="open_needs_db.html"
+      >29 November - Open-Needs-DB gets funded</a
+    >
+  </li>
+  
+  <li>
+    <a href="sphinx_extension_dev.html"
+      >22 November - Sphinx Extension Development: Tips & Tricks</a
+    >
+  </li>
+  
+  <li>
+    <a href="docs-as-code-enhanced.html"
+      >19 November - Docs-as-Code Enhanced</a
+    >
+  </li>
+  
+  <li>
+    <a href="meta_data_per_page.html"
+      >18 November - Page meta data in Sphinx</a
+    >
+  </li>
+  
+</ul>
+
+<h3>
+  <a href="../../blog/archive.html">Archives</a>
+</h3>
+<ul>
+   
+  <li>
+    <a href="../../blog/2021.html">2021 (9)</a>
+  </li>
+   
+</ul>
+
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<nav id="bd-toc-nav">
+    
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                 <section class="tex2jax_ignore mathjax_ignore" id="pycharm-file-watchers-for-sphinx-projects">
+<span id="pycharm-file-watchers"></span><h1>PyCharm File Watchers for Sphinx projects<a class="headerlink" href="#pycharm-file-watchers-for-sphinx-projects" title="Permalink to this headline">¶</a></h1>
+<p>I often have the case that I want to see my documentation as fast as possible.</p>
+<p>And I know there are “Preview” IDE-Extensions available, which want to solve this problem.</p>
+<p>But the all have one of the following problems:</p>
+<ul class="simple">
+<li><p>they often support standard rst-syntax only (so no Sphinx-Extension support).</p></li>
+<li><p>their preview window is not reachable or positioned they way I need it.</p></li>
+<li><p>they often force a full build, as their build command is different as the one I normally use.</p></li>
+<li><p>I need to see the result in a normal browser window with the option to “debug” the site (e.g. to check css configs).</p></li>
+</ul>
+<p>So I came up with the solution to use the build-in File Watcher feature of my PyCharm IDE.</p>
+<p>Open <em>File -&gt; Settings -&gt; File Watchers</em></p>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/1_general_settings.png"><img alt="../../_images/1_general_settings.png" src="../../_images/1_general_settings.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text"><em>File Watchers area on the Settings window</em></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Create a new watcher (<code class="docutils literal notranslate"><span class="pre">plus</span></code> sign) and select <code class="docutils literal notranslate"><span class="pre">&lt;custom&gt;</span></code>.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/2_select_custom.png"><img alt="../../_images/2_select_custom.png" src="../../_images/2_select_custom.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text"><em>File Watcher template selection</em></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Set <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">Type</span></code> to <code class="docutils literal notranslate"><span class="pre">All</span></code>.</p>
+<p>Configure the project <code class="docutils literal notranslate"><span class="pre">scope</span></code>. This defines when your watcher gets triggered.</p>
+<p>Select your <code class="docutils literal notranslate"><span class="pre">docs</span></code> folder and press <code class="docutils literal notranslate"><span class="pre">Include</span> <span class="pre">recursively</span></code>.</p>
+<p>Then select the <code class="docutils literal notranslate"><span class="pre">_build</span></code> folder inside <code class="docutils literal notranslate"><span class="pre">docs</span></code> and exclude it by pressing <code class="docutils literal notranslate"><span class="pre">Exclude</span> <span class="pre">recursively</span></code>.
+This step is important, otherwise the File watcher will hang in a loop, as it is changing files under <code class="docutils literal notranslate"><span class="pre">_build</span></code>,
+what would retrigger the watcher.</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/3_project_scope.png"><img alt="../../_images/3_project_scope.png" src="../../_images/3_project_scope.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text"><em>Project scope defintion</em></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Back to the File Watcher configuration.</p>
+<p>Select for <code class="docutils literal notranslate"><span class="pre">Program</span></code> the <code class="docutils literal notranslate"><span class="pre">sphinx-build</span></code> command from your used Python Environment.</p>
+<p>Set as arguments <code class="docutils literal notranslate"><span class="pre">-b</span> <span class="pre">html</span> <span class="pre">.</span> <span class="pre">_build/html</span></code> and as <code class="docutils literal notranslate"><span class="pre">Working</span> <span class="pre">Directtory</span></code> the <code class="docutils literal notranslate"><span class="pre">docs/</span></code> folder.</p>
+<p>Under <code class="docutils literal notranslate"><span class="pre">Advanced</span> <span class="pre">Options</span></code> select <code class="docutils literal notranslate"><span class="pre">Always</span></code> for <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">console</span></code>.
+This helps to see each build result.</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../../_images/4_final_settings.png"><img alt="../../_images/4_final_settings.png" src="../../_images/4_final_settings.png" style="width: 80%;" /></a>
+<figcaption>
+<p><span class="caption-text"><em>Project scope defintion</em></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>After storing the config by pressing <code class="docutils literal notranslate"><span class="pre">OK</span></code>, a small popup shows up in the bottom right corner, asking you to
+trust all project file watchers in general.</p>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../../_images/5_trust_watchers.png"><img alt="../../_images/5_trust_watchers.png" src="../../_images/5_trust_watchers.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-text"><em>Trust File Watchers?</em></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>That’s it. For sure, you still need to open the generated page in your browser by hand.</p>
+<hr class="docutils" />
+<table class="need needs_grid_content_footer needs_layout_meta rtd-exclude-wy-table no-sphinx-material-strip needs_style_clean needs_type_metadata table" id="WATCHERS">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="content row-odd"><td class="content"><dl class="field-list simple">
+<dt class="field-odd">Title</dt>
+<dd class="field-odd"><p>PyCharm File Watchers for Sphinx projects</p>
+</dd>
+<dt class="field-even">Author</dt>
+<dd class="field-even"><p>danwos</p>
+</dd>
+<dt class="field-odd">Tags</dt>
+<dd class="field-odd"><p>pycharm, watchers, automation, sphinx</p>
+</dd>
+<dt class="field-even">Last changed</dt>
+<dd class="field-even"><p>20.11.2021</p>
+</dd>
+</dl>
+<p>How to configure and use PyCharm file watchers to generate Sphinx documentation with
+ech file change</p>
+</td>
+</tr>
+<tr class="footer row-even"><td class="footer"><div class="needs_footer line-block">
+<div class="line"><span><span class="needs collapse" id="target__hide__content"><span class="needs collapsed">Hide page metadata</span><span class="needs visible">Show page metadata</span></span> </span></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+</section>
+
+<div class="section">
+    
+
+<div class="section">
+  <span style="float: left">
+     
+    <a href="page_reactivation.html">
+      <i class="fa fa-arrow-circle-left"></i> Page reactivation
+    </a>
+    
+  </span>
+  <span>&nbsp;</span>
+  <span style="float: right">
+     
+    <a href="sphinx_needs_string_links.html">
+      String2Link transformation with Sphinx-Needs <i
+        class="fa fa-arrow-circle-right"
+      ></i
+      >
+    </a>
+    
+  </span>
+</div>
+  
+  <div class="section">
+    <h2>Comments</h2>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = "danwos";
+      var disqus_identifier = "/posts/2021/pycharm_file_watchers/";
+      var disqus_title = "PyCharm File Watchers for Sphinx projects";
+      var disqus_url = "https://daniel-woste.de/posts/2021/pycharm_file_watchers";
+
+      (function () {
+        var dsq = document.createElement("script");
+        dsq.type = "text/javascript";
+        dsq.async = true;
+        dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+        (
+          document.getElementsByTagName("head")[0] ||
+          document.getElementsByTagName("body")[0]
+        ).appendChild(dsq);
+      })();
+    </script>
+    <noscript
+      >Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript"
+        >comments powered by Disqus.</a
+      ></noscript
+    >
+    <a href="https://disqus.com" class="dsq-brlink"
+      >comments powered by <span class="logo-disqus">Disqus</span></a
+    >
+  </div>
+  
+</div>
+
+              </div>
+              
+              
+              <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2021, Daniel Woste.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.2.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
