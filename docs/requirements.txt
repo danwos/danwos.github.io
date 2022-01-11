@@ -2,7 +2,7 @@ sphinx>=3.4
 sphinxcontrib-plantuml
 
 # Always use latest code from master
-git+git://github.com/useblocks/sphinxcontrib-needs@master
+git+https://github.com/useblocks/sphinxcontrib-needs@master
 
 sphinx-copybutton
 sphinxcontrib-programoutput
