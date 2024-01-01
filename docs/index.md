@@ -9,7 +9,7 @@ html_meta:
 ```{title} Daniel Woste personal page
 ```
 
-```{image} _static/danwos_intro.png
+```{image} _static/danwos_intro2.png
 :align: center
 :width: 100%
 ```
@@ -21,6 +21,15 @@ I'm Daniel, and I'm a passionate Software developer for topics round about
 * 📊 Business Insights
 * 📚 Smart Documentation and
 * 🔨 Continuous Integration and 📦 Delivery 
+
+This is my private blog, used to write down my thoughts and ideas about documentation challenges in bigger teams.
+
+I haven developed a bunch of solutions, that make it possible to use the docs-as-code approach not only for end-user documentation but already during project setup and realization, including Application Lifecycle Management and the intergration of external data from architecture and test frameworks.
+Just take a look at [my projects](projects-target) for a quick overview.
+
+My daily work is at [useblocks](https://useblocks.com), a small, specialized, German company creating tools for the international
+Automotive industry. Focussing mostly on PMT (processes, methods, tools) for distributed software teams (>100-2.000 team members).
+
 
 
 ```{postlist}

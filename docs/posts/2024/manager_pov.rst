@@ -1,0 +1,89 @@
+
+:author: Daniel Woste
+:tags: manager, docs-as-code, dac, pov
+:date: 2030-01-01
+
+
+Manager POV: What's the benefit of docs-as-code?
+================================================
+
+
+.. image:: _images/02_manager_pov.png
+   :align: center
+
+In the last 2-3 years one of my main tasks was to convince people to use a docs-as-code approach for their SW project.
+The hard part is not to convince SW developers to use it, as they are often already doing it. 
+But team leaders and managers, as their concerns are often not related to single features, but more about process 
+and toolchain compliants and integration. And for sure the question of all questions: What's the monetary benefit?
+
+So if you are a CEO, a manager, a team leader or just want to understand the big picture, grab a coffee/tea, sit back and let me explain: 
+How docs-as-code will save you money and still increase the product quality.
+
+Let's create a fictitious, shorten conversation, between a Project manager and me, that's make it much easier for you to skip certain questions and
+use it also as some kind of reference book for later needed arguments in possible further dicussions.
+
+The content will be based on discussions I already had in the past with multiple SW teams.
+
+**The scenario**: A German Automotive company (TIER-1: direct supplier for several car manufacturers (OEMs)) needs to create embedded software 
+for an electronic control unit (ECU). Team size is **~500 SW Engineers**, sitting at **3 locations** (Germany, India, USA).
+
+My contact person is Peter Heinzel, the project manager, responsible for the in-time delivery, the budget and the compliance with the legal requirements of such a SW development.
+
+----
+
+**Me:** Mr. Heinzel, thanks for the invitation and the possibility to talk about docs-as-code with you. I'm really looking forward to understand your project and the special 
+requirements it may have.
+
+**Mr. Heinzel:**  Thanks for beeing here. Our project is quite complex, 500 SW engineers, sitting at 3 locations in 3 different time zones. Luckily they are all using the same
+technical infrastructure. I have been asked by some of my core developers, if docs-as-code could be used to document and steer our SW projects.
+And honestly, I have never heard about it before.
+
+----
+
+**Me:** I will give you a short introduction, but before I know where to put the focus, let me allow 1-2 questions. **I guess your company or team already
+has solutions for documentation and project steering. Why the change?**.
+
+**Mr. Heinzel:** Well, let's say it like this: The preliminary project didn't go so well. We fulfilled all legal requirements, but with a lot of rework at the end of the project
+to create the needed documentation or fix the quality issues we had in the existing data. This has cost us some extra weeks of work with multiple internal and external audits until
+everybody was happy with at least the lowest possible level of compliance. 
+
+**Me:** Was this situation based on the **usage of the wrong tools, which were not capable of providing the needed features?**
+
+**Mr. Heinzel:** Oh no, we have **spent a lot of money for licenses, to get the best of the best.** So for most expert tools, we were using solutions from market leaders, which were all capable
+of providing the needed features. However, the data quality inside these tools was poor, which sounds like a problem on our side, as we were responsible to input and maintain the data. But yes, looks
+like nobody did this job often enough. We tried to change processes, put more men power on the process maintenance part, it helped a little bit but getting the budget for such long going, not planned actions
+was also not easy.
+And honestly speaking, I'm not sure **how a tool switch may change this situation?!**
+
+**Me:** The docs-as-code approach can help you here. But first of all, **your problem was not missing features, but missing usability and attractiveness.** 
+Most expert tools are just this, tools for experts. Written to be used on a daily base and with detailed knowledge of the tool interface. Providing solutions for every possible requirement, even if not used
+by a project. This makes it hard for users, who are mostly responsible for something else. May I ask, **who writes the SW requirements and what does the change process look like?**
+
+**Mr. Heinzel:** We have requirements of different levels. For System Requirements, a Requirement Engineer is responsible. She or he defines the requirement in our expert tool and marks the SW components, 
+which need to implement something. The SW component leaders get informed and their team needs to break the system requirement down and describe their component's internal architecture. 
+These component requirements and any updates are rechecked by the System engineer and need to be approved. After that, the team can start to use our ticket system to plan the component's internal implementation.
+
+**Me:** Oh, this means a None-Requirement-Expert is forced to work inside the export tool of a requirement engineer. And as Requirement changes of a SW component are not so often, it may be needed only 
+3-4 times per months. Is there often a single person in a component team, who is responsible for maintaining the related requirements, **or must every team member may be update requirements on their own?**
+
+**Mr. Heinzel:** Well as there can be domain-specific developers in a component team, these SW expert needs to update their related requirements on their own.
+
+**Me:** To be honest, I like this approach, but this means that each single SW developer needs to understand the Requirement engineering tool, the process and must like the tool interfaces.
+**And that's all besides their needed knowledge for their tools and processes.**
+
+**Mr. Heinzel:** **You mean they are living in 2 worlds, where the used data may be related to each other, but tools and processes are not?**
+
+**Me**: Exactly, I call it the "tool and process-cut". A situation, which makes it uncomfortable for a user to maintain the needed data in tool A, to prepare it for the final usage in tool B.
+So the motivation to maintain such data is low and therefore also the data quality will be low. This is what happened to the last project.
+
+**Mr. Heinzel:** **So we must change our process, to make sure that a person with a certain process role needs only to use the related expert tool?**
+
+**Me**: Would be nice, but that's not doable. For instance for developers have domain-specific knowledge, so that they care about everything in this domain. From the first idea, the SW architecture and implementation,
+till the final tests nd maybe also customer documentation. This can't be split, but he/she should not be forced to use a different tool for each of the needed actions?
+
+**Mr. Heinzel:** **So a new tool, which combines everything in it? Requirements, Architecture, Code, Tests, ... ?**
+
+**Me**: First of all, I don't believe in such tools, as they need to make every expert happy and provide a lot of features. So in the end you something like the *mother of all expert tools*.
+And second, ***why a new tool?**
+
+
