@@ -1,19 +1,18 @@
 # Projects
 
 A collection of projects I have 
-{badge}`created,badge-success`, 
-{badge}`maintained,badge-primary` 
-or simply was {badge}`hired,badge-dark` for.
+{bdg-success}`created`, 
+{bdg-primary}`maintained` 
+or simply was {bdg-dark}`hired` for.
 
 
 ## Open Source
 
 ### Active projects
 
-````{panels}
-:card: border-1
----
-**Sphinx-Needs** {badge}`created,badge-success` {badge}`maintained,badge-primary` 
+`````{grid} 1 1 2 2
+````{grid-item-card}
+**Sphinx-Needs** {bdg-success}`created` {bdg-primary}`maintained` 
 ^^^^^^^^^^^^
 Brings life cycle management to Sphinx.
 
@@ -22,28 +21,29 @@ Link them, add data and present the result in list, tables and flowchart.
 
 Totally configurable and ready for any kind of use case.  
 
-```{image}  https://img.shields.io/github/stars/useblocks/sphinxcontrib-needs?style=social
-:target: https://github.com/useblocks/sphinxcontrib-needs
+```{image}  https://img.shields.io/github/stars/useblocks/sphinx-needs?style=social
+:target: https://github.com/useblocks/sphinx-needs
 :alt: Sphinx-Needs github stars
 ```  
 
-```{image}  https://img.shields.io/pypi/dd/sphinxcontrib-needs.svg
-:target: https://pypistats.org/packages/sphinxcontrib-needs
+```{image}  https://img.shields.io/pypi/dd/sphinx-needs.svg
+:target: https://pypistats.org/packages/sphinx-needs
 :alt: Sphinx-Needs downloads daily
 ```
 
-```{image}  https://img.shields.io/pypi/dm/sphinxcontrib-needs.svg
-:target: https://pypistats.org/packages/sphinxcontrib-needs
+```{image}  https://img.shields.io/pypi/dm/sphinx-needs.svg
+:target: https://pypistats.org/packages/sphinx-needs
 :alt: Sphinx-Needs downloads monthly
 ```
 
 +++
 [Sphinx-Needs Website](https://sphinx-needs.com)  
-[Sphinx-Needs Documentation](https://sphinxcontrib-needs.readthedocs.io/en/latest/)
+[Sphinx-Needs Documentation](https://sphinx-needs.readthedocs.io/en/latest/)
 
----
+````
+````{grid-item-card}
 
-**Sphinx-Collections** {badge}`created,badge-success` {badge}`maintained,badge-primary`
+**Sphinx-Collections** {bdg-success}`created` {bdg-primary}`maintained`
 ^^^^^^^^^^^^^^^^^^
 A package to collect or generate documentation files from different sources and make them avaialbe 
 in the Sphinx source folder.
@@ -69,9 +69,10 @@ documentation.
 +++
 [Sphinx-Collections Documentation](https://sphinx-collections.readthedocs.io/en/latest/)
 
----
+````
+````{grid-item-card}
 
-**Sphinx-Test-Reports** {badge}`created,badge-success` {badge}`maintained,badge-primary`
+**Sphinx-Test-Reports** {bdg-success}`created` {bdg-primary}`maintained`
 ^^^^^^^^^^^^^^^^^^^
 Shows Test-Results inside [Sphinx](https://www.sphinx-doc.org) based documentation.
 
@@ -97,9 +98,10 @@ found test case in a `junit-based` xml file.
 [Sphinx-Test-Reports Documentation](https://sphinx-test-reports.readthedocs.io/en/latest/)
 
 
----
+````
+````{grid-item-card}
 
-**Sphinx-Data-Viewer** {badge}`created,badge-success` {badge}`maintained,badge-primary`
+**Sphinx-Data-Viewer** {bdg-success}`created` {bdg-primary}`maintained`
 ^^^^^^^^^^^^^^^^^^^
 A simple data viewer for data of type json or python object, which shows the data in an interactive 
 list-view on HTML pages.
@@ -122,9 +124,10 @@ list-view on HTML pages.
 +++
 [Sphinx-Data-Viewer Documentation](https://sphinx-data-viewer.readthedocs.io/en/latest/)
 
----
+````
+````{grid-item-card}
 
-**Sphinx-Preview** {badge}`created,badge-success` {badge}`maintained,badge-primary`
+**Sphinx-Preview** {bdg-success}`created` {bdg-primary}`maintained`
 ^^^^^^^^^^^^^^^^^^^
 A simple data viewer for data of type json or python object, which shows the data in an interactive 
 list-view on HTML pages.
@@ -148,13 +151,14 @@ list-view on HTML pages.
 [Sphinx-Preview Documentation](https://sphinx-preview.readthedocs.io/en/latest/)
 
 ````
+`````
 
 ### Deprecated projects
 
-````{panels}
-:card: border-1
----
-**Groundwork** {badge}`created,badge-success` {badge}`maintained,badge-primary`
+`````{grid}
+
+````{grid-item-card}
+**Groundwork** {bdg-success}`created` {bdg-primary}`maintained`
 ^^^^^^^^^^
 groundwork is a Python based microframework for highly reusable applications and their components.
 Its functionality is based on exchangeable, well-documented and well-tested plugins and patterns.
@@ -178,20 +182,23 @@ Quite old and unmaintained. But I put some months into it, so it is worth beeing
 +++
 [Groundwork Documentation](https://groundwork.readthedocs.io/en/latest/)
 ````
+`````
 
 ## Customer internal
-````{panels}
-:card: border-1
----
-**ReleaseNotes Creator** {badge}`created,badge-dark` 
+
+`````{grid} 1 1 2 2 
+
+````{grid-item-card}
+**ReleaseNotes Creator** {bdg-dark}`created` 
 ^^^^^^^^^^
 A script to create a HTML/PDF report of content between two given git tags.
 
 Collects and reports also all related JIRA issues, GitHub PRs and Commits and touched files.
 
----
+````
+````{grid-item-card}
 
-**DeltaReport** {badge}`created,badge-dark` 
+**DeltaReport** {bdg-dark}`created` 
 ^^^^^^^^^^
 Creates a delta report of commit-based content on different, technical unrelated  branches.
 
@@ -199,8 +206,9 @@ Compares commits based on content, author and other indicators to identify match
 
 Report is an interactive but static HTML page.
 
----
-**SyncMonitor** {badge}`created,badge-dark` 
+````
+````{grid-item-card}
+**SyncMonitor** {bdg-dark}`created` 
 ^^^^^^^^^^
 Compares the planned dates of JIRA issues with the related commits and their "release tags".
 
@@ -211,7 +219,8 @@ Identifies problems like:
 * Issue is open but release date is in the past.
 * Commit with no linked issues got integrated into a release.  
 
----
+````
+````{grid-item-card}
 
 **AWS Integration**  
 ^^^^^^^^^^
@@ -226,13 +235,16 @@ Used infrastructure-as-code frameworks:
  
 
 ````
+`````
 
 
 ```{eval-rst}
 .. metadata::
    :id: PROJECTS
    :author: danwos
-   :last_changed: 01.12.2021
+   :last_changed: 01.01.2024
    
    Short list of my projects
 ```
+
+&nbsp;

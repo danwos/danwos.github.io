@@ -186,3 +186,16 @@ All with extra post about Sphinx-Needs integration
 **C docstring via Breathe**
 
 **JS with sphinx-js**
+
+
+
+```{eval-rst}
+.. metadata::
+   :id: IDEAS
+   :author: danwos
+   :last_changed: 01.01.2024
+   
+   Lists of ideas for tools and documentation projects.
+```
+
+&nbsp;

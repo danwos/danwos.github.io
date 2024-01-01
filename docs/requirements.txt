@@ -2,11 +2,12 @@ sphinx>=3.4
 sphinxcontrib-plantuml
 
 # Always use latest code from master
-git+https://github.com/useblocks/sphinxcontrib-needs@master
+#git+https://github.com/useblocks/sphinxcontrib-needs@master
+sphinx-needs
 
 sphinx-copybutton
 sphinxcontrib-programoutput
-sphinx-panels
+sphinx-design
 pydata-sphinx-theme
 ablog
 MyST-Parser

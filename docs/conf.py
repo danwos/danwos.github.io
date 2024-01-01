@@ -32,8 +32,8 @@ extensions = [
     'sphinxcontrib.plantuml',
     'ablog',
     'myst_parser',
-    'sphinx_panels',
-    'sphinxcontrib.needs',
+    'sphinx_design',
+    'sphinx_needs',
 ]
 
 needs_title_optional = True
@@ -212,32 +212,37 @@ html_theme_options = {
     "show_toc_level": 3,
     "search_bar_text": "Search this site...",
     "google_analytics_id": "G-0MZ0221M7W",
-    "navbar_end": ["search-field.html", "navbar-icon-links"],
+    "navbar_end": ["theme-switcher", "navbar-icon-links"],
     "icon_links": [
         {
             "name": "GitHub",
             "url": "https://github.com/danwos/",
-            "icon": "fab fa-github-square",
+            "icon": "fa-brands fa-square-github",
+            "type": "fontawesome",
         },
         {
             "name": "Twitter",
             "url": "https://twitter.com/danwos",
-            "icon": "fab fa-twitter-square",
+            "icon": "fa-brands fa-twitter",
+            "type": "fontawesome",
         },
         {
             "name": "LinkedIn",
             "url": "https://www.linkedin.com/in/daniel-woste-362b6252/",
-            "icon": "fab fa-linkedin",
+            "icon": "fa-brands fa-linkedin",
+            "type": "fontawesome",
         },
         {
             "name": "Xing",
             "url": "https://www.xing.com/profile/Daniel_Woste/",
-            "icon": "fab fa-xing",
+            "icon": "fa-brands fa-xing",
+            "type": "fontawesome",
         },
         {
             "name": "My company useblocks",
             "url": "https://useblocks.com",
-            "icon": "fab fa-briefcase",
+            "icon": "fa-solid fa-briefcase",
+            "type": "fontawesome",
         },
     ],
 }
@@ -248,9 +253,9 @@ html_sidebars = {
     "publications": ["me.html"],
     "projects": ["me.html"],
     "talks": ["me.html"],
-    "posts/**": ['postcard.html', 'recentposts.html', 'archives.html'],
-    "blog": ['tagcloud.html', 'archives.html'],
-    "blog/**": ['postcard.html', 'recentposts.html', 'archives.html']
+    "posts/**": ['ablog/postcard.html', 'ablog/recentposts.html', 'ablog/archives.html'],
+    "blog": ['ablog/tagcloud.html', 'ablog/archives.html'],
+    "blog/**": ['ablog/postcard.html', 'ablog/recentposts.html', 'ablog/archives.html']
 }
 
 # Sphinx-panels config

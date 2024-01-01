@@ -4,11 +4,10 @@ html_meta:
   "keywords": "Sphinx, MyST"
   "property=og:locale": "en_US"
 ---
+# Big business and Docs-as-code
+
 ```{title} Daniel Woste personal page
 ```
-
-
-# Big business and Docs-as-code
 
 ```{image} _static/danwos_intro.png
 :align: center
@@ -40,7 +39,7 @@ ideas
 ```
 
 ## Page meta data objects
-
+&nbsp;
 
 ```{eval-rst}
 .. metadata::
@@ -52,3 +51,4 @@ ideas
    
 ```
 
+&nbsp;

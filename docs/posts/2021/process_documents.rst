@@ -142,40 +142,9 @@ Model documentation
 -------------------
 This whole configuration allows us to describe our model with the help of Sphinx-Needs.
 
-.. tabbed:: result
+.. tab-set::
 
-    .. wor:: Workflow object
-       :id: WOR_001
-       :executes: ACT_001
-       :tags: post_process
-
-       Defines a collection of activities, which must be performed in a specific order to get the needed result.
-
-    .. act:: Activity object
-       :id: ACT_001
-       :uses: STO_001
-       :consumes: ART_001
-       :produces: ART_001
-       :tags: post_process
-
-       Atomic tasks description, which can be used in different workflows.
-
-    .. art:: Artifact object
-       :id: ART_001
-       :tags: post_process
-
-       Some resource, which can be used as input for or output by activities.
-
-    .. sto:: Storage object
-       :id: STO_001
-       :tags: post_process
-       :stores: ART_001
-
-       The location of a resource where it can be access or must be stored.
-
-.. tabbed:: rst code
-
-   .. code-block:: rst
+   .. tab-item:: result
 
       .. wor:: Workflow object
          :id: WOR_001
@@ -206,21 +175,56 @@ This whole configuration allows us to describe our model with the help of Sphinx
 
          The location of a resource where it can be access or must be stored.
 
+   .. tab-item:: rst code
+
+      .. code-block:: rst
+
+         .. wor:: Workflow object
+            :id: WOR_001
+            :executes: ACT_001
+            :tags: post_process
+
+            Defines a collection of activities, which must be performed in a specific order to get the needed result.
+
+         .. act:: Activity object
+            :id: ACT_001
+            :uses: STO_001
+            :consumes: ART_001
+            :produces: ART_001
+            :tags: post_process
+
+            Atomic tasks description, which can be used in different workflows.
+
+         .. art:: Artifact object
+            :id: ART_001
+            :tags: post_process
+
+            Some resource, which can be used as input for or output by activities.
+
+         .. sto:: Storage object
+            :id: STO_001
+            :tags: post_process
+            :stores: ART_001
+
+            The location of a resource where it can be access or must be stored.
+
 Looks all good, lets see how a graphical representation looks like:
 
-.. tabbed:: result
+.. tab-set::
 
-    .. needflow::
-       :tags: post_process
-       :show_link_names:
+   .. tab-item:: result
 
-.. tabbed:: rst code
+      .. needflow::
+         :tags: post_process
+         :show_link_names:
 
-    .. code-block:: rst
+   .. tab-item:: rst code
 
-       .. needflow::
-          :tags: post_process
-          :show_link_names:
+      .. code-block:: rst
+
+         .. needflow::
+            :tags: post_process
+            :show_link_names:
 
 Process hardening
 -----------------
@@ -396,122 +400,130 @@ Example Metrics and Problems
    showed features.
    In reality this "report" would not have any *tabs* and would look much smoother.
 
+.. tab-set::
 
-.. tabbed:: result
+   .. tab-item:: result
 
-    The numbers here are for :need:`WOR_002`, which includes
-    :need_count:`type=="act" and "post_process_example" in tags`
-    activities and :need_count:`type=="art" and "post_process_example" in tags` artifacts, stored on
-    :need_count:`type=="sto" and "post_process_example" in tags` storages.
+      The numbers here are for :need:`WOR_002`, which includes
+      :need_count:`type=="act" and "post_process_example" in tags`
+      activities and :need_count:`type=="art" and "post_process_example" in tags` artifacts, stored on
+      :need_count:`type=="sto" and "post_process_example" in tags` storages.
 
-.. tabbed:: rst code
+   .. tab-item:: rst code
 
-    .. code-block:: rst
+      .. code-block:: rst
 
-        The numbers here are for :need:`WOR_002`,
-        which includes :need_count:`type=="act" and "post_process_example" in tags`
-        activities and :need_count:`type=="art" and "post_process_example" in tags` artifacts,
-        stored on :need_count:`type=="sto" and "post_process_example" in tags` storages.
+         The numbers here are for :need:`WOR_002`,
+         which includes :need_count:`type=="act" and "post_process_example" in tags`
+         activities and :need_count:`type=="art" and "post_process_example" in tags` artifacts,
+         stored on :need_count:`type=="sto" and "post_process_example" in tags` storages.
 
 The overall workflow diagram is:
 
-.. tabbed:: result
+.. tab-set::
 
-   .. needflow::
-      :tags: post_process_example
-      :show_link_names:
-
-   Hint: Open the image in a new tab. Each "box" is then a link to the related need in the documentation.
-
-.. tabbed:: rst code
-
-   .. code-block:: rst
+   .. tab-item:: result
 
       .. needflow::
          :tags: post_process_example
          :show_link_names:
 
+      Hint: Open the image in a new tab. Each "box" is then a link to the related need in the documentation.
+
+   .. tab-item:: rst code
+
+      .. code-block:: rst
+
+         .. needflow::
+            :tags: post_process_example
+            :show_link_names:
+
 Table with all objects:
 
-.. tabbed:: result
+.. tab-set::
 
-   .. needtable::
-      :tags: post_process_example
-      :columns: id, title, type_name, role
-
-.. tabbed:: rst code
-
-   .. code-block:: rst
+   .. tab-item:: result
 
       .. needtable::
          :tags: post_process_example
          :columns: id, title, type_name, role
 
+   .. tab-item:: rst code
+
+      .. code-block:: rst
+
+         .. needtable::
+            :tags: post_process_example
+            :columns: id, title, type_name, role
+
 Metrics
 +++++++
 
-.. tabbed:: result
+.. tab-set::
 
-   .. needpie:: Comparison of used need types
-      :shadow:
-      :labels: Workflow, Activity, Artifact, Storage
+   .. tab-item:: result
 
-      type=="wor" and "post_process_example" in tags
-      type=="act" and "post_process_example" in tags
-      type=="art" and "post_process_example" in tags
-      type=="sto" and "post_process_example" in tags
+      .. needpie:: Comparison of used need types
+         :shadow:
+         :labels: Workflow, Activity, Artifact, Storage
+
+         type=="wor" and "post_process_example" in tags
+         type=="act" and "post_process_example" in tags
+         type=="art" and "post_process_example" in tags
+         type=="sto" and "post_process_example" in tags
 
 
-.. tabbed:: rst code
+   .. tab-item:: rst code
 
-    .. code-block:: rst
+      .. code-block:: rst
 
-       .. needpie:: Comparison of used need types
-          :shadow:
-          :labels: Workflow, Activity, Artifact, Storage
+         .. needpie:: Comparison of used need types
+            :shadow:
+            :labels: Workflow, Activity, Artifact, Storage
 
-          type=="wor" and "post_process_example" in tags
-          type=="act" and "post_process_example" in tags
-          type=="art" and "post_process_example" in tags
-          type=="sto" and "post_process_example" in tags
+            type=="wor" and "post_process_example" in tags
+            type=="act" and "post_process_example" in tags
+            type=="art" and "post_process_example" in tags
+            type=="sto" and "post_process_example" in tags
 
-.. tabbed:: result
-   :new-group:
-
-   Overall :need_count:`type=="act" and role=="developer" ? type=="act"` % of activities are done by **developer**.
-   And :need_count:`type=="act" and role=="CI" ? type=="act"` % by **CI**.
-
-.. tabbed:: rst code
-
-   .. code-block:: rst
+   .. tab-item:: result
 
       Overall :need_count:`type=="act" and role=="developer" ? type=="act"` % of activities are done by **developer**.
       And :need_count:`type=="act" and role=="CI" ? type=="act"` % by **CI**.
+
+   .. tab-item:: rst code
+
+      .. code-block:: rst
+
+         Overall :need_count:`type=="act" and role=="developer" ? type=="act"` % of activities are done by **developer**.
+         And :need_count:`type=="act" and role=="CI" ? type=="act"` % by **CI**.
 
 Hint: See **problems** to identify, why the sum of the above numbers is not 100%.
 
 Problems
 ++++++++
 
-.. tabbed:: result
+.. tab-set::
 
-    **Activities** without a set role: :need_count:`type=="act" and not role and "post_process_example" in tags`
+   .. tab-item:: result
 
-    .. needtable::
-       :filter: type=="act" and not role and "post_process_example" in tags
-       :style: table
-       :columns: id, title, needs, role
-
-.. tabbed:: rst code
-
-   .. code-block::
-
-      **Activities** without a set role: :need_count:`type=="act" and not role and "post_process_example" in tags`s
+      **Activities** without a set role: :need_count:`type=="act" and not role and "post_process_example" in tags`
 
       .. needtable::
          :filter: type=="act" and not role and "post_process_example" in tags
          :style: table
          :columns: id, title, needs, role
+
+   .. tab-item:: rst code
+
+      .. code-block::
+
+         **Activities** without a set role: :need_count:`type=="act" and not role and "post_process_example" in tags`s
+
+         .. needtable::
+            :filter: type=="act" and not role and "post_process_example" in tags
+            :style: table
+            :columns: id, title, needs, role
 
 Final words
 -----------

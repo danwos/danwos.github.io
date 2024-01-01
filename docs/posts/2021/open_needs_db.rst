@@ -14,20 +14,21 @@ The `Federal Ministry of Education and Research <https://www.bmbf.de/bmbf/en/hom
 to support developers in Germany during the creation of digital prototypes for topics in the area of
 Civic Tech, Data Literacy, IT Security and Software Infrastructure.
 
-.. panels::
-    :container: container pb-6
+.. grid::
 
-    .. image:: _images/PrototypeFund-P-Logo.png
-       :align: center
-       :width: 20%
-       :target: https://prototypefund.de/en/
+   .. grid-item-card::
 
-    ---
+      .. image:: _images/PrototypeFund-P-Logo.png
+         :align: center
+         :width: 20%
+         :target: https://prototypefund.de/en/
 
-    .. image:: _images/bmbf_logo_en.svg
-       :align: center
-       :width: 70%
-       :target: https://www.bmbf.de/bmbf/en/
+   .. grid-item-card::
+
+      .. image:: _images/bmbf_logo_en.svg
+         :align: center
+         :width: 70%
+         :target: https://www.bmbf.de/bmbf/en/
 
 ``Open-Neeeds-DB`` shall be a REST based database for requirements and co..
 It does not provide a single graphical user interface, instead it shall support the creation of interfaces in

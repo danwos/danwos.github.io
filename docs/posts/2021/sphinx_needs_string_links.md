@@ -44,7 +44,8 @@ which support [Jinja](https://jinja.palletsprojects.com)  syntax.
 
 **Inside any rst/md file**
 
-````{tabbed} rst
+`````{tab-set}
+````{tab-item} rst
 ```rst
 .. spec:: Implement the string2linkfeature
    :id: SPEC_123
@@ -54,13 +55,14 @@ which support [Jinja](https://jinja.palletsprojects.com)  syntax.
 ```
 ````
 
-`````{tabbed} MyST
+`````{tab-item} MyST
 ````
 ```{spec} Implement the string2linkfeature
 :id: SPEC_123
 :github: 404
 See above issue on github for a detailed specification
 ```
+````
 ````
 `````
 
