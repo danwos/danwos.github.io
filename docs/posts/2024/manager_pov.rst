@@ -63,27 +63,44 @@ by a project. This makes it hard for users, who are mostly responsible for somet
 which need to implement something. The SW component leaders get informed and their team needs to break the system requirement down and describe their component's internal architecture. 
 These component requirements and any updates are rechecked by the System engineer and need to be approved. After that, the team can start to use our ticket system to plan the component's internal implementation.
 
-**Me:** Oh, this means a None-Requirement-Expert is forced to work inside the export tool of a requirement engineer. And as Requirement changes of a SW component are not so often, it may be needed only 
-3-4 times per months. Is there often a single person in a component team, who is responsible for maintaining the related requirements, **or must every team member may be update requirements on their own?**
+**Me:** Oh, this means a None-Requirement-Expert is forced to work inside the export tool of a Requirement Engineer. And Requirement changes of a SW component are not so often, it may be needed only 
+3-4 times per month. Is there often a single person in a component team, who is responsible for maintaining the related requirements, **or must every team member be able to update requirements on their own?**
 
-**Mr. Heinzel:** Well as there can be domain-specific developers in a component team, these SW expert needs to update their related requirements on their own.
+**Mr. Heinzel:** Well as there can be domain-specific developers in a component team, these SW experts need to update their related requirements on their own.
 
-**Me:** To be honest, I like this approach, but this means that each single SW developer needs to understand the Requirement engineering tool, the process and must like the tool interfaces.
+**Me:** To be honest, I like this approach, but this means that each single SW developer needs to understand the Requirement engineering tool, and the process and must be familar with the tool interfaces.
 **And that's all besides their needed knowledge for their tools and processes.**
 
 **Mr. Heinzel:** **You mean they are living in 2 worlds, where the used data may be related to each other, but tools and processes are not?**
 
-**Me**: Exactly, I call it the "tool and process-cut". A situation, which makes it uncomfortable for a user to maintain the needed data in tool A, to prepare it for the final usage in tool B.
+**Me:** Exactly, I call it the "tool and process-cut". A situation, which makes it uncomfortable for a user to maintain the needed data in tool A, to prepare it for the final usage in tool B.
 So the motivation to maintain such data is low and therefore also the data quality will be low. This is what happened to the last project.
 
 **Mr. Heinzel:** **So we must change our process, to make sure that a person with a certain process role needs only to use the related expert tool?**
 
-**Me**: Would be nice, but that's not doable. For instance for developers have domain-specific knowledge, so that they care about everything in this domain. From the first idea, the SW architecture and implementation,
-till the final tests nd maybe also customer documentation. This can't be split, but he/she should not be forced to use a different tool for each of the needed actions?
+**Me:** Would be nice, but that's not doable. For instance, developers have domain-specific knowledge, so they care about everything in this domain. From the first idea, the SW architecture and implementation,
+till the final tests and maybe also customer documentation. This can't be split, but he/she should not be forced to use a different tool for each of the needed actions.
 
-**Mr. Heinzel:** **So a new tool, which combines everything in it? Requirements, Architecture, Code, Tests, ... ?**
+**Mr. Heinzel:** **So a new tool is needed, which combines everything in it? Requirements, Architecture, Code, Tests, ... ?**
 
-**Me**: First of all, I don't believe in such tools, as they need to make every expert happy and provide a lot of features. So in the end you something like the *mother of all expert tools*.
-And second, ***why a new tool?**
+**Me**: Why not use one of the existing tools? For SW developers this would be their editor of choice. Or short **IDE** for **I**\ ntegrated **D**\ evelopment **E**\ nvironment. 
+**And that's where the docs-as-code approach shows up.**
 
+**Mr. Heinzel:** You mean because the documentation is treated as code, also **the already used code editor can be used?**
+
+**Me:** Yes, but not only the editor. Most of the tools and also processes and workflows can be reused.
+
+For instance performing a code review. Because the docs are part of the code repository you can check the docs in the same review. A feature got implemented, but the Change Request only contains source code, no tests, no docs? Reject it.
+
+The CI is running the tests, why not check the docs, if all references are still valid?
+
+You can even reuse parts of your source code in the documentation. No need to explain an API twice, in the code and later in the user documentation. Docs-as-code makes it easily possible to follow "single-source-of-truth".
+
+**Mr. Heinzel:** And that's possible? All the needed features inside the editor?
+
+**Me:** Yes, we use for instance the Sphinx documentation generator, which can produce HTML-websites, PDF, and other formats out of the same documentation input.
+There are also over 600 extensions and themes available, to provide new features and layouts. And the best, most of it is Open-Source, so no license fees.
+
+**Mr. Heinzel:** I can imagine that this approach is possible for end user documentation, which needs to be created only once and not so often updated.
+But how about project documentation, including for instance requirements and test results. Can this be done with the editor as well?
 
