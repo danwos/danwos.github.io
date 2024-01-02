@@ -78,7 +78,8 @@ jobs:
       - name: Build Sphinx docs
         run: |
           cd docs
-          make html
+          sphinx-build -b html -a -E -v . _build/html
+
       # Build
       - uses: ammaraskar/sphinx-problem-matcher@master
       - name: Build Sphinx presentations
