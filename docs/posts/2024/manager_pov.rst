@@ -1,7 +1,7 @@
 
 :author: Daniel Woste
 :tags: manager, docs-as-code, dac, pov
-:date: 2030-01-01
+:date: 2024-01-02
 
 
 Manager POV: What's the benefit of docs-as-code?
@@ -14,13 +14,13 @@ Manager POV: What's the benefit of docs-as-code?
 In the last 2-3 years one of my main tasks was to convince people to use a docs-as-code approach for their SW project.
 The hard part is not to convince SW developers to use it, as they are often already doing it. 
 But team leaders and managers, as their concerns are often not related to single features, but more about process 
-and toolchain compliants and integration. And for sure the question of all questions: What's the monetary benefit?
+and toolchain compliance and integration. And for sure the question of all questions: What's the monetary benefit?
 
 So if you are a CEO, a manager, a team leader or just want to understand the big picture, grab a coffee/tea, sit back and let me explain: 
 How docs-as-code will save you money and still increase the product quality.
 
-Let's create a fictitious, shorten conversation, between a Project manager and me, that's make it much easier for you to skip certain questions and
-use it also as some kind of reference book for later needed arguments in possible further dicussions.
+Let's create a fictitious, shortened conversation, between a Project manager and me. That's make it much easier for you to skip certain questions and
+use it also as some kind of reference book for later needed arguments in possible further discussions.
 
 The content will be based on discussions I already had in the past with multiple SW teams.
 
@@ -38,8 +38,6 @@ requirements it may have.
 technical infrastructure. I have been asked by some of my core developers, if docs-as-code could be used to document and steer our SW projects.
 And honestly, I have never heard about it before.
 
-----
-
 **Me:** I will give you a short introduction, but before I know where to put the focus, let me allow 1-2 questions. **I guess your company or team already
 has solutions for documentation and project steering. Why the change?**.
 
@@ -51,7 +49,7 @@ everybody was happy with at least the lowest possible level of compliance.
 
 **Mr. Heinzel:** Oh no, we have **spent a lot of money for licenses, to get the best of the best.** So for most expert tools, we were using solutions from market leaders, which were all capable
 of providing the needed features. However, the data quality inside these tools was poor, which sounds like a problem on our side, as we were responsible to input and maintain the data. But yes, looks
-like nobody did this job often enough. We tried to change processes, put more men power on the process maintenance part, it helped a little bit but getting the budget for such long going, not planned actions
+like nobody did this job often enough. We tried to change processes and put more manpower into the process maintenance part, it helped a little bit but getting the budget for such long going, not planned actions
 was also not easy.
 And honestly speaking, I'm not sure **how a tool switch may change this situation?!**
 
@@ -90,7 +88,7 @@ till the final tests and maybe also customer documentation. This can't be split,
 
 **Me:** Yes, but not only the editor. Most of the tools and also processes and workflows can be reused.
 
-For instance performing a code review. Because the docs are part of the code repository you can check the docs in the same review. A feature got implemented, but the Change Request only contains source code, no tests, no docs? Reject it.
+For instance, performing a code review. Because the docs are part of the code repository you can check the docs in the same review. A feature got implemented, but the Change Request only contains source code, no tests, no docs? Reject it.
 
 The CI is running the tests, why not check the docs, if all references are still valid?
 
@@ -101,6 +99,18 @@ You can even reuse parts of your source code in the documentation. No need to ex
 **Me:** Yes, we use for instance the Sphinx documentation generator, which can produce HTML-websites, PDF, and other formats out of the same documentation input.
 There are also over 600 extensions and themes available, to provide new features and layouts. And the best, most of it is Open-Source, so no license fees.
 
-**Mr. Heinzel:** I can imagine that this approach is possible for end user documentation, which needs to be created only once and not so often updated.
-But how about project documentation, including for instance requirements and test results. Can this be done with the editor as well?
+**Mr. Heinzel:** I can imagine that this approach is possible for end user documentation, which needs to be created only once and gets not so often updated.
+But how about project documentation, including for instance requirements and test results. Ohh and think about traceability features and compliance to common standards. Can this be done with the editor as well?
 
+**Me:** Well, yes. For instance allows the extension `Sphinx-Needs <https://sphinx-needs.com>`__ to create, configure and link different kinds of objects. It is 
+used already now for Automotive SW projects with over 40.000 requirements + plus related objects like specifications and test cases, so overall ~150.000 objects.
+All are linked together and can be represented in tables, flow charts and much more. So yes, I think docs-as-code is capable to support you also with a dynamic project documentation.
+
+**Mr. Heinzel:** Sounds good, but **I can't believe that all the features from expert tools can be realized with docs-as-code** or here Sphinx.
+
+**Me:** That's right, not everything is possible. Especially analyzing specific historical data is not so easy, but doable. With docs-as-code you normally work on a checked-out branch of 
+the project repository. So you only use the data from a specific point in time. The docs-as-code tools are only using this data, they have no idea about older data or data on a parallel branch.
+That's an expert feature, but some extensions like Sphinx-Needs are already working on features like this.
+
+
+I'm sorry to say but for the moment: **To be continued...**

@@ -10,11 +10,6 @@ myst:
 ```{title} Daniel Woste personal page
 ```
 
-```{image} _static/danwos_intro2.png
-:align: center
-:width: 100%
-```
-<br/>
 
 Welcome dear friend 👋,
 
