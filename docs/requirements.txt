@@ -3,7 +3,7 @@ sphinxcontrib-plantuml
 
 # Always use latest code from master
 #git+https://github.com/useblocks/sphinxcontrib-needs@master
-sphinx-needs
+sphinx-needs[plotting]
 
 sphinx-copybutton
 sphinxcontrib-programoutput

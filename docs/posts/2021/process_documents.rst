@@ -486,6 +486,8 @@ Metrics
             type=="art" and "post_process_example" in tags
             type=="sto" and "post_process_example" in tags
 
+.. tab-set::
+
    .. tab-item:: result
 
       Overall :need_count:`type=="act" and role=="developer" ? type=="act"` % of activities are done by **developer**.

@@ -211,7 +211,9 @@ html_logo = "_static/danwos_white.png"
 html_theme_options = {
     "show_toc_level": 3,
     "search_bar_text": "Search this site...",
-    "google_analytics_id": "G-0MZ0221M7W",
+    "analytics": {
+        "google_analytics_id": "G-0MZ0221M7W"
+    },
     "navbar_end": ["theme-switcher", "navbar-icon-links"],
     "icon_links": [
         {

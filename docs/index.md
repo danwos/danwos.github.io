@@ -1,8 +1,9 @@
 ---
-html_meta:
-  "description lang=en": "metadata description"
-  "keywords": "Sphinx, MyST"
-  "property=og:locale": "en_US"
+myst:
+  html_meta:
+    "description lang=en": "metadata description"
+    "keywords": "Sphinx, MyST"
+    "property=og:locale": "en_US"
 ---
 # Big business and Docs-as-code
 
@@ -13,7 +14,7 @@ html_meta:
 :align: center
 :width: 100%
 ```
-
+<br/>
 
 Welcome dear friend 👋,
 
@@ -30,7 +31,7 @@ Just take a look at [my projects](projects-target) for a quick overview.
 My daily work is at [useblocks](https://useblocks.com), a small, specialized, German company creating tools for the international
 Automotive industry. Focussing mostly on PMT (processes, methods, tools) for distributed software teams (>100-2.000 team members).
 
-
+## Blog entries
 
 ```{postlist}
 :date: "%Y-%m-%d"

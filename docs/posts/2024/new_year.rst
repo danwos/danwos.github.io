@@ -29,5 +29,6 @@ So, this forces me to make my existing documentation code valid with the latest 
 3. Update also some theme config, as the search box showed up twice in the navigation bar.
 4. Reactivate and check the GitHub Action for build and deployment, as my last chance is quite old (2022) and GitHub deactivates
    the CI after 6 months of inactivity.
+5. Fix the Sphinx-Needs installation, as I need to request "plotting features" explicitly. 
 
 Hopefully, that's it. Looking forward to writing 1-2 new blog posts in the next few days. And for sure, mainly about docs-as-code.

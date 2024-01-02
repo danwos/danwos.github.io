@@ -7,9 +7,9 @@ image: 1
 
 # Docs-as-Code Enhanced
 
-:::{image} _images/post_icons/docs_as_code_enhanced.png
+```{image} _images/post_icons/docs_as_code_enhanced.png
 :align: center
-:::
+```
 For most of us "Docs-as-Code" mostly means to store the documentation files beside the project sources in git. 
 Also editing the sources in an already used IDE and using the CI system to build it, are 2 important use cases why
 docs-as-code is chosen to create documentation.
@@ -62,7 +62,7 @@ of {{sphinx_needs}} right on this page.
 
 So here is an embedded requirement object:
 
-:::rst
+```{eval-rst}
 .. req:: Objects in documentation
    :id: REQ_001
    :status: done
@@ -73,14 +73,14 @@ So here is an embedded requirement object:
    For our overall SW development documentation we need a way to create and reuse objects.
    
    We need them for **Requirements**, **Specifications**, **Test Cases**, **Test Case Runs** and maybe more.
-:::
+```
 
 *Click the arrow on the right side of the title to show the meta-data.*
 
 The code for this object is embedded inside the normal rst/md documentation code:
-:::::{tab-set}
-::::{tab-item} rst
-:::rst
+``````{tab-set}
+`````{tab-item} rst
+```rst
 Some text before the requirement object.
 
 .. req:: Objects in documentation
@@ -94,14 +94,14 @@ Some text before the requirement object.
    We need them for **Requirements**, **Specifications**, **Test Cases**, **Test Case Runs** and maybe more.
 
 Some text after the requirement object.
-:::
-::::
+```
+`````
 
-::::{tab-item} md / MyST
-:::md
+`````{tab-item} md / MyST
+````md
 Some text before the requirement object.
 
-:::{req}Objects in documentation
+```{req}Objects in documentation
 :id: REQ_001
 :status: done
 :tags: objects, documentation, sphinx-needs
@@ -110,17 +110,17 @@ Some text before the requirement object.
 For our overall SW development documentation we need a way to create and reuse objects.
 
 We need them for **Requirements**, **Specifications**, **Test Cases**, **Test Case Runs** and maybe more.
-:::
+```
 Some text after the requirement object.
-:::
-::::
-:::::
+````
+`````
+``````
 
 ### Object Linking
 And for sure objects can be linked to each other:
 
-:::{req} Object linking
-:id: REQ_00234
+```{req} Object linking
+:id: REQ_002
 :status: done
 :tags: objects, documentation, sphinx-needs
 :links: REQ_001
@@ -129,13 +129,13 @@ And for sure objects can be linked to each other:
 Objects must be linkable and all incoming and outgoing links shall get documented.
 
 This is based on {need}`REQ_001`
-:::
+```
 
-:::::{tab-set}
+``````{tab-set}
 
-::::{tab-item} rst
+`````{tab-item} rst
 
-:::rst
+```rst
 .. req:: Object linking
    :id: REQ_002
    :status: done
@@ -145,13 +145,13 @@ This is based on {need}`REQ_001`
    Objects must be linkable and all incoming and outgoing links shall get documented.
    
    This is based on :need::REQ_001`
-:::
+```
 
-::::
+`````
 
-::::{tab-item} md / MyST
-:::md
-:::{req} Object linking
+`````{tab-item} md / MyST
+````md
+```{req} Object linking
 :id: REQ_002
 :status: done
 :tags: objects, documentation, sphinx-needs
@@ -160,37 +160,37 @@ This is based on {need}`REQ_001`
 Objects must be linkable and all incoming and outgoing links shall get documented.
 
 This is based on {need}`REQ_001`
-:::
-:::
+```
+````
 
-::::
-:::::
+`````
+``````
 
 ### Tables
 To perform some analysis on objects, we can use `needtable`.
 
-:::{needtable}
+```{needtable}
 :types: req
 :style: table
-:::
-::::::{tab-set}
-:::::{tab-item} rst
-:::rst
+```
+``````{tab-set}
+`````{tab-item} rst
+```rst
 .. needtable::
    :types: req
    :style: table 
-:::
-:::::
+```
+`````
 
-:::::{tab-item} md / MyST
-::::md
-:::{needtable}
+`````{tab-item} md / MyST
+````md
+```{needtable}
 :types: req
 :style: table
-:::
-::::
-:::::
-::::::
+```
+````
+`````
+``````
 
 And for sure we have access to **all** objects from the complete documentation (in this case objects 
 created by other blog posts).
@@ -198,50 +198,50 @@ created by other blog posts).
 The following table is configured to show selected columns and uses the default DataTables 
 for a more "dynamic" view.
 
-:::{needtable}
+```{needtable}
 :columns: id,title,status,docname,section_name,incoming,outgoing
-:::
+```
 
-:::::{tab-set}
-::::{tab-item} rst
-:::rst
+``````{tab-set}
+`````{tab-item} rst
+```rst
 .. needtable::
    :columns: id,title,status,docname,section_name,incoming,outgoing 
-:::
-::::
+```
+`````
 
-::::{tab-item} md / MyST
-::::md
-:::{needtable}
+`````{tab-item} md / MyST
+````md
+```{needtable}
 :columns: id,title,status,docname,section_name,incoming,outgoing
-:::
-::::
-:::::
-::::::
+```
+````
+`````
+``````
 
 ### Flowcharts
 
 Or maybe present the objects and their connections in a flowchart:
 
-:::{needflow}
+```{needflow}
 :types: req
-:::
-::::::{tab-set}
-:::::{tab-item} rst
-:::rst
+```
+``````{tab-set}
+`````{tab-item} rst
+```rst
 .. needflow::
    :types: req
-:::
-:::::
+```
+`````
 
-:::::{tab-item} md / MyST
-::::md
-:::{needflow}
+`````{tab-item} md / MyST
+````md
+```{needflow}
 :types: req
-:::
-:::
-:::::
-::::::
+```
+````
+`````
+``````
 
 ### Export and Import
 
@@ -250,9 +250,9 @@ All the objects of a documentation can be exported to a json file called ``needs
 
 This is an example of a ``needs.json`` file containing 10 needs (including the two from above):
 
-:::{literalinclude} data/needs.json
+```{literalinclude} data/needs.json
 :class: needs-json-example
-:::
+```
 
 And this file and any other file following the same syntax, can be imported by using ``needimport``.
 This allows you to extract data from external systems like JIRA, write it to a ``needs.json`` compatible file
@@ -287,9 +287,9 @@ Their benefit for using a docs-as-code approach are:
 
 So **Objects included documentation** is come to stay :)
 
-:::{image} _images/post_icons/docs_as_code_enhanced_end.png
+```{image} _images/post_icons/docs_as_code_enhanced_end.png
 :align: center
-:::
+```
 
 ```{eval-rst}
 .. metadata::
@@ -300,22 +300,3 @@ So **Objects included documentation** is come to stay :)
    
    Explains the reason for and features of object orientated documentations.
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
