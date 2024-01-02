@@ -1,4 +1,4 @@
-sphinx>=3.4
+sphinx==7.2.6
 sphinxcontrib-plantuml
 
 # Always use latest code from master
@@ -7,7 +7,7 @@ sphinx-needs[plotting]
 
 sphinx-copybutton
 sphinxcontrib-programoutput
-sphinx-design
-pydata-sphinx-theme
-ablog
+sphinx-design==0.5.0
+pydata-sphinx-theme==0.14.4
+ablog==0.11.6
 MyST-Parser
