@@ -106,9 +106,9 @@ The DaC methodology involves using a range of tools to facilitate different stag
 ```{dropdown} ALM alternative (note by Daniel)
 In some of my projects, JIRA was just more as an issue system, caring about the implementation realization tasks, but not containing any technical requirements or specifications.
 
-These were written down by the help of [Sphinx-Needs](https://www.sphinx-needs.com/), which allows a direct, continuous traceability between upper elements like system requirements and elements on the right side of the V-model, like integration test cases and their execution result.
+These were written down by the help of [Sphinx-Needs](https://www.sphinx-needs.com/), which allows a direct, continuous traceability between upper elements like system requirements and elements on the right side of the V-model, like integration test cases and their execution results.
 
-As all of these elements were handled in one system, so the the complete traceability matrix could be easily graphically represented and also validated.
+As all of these elements were handled in one system, the complete traceability matrix could be easily graphically represented and also validated.
 ```
 
 (reqs-exch)=
