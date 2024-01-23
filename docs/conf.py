@@ -34,7 +34,14 @@ extensions = [
     'myst_parser',
     'sphinx_design',
     'sphinx_needs',
+    'sphinxcontrib.bibtex'
 ]
+
+# -- Bibtex information
+bibtex_bibfiles = ['posts/2024/_bib/dac_bibliography.bib']
+
+
+numfig = False  # Gives figures a number
 
 needs_title_optional = True
 needs_id_regex = r'^[A-Z0-9_]{2,}'
