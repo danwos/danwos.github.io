@@ -78,6 +78,7 @@ One of the conditions of the case study used in this research was the ASPICE (Au
 
 (aspice-l2)=
 ```{figure} _images/dac/figures/ASPICE_L2.png
+:width: 99%
 
 ASPICE process grading piramide
 ```
@@ -86,6 +87,7 @@ The ASPICE process model and the V-model are two widely used models in the autom
 
 (aspice-v)=
 ```{figure} _images/dac/figures/ASPICE_V.png
+:width: 99%
 
 ASPICE V-model organization
 ```
@@ -110,6 +112,7 @@ As all of these elements were handled in one system, so the the complete traceab
 
 (reqs-exch)=
 ```{figure} _images/dac/figures/Requirements_Management_C3.svg
+:width: 99%
 
 Requirements exchange process between OEM and Tier 1 software supplier
 ```
@@ -120,6 +123,7 @@ In this study, Jira was employed as an Application Lifecycle Management (ALM) to
 
 (jira)=
 ```{figure} _images/dac/figures/Jira_C2.svg
+:width: 99%
 
 Jira as process guideline
 ```  
@@ -149,6 +153,7 @@ At the begging of this section let's first identify all relevant documents (Fig.
 
 (docs)=
 ```{figure} _images/dac/figures/Documentation_landscape.png
+:width: 99%
 
 ASPICE SWE process group compliant documentation landscape
 ```  
@@ -197,6 +202,7 @@ In this research, feature teams have used SRD template [@srd-template] for the d
 
 (reqs_mgmt)=
 ```{figure} _images/dac/figures/Requirements_Management_C4.svg
+:width: 99%
 
 Requirements elicitation process between Tier 1 and OEM
 ```  
@@ -245,6 +251,7 @@ This CI/CD pipeline (Fig. {ref}`doc-ci`) is triggered on every PR update. Upon t
 
 (software)=
 ```{figure} _images/dac/figures/software_cd.png
+:width: 99%
 
 Continuous delivery pipeline for software
 ```  
@@ -253,6 +260,7 @@ Establishing and maintaining consistent technical documentation is a difficult t
 
 (doc-ci)=
 ```{figure} _images/dac/figures/doc_ci.png
+:width: 99%
 
 Documentation as Code Continuous Integration pipeline
 ```
@@ -263,6 +271,7 @@ CD pipeline (Fig. {ref}`doc-cd`) is triggered by the merge to the main branch. I
 
 (doc-cd)=
 ```{figure} _images/dac/figures/doc_cd.png
+:width: 99%
 
 Documentation as Code Continuous Deployment pipeline
 ```
@@ -275,6 +284,7 @@ Stability was tracked during the research as one of the key metrics, measured by
 
 (stability)=
 ```{figure} _images/dac/figures/stability.svg
+:width: 99%
 
 Measured stability throughout the first year of the Project
 ```
@@ -283,6 +293,7 @@ In addition to the reported defects, (Fig. {ref}`stability`) shows additional us
 
 (git-stat)=
 ```{figure} _images/dac/figures/git_stat.png
+:width: 99%
 
 Documentation repository statistics (commits per month)
 
@@ -291,6 +302,7 @@ The interesting statistic can be derived from the documentation repository (Fig.
 
 (cumulative)=
 ```{figure} _images/dac/figures/cumulative.png
+:width: 99%
 
 Release cumulative flow chart
 ```
@@ -321,9 +333,10 @@ When comparing state-of-the-art automotive software development practices and ou
 
 This research was inspired by the idea of continuous and never-ending improvement (Kaizen {cite}`imai1986kaizen`) of processes and tools to produce better-quality software faster {cite}`farley2021modern`. In DaC methodology, quality is built ground up, brick by brick (micro-V cycle by micro-V cycle), through incremental and iterative cycles. This idea was based on the philosophy of W. Edwards Deming, the father of quality, which suggested that organizations that prioritize improving quality will see a decrease in costs, whereas those that prioritize cost-cutting will inherently reduce quality and end up incurring higher costs.{cite}`deming1992system`.  
 
-“Inspection to improve quality is too late, ineffective, costly.
-Quality comes not from inspection, but from the improvement of the production process.”
-― **W. Edwards Deming,** [Out of the Crisis](https://www.goodreads.com/work/quotes/553678) {cite}`deming2018out`
+> “Inspection to improve quality is too late, ineffective, costly.
+> Quality comes not from inspection, but from the improvement of the production process.”
+> 
+> -- **W. Edwards Deming,** [Out of the Crisis](https://www.goodreads.com/work/quotes/553678) {cite}`deming2018out`
 
 
 # Conclusion 
