@@ -1,6 +1,6 @@
 ---
 title: "Documentation as Code in Automotive System/Software Engineering"
-date: 2024-02-01
+date: 2024-01-23
 tags: Automotive engineering, documentation, software engineering, software systems
 author: Dr. Momcilo Krunic
 name: Momcilo Krunic
