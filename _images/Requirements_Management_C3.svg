@@ -1,0 +1,689 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1166px" preserveAspectRatio="none" style="width:697px;height:1166px;background:#FFFFFF;" version="1.1" viewBox="0 0 697 1166" width="697px" zoomAndPan="magnify"><defs/><g><!--MD5=[430cb7412690997ed7973a9d145344a9]
+cluster RM--><g id="cluster_RM"><rect fill="none" height="725" rx="2.5" ry="2.5" style="stroke:#444444;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="455" x="233" y="244"/><text fill="#444444" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="245" x="338" y="260.8516">Requirements Management</text><text fill="#444444" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="62" x="429.5" y="275.7637">[System]</text></g><!--MD5=[d8ba309a18de5b23181900c95ded0303]
+entity Jira--><g id="elem_Jira"><path d="M458,297 C458,287 569,287 569,287 C569,287 680,287 680,297 L680,380.5 C680,390.5 569,390.5 569,390.5 C569,390.5 458,390.5 458,380.5 L458,297 " fill="#438DD5" style="stroke:#3C7FC0;stroke-width:0.5;"/><path d="M458,297 C458,307 569,307 569,307 C569,307 680,307 680,297 " fill="none" style="stroke:#3C7FC0;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="28" x="555" y="325.8516">Jira</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="128" x="503" y="340.7637">[Input Requirements</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="193" x="470.5" y="354.7324">decomposition into the Stories</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="198" x="470" y="368.7012">(Software Requirements). Place</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="61" x="468" y="382.6699">holder for</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" font-weight="bold" lengthAdjust="spacing" textLength="128" x="533" y="382.6699">Definition of Done</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="9" x="661" y="382.6699">.]</text></g><!--MD5=[fe771890ff5e7fb46737c7a9152e5b9a]
+entity Jenkins--><g id="elem_Jenkins"><path d="M339,890 L549,890 C554,890 554,925.2656 554,925.2656 C554,925.2656 554,960.5313 549,960.5313 L339,960.5313 C334,960.5313 334,925.2656 334,925.2656 C334,925.2656 334,890 339,890 " fill="#438DD5" style="stroke:#3C7FC0;stroke-width:0.5;"/><path d="M549,890 C544,890 544,925.2656 544,925.2656 C544,960.5313 549,960.5313 549,960.5313 " fill="none" style="stroke:#3C7FC0;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="94" x="392" y="909.8516">Jenkins CI/CD</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="200" x="339" y="924.7637">[Generates neccesary artefacts</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="186" x="344" y="938.7324">from the Git repo: SRD, SAD,</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="66" x="406" y="952.7012">Reports...]</text></g><!--MD5=[871298b648dcd67b5928a01a1097c4c0]
+entity Git repo--><g id="elem_Git repo"><path d="M338.5,589.5 C338.5,579.5 456,579.5 456,579.5 C456,579.5 573.5,579.5 573.5,589.5 L573.5,719.5625 C573.5,729.5625 456,729.5625 456,729.5625 C456,729.5625 338.5,729.5625 338.5,719.5625 L338.5,589.5 " fill="#438DD5" style="stroke:#3C7FC0;stroke-width:0.5;"/><path d="M338.5,589.5 C338.5,599.5 456,599.5 456,599.5 C456,599.5 573.5,599.5 573.5,589.5 " fill="none" style="stroke:#3C7FC0;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="158" x="374" y="618.3516">Git repo - Single</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="52" x="430" y="636.9766">Trunk</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="153" x="348.5" y="651.8887">[Git-based repository for</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" font-weight="bold" lengthAdjust="spacing" textLength="58" x="505.5" y="651.8887">bundled</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="174" x="369" y="665.8574">versioning of all micro-V cycle</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="156" x="376" y="679.8262">artefacts: Requirements,</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="200" x="356" y="693.7949">Architecture, Source Code, Test</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="163" x="372.5" y="707.7637">specifications, Tests, Test</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="52" x="430" y="721.7324">results.]</text></g><!--MD5=[23d84124f3973e8305902147b45de04d]
+entity Windchill--><g id="elem_Windchill"><path d="M241,302 C241,292 332,292 332,292 C332,292 423,292 423,302 L423,376.1875 C423,386.1875 332,386.1875 332,386.1875 C332,386.1875 241,386.1875 241,376.1875 L241,302 " fill="#438DD5" style="stroke:#3C7FC0;stroke-width:0.5;"/><path d="M241,302 C241,312 332,312 332,312 C332,312 423,312 423,302 " fill="none" style="stroke:#3C7FC0;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="77" x="293.5" y="330.8516">Windchill</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="162" x="251" y="345.7637">[Requirements exchange]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="330" y="361.5889"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="288" y="377.8857">Setup status.</text></g><!--MD5=[db943cdca9d00f25b6a050c455de2b37]
+entity Requirement_Manager--><g id="elem_Requirement_Manager"><rect fill="#08427B" height="135.5156" rx="2.5" ry="2.5" style="stroke:#073B6F;stroke-width:0.5;" width="217" x="44.5" y="31"/><image height="48" width="48" x="129" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACD0lEQVR4Xu2YoU4EMRCGT+4j8Ai8AhaH4QHgAUjQuFMECUgMIUgwJAgMhgQsAYUiJCiQIBBY+EITsjfTdme6V24v4c8vyGbb+ZjOtN0bNcvjQXmkH83WvYBWto6PLm6v7p7uH1/w2fXD+PBycX1Pv2l3IdDm/vn7x+dXQiAubRzoURa7gRZWd0iGRIiJbOnhnfYBQZNJjNbuyY2eJG8fkDE3bbG4ep6MHUAsgYxmE3nVs6VsBWJSGccsOlFPmLIViMzLOB7pCVO2AtHJMohH7Fh6zqitQK7m0rJvAVYgGcEpe//PLdDz65sM4pF9N7ICcXDKIB5Nv6j7tD0NoSdM2QrU9Gg0ewE1LqBhHR3BBdvj2vapnidjHxD/q6vd7Pvhr31AwcY8eXMTXAKECZZJFXuEq27aLgQK5uLMohCenGGuGewOxSjBvYBqeG6B+Nqiblggdjnc+ZXDy+FNFpFzw76O3UBAROuXh6FoiAcf5g9eTvUgzy0nWg6I8cXHRUpg5bOVBCo+KDpFajOf23GgPme7RSQ+lacIENUgJ6gg1k6HjgOlqnLqip4tEuhv0hNEMXUD0clyXE3p6pZA0S2nnvTlXwLJEZWlb7cTQH1+USgTN4VhAenm/wea1OCAOmqo6fE1WCb9WSKBah+rbUWPWAmE2Rvk0ApiB45eOyNAzU8xcTvj8KvkKEoOaIYeHNA3ZuygAvFMUO0AAAAASUVORK5CYII=" y="41"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="197" x="54.5" y="103.8516">Requirement Manager</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="151" y="120.6201"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="159" x="73.5" y="136.917">Takes care about Input</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="174" x="66" y="153.2139">Customer Requirements.</text></g><!--MD5=[1da55835bfcaf145565fd6c697616945]
+entity Development_Teams--><g id="elem_Development_Teams"><rect fill="#08427B" height="184.4063" rx="2.5" ry="2.5" style="stroke:#073B6F;stroke-width:0.5;" width="208" x="316" y="7"/><image height="48" width="48" x="396" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACD0lEQVR4Xu2YoU4EMRCGT+4j8Ai8AhaH4QHgAUjQuFMECUgMIUgwJAgMhgQsAYUiJCiQIBBY+EITsjfTdme6V24v4c8vyGbb+ZjOtN0bNcvjQXmkH83WvYBWto6PLm6v7p7uH1/w2fXD+PBycX1Pv2l3IdDm/vn7x+dXQiAubRzoURa7gRZWd0iGRIiJbOnhnfYBQZNJjNbuyY2eJG8fkDE3bbG4ep6MHUAsgYxmE3nVs6VsBWJSGccsOlFPmLIViMzLOB7pCVO2AtHJMohH7Fh6zqitQK7m0rJvAVYgGcEpe//PLdDz65sM4pF9N7ICcXDKIB5Nv6j7tD0NoSdM2QrU9Gg0ewE1LqBhHR3BBdvj2vapnidjHxD/q6vd7Pvhr31AwcY8eXMTXAKECZZJFXuEq27aLgQK5uLMohCenGGuGewOxSjBvYBqeG6B+Nqiblggdjnc+ZXDy+FNFpFzw76O3UBAROuXh6FoiAcf5g9eTvUgzy0nWg6I8cXHRUpg5bOVBCo+KDpFajOf23GgPme7RSQ+lacIENUgJ6gg1k6HjgOlqnLqip4tEuhv0hNEMXUD0clyXE3p6pZA0S2nnvTlXwLJEZWlb7cTQH1+USgTN4VhAenm/wea1OCAOmqo6fE1WCb9WSKBah+rbUWPWAmE2Rvk0ApiB45eOyNAzU8xcTvj8KvkKEoOaIYeHNA3ZuygAvFMUO0AAAAASUVORK5CYII=" y="17"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="181" x="329.5" y="79.8516">Development Teams</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="418" y="96.6201"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="128" x="356" y="112.917">Develops software</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125" x="355.5" y="129.2139">according to input</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="184" x="326" y="145.5107">requirements. Empowered</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="168" x="334" y="161.8076">to handle all micro-V cycle</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="388" y="178.1045">artefacts.</text></g><!--MD5=[c8ae4bf05117c03261bf89dfaf0826d7]
+entity Requirements_Management_external_C4--><g id="elem_Requirements_Management_external_C4"><path d="M6,566 C6,556 115,556 115,556 C115,556 224,556 224,566 L224,742.625 C224,752.625 115,752.625 115,752.625 C115,752.625 6,752.625 6,742.625 L6,566 " fill="#999999" style="stroke:#8A8A8A;stroke-width:0.5;"/><path d="M6,566 C6,576 115,576 115,576 C115,576 224,576 224,566 " fill="none" style="stroke:#8A8A8A;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="124" x="50" y="594.8516">Requirements</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="115" x="57.5" y="613.4766">Management</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="113" y="630.2451"> </text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="173" x="28.5" y="646.542">Process of documenting,</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="198" x="16" y="662.8389">analyzing, tracing, prioritizing</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="113" x="56.5" y="679.1357">and agreeing on</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="159" x="33.5" y="695.4326">requirements and then</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="158" x="34" y="711.7295">controlling change and</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="183" x="21.5" y="728.0264">communicating to relevant</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="94" x="68" y="744.3232">stakeholders.</text></g><!--MD5=[14941a724eb3f322dd803df24e727b55]
+link Requirement_Manager to Windchill--><g id="link_Requirement_Manager_Windchill"><path d="M203.8154,167.1324 C232.3209,205.3521 267.3095,252.2641 293.5261,287.4149 " fill="none" id="Requirement_Manager-to-Windchill" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="296.6788,291.6419,294.5043,282.0361,293.6894,287.634,288.0916,286.8191,296.6788,291.6419" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="47" x="254" y="233.1387">Imports</text></g><!--MD5=[caa0a3a75ea764f5a9e636fb9de15564]
+link Development_Teams to Windchill--><g id="link_Development_Teams_Windchill"><path d="M386.2286,191.1039 C374.3156,223.5937 361.3437,258.9718 351.0747,286.9782 " fill="none" id="Development_Teams-to-Windchill" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="349.3203,291.7628,356.1741,284.6899,351.0416,287.0684,348.6631,281.9359,349.3203,291.7628" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="65" x="374" y="233.1387">Set status</text></g><!--MD5=[6fc9ef1e99894729972e60d653fc9504]
+link Windchill to Git repo--><g id="link_Windchill_Git repo"><path d="M350.5641,386.2335 C370.0813,435.8925 401.1392,514.9147 424.5017,574.3572 " fill="none" id="Windchill-to-Git repo" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="426.4534,579.3229,426.884,569.4835,424.6244,574.6694,419.4385,572.4098,426.4534,579.3229" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="91" x="393" y="478.1387">Converstion to</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="63" x="409" y="492.1074">Markdown</text></g><!--MD5=[8896c79c3b60721d7bd5bd1cf7daa1a4]
+link Windchill to Requirements_Management_external_C4--><g id="link_Windchill_Requirements_Management_external_C4"><path d="M299.5129,386.2335 C269.5526,429.7933 224.0527,495.9464 185.7335,551.6594 " fill="none" id="Windchill-to-Requirements_Management_external_C4" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="182.7536,555.9918,191.1496,550.8432,185.5871,551.8722,184.5581,546.3097,182.7536,555.9918" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="78" x="244" y="485.1387">ReqIF export</text></g><!--MD5=[f40a7edf2fc005b32c844eb309428bd1]
+link Development_Teams to Jira--><g id="link_Development_Teams_Jira"><path d="M477.1812,191.1039 C496.2668,221.8458 516.9577,255.1735 533.8581,282.3956 " fill="none" id="Development_Teams-to-Jira" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="536.5372,286.7109,535.1884,276.9548,533.8999,282.463,528.3917,281.1745,536.5372,286.7109" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="74" x="504" y="233.1387">Decompose</text></g><!--MD5=[9a1ba2845b693e94f6d8f8815ccd014c]
+link Git repo to Jenkins--><g id="link_Git repo_Jenkins"><path d="M425.5783,729.5482 C416.5248,760.1658 410.1568,796.0556 415,829 C417.744,847.6652 423.3225,867.7297 428.8605,884.7021 " fill="none" id="Git repo-to-Jenkins" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="430.5747,889.8652,431.5349,880.0633,428.9991,885.1199,423.9425,882.5842,430.5747,889.8652" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="39" x="416" y="826.1387">Inputs</text></g><!--MD5=[e3fc2ced7bf3f18fd20929149f1df9b8]
+link Jenkins to Git repo--><g id="link_Jenkins_Git repo"><path d="M451.3331,889.9284 C454.7075,871.7829 458.3277,849.3099 460,829 C462.527,798.3095 462.4175,764.4878 461.3665,734.8568 " fill="none" id="Jenkins-to-Git repo" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="461.1749,729.7578,457.5159,738.9017,461.3628,734.7543,465.5102,738.6012,461.1749,729.7578" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="57" x="461" y="826.1387">Artefacts</text></g><!--MD5=[05f5ad8bacc505b9178ddaab1b167604]
+link Jira to Git repo--><g id="link_Jira_Git repo"><path d="M550.3403,391.0984 C532.4756,440.9774 505.2697,516.9373 484.6564,574.4902 " fill="none" id="Jira-to-Git repo" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="482.934,579.2994,489.7345,572.1752,484.62,574.5922,482.203,569.4777,482.934,579.2994" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="139" x="523" y="478.1387">Internal Requirements</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="92" x="548.5" y="492.1074">IDs generation</text></g><!--MD5=[c82ffe9a59a7a2a1b5e7faecaf92c3ea]
+reverse link Requirement_Manager to Requirements_Management_external_C4--><g id="link_Requirement_Manager_Requirements_Management_external_C4"><path d="M147.9841,172.3239 C141.2512,270.7486 129.2693,445.9055 121.7499,555.8278 " fill="none" id="Requirement_Manager-backto-Requirements_Management_external_C4" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="148.3405,167.1152,143.7355,175.8212,147.9992,172.1035,151.7169,176.3672,148.3405,167.1152" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="78" x="132" y="433.1387">ReqIF export</text></g><rect fill="none" height="160.6719" id="_legend" rx="7.5" ry="7.5" style="stroke:none;stroke-width:1.0;" width="157" x="514" y="986"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="59" x="519" y="1005.9951">Legend</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="4" x="578" y="1005.9951"> </text><rect fill="#08427B" height="16.2969" style="stroke:none;stroke-width:1.0;" width="147" x="519" y="1009.2969"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="49" x="523" y="1022.292">person</text><rect fill="#1168BD" height="16.2969" style="stroke:none;stroke-width:1.0;" width="147" x="519" y="1025.5938"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="523" y="1038.5889">system</text><rect fill="#438DD5" height="16.2969" style="stroke:none;stroke-width:1.0;" width="147" x="519" y="1041.8906"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="523" y="1054.8857">container</text><rect fill="#85BBF0" height="16.2969" style="stroke:none;stroke-width:1.0;" width="147" x="519" y="1058.1875"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="80" x="523" y="1071.1826">component</text><rect fill="#686868" height="16.2969" style="stroke:none;stroke-width:1.0;" width="147" x="519" y="1074.4844"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="108" x="523" y="1087.4795">external person</text><rect fill="#999999" height="16.2969" style="stroke:none;stroke-width:1.0;" width="147" x="519" y="1090.7813"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109" x="523" y="1103.7764">external system</text><rect fill="#B3B3B3" height="16.2969" style="stroke:none;stroke-width:1.0;" width="147" x="519" y="1107.0781"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="124" x="523" y="1120.0732">external container</text><rect fill="#CCCCCC" height="16.2969" style="stroke:none;stroke-width:1.0;" width="147" x="519" y="1123.375"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="139" x="523" y="1136.3701">external component</text><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="519" x2="666" y1="993" y2="993"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="519" x2="666" y1="1009.2969" y2="1009.2969"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="519" x2="666" y1="1025.5938" y2="1025.5938"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="519" x2="666" y1="1041.8906" y2="1041.8906"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="519" x2="666" y1="1058.1875" y2="1058.1875"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="519" x2="666" y1="1074.4844" y2="1074.4844"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="519" x2="666" y1="1090.7813" y2="1090.7813"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="519" x2="666" y1="1107.0781" y2="1107.0781"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="519" x2="666" y1="1123.375" y2="1123.375"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="519" x2="666" y1="1139.6719" y2="1139.6719"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="519" x2="519" y1="993" y2="1139.6719"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="666" x2="666" y1="993" y2="1139.6719"/><!--MD5=[7d39eff7caeb03225b86af541e837190]
+@startuml
+!include C4_Component.puml
+!include C4_Container.puml
+!include ../building_blocks_C4/Requirement_Manager.puml
+!include ../building_blocks_C4/Development_Teams.puml
+
+LAYOUT_WITH_LEGEND()
+
+System_Boundary(RM, "Requirements Management"){
+    !include building_blocks_C3/Jira.puml
+    !include building_blocks_C3/Jenkins.puml
+    !include building_blocks_C3/Git repo.puml  
+    !include building_blocks_C3/Windchill.puml
+}
+
+!include ../building_blocks_C4/Requirements_Management_external_C4.puml
+
+Requirement_Manager- ->Windchill: Imports
+Development_Teams- ->Windchill: Set status
+Windchill- ->Git repo: Converstion to Markdown
+Windchill- -d->Requirements_Management_external_C4: ReqIF export
+Development_Teams- ->Jira:Decompose
+Git repo- ->Jenkins: Inputs
+Jenkins- ->Git repo: Artefacts
+Jira- ->Git repo: Internal Requirements IDs generation
+Requirements_Management_external_C4- -u->Requirement_Manager: ReqIF export
+
+@enduml
+
+@startuml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam defaultTextAlignment center
+
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam LegendBorderColor transparent
+skinparam LegendBackgroundColor transparent
+skinparam LegendFontColor #FFFFFF
+
+skinparam shadowing<<legendArea>> false
+skinparam rectangle<<legendArea>> {
+    backgroundcolor #00000000
+    bordercolor #00000000
+}
+
+skinparam rectangle {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam database {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam queue {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam arrow {
+    Color #666666
+    FontColor #666666
+    FontSize 12
+}
+
+skinparam actor {
+    StereotypeFontSize 12
+    shadowing false
+    style awesome
+}
+
+skinparam person {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam package {
+    StereotypeFontSize 6
+    StereotypeFontColor transparent
+    FontStyle plain
+    BackgroundColor transparent
+}
+
+skinparam rectangle<<boundary>> {
+    Shadowing false
+    StereotypeFontSize 6
+    StereotypeFontColor transparent
+    FontColor #444444
+    BorderColor #444444
+    BackgroundColor transparent
+    BorderStyle dashed
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam database<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam queue<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam actor<<person>> {
+    StereotypeFontColor #08427B
+    FontColor #08427B
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam person<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+
+
+skinparam rectangle<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam database<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam actor<<external_person>> {
+    StereotypeFontColor #686868
+    FontColor #686868
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam person<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+
+
+skinparam rectangle<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam database<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam queue<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam actor<<system>> {
+    StereotypeFontColor #1168BD
+    FontColor #1168BD
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam person<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+
+
+skinparam rectangle<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam database<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam actor<<external_system>> {
+    StereotypeFontColor #999999
+    FontColor #999999
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam person<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+
+
+
+
+
+sprite $person [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000025788300000000005886410000000000000
+000000000007DFFFFFFD9643347BFFFFFFFB400000000000
+0000000004EFFFFFFFFFFFFFFFFFFFFFFFFFFB1000000000
+000000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFD200000000
+00000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE10000000
+0000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB0000000
+000000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5000000
+000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD000000
+000009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF200000
+00000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF600000
+00000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF800000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00000EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF700000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+0000008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD3000000
+000000014555555555555555555555555555555300000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+sprite $person2 [48x48/16] {
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000002578888300000000005888864100000000000
+0000000007DFFFFFFFFD9643347BFFFFFFFFFB4000000000
+00000004EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB10000000
+0000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD2000000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+00003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+0000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF50000
+0003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD0000
+0009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF2000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+0009FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFF2000
+0003FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFD0000
+0000BFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFF50000
+00003FFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFB00000
+000006FFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFE100000
+0000007FFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFD2000000
+00000004EFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFB10000000
+0000000007DF8FFFFFFFFFFFFFFFFFFFFFF8FB4000000000
+000000000002578888888888888888888864100000000000
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam database<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam queue<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam actor<<container>> {
+    StereotypeFontColor #438DD5
+    FontColor #438DD5
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam person<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+
+
+skinparam rectangle<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam database<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam queue<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam actor<<external_container>> {
+    StereotypeFontColor #B3B3B3
+    FontColor #B3B3B3
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam person<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam database<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam queue<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam actor<<component>> {
+    StereotypeFontColor #85BBF0
+    FontColor #85BBF0
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam person<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+
+
+skinparam rectangle<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam database<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam queue<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam actor<<external_component>> {
+    StereotypeFontColor #CCCCCC
+    FontColor #CCCCCC
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam person<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+rectangle "<$person>\n==Requirement Manager\n\n Takes care about Input Customer Requirements." <<person>> as Requirement_Manager 
+rectangle "<$person>\n==Development Teams\n\n Develops software according to input requirements. Empowered to handle all micro-V cycle artefacts." <<person>> as Development_Teams 
+
+hide stereotype
+legend right
+|<color:#000000>**Legend**</color> |
+|<#08427B> person |
+|<#1168BD> system |
+|<#438DD5> container |
+|<#85BBF0> component |
+|<#686868> external person |
+|<#999999> external system |
+|<#B3B3B3> external container |
+|<#CCCCCC> external component |
+endlegend
+
+rectangle "==Requirements Management\n<size:12>[System]</size>" <<boundary>> as RM {
+database "==Jira\n//<size:12>[Input Requirements decomposition into the Stories (Software Requirements). Place holder for **Definition of Done**.]</size>//" <<container>> as Jira 
+queue "==Jenkins CI/CD\n//<size:12>[Generates neccesary artefacts from the Git repo: SRD, SAD, Reports...]</size>//" <<container>> as Jenkins 
+database "==Git repo - Single Trunk\n//<size:12>[Git-based repository for **bundled** versioning of all micro-V cycle artefacts: Requirements, Architecture, Source Code, Test specifications, Tests, Test results.]</size>//" <<container>> as Git repo 
+database "==Windchill\n//<size:12>[Requirements exchange]</size>//\n\n Setup status." <<container>> as Windchill 
+}
+
+database "== Requirements Management\n\n Process of documenting, analyzing, tracing, prioritizing and agreeing on requirements and then controlling change and communicating to relevant stakeholders." <<external_system>> as Requirements_Management_external_C4 
+
+Requirement_Manager- ->Windchill: Imports
+Development_Teams- ->Windchill: Set status
+Windchill- ->Git repo: Converstion to Markdown
+Windchill- -d->Requirements_Management_external_C4: ReqIF export
+Development_Teams- ->Jira:Decompose
+Git repo- ->Jenkins: Inputs
+Jenkins- ->Git repo: Artefacts
+Jira- ->Git repo: Internal Requirements IDs generation
+Requirements_Management_external_C4- -u->Requirement_Manager: ReqIF export
+
+@enduml
+
+PlantUML version 1.2022.12(Sun Oct 23 18:12:26 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
