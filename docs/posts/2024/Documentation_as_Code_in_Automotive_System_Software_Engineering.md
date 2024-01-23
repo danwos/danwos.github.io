@@ -13,6 +13,19 @@ email: momcilo.krunic@rt-rk.com
 ```{image} _images/03_dac_automotive.png
 :align: center
 ```
+Some days ago I stumbled over a PDF paper by Dr. Momcilo Krunic from 2023, in which he describes a docs-as-code implementation for an ASPICE-compliant SW development project at an Automotive supplier.
+And what can I say? This article by Dr. Momcilo Krunic is the best overview I have ever read, regarding the introduction of docs-as-code in a professional Automotive SW project.
+Therefore I decided to get in contact with him and ask for permission to republish his outstanding work in an HTML version so that single chapters are easier link-
+and shareable.
+It's 100% in sync with the original post, I only needed to change 1-2 reference styles for technical reasons.
+And I added also some personal notes as dropdowns, pointing to extensions or slightly different implementation ideas.
+
+```{note}
+This post was written and published by **Dr. Momcilo Krunic**, as a paper for the [Elektronika ir Elektrotechnika journal](https://eejournal.ktu.lt/index.php/elt>).
+The original version can be downloaded as PDF from [ResearchGate](https://www.researchgate.net/publication/373746697_Documentation_as_Code_in_Automotive_SystemSoftware_Engineering>).
+Original sources are available on [a gitlab repository](https://gitlab.com/momcilo_krunic/elektronika_ir_elektrotechnika_2023>) under [Creative Common License 4.0](https://creativecommons.org/licenses/by/4.0/).
+It's also worth to visit his new startup: [labsoft.ai](https://labsoft.ai/).
+```
 
 
 **Abstract**
@@ -85,7 +98,15 @@ After going through several rounds of internal audits with the Quality Assurance
 
 ## Tools
 
-The DaC methodology involves using a range of tools to facilitate different stages of the software development process, including application lifecycle management (ALM) to track progress; documentation generation for accurate and up-to-date records; source control management to keep versions organized; CI/CD for automated delivery; and custom micro-tooling to streamline tasks. We used these tools alongside an existing tool (Windchill) to ensure backward compatibility with the exchange of requirements using the ReqIf format (Fig. {ref}`reqs-exch`). This portion of the system requires improvement in both the process and the tolls.
+The DaC methodology involves using a range of tools to facilitate different stages of the software development process, including application lifecycle management (ALM) to track progress; documentation generation for accurate and up-to-date records; source control management to keep versions organized; CI/CD for automated delivery; and custom micro-tooling to streamline tasks. We used these tools alongside an existing tool (Windchill) to ensure backward compatibility with the exchange of requirements using the ReqIf format (Fig. {ref}`reqs-exch`). This portion of the system requires improvement in both the process and the tools.
+
+```{dropdown} ALM alternative (note by Daniel)
+In some of my projects, JIRA was just more as an issue system, caring about the implementation realization tasks, but not containing any technical requirements or specifications.
+
+These were written down by the help of [Sphinx-Needs](https://www.sphinx-needs.com/), which allows a direct, continuous traceability between upper elements like system requirements and elements on the right side of the V-model, like integration test cases and their execution result.
+
+As all of these elements were handled in one system, so the the complete traceability matrix could be easily graphically represented and also validated.
+```
 
 (reqs-exch)=
 ```{figure} _images/dac/figures/Requirements_Management_C3.svg
