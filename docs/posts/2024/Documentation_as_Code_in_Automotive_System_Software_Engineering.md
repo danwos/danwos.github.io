@@ -10,13 +10,14 @@ country: Serbia
 email: momcilo.krunic@rt-rk.com
 ---
 
+# Documentation-as-Code in Automotive System/Software Engineering
+
 ```{image} _images/03_dac_automotive.png
 :align: center
 ```
 Some days ago I stumbled over a PDF paper by Dr. Momcilo Krunic from 2023, in which he describes a docs-as-code implementation for an ASPICE-compliant SW development project at an Automotive supplier.
 And what can I say? This article by Dr. Momcilo Krunic is the best overview I have ever read, regarding the introduction of docs-as-code in a professional Automotive SW project.
-Therefore I decided to get in contact with him and ask for permission to republish his outstanding work in an HTML version so that single chapters are easier link-
-and shareable.
+Therefore I decided to get in contact with him and ask for permission to republish his outstanding work in an HTML version so that single chapters are easier to link and share.
 It's 100% in sync with the original post, I only needed to change 1-2 reference styles for technical reasons.
 And I added also some personal notes as dropdowns, pointing to extensions or slightly different implementation ideas.
 
