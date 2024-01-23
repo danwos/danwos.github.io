@@ -297,7 +297,7 @@ In addition to the reported defects, (Fig. {ref}`stability`) shows additional us
 :width: 99%
 
 Documentation repository statistics (commits per month)
-
+```
 
 The interesting statistic can be derived from the documentation repository (Fig. {ref}`git-stat`). The statistic provides data about the number of commits per month related to the DaC approach during the research. In the first couple of months, the whole infrastructure was created and feature teams were onboarded. Afterward, there was a steady influx of commits per month related to the creation of technical documentation (executable specifications, architecture, unit design, etc.). When comparing this statistic to the almost non-existent documentation from the Legacy project, a direct correlation can be made between treating documentation as a first-class citizen (DaC) (Fig. {ref}`git-stat`) and a reduced number of reported defects (Fig. {ref}`stability`). 
 
