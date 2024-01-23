@@ -22,9 +22,9 @@ It's 100% in sync with the original post, I only needed to change 1-2 reference 
 And I added also some personal notes as dropdowns, pointing to extensions or slightly different implementation ideas.
 
 ```{note}
-This post was written and published by **Dr. Momcilo Krunic**, as a paper for the [Elektronika ir Elektrotechnika journal](https://eejournal.ktu.lt/index.php/elt>).
+This post was written and published by [Dr. Momcilo Krunic](https://www.linkedin.com/in/momcilokrunic/), as a paper for the [Elektronika ir Elektrotechnika journal](https://eejournal.ktu.lt/index.php/elt>).
 The original version can be downloaded as PDF from [ResearchGate](https://www.researchgate.net/publication/373746697_Documentation_as_Code_in_Automotive_SystemSoftware_Engineering>).
-Original sources are available on [a gitlab repository](https://gitlab.com/momcilo_krunic/elektronika_ir_elektrotechnika_2023>) under [Creative Common License 4.0](https://creativecommons.org/licenses/by/4.0/).
+Original sources are available on [a gitlab repository](https://gitlab.com/momcilo_krunic/elektronika_ir_elektrotechnika_2023) under [Creative Common License 4.0](https://creativecommons.org/licenses/by/4.0/).
 It's also worth to visit his new startup: [labsoft.ai](https://labsoft.ai/).
 ```
 
@@ -362,9 +362,9 @@ In the DaC approach, the testability of the system is considered one of the most
 I would like to express my deepest gratitude to my colleague (and brother-in-law), Dr. Svetozar Miucin, for his invaluable guidance and support throughout this research project. I am also grateful to my colleagues Dr. Branislav Kordic and Dimitrije Stojanovic for their helpful comments and suggestions. Furthermore, I am sincerely thankful to SVP Dr. Nemanja Lukic for his selfless support, without which this research would not have been possible. Lastly, I cannot express enough appreciation to Overall PM Dr. Nenad Cetic for his invaluable contribution to my professional career (and this research).
 
 ```{note}
-Short Reminder: This post was written and published by **Dr. Momcilo Krunic**, as a paper for the [Elektronika ir Elektrotechnika journal](https://eejournal.ktu.lt/index.php/elt>).
+Short Reminder: This post was written and published by [Dr. Momcilo Krunic](https://www.linkedin.com/in/momcilokrunic/), as a paper for the [Elektronika ir Elektrotechnika journal](https://eejournal.ktu.lt/index.php/elt>).
 The original version can be downloaded as PDF from [ResearchGate](https://www.researchgate.net/publication/373746697_Documentation_as_Code_in_Automotive_SystemSoftware_Engineering>).
-Original sources are available on [a gitlab repository](https://gitlab.com/momcilo_krunic/elektronika_ir_elektrotechnika_2023>) under [Creative Common License 4.0](https://creativecommons.org/licenses/by/4.0/).
+Original sources are available on [a gitlab repository](https://gitlab.com/momcilo_krunic/elektronika_ir_elektrotechnika_2023) under [Creative Common License 4.0](https://creativecommons.org/licenses/by/4.0/).
 ```
 
 
