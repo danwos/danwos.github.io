@@ -1,0 +1,56 @@
+"$schema" = "https://ubcode.useblocks.com/ubproject.schema.json"
+
+[project]
+# Project name
+name = "danwos"
+# Project version
+version = "1.0.0"
+# Project description
+description = "Danwos Blog"
+# A directory, used for resolving paths in certain directives (defaults to config directory).
+srcdir = "source"
+
+[rst_lint]
+ignore = ["block.title_line"]
+
+# Rules for the ubCode formater, to get a nice looking documentation.
+[format_rst]
+fail_on_warning = []
+validate = true
+blockquote_indent = 2
+definition_list_indent = 2
+directive_indent = 3
+enum_list_auto = "preserve"
+enum_list_style = "preserve"
+field_list_align_body = false
+field_list_body_on_new_line = 20
+field_list_indent = 2
+literal_indent = 2
+paragraph_line_length = 70
+paragraph_semantic_wrap = false
+simple_table_space = 2
+substitution_indent = 3
+transition_char = "-"
+transition_length = 10
+
+[server]
+image_file_patterns = [
+  "*.jpg",
+  "*.jpeg",
+  "*.png",
+  "*.gif",
+  "*.svg",
+  "*.webp",
+  "*.bmp",
+  "*.tiff",
+  "*.tif",
+  "*.ico",
+  "*.heif",
+  "*.heic",
+  "*.avif",
+  "*.eps",
+  "*.psd",
+  "*.ai",
+  "*.pdf",
+]
+hover_images = true
