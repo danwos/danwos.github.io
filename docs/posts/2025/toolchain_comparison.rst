@@ -101,44 +101,6 @@ Available (but extendable) tools are:
 
 The list of all requirments can be seen in the `sheet <https://docs.google.com/spreadsheets/d/13MwtKcdgjgT5v-j7CKwhIIQ9zKbR5_G-N56Uhz-0QaM/edit?gid=955912988#gid=955912988>`__.
 
-Configuration
-~~~~~~~~~~~~~
-
-Prefilled process roles are:
-
-* DevOps
-* Manager
-* Process Eng.
-* Project Lead
-* Quality Eng.
-* Req. Manager
-* SW Architect
-* SW Developer
-* SW Tester
-* System Eng.
-
-And available, but extendable, tools are:
-
-* AsciiDoc - https://asciidoc.org/
-* Docker - https://docs.docker.com/
-* DoxyGen - https://www.doxygen.nl/manual/
-* Git - https://git-scm.com/doc
-* GitHub - https://docs.github.com/
-* Isso - https://posativ.org/isso/docs/
-* Jupyter - https://docs.jupyter.org/
-* Open-Needs IDE
-* SNE
-* Sphinx - https://www.sphinx-doc.org/
-* Sphinx-Needs - https://sphinx-needs.readthedocs.io/
-* Sphinx-PlantUML - https://sphinxcontrib-plantuml.readthedocs.io/
-* Sphinx-Preview
-* Sphinx-Test-Reports - https://sphinx-test-reports.readthedocs.io/
-* VsCode RST Preview - https://marketplace.visualstudio.com/items?itemName=lextudio.restructuredtext
-* ubCode - https://useblocks.com/products/ubcode/
-* ubTrace - https://useblocks.com/products/ubtrace
-* ubc - https://useblocks.com/
-* ubConnect - https://useblocks.com/
-
 How to use the sheet
 --------------------
 
