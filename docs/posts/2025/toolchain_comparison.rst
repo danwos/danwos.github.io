@@ -24,6 +24,7 @@ projects (150–1,500 users) over recent years.
 
 .. image:: _images/02_tool_comparison_screenshot.png
    :align: center
+   :target: https://docs.google.com/spreadsheets/d/13MwtKcdgjgT5v-j7CKwhIIQ9zKbR5_G-N56Uhz-0QaM
 
 Summary
 -------
@@ -58,6 +59,80 @@ categorized by process role and task. Requirements are filterable by
 topic and benefit category, and each can be assigned a
 project-specific value.
 
+Prefilled Docs-as-Code data
+---------------------------
+
+The spreadsheet already contains process roles, tools and other
+criteria which are often used in Docs-as-Code projects and where
+collected in Automotive projects at international OEM and TIER-1
+companies.
+
+Predecessors of this spreadsheet were also used in multiple projects
+to support the decision making in certain toolchain evaluations.
+
+Requirements
+~~~~~~~~~~~~
+
+Over 160 requirments are already avaialble, togehter with their
+process role, a rough task description, and a first weighting.
+
+Some examples from the requirement data:
+
+* As a **Req. Manager**, I want to **create versions and baseline**.
+* As an **Architect**, I want to **write PlantUML diagrams in object
+  content**.
+* As a **SW Developer**, I want to **test the documentation links**.
+* As a **Req. Manager**, I want to **have free configurable object
+  types**.
+* As a **Process Eng.**, I want to **define the rules for requirement
+  Ids**.
+* As a **DevOps**, I want to **build html and export data to files
+  during one build**.
+* As a **Req. Manager**, I want to **integrate/copy IBM Doors issues as
+  objects into my docs**.
+* As a **Project Lead**, I want to **find triggers for performance
+  problems (bottle necks)**.
+
+The list of all requirments can be seen in the `sheet <https://docs.google.com/spreadsheets/d/13MwtKcdgjgT5v-j7CKwhIIQ9zKbR5_G-N56Uhz-0QaM/edit?gid=955912988#gid=955912988>`__.
+
+Configuration
+~~~~~~~~~~~~~
+
+Prefilled process roles are:
+
+* DevOps
+* Manager
+* Process Eng.
+* Project Lead
+* Quality Eng.
+* Req. Manager
+* SW Architect
+* SW Developer
+* SW Tester
+* System Eng.
+
+And available, but extendable, tools are:
+
+* AsciiDoc - https://asciidoc.org/
+* Docker - https://docs.docker.com/
+* DoxyGen - https://www.doxygen.nl/manual/
+* Git - https://git-scm.com/doc
+* GitHub - https://docs.github.com/
+* Isso - https://posativ.org/isso/docs/
+* Jupyter - https://docs.jupyter.org/
+* Open-Needs IDE
+* SNE
+* Sphinx - https://www.sphinx-doc.org/
+* Sphinx-Needs - https://sphinx-needs.readthedocs.io/
+* Sphinx-PlantUML - https://sphinxcontrib-plantuml.readthedocs.io/
+* Sphinx-Preview
+* Sphinx-Test-Reports - https://sphinx-test-reports.readthedocs.io/
+* VsCode RST Preview - https://marketplace.visualstudio.com/items?itemName=lextudio.restructuredtext
+* ubCode - https://useblocks.com/products/ubcode/
+* ubTrace - https://useblocks.com/products/ubtrace
+* ubc - https://useblocks.com/
+* ubConnect - https://useblocks.com/
+
 How to use the sheet
 --------------------
 
@@ -86,7 +161,8 @@ Requirements sheet
    :align: center
    :width: 90%
 
-In this sheet, requirements are collected and weighted.
+In this `sheet <https://docs.google.com/spreadsheets/d/13MwtKcdgjgT5v-j7CKwhIIQ9zKbR5_G-N56Uhz-0QaM/edit?gid=955912988#gid=955912988>`__,
+requirements are collected and weighted.
 
 Requirements are written like user stories, with **process role** and **process
 task** specified in separate columns. Example: As a **Process
@@ -135,8 +211,8 @@ Comparison sheet
    :align: center
    :width: 90%
 
-The reuqirements are automatically moved over to the **Comparsion**
-sheet and are not allowed to be changed.
+The reuqirements are automatically moved over to the `Comparsion sheet <https://docs.google.com/spreadsheets/d/13MwtKcdgjgT5v-j7CKwhIIQ9zKbR5_G-N56Uhz-0QaM/edit?gid=1557903405#gid=1557903405>`__
+and are not allowed to be changed.
 
 For both Toolchains, an entry shall be given in the **Support** column
 if a requirement is fullfilled by **100%, 50% or 0%**.
@@ -146,14 +222,73 @@ unfullfilled requirements. And **50%** is for rare cases, where
 workarounds may be available, which allow to reach the goal of the
 requirment maybe with some extra work.
 
-The **Points** column contains the finally reached points for 
-a requirement: **Points** from the **Requirement** sheet multiplied
-with the **Support** value.
+The **Points** column contains the finally reached points for a
+requirement: **Points** from the **Requirement** sheet multiplied with
+the **Support** value.
 
-The information can be extended by setting the related tool.
+You can further specify the information by assigning the related tool
+for each requirement.
+
+The final result—the total points achieved—can be seen in row 3, where
+the points reached are compared to the overall possible points.
+
+.. image:: _images/05_comparison_result.png
+   :align: center
 
 Analysis sheet
 ~~~~~~~~~~~~~~
 
+.. image:: _images/06_analysis_sheet.png
+   :align: center
+   :width: 90%
+
+The `Analysis sheet <https://docs.google.com/spreadsheets/d/13MwtKcdgjgT5v-j7CKwhIIQ9zKbR5_G-N56Uhz-0QaM/edit?gid=1318461535#gid=1318461535>`__
+provides insights into the main benefits each tool offers.
+
+Does a tool help you speed up development, or is it more valuable for
+providing data insights?
+
+This view helps you assess how important a specific tool is for your
+process and the expected improvements it brings to the toolchain.
+
 Other sheets
 ~~~~~~~~~~~~
+
+Additional sheets included:
+
+* **Overview**: The welcome page of the spreadsheet.
+* **Help**: Instructions and tips for using the spreadsheet.
+* **Config**: Configuration options for drop-downs and related settings.
+* **License**: The license information for the spreadsheet.
+
+Motivation
+----------
+
+The motivation for creating and sharing this sheet is that most tool
+decisions are made behind closed doors, often by a small group of
+people who do not fully represent the real project situation.
+Frequently, these decisions are driven by a single tool vendor or team
+with preferred access, who may define and even hide requirements to
+gain an advantage.
+
+While this toolchain comparison cannot eliminate discussions based on
+politics or budget, it does provide a transparent way to evaluate
+supported features against a comprehensive list of project-specific
+requirements.
+
+In the end, such a list also helps to revisit and justify past
+decisions in the future.
+
+Contribution
+------------
+
+The list of requirements and tools can never be fully complete. I
+welcome any additional requirements or suggestions that could help
+extend the current list.
+
+You can contribute by sharing your own filled toolchain comparison
+spreadsheet—either publicly or by sending it to me via email.
+
+Smaller feedback can also be provided by writing comments directly in
+the spreadsheet, but please note that these comments are visible to
+everyone.
