@@ -1,8 +1,8 @@
 ---
 myst:
   html_meta:
-    "description lang=en": "metadata description"
-    "keywords": "Sphinx, MyST"
+    "description lang=en": "Entry page"
+    "keywords": "Sphinx, Docs-as-Code"
     "property=og:locale": "en_US"
 ---
 # Big business and Docs-as-code
