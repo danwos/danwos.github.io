@@ -1,0 +1,210 @@
+/* Most styles are coming from https://github.com/choldgraf/choldgraf.github.io/blob/main/_static/custom.css
+https://predictablynoisy.com/#
+*/
+
+.bd-main .bd-content .bd-article-container {
+    max-width: 100%;  /* default is 60em */
+  }
+
+/* POST SPECIFIC */
+
+/*meta_data post */
+#META_DATA_5 span.collapse span,
+#META_DATA_6 span.collapse span,
+table.needs_layout_meta span.collapse span{
+    color: #555;
+    border: 2px solid #aaa;
+    border-radius: 10px;
+    padding: 2px 10px;
+}
+
+/*docs-as-code enhanced post*/
+div.needs-json-example pre{
+    max-height: 250px;
+
+}
+
+/* Sphinx-Needs css */
+table.needs_layout_usecase td.side {
+    text-orientation: upright;
+    writing-mode: sideways-lr;
+    font-size: small;
+    background-color: rgba(0,0,0,0.1);
+}
+
+/* Fix for pydata theme to show collapse button for needs */
+span.needs.collapse {
+    display: inherit;
+}
+
+/*DataTables smaller search input field  */
+div.dataTables_filter input {
+    max-width: 150px;
+}
+
+.navbar-brand img {
+    padding-left: 10px;
+}
+
+/*Text and link details at the end!
+*/
+
+main {
+    text-align: justify;
+}
+
+/* NavBar */
+.navbar-light {
+    background: #333 !important;
+}
+
+#navbar-icon-links i.fa-github-square::before {
+    color: #ffffff !important;
+}
+/* Bio area */
+div.profile-pic {
+    margin-top: 1em;
+}
+
+div.profile-pic img {
+    /*border-radius: 500px;*/
+    width: 80%;
+    max-width: 190px;
+    margin: 0 auto;
+    display: block;
+}
+
+.bio-info {
+    margin: 1em auto;
+    max-width: 220px;
+}
+
+.name {
+    font-size: 1.5em;
+}
+
+.focusareas {
+    font-size: .9em;
+    font-weight: bold;
+}
+
+.whatido {
+    margin-top: 1em;
+}
+
+
+/* Sidebar for blog archive / each post */
+ul.ablog-archive {
+    padding-left: 0px;
+}
+
+.bd-sidebar h2 {
+    font-size: 1.4em;
+}
+
+.bd-sidebar ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.bd-sidebar li {
+    padding-bottom: .5em;
+}
+
+div.bd-sidebar h3, div.bd-sidebar h2, div.bd-sidebar ul {
+    padding-left: 5%;
+}
+
+/* In-page post lists */
+ul.postlist {
+    padding-left: 0;
+}
+
+ul.postlist > li > p:first-child {
+    font-size: 1.5em;
+}
+
+ul.postlist li + li {
+    margin-top: 2em;
+}
+
+ul.postlist li > p > a {
+    font-style: normal;
+    font-size: 1.0em;
+}
+
+
+/* Timeline CSS */
+div.timeline div.card {
+    border: 0px;
+}
+
+div.timeline div.left {
+    text-align: right;
+    border-right: 1px solid black;
+}
+
+div.timeline div.entry::after {
+    width: 1em;
+    height: 1em;
+    background: white;
+    border-radius: 50%;
+    content: "";
+    top: 1em;
+    display: block;
+    position: absolute;
+    border: 1px black solid;
+    z-index: 999;
+}
+
+div.timeline div.entry.left::after {
+    right: -.5em;
+}
+
+div.timeline div.entry.right::after {
+    left: -.5em;
+}
+/* Details: https://pydata-sphinx-theme.readthedocs.io/en/latest/user_guide/customizing.html */
+:root {
+    /*****************************************************************************
+  * Color
+  *
+  * Colors are defined in rgb string way, "red, green, blue"
+  **/
+  --pst-color-primary: 19, 6, 84;
+  --pst-color-success: 40, 167, 69;
+  --pst-color-info: 0, 123, 255;  /*23, 162, 184;*/
+  --pst-color-warning: 255, 193, 7;
+  --pst-color-danger: 220, 53, 69;
+  --pst-color-text-base: 51, 51, 51;
+
+  --pst-color-h1: var(--pst-color-primary);
+  --pst-color-h2: var(--pst-color-primary);
+  --pst-color-h3: var(--pst-color-text-base);
+  --pst-color-h4: var(--pst-color-text-base);
+  --pst-color-h5: var(--pst-color-text-base);
+  --pst-color-h6: var(--pst-color-text-base);
+  --pst-color-paragraph: var(--pst-color-text-base);
+  --pst-color-link: 0, 91, 129;
+  --pst-color-link-hover: 227, 46, 0;
+  --pst-color-headerlink: 198, 15, 15;
+  --pst-color-headerlink-hover: 255, 255, 255;
+  --pst-color-preformatted-text: 34, 34, 34;
+  --pst-color-preformatted-background: 250, 250, 250;
+  --pst-color-inline-code: 232, 62, 140;
+
+  --pst-color-active-navigation: 19, 6, 84;
+  --pst-color-navbar-link: 255, 255, 255;
+  --pst-color-navbar-link-hover: 255,255,255;/*var(--pst-color-active-navigation);*/
+  --pst-color-navbar-link-active: 255,255,255; /*var(--pst-color-active-navigation);*/
+  --pst-color-sidebar-link: 77, 77, 77;
+  --pst-color-sidebar-link-hover: var(--pst-color-active-navigation);
+  --pst-color-sidebar-link-active: var(--pst-color-active-navigation);
+  --pst-color-sidebar-expander-background-hover: 244, 244, 244;
+  --pst-color-sidebar-caption: 77, 77, 77;
+  --pst-color-toc-link: 119, 117, 122;
+  --pst-color-toc-link-hover: var(--pst-color-active-navigation);
+  --pst-color-toc-link-active: var(--pst-color-active-navigation);
+
+
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="240px" preserveAspectRatio="none" style="width:186px;height:240px;" version="1.1" viewBox="0 0 186 240" width="186px" zoomAndPan="magnify"><defs><filter height="300%" id="f1tisudei1d40g" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[7f32460df2b23b452a92cdd5fc1d2221]
+entity REQ_001--><a href="../posts/2021/docs-as-code-enhanced.html#REQ_001" target="_top" title="../posts/2021/docs-as-code-enhanced.html#REQ_001" xlink:actuate="onRequest" xlink:href="../posts/2021/docs-as-code-enhanced.html#REQ_001" xlink:show="new" xlink:title="../posts/2021/docs-as-code-enhanced.html#REQ_001" xlink:type="simple"><polygon fill="#BFD8D2" filter="url(#f1tisudei1d40g)" points="6,150,16,140,164,140,164,218.2031,154,228.2031,6,228.2031,6,150" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="154" x2="163" y1="150" y2="141"/><line style="stroke: #000000; stroke-width: 1.5;" x1="6" x2="154" y1="150" y2="150"/><line style="stroke: #000000; stroke-width: 1.5;" x1="154" x2="154" y1="150" y2="228.2031"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="80" x="21" y="171.1387">Requirement</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="79" x="21" y="186.9639">Objects in</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="118" x="21" y="203.2607">documentation</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="45" x="21" y="215.8447">REQ_001</text></a><!--MD5=[72a93ad3ed7ef64911bd65be97b1a946]
+entity REQ_002--><a href="../posts/2021/docs-as-code-enhanced.html#REQ_002" target="_top" title="../posts/2021/docs-as-code-enhanced.html#REQ_002" xlink:actuate="onRequest" xlink:href="../posts/2021/docs-as-code-enhanced.html#REQ_002" xlink:show="new" xlink:title="../posts/2021/docs-as-code-enhanced.html#REQ_002" xlink:type="simple"><polygon fill="#BFD8D2" filter="url(#f1tisudei1d40g)" points="11.5,18,21.5,8,158.5,8,158.5,69.9063,148.5,79.9063,11.5,79.9063,11.5,18" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="148.5" x2="157.5" y1="18" y2="9"/><line style="stroke: #000000; stroke-width: 1.5;" x1="11.5" x2="148.5" y1="18" y2="18"/><line style="stroke: #000000; stroke-width: 1.5;" x1="148.5" x2="148.5" y1="18" y2="79.9063"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="80" x="26.5" y="39.1387">Requirement</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="107" x="26.5" y="54.9639">Object linking</text><text fill="#000000" font-family="sans-serif" font-size="10" lengthAdjust="spacingAndGlyphs" textLength="45" x="26.5" y="67.5479">REQ_002</text></a><!--MD5=[08b06e01500a1328ce61b7fbc7fd0e61]
+link REQ_002 to REQ_001--><path d="M85,80.18 C85,96.82 85,116.95 85,134.97 " fill="none" id="REQ_002-&gt;REQ_001" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="85,140,89,131,85,135,81,131,85,140" style="stroke: #A80036; stroke-width: 1.0;"/><!--MD5=[0f123da9e9365a3f490236eee37e5835]
+@startuml
+
+
+node "<size:12>Requirement</size>\n**Objects in**\n**documentation**\n<size:10>REQ_001</size>" as REQ_001 [[../posts/2021/docs-as-code-enhanced.html#REQ_001]] #BFD8D2 
+node "<size:12>Requirement</size>\n**Object linking**\n<size:10>REQ_002</size>" as REQ_002 [[../posts/2021/docs-as-code-enhanced.html#REQ_002]] #BFD8D2 
+
+
+REQ_002 - -> REQ_001
+
+@enduml
+
+PlantUML version 1.2020.09(Sun May 10 10:51:06 UTC 2020)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Java Version: 11.0.11+9
+Operating System: Linux
+Default Encoding: UTF-8
+Language: en
+Country: null
+--></g></svg>

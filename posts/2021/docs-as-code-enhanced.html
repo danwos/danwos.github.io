@@ -1,0 +1,2139 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Docs-as-Code Enhanced &#8212; danwos  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_style.css?v=92936fa5" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/modern.css?v=803738c0" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=e3bc0ac0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-0MZ0221M7W"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-0MZ0221M7W');
+            </script>
+    <script src="../../_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5"></script>
+    <script src="../../_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d"></script>
+    <script src="../../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
+    <script src="../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
+    <script src="../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-0MZ0221M7W');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2021/docs-as-code-enhanced';</script>
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="danwos"
+/>
+
+
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this site..."
+         aria-label="Search this site..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/danwos_white.png" class="logo__image only-light" alt="danwos  documentation - Home"/>
+    <script>document.write(`<img src="../../_static/danwos_white.png" class="logo__image only-dark" alt="danwos  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../blog.html">
+                        Blog
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../about.html">
+                        About me
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects.html">
+                        Projects
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../ideas.html">
+                        Ideas
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/danwos/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/danwos" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/in/daniel-woste-362b6252/" title="LinkedIn" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">LinkedIn</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.xing.com/profile/Daniel_Woste/" title="Xing" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-xing fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Xing</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://useblocks.com" title="My company useblocks" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-briefcase fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">My company useblocks</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../blog.html">
+                        Blog
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../about.html">
+                        About me
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects.html">
+                        Projects
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../ideas.html">
+                        Ideas
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/danwos/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/danwos" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/in/daniel-woste-362b6252/" title="LinkedIn" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">LinkedIn</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.xing.com/profile/Daniel_Woste/" title="Xing" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-xing fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Xing</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://useblocks.com" title="My company useblocks" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-briefcase fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">My company useblocks</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<div class="ablog-sidebar-item ablog__postcard">
+
+
+<h2>
+  
+  
+  <i class="fa fa-calendar"></i>
+  
+  19 November 2021
+  
+</h2>
+<ul>
+  <div class="ablog-sidebar-item ablog__postcard2">
+
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
+    
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="../../blog/author/daniel-woste.html">Daniel Woste</a>
+  
+  
+  
+</li>
+
+
+
+
+
+<li id="ablog-sidebar-item tags ablog__tags">
+  <span>
+    
+    
+    <i class="fa-fw fa fa-tags"></i>
+    
+    
+    </span>
+  
+  
+  <a href="../../blog/tag/docs-as-code.html">docs-as-code</a>
+  
+  
+  
+  
+  
+  <a href="../../blog/tag/sphinx.html">sphinx</a>
+  
+  
+  
+  
+  
+  <a href="../../blog/tag/sphinx-needs.html">sphinx-needs</a>
+  
+  
+  
+</li>
+
+
+<li id="ablog-sidebar-item comments ablog__comments">
+  <script type="text/javascript">
+    var disqus_shortname = "danwos";
+
+    (function () {
+      var s = document.createElement("script");
+      s.async = true;
+      s.type = "text/javascript";
+      s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+      (
+        document.getElementsByTagName("HEAD")[0] ||
+        document.getElementsByTagName("BODY")[0]
+      ).appendChild(s);
+    })();
+  </script>
+  
+  <i class="fa-fw fa fa-comments"></i>
+  
+  <a href="#disqus_thread" data-disqus-identifier="/posts/2021/docs-as-code-enhanced/" >
+    
+  </a >
+</li>
+
+</div>
+</ul>
+</div>
+</div>
+        <div class="sidebar-primary-item">
+<div class="ablog-sidebar-item ablog__recentposts">
+<h3>
+  <a href="../../blog.html">Recent Posts</a>
+</h3>
+<ul>
+  
+  
+  <li>
+    <a href="../2025/toolchain_comparison.html">
+      15 July - Toolchain comparison
+    </a>
+  </li>
+  
+  <li>
+    <a href="../2024/Documentation_as_Code_in_Automotive_System_Software_Engineering.html">
+      23 January - Documentation as Code in Automotive System/Software Engineering
+    </a>
+  </li>
+  
+  <li>
+    <a href="../2024/manager_pov.html">
+      02 January - Manager POV: What’s the benefit of docs-as-code?
+    </a>
+  </li>
+  
+  <li>
+    <a href="process_documents.html">
+      02 December - Process documents with Sphinx-Needs
+    </a>
+  </li>
+  
+  <li>
+    <a href="open_needs_db.html">
+      29 November - Open-Needs-DB gets funded
+    </a>
+  </li>
+  
+</ul>
+</div>
+</div>
+        <div class="sidebar-primary-item">
+<div class="ablog-sidebar-item ablog__archive">
+<h3>
+  <a href="../../blog/archive.html">Archives</a>
+</h3>
+<ul>
+  
+  
+  <li>
+    <a href="../../blog/2025.html">2025 (1)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../../blog/2024.html">2024 (2)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../../blog/2021.html">2021 (9)</a>
+  </li>
+  
+  
+</ul>
+</div>
+</div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Docs-as-Code...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+<section class="tex2jax_ignore mathjax_ignore" id="docs-as-code-enhanced">
+<h1>Docs-as-Code Enhanced<a class="headerlink" href="#docs-as-code-enhanced" title="Link to this heading">#</a></h1>
+<img alt="../../_images/docs_as_code_enhanced.png" class="align-center" src="../../_images/docs_as_code_enhanced.png" />
+<p>For most of us “Docs-as-Code” mostly means to store the documentation files beside the project sources in git.
+Also editing the sources in an already used IDE and using the CI system to build it, are 2 important use cases why
+docs-as-code is chosen to create documentation.</p>
+<p>But these features have nothing to do with the documentation content itself.
+What if the content itself can be treated as code? What if the content / documentation language provides features,
+which we already know from our programming languages?</p>
+<section id="textual-and-technical-representation">
+<h2>Textual and technical representation<a class="headerlink" href="#textual-and-technical-representation" title="Link to this heading">#</a></h2>
+<p>Most documentation exist in two ways out there:</p>
+<ol class="arabic simple">
+<li><p>A pure <strong>textual representation</strong>, readable by human and with some markup to make it nice looking (e.g, MS Word).</p></li>
+<li><p>A pure <strong>technical representation</strong>, stored as objects in database and available for humans via graphical
+user interface only (e.g. a ticket system like JIRA).</p></li>
+</ol>
+<p>The <strong>textual representation</strong> must be used as it is. No way to easily reorganize it on the fly.
+No way to easily reuse specific chapters, without the need to copy&amp;paste them.
+And no way to enhance the content with meta data, to make filtering/searching so much easier.</p>
+<p>The <strong>technical representation</strong> makes all this possible.
+Add additional data to an object, link it to another object. Filter for it and react programmatically on data changes.
+All this is possible, with the drawback that you as writer only have objects.
+You can change the object itself, but there is no way to add information, which are not following the rules of
+an object. E.g. you can’t add headlines between issue objects. You can have different filters. But you can not create
+a page with 10 headlines, each filled with a different amount of objects.
+You don’t have the freedom to organize your content the way a <strong>textual representation</strong> has.</p>
+</section>
+<section id="objects-included-documentation">
+<h2>Objects included documentation<a class="headerlink" href="#objects-included-documentation" title="Link to this heading">#</a></h2>
+<p>But what, if you can have both?</p>
+<p>The freedom to structure your documentation the way you need it.
+Plus the possibility to add reusable, linkable, extendable objects on every position of your document?</p>
+<section id="use-case-requirements-in-sw-architecture">
+<h3>Use case: Requirements in SW Architecture<a class="headerlink" href="#use-case-requirements-in-sw-architecture" title="Link to this heading">#</a></h3>
+<p>Here an example:<br />
+You are responsible for describing the SW architecture of the upcoming project.
+And your goal is to not only present UML-models, but also to explain textual why specific decisions were made.
+Decisions based on technical and functional requirements. Requirements, which you will need to extend, as your
+SW Architecture will tell the SW developers how stuff needs to get implemented.</p>
+<p>And a requirement can be best represented as an object, with different kind of information. Able to be linked to other
+requirements. And accessible all over the documentation to create tables of open requirements or a topic-centric list of
+requirements. Ready to get exported to external systems or suppliers, without any internal content.</p>
+</section>
+</section>
+<section id="sphinx-sphinx-needs">
+<h2>Sphinx &amp; Sphinx-Needs<a class="headerlink" href="#sphinx-sphinx-needs" title="Link to this heading">#</a></h2>
+<p>This idea got already realised by an extension for the documentation framework <a class="reference external" href="https://www.sphinx-doc.org">Sphinx</a>.<br />
+The extension is called <strong><a class="reference external" href="https://sphinx-needs.com">Sphinx-Needs</a></strong> and because this page is based on Sphinx, I can present you all features
+of <a class="reference external" href="https://sphinx-needs.com">Sphinx-Needs</a> right on this page.</p>
+<section id="object-creation">
+<h3>Object creation<a class="headerlink" href="#object-creation" title="Link to this heading">#</a></h3>
+<p>So here is an embedded requirement object:</p>
+<div class="need_container docutils container" id="SNCB-a4d87af2">
+<table class="need needs_grid_simple needs_layout_clean needs_style_none needs_type_req table" id="REQ_001">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">Objects in documentation</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_001" title="REQ_001">REQ_001</a></span>  <span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">done</span></span></div>
+<div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">objects</span><span class="needs_spacer">, </span><span class="needs_data">documentation</span><span class="needs_spacer">, </span><span class="needs_data">sphinx-needs</span></span></span></div>
+<div class="line"><span class="needs_example"><span class="needs_label">example: </span><span class="needs_data">True</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">links incoming: <span class="links"><span><a class="reference internal" href="#REQ_002" title="REQ_001">REQ_002</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>For our overall SW development documentation we need a way to create and reuse objects.</p>
+<p>We need them for <strong>Requirements</strong>, <strong>Specifications</strong>, <strong>Test Cases</strong>, <strong>Test Case Runs</strong> and maybe more.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><em>Click the arrow on the right side of the title to show the meta-data.</em></p>
+<p>The code for this object is embedded inside the normal rst/md documentation code:</p>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-0">
+rst</label><div class="sd-tab-content docutils">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span>Some text before the requirement object.
+
+<span class="p">..</span> <span class="ow">req</span><span class="p">::</span> Objects in documentation
+   <span class="nc">:id:</span> REQ_001
+   <span class="nc">:status:</span> done
+   <span class="nc">:tags:</span> objects, documentation, sphinx-needs
+   <span class="nc">:collapse:</span> True
+
+   For our overall SW development documentation we need a way to create and reuse objects.
+
+   We need them for <span class="gs">**Requirements**</span>, <span class="gs">**Specifications**</span>, <span class="gs">**Test Cases**</span>, <span class="gs">**Test Case Runs**</span> and maybe more.
+
+Some text after the requirement object.
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-1">
+md / MyST</label><div class="sd-tab-content docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Some text before the requirement object.
+
+```{req}Objects in documentation
+:id: REQ_001
+:status: done
+:tags: objects, documentation, sphinx-needs
+:collapse: True
+
+For our overall SW development documentation we need a way to create and reuse objects.
+
+We need them for <span class="gs">**Requirements**</span>, <span class="gs">**Specifications**</span>, <span class="gs">**Test Cases**</span>, <span class="gs">**Test Case Runs**</span> and maybe more.
+```
+Some text after the requirement object.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="object-linking">
+<h3>Object Linking<a class="headerlink" href="#object-linking" title="Link to this heading">#</a></h3>
+<p>And for sure objects can be linked to each other:</p>
+<div class="need_container docutils container" id="SNCB-0e3990e9">
+<table class="need needs_grid_simple needs_layout_clean needs_style_none needs_type_req table" id="REQ_002">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Requirement</span></span>: </span><strong><span><span class="needs_title"><span class="needs_data">Object linking</span></span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#REQ_002" title="REQ_002">REQ_002</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">done</span></span></div>
+<div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">objects</span><span class="needs_spacer">, </span><span class="needs_data">documentation</span><span class="needs_spacer">, </span><span class="needs_data">sphinx-needs</span></span></span></div>
+<div class="line"><span class="needs_example"><span class="needs_label">example: </span><span class="needs_data">True</span></span></div>
+</span></span></div>
+<div class="line"><span><div class="line">links outgoing: <span class="links"><span><a class="reference internal" href="#REQ_001" title="REQ_002">REQ_001</a></span></span></div>
+</span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Objects must be linkable and all incoming and outgoing links shall get documented.</p>
+<p>This is based on <a class="reference internal" href="#REQ_001" title="REQ_001"><em class="xref need">Objects in documentation (REQ_001)</em></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-2" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-2">
+rst</label><div class="sd-tab-content docutils">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">req</span><span class="p">::</span> Object linking
+   <span class="nc">:id:</span> REQ_002
+   <span class="nc">:status:</span> done
+   <span class="nc">:tags:</span> objects, documentation, sphinx-needs
+   <span class="nc">:links:</span> REQ_001
+
+   Objects must be linkable and all incoming and outgoing links shall get documented.
+   
+   This is based on :need::REQ_001`
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-3" name="sd-tab-set-1" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-3">
+md / MyST</label><div class="sd-tab-content docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{req} Object linking
+:id: REQ_002
+:status: done
+:tags: objects, documentation, sphinx-needs
+:links: REQ_001
+
+Objects must be linkable and all incoming and outgoing links shall get documented.
+
+This is based on {need}`REQ_001`
+```
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="tables">
+<h3>Tables<a class="headerlink" href="#tables" title="Link to this heading">#</a></h3>
+<p>To perform some analysis on objects, we can use <code class="docutils literal notranslate"><span class="pre">needtable</span></code>.</p>
+<div class="needstable_wrapper docutils container" id="needtable-posts/2021/docs-as-code-enhanced-0">
+<table class="NEEDS_TABLE table" id="needtable-posts/2021/docs-as-code-enhanced-0-table_node">
+<colgroup>
+<col style="width: 12.5%" />
+<col style="width: 37.5%" />
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+<col style="width: 12.5%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ID</p></th>
+<th class="head"><p>Title</p></th>
+<th class="head"><p>Status</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Outgoing</p></th>
+<th class="head"><p>Tags</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="#REQ_001">REQ_001</a></p></td>
+<td class="needs_title"><p>Objects in documentation</p></td>
+<td class="needs_status"><p>done</p></td>
+<td class="needs_type"><p>req</p></td>
+<td class="needs_links"><p></p></td>
+<td class="needs_tags"><p>objects<em>; </em>documentation<em>; </em>sphinx-needs</p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="#REQ_002">REQ_002</a></p></td>
+<td class="needs_title"><p>Object linking</p></td>
+<td class="needs_status"><p>done</p></td>
+<td class="needs_type"><p>req</p></td>
+<td class="needs_links"><p><a class="reference internal" href="#REQ_001">REQ_001</a></p></td>
+<td class="needs_tags"><p>objects<em>; </em>documentation<em>; </em>sphinx-needs</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-4" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-4">
+rst</label><div class="sd-tab-content docutils">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">needtable</span><span class="p">::</span>
+   <span class="nc">:types:</span> req
+   <span class="nc">:style:</span> table 
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-5" name="sd-tab-set-2" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-5">
+md / MyST</label><div class="sd-tab-content docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{needtable}
+:types: req
+:style: table
+```
+</pre></div>
+</div>
+</div>
+</div>
+<p>And for sure we have access to <strong>all</strong> objects from the complete documentation (in this case objects
+created by other blog posts).</p>
+<p>The following table is configured to show selected columns and uses the default DataTables
+for a more “dynamic” view.</p>
+<span id="needtable-posts/2021/docs-as-code-enhanced-1"></span><table class="NEEDS_DATATABLES table" id="needtable-posts/2021/docs-as-code-enhanced-1-table_node">
+<colgroup>
+<col style="width: 11.1%" />
+<col style="width: 33.3%" />
+<col style="width: 11.1%" />
+<col style="width: 11.1%" />
+<col style="width: 11.1%" />
+<col style="width: 11.1%" />
+<col style="width: 11.1%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ID</p></th>
+<th class="head"><p>Title</p></th>
+<th class="head"><p>Status</p></th>
+<th class="head"><p>Docname</p></th>
+<th class="head"><p>Section Name</p></th>
+<th class="head"><p>Incoming</p></th>
+<th class="head"><p>Outgoing</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../../about.html#ABOUT">ABOUT</a></p></td>
+<td class="needs_title"><p></p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>about</p></td>
+<td class="needs_section_name"><p>About me</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="process_documents.html#ACT_001">ACT_001</a></p></td>
+<td class="needs_title"><p>Activity object</p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/process_documents</p></td>
+<td class="needs_section_name"><p>Model documentation</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="process_documents.html#ACT_002">ACT_002</a></p></td>
+<td class="needs_title"><p>Get documentation</p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/process_documents</p></td>
+<td class="needs_section_name"><p>activities</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="process_documents.html#ACT_003">ACT_003</a></p></td>
+<td class="needs_title"><p>Update documentation</p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/process_documents</p></td>
+<td class="needs_section_name"><p>activities</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="process_documents.html#ACT_004">ACT_004</a></p></td>
+<td class="needs_title"><p>Upload documentation</p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/process_documents</p></td>
+<td class="needs_section_name"><p>activities</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="process_documents.html#ACT_005">ACT_005</a></p></td>
+<td class="needs_title"><p>Build and test doc change</p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/process_documents</p></td>
+<td class="needs_section_name"><p>activities</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="process_documents.html#ACT_006">ACT_006</a></p></td>
+<td class="needs_title"><p>Deploy docs</p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/process_documents</p></td>
+<td class="needs_section_name"><p>activities</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="process_documents.html#ART_001">ART_001</a></p></td>
+<td class="needs_title"><p>Artifact object</p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/process_documents</p></td>
+<td class="needs_section_name"><p>Model documentation</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="process_documents.html#ART_002">ART_002</a></p></td>
+<td class="needs_title"><p>Sphinx documentation sources</p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/process_documents</p></td>
+<td class="needs_section_name"><p>artifacts</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="process_documents.html#ART_003">ART_003</a></p></td>
+<td class="needs_title"><p>Sphinx documentation HTML files</p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/process_documents</p></td>
+<td class="needs_section_name"><p>artifacts</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="#DACE">DACE</a></p></td>
+<td class="needs_title"><p></p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/docs-as-code-enhanced</p></td>
+<td class="needs_section_name"><p>User story</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../../ideas.html#IDEAS">IDEAS</a></p></td>
+<td class="needs_title"><p></p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>ideas</p></td>
+<td class="needs_section_name"><p>Code language support</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../../index.html#INDEX">INDEX</a></p></td>
+<td class="needs_title"><p></p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>index</p></td>
+<td class="needs_section_name"><p>Page meta data objects</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="job_advertisement_sphinx_needs.html#JOB">JOB</a></p></td>
+<td class="needs_title"><p></p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/job_advertisement_sphinx_needs</p></td>
+<td class="needs_section_name"><p>Job advertisement for Sphinx-Needs</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="meta_data_per_page.html#META_DATA">META_DATA</a></p></td>
+<td class="needs_title"><p></p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/meta_data_per_page</p></td>
+<td class="needs_section_name"><p>Page meta data in Sphinx</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="meta_data_per_page.html#META_DATA_2">META_DATA_2</a></p></td>
+<td class="needs_title"><p></p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/meta_data_per_page</p></td>
+<td class="needs_section_name"><p>Page meta data in Sphinx</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="meta_data_per_page.html#META_DATA_3">META_DATA_3</a></p></td>
+<td class="needs_title"><p></p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/meta_data_per_page</p></td>
+<td class="needs_section_name"><p>Page meta data in Sphinx</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="meta_data_per_page.html#META_DATA_4">META_DATA_4</a></p></td>
+<td class="needs_title"><p></p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/meta_data_per_page</p></td>
+<td class="needs_section_name"><p>Page meta data in Sphinx</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="meta_data_per_page.html#META_DATA_5">META_DATA_5</a></p></td>
+<td class="needs_title"><p></p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/meta_data_per_page</p></td>
+<td class="needs_section_name"><p>Page meta data in Sphinx</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="meta_data_per_page.html#META_DATA_6">META_DATA_6</a></p></td>
+<td class="needs_title"><p></p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/meta_data_per_page</p></td>
+<td class="needs_section_name"><p>Headlines Example</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="page_reactivation.html#PAGE">PAGE</a></p></td>
+<td class="needs_title"><p></p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/page_reactivation</p></td>
+<td class="needs_section_name"><p>MyST</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="meta_data_per_page.html#PAGE_META_DATA">PAGE_META_DATA</a></p></td>
+<td class="needs_title"><p></p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/meta_data_per_page</p></td>
+<td class="needs_section_name"><p>Forecast</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../../projects.html#PROJECTS">PROJECTS</a></p></td>
+<td class="needs_title"><p></p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>projects</p></td>
+<td class="needs_section_name"><p>Customer internal</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="#REQ_001">REQ_001</a></p></td>
+<td class="needs_title"><p>Objects in documentation</p></td>
+<td class="needs_status"><p>done</p></td>
+<td class="needs_docname"><p>posts/2021/docs-as-code-enhanced</p></td>
+<td class="needs_section_name"><p>Object creation</p></td>
+<td class="needs_links_back"><p><a class="reference internal" href="#REQ_002">REQ_002</a></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="#REQ_002">REQ_002</a></p></td>
+<td class="needs_title"><p>Object linking</p></td>
+<td class="needs_status"><p>done</p></td>
+<td class="needs_docname"><p>posts/2021/docs-as-code-enhanced</p></td>
+<td class="needs_section_name"><p>Object Linking</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p><a class="reference internal" href="#REQ_001">REQ_001</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="sphinx_needs_string_links.html#S2L">S2L</a></p></td>
+<td class="needs_title"><p></p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/sphinx_needs_string_links</p></td>
+<td class="needs_section_name"><p>Example</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="sphinx_needs_string_links.html#SPEC_123">SPEC_123</a></p></td>
+<td class="needs_title"><p>Implement the string2linkfeature</p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/sphinx_needs_string_links</p></td>
+<td class="needs_section_name"><p>Example</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="process_documents.html#STO_001">STO_001</a></p></td>
+<td class="needs_title"><p>Storage object</p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/process_documents</p></td>
+<td class="needs_section_name"><p>Model documentation</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="process_documents.html#STO_002">STO_002</a></p></td>
+<td class="needs_title"><p>Git repo github.company.com/team_x/project_y</p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/process_documents</p></td>
+<td class="needs_section_name"><p>storages</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="process_documents.html#STO_003">STO_003</a></p></td>
+<td class="needs_title"><p>Apache Documentation Webserver</p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/process_documents</p></td>
+<td class="needs_section_name"><p>storages</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../mega_sphinx_enterprise/01_planing.html#UC_Example">UC_Example</a></p></td>
+<td class="needs_title"><p>Use case example</p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/mega_sphinx_enterprise/01_planing</p></td>
+<td class="needs_section_name"><p>Needed documentation</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="pycharm_file_watchers.html#WATCHERS">WATCHERS</a></p></td>
+<td class="needs_title"><p></p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/pycharm_file_watchers</p></td>
+<td class="needs_section_name"><p>PyCharm File Watchers for Sphinx projects</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="process_documents.html#WOR_001">WOR_001</a></p></td>
+<td class="needs_title"><p>Workflow object</p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/process_documents</p></td>
+<td class="needs_section_name"><p>Model documentation</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="process_documents.html#WOR_002">WOR_002</a></p></td>
+<td class="needs_title"><p>Documentation update, build and deploy</p></td>
+<td class="needs_status"><p></p></td>
+<td class="needs_docname"><p>posts/2021/process_documents</p></td>
+<td class="needs_section_name"><p>workflows</p></td>
+<td class="needs_links_back"><p></p></td>
+<td class="needs_links"><p></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-6" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-6">
+rst</label><div class="sd-tab-content docutils">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">needtable</span><span class="p">::</span>
+   <span class="nc">:columns:</span> id,title,status,docname,section_name,incoming,outgoing 
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-7" name="sd-tab-set-3" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-7">
+md / MyST</label><div class="sd-tab-content docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{needtable}
+:columns: id,title,status,docname,section_name,incoming,outgoing
+```
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="flowcharts">
+<h3>Flowcharts<a class="headerlink" href="#flowcharts" title="Link to this heading">#</a></h3>
+<p>Or maybe present the objects and their connections in a flowchart:</p>
+<figure class="align-center" id="needflow-posts/2021/docs-as-code-enhanced-0">
+<p class="plantuml">
+<img src="../../_images/plantuml-6cc7209c8833e65b1e1bbd4d9813a3e037bd082b.svg" alt="&#64;startuml
+
+' Nodes definition 
+
+node &quot;&lt;size:12&gt;Requirement&lt;/size&gt;\n**Objects in**\n**documentation**\n&lt;size:10&gt;REQ_001&lt;/size&gt;&quot; as REQ_001 [[../posts/2021/docs-as-code-enhanced.html#REQ_001]] #BFD8D2
+node &quot;&lt;size:12&gt;Requirement&lt;/size&gt;\n**Object linking**\n&lt;size:10&gt;REQ_002&lt;/size&gt;&quot; as REQ_002 [[../posts/2021/docs-as-code-enhanced.html#REQ_002]] #BFD8D2
+
+' Connection definition 
+
+REQ_002 --&gt; REQ_001
+
+&#64;enduml"/></p>
+</figure>
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-8" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-8">
+rst</label><div class="sd-tab-content docutils">
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">needflow</span><span class="p">::</span>
+   <span class="nc">:types:</span> req
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-9" name="sd-tab-set-4" type="radio">
+</input><label class="sd-tab-label" for="sd-tab-item-9">
+md / MyST</label><div class="sd-tab-content docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{needflow}
+:types: req
+```
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="export-and-import">
+<h3>Export and Import<a class="headerlink" href="#export-and-import" title="Link to this heading">#</a></h3>
+<p>All the objects of a documentation can be exported to a json file called <code class="docutils literal notranslate"><span class="pre">needs.json</span></code> by using the builder
+<a class="reference external" href="https://sphinxcontrib-needs.readthedocs.io/en/latest/builders.html">needs</a>: <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">needs</span></code></p>
+<p>This is an example of a <code class="docutils literal notranslate"><span class="pre">needs.json</span></code> file containing 10 needs (including the two from above):</p>
+<div class="needs-json-example highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-11-19T16:51:30.679372&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;current_version&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="s2">&quot;danwos&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;versions&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;created&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-11-19T16:51:30.679346&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;filters&quot;</span><span class="p">:</span> <span class="p">{},</span>
+            <span class="s2">&quot;filters_amount&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">&quot;needs&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;META_DATA&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;danwos&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;closed_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;completion&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;created_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Explains how to set meta data for a Sphinx page.&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;docname&quot;</span><span class="p">:</span> <span class="s2">&quot;posts/2021/meta_data_per_page&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;external_css&quot;</span><span class="p">:</span> <span class="s2">&quot;external_link&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;external_url&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;full_title&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;github&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;has_dead_links&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;has_forbidden_dead_links&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;hidden&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;META_DATA&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_complete&quot;</span><span class="p">:</span> <span class="s2">&quot;META_DATA&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_parent&quot;</span><span class="p">:</span> <span class="s2">&quot;META_DATA&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;is_external&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;is_modified&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;is_need&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+                    <span class="s2">&quot;is_part&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;last_changed&quot;</span><span class="p">:</span> <span class="s2">&quot;18.11.2021&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;layout&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;links&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;max_amount&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;max_content_lines&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;modifications&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;parent_need&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;parent_needs&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;parent_needs_back&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;parts&quot;</span><span class="p">:</span> <span class="p">{},</span>
+                    <span class="s2">&quot;post_template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;pre_template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;section_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Page meta data in Sphinx&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;sections&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;Page meta data in Sphinx&quot;</span>
+                    <span class="p">],</span>
+                    <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;signature&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;specific&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;sphinx&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;sphinx-needs&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;meta&quot;</span>
+                    <span class="p">],</span>
+                    <span class="s2">&quot;template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Page meta data in Sphinx&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;metadata&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Meta data&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;META_DATA_2&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;danwos&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;closed_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;completion&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;created_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Explains how to set meta data for a Sphinx page.&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;docname&quot;</span><span class="p">:</span> <span class="s2">&quot;posts/2021/meta_data_per_page&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;external_css&quot;</span><span class="p">:</span> <span class="s2">&quot;external_link&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;external_url&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;full_title&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;github&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;has_dead_links&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;has_forbidden_dead_links&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;hidden&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;META_DATA_2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_complete&quot;</span><span class="p">:</span> <span class="s2">&quot;META_DATA_2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_parent&quot;</span><span class="p">:</span> <span class="s2">&quot;META_DATA_2&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;is_external&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;is_modified&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;is_need&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+                    <span class="s2">&quot;is_part&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;last_changed&quot;</span><span class="p">:</span> <span class="s2">&quot;18.11.2021&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;layout&quot;</span><span class="p">:</span> <span class="s2">&quot;meta&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;links&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;max_amount&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;max_content_lines&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;modifications&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;parent_need&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;parent_needs&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;parent_needs_back&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;parts&quot;</span><span class="p">:</span> <span class="p">{},</span>
+                    <span class="s2">&quot;post_template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;pre_template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;section_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Page meta data in Sphinx&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;sections&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;Page meta data in Sphinx&quot;</span>
+                    <span class="p">],</span>
+                    <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;signature&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;specific&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;sphinx&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;sphinx-needs&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;meta&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;collapse&quot;</span>
+                    <span class="p">],</span>
+                    <span class="s2">&quot;template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Page meta data in Sphinx&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;metadata&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Meta data&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;META_DATA_3&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;danwos&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;closed_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;completion&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;created_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;:Title: [[copy(</span><span class="se">\&quot;</span><span class="s2">section_name</span><span class="se">\&quot;</span><span class="s2">)]]</span><span class="se">\n</span><span class="s2">:Author: danwos</span><span class="se">\n</span><span class="s2">:Tags: sphinx, sphinx-needs, meta, collapse, content</span><span class="se">\n</span><span class="s2">:Last changed: 18.11.2021</span><span class="se">\n\n</span><span class="s2">Explains how to set meta data for a Sphinx page.&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;docname&quot;</span><span class="p">:</span> <span class="s2">&quot;posts/2021/meta_data_per_page&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;external_css&quot;</span><span class="p">:</span> <span class="s2">&quot;external_link&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;external_url&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;full_title&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;github&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;has_dead_links&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;has_forbidden_dead_links&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;hidden&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;META_DATA_3&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_complete&quot;</span><span class="p">:</span> <span class="s2">&quot;META_DATA_3&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_parent&quot;</span><span class="p">:</span> <span class="s2">&quot;META_DATA_3&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;is_external&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;is_modified&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;is_need&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+                    <span class="s2">&quot;is_part&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;last_changed&quot;</span><span class="p">:</span> <span class="s2">&quot;18.11.2021&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;layout&quot;</span><span class="p">:</span> <span class="s2">&quot;meta&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;links&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;max_amount&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;max_content_lines&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;modifications&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;parent_need&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;parent_needs&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;parent_needs_back&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;parts&quot;</span><span class="p">:</span> <span class="p">{},</span>
+                    <span class="s2">&quot;post_template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;pre_template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;section_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Page meta data in Sphinx&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;sections&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;Page meta data in Sphinx&quot;</span>
+                    <span class="p">],</span>
+                    <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;signature&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;specific&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;sphinx&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;sphinx-needs&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;meta&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;collapse&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;content&quot;</span>
+                    <span class="p">],</span>
+                    <span class="s2">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;metadata_template&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Page meta data in Sphinx&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;metadata&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Meta data&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;META_DATA_4&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;danwos&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;closed_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;completion&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;created_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;:Title: [[copy(</span><span class="se">\&quot;</span><span class="s2">section_name</span><span class="se">\&quot;</span><span class="s2">)]]</span><span class="se">\n</span><span class="s2">:Author: danwos</span><span class="se">\n</span><span class="s2">:Tags: sphinx, sphinx-needs, meta, collapse, content, style</span><span class="se">\n</span><span class="s2">:Last changed: 18.11.2021</span><span class="se">\n\n</span><span class="s2">Explains how to set meta data for a Sphinx page.&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;docname&quot;</span><span class="p">:</span> <span class="s2">&quot;posts/2021/meta_data_per_page&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;external_css&quot;</span><span class="p">:</span> <span class="s2">&quot;external_link&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;external_url&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;full_title&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;github&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;has_dead_links&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;has_forbidden_dead_links&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;hidden&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;META_DATA_4&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_complete&quot;</span><span class="p">:</span> <span class="s2">&quot;META_DATA_4&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_parent&quot;</span><span class="p">:</span> <span class="s2">&quot;META_DATA_4&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;is_external&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;is_modified&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;is_need&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+                    <span class="s2">&quot;is_part&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;last_changed&quot;</span><span class="p">:</span> <span class="s2">&quot;18.11.2021&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;layout&quot;</span><span class="p">:</span> <span class="s2">&quot;meta&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;links&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;max_amount&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;max_content_lines&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;modifications&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;parent_need&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;parent_needs&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;parent_needs_back&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;parts&quot;</span><span class="p">:</span> <span class="p">{},</span>
+                    <span class="s2">&quot;post_template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;pre_template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;section_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Page meta data in Sphinx&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;sections&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;Page meta data in Sphinx&quot;</span>
+                    <span class="p">],</span>
+                    <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;signature&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;specific&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="s2">&quot;clean&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;sphinx&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;sphinx-needs&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;meta&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;collapse&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;content&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;style&quot;</span>
+                    <span class="p">],</span>
+                    <span class="s2">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;metadata_template&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Page meta data in Sphinx&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;metadata&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Meta data&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;META_DATA_5&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;danwos&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;closed_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;completion&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;created_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;:Title: [[copy(</span><span class="se">\&quot;</span><span class="s2">section_name</span><span class="se">\&quot;</span><span class="s2">)]]</span><span class="se">\n</span><span class="s2">:Author: danwos</span><span class="se">\n</span><span class="s2">:Tags: sphinx, sphinx-needs, meta, collapse, content, style</span><span class="se">\n</span><span class="s2">:Last changed: 18.11.2021</span><span class="se">\n\n</span><span class="s2">Explains how to set meta data for a Sphinx page.&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;docname&quot;</span><span class="p">:</span> <span class="s2">&quot;posts/2021/meta_data_per_page&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;external_css&quot;</span><span class="p">:</span> <span class="s2">&quot;external_link&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;external_url&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;full_title&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;github&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;has_dead_links&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;has_forbidden_dead_links&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;hidden&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;META_DATA_5&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_complete&quot;</span><span class="p">:</span> <span class="s2">&quot;META_DATA_5&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_parent&quot;</span><span class="p">:</span> <span class="s2">&quot;META_DATA_5&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;is_external&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;is_modified&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;is_need&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+                    <span class="s2">&quot;is_part&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;last_changed&quot;</span><span class="p">:</span> <span class="s2">&quot;18.11.2021&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;layout&quot;</span><span class="p">:</span> <span class="s2">&quot;meta&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;links&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;max_amount&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;max_content_lines&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;modifications&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;parent_need&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;parent_needs&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;parent_needs_back&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;parts&quot;</span><span class="p">:</span> <span class="p">{},</span>
+                    <span class="s2">&quot;post_template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;pre_template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;section_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Page meta data in Sphinx&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;sections&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;Page meta data in Sphinx&quot;</span>
+                    <span class="p">],</span>
+                    <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;signature&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;specific&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="s2">&quot;clean&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;sphinx&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;sphinx-needs&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;meta&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;collapse&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;content&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;style&quot;</span>
+                    <span class="p">],</span>
+                    <span class="s2">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;metadata_template&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Page meta data in Sphinx&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;metadata&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Meta data&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;META_DATA_6&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;Mr. Nice Guy&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;closed_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;completion&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;created_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;:Title: [[copy(</span><span class="se">\&quot;</span><span class="s2">section_name</span><span class="se">\&quot;</span><span class="s2">)]]</span><span class="se">\n</span><span class="s2">:Author: Mr. Nice Guy</span><span class="se">\n</span><span class="s2">:Tags: sphinx, sphinx-needs, meta, collapse, content, style</span><span class="se">\n</span><span class="s2">:Last changed: 21.21.2020</span><span class="se">\n\n</span><span class="s2">Chapter to explain the usage of ``metadata`` on headline/chapter level.&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;docname&quot;</span><span class="p">:</span> <span class="s2">&quot;posts/2021/meta_data_per_page&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;external_css&quot;</span><span class="p">:</span> <span class="s2">&quot;external_link&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;external_url&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;full_title&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;github&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;has_dead_links&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;has_forbidden_dead_links&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;hidden&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;META_DATA_6&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_complete&quot;</span><span class="p">:</span> <span class="s2">&quot;META_DATA_6&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_parent&quot;</span><span class="p">:</span> <span class="s2">&quot;META_DATA_6&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;is_external&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;is_modified&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;is_need&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+                    <span class="s2">&quot;is_part&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;last_changed&quot;</span><span class="p">:</span> <span class="s2">&quot;21.21.2020&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;layout&quot;</span><span class="p">:</span> <span class="s2">&quot;meta&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;links&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;max_amount&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;max_content_lines&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;modifications&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;parent_need&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;parent_needs&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;parent_needs_back&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;parts&quot;</span><span class="p">:</span> <span class="p">{},</span>
+                    <span class="s2">&quot;post_template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;pre_template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;section_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Headlines Example&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;sections&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;Headlines Example&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;Headlines&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;Page meta data in Sphinx&quot;</span>
+                    <span class="p">],</span>
+                    <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;signature&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;specific&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="s2">&quot;clean&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;sphinx&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;sphinx-needs&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;meta&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;collapse&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;content&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;style&quot;</span>
+                    <span class="p">],</span>
+                    <span class="s2">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;metadata_template&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Headlines Example&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;metadata&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Meta data&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;REQ_001&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;closed_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;completion&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;created_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;For our overall SW development documentation we need a way to create and reuse objects.</span><span class="se">\n\n</span><span class="s2">We need them for **Requirements**, **Specifications**, **Test Cases**, **Test Case Runs** and maybe more.&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;docname&quot;</span><span class="p">:</span> <span class="s2">&quot;posts/2021/docs-as-code-enhanced&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;external_css&quot;</span><span class="p">:</span> <span class="s2">&quot;external_link&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;external_url&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;full_title&quot;</span><span class="p">:</span> <span class="s2">&quot;Objects in documentation&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;github&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;has_dead_links&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;has_forbidden_dead_links&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;hidden&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;REQ_001&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_complete&quot;</span><span class="p">:</span> <span class="s2">&quot;REQ_001&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_parent&quot;</span><span class="p">:</span> <span class="s2">&quot;REQ_001&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;is_external&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;is_modified&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;is_need&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+                    <span class="s2">&quot;is_part&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;last_changed&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;layout&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;links&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;max_amount&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;max_content_lines&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;modifications&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;parent_need&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;parent_needs&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;parent_needs_back&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;parts&quot;</span><span class="p">:</span> <span class="p">{},</span>
+                    <span class="s2">&quot;post_template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;pre_template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;section_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Object creation&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;sections&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;Object creation&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;Sphinx &amp; Sphinx-Needs&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;Docs-as-Code Enhanced&quot;</span>
+                    <span class="p">],</span>
+                    <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;signature&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;specific&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;done&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;objects&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;documentation&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;sphinx-needs&quot;</span>
+                    <span class="p">],</span>
+                    <span class="s2">&quot;template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Objects in documentation&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;req&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Requirement&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;REQ_002&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;closed_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;completion&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;created_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Objects must be linkable and all incoming and outgoing links shall get documented.</span><span class="se">\n\n</span><span class="s2">This is based on </span><span class="si">{need}</span><span class="s2">`REQ_001`&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;docname&quot;</span><span class="p">:</span> <span class="s2">&quot;posts/2021/docs-as-code-enhanced&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;external_css&quot;</span><span class="p">:</span> <span class="s2">&quot;external_link&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;external_url&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;full_title&quot;</span><span class="p">:</span> <span class="s2">&quot;Object linking&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;github&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;has_dead_links&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;has_forbidden_dead_links&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;hidden&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;REQ_002&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_complete&quot;</span><span class="p">:</span> <span class="s2">&quot;REQ_002&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_parent&quot;</span><span class="p">:</span> <span class="s2">&quot;REQ_002&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;is_external&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;is_modified&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;is_need&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+                    <span class="s2">&quot;is_part&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;last_changed&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;layout&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;links&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;REQ_001&quot;</span>
+                    <span class="p">],</span>
+                    <span class="s2">&quot;max_amount&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;max_content_lines&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;modifications&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;parent_need&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;parent_needs&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;parent_needs_back&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;parts&quot;</span><span class="p">:</span> <span class="p">{},</span>
+                    <span class="s2">&quot;post_template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;pre_template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;section_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Object Linking&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;sections&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;Object Linking&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;Sphinx &amp; Sphinx-Needs&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;Docs-as-Code Enhanced&quot;</span>
+                    <span class="p">],</span>
+                    <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;signature&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;specific&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;done&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;objects&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;documentation&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;sphinx-needs&quot;</span>
+                    <span class="p">],</span>
+                    <span class="s2">&quot;template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Object linking&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;req&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Requirement&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;SPEC_123&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;closed_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;completion&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;created_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;See above issue on github for a detailed specification&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;docname&quot;</span><span class="p">:</span> <span class="s2">&quot;posts/2021/sphinx_needs_string_links&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;external_css&quot;</span><span class="p">:</span> <span class="s2">&quot;external_link&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;external_url&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;full_title&quot;</span><span class="p">:</span> <span class="s2">&quot;Implement the string2linkfeature&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;github&quot;</span><span class="p">:</span> <span class="s2">&quot;404&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;has_dead_links&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;has_forbidden_dead_links&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;hidden&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;SPEC_123&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_complete&quot;</span><span class="p">:</span> <span class="s2">&quot;SPEC_123&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_parent&quot;</span><span class="p">:</span> <span class="s2">&quot;SPEC_123&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;is_external&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;is_modified&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;is_need&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+                    <span class="s2">&quot;is_part&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;last_changed&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;layout&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;links&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;max_amount&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;max_content_lines&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;modifications&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;parent_need&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;parent_needs&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;parent_needs_back&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;parts&quot;</span><span class="p">:</span> <span class="p">{},</span>
+                    <span class="s2">&quot;post_template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;pre_template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;section_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Example&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;sections&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;Example&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;String2Link transformation with Sphinx-Needs&quot;</span>
+                    <span class="p">],</span>
+                    <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;signature&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;specific&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Implement the string2linkfeature&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;spec&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Specification&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+                <span class="p">},</span>
+                <span class="s2">&quot;UC_Example&quot;</span><span class="p">:</span> <span class="p">{</span>
+                    <span class="s2">&quot;author&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;avatar&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;closed_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;completion&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;created_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Boxes like this will be used to create a link between the technical described solution and a real world</span><span class="se">\n</span><span class="s2">example.&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;docname&quot;</span><span class="p">:</span> <span class="s2">&quot;posts/mega_sphinx_enterprise/01_planing&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;duration&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;external_css&quot;</span><span class="p">:</span> <span class="s2">&quot;external_link&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;external_url&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;full_title&quot;</span><span class="p">:</span> <span class="s2">&quot;Use case example&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;github&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;has_dead_links&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;has_forbidden_dead_links&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;hidden&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;UC_Example&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_complete&quot;</span><span class="p">:</span> <span class="s2">&quot;UC_Example&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_parent&quot;</span><span class="p">:</span> <span class="s2">&quot;UC_Example&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;id_prefix&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;is_external&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;is_modified&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;is_need&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+                    <span class="s2">&quot;is_part&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+                    <span class="s2">&quot;last_changed&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;layout&quot;</span><span class="p">:</span> <span class="s2">&quot;usecase&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;links&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;max_amount&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;max_content_lines&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;modifications&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+                    <span class="s2">&quot;parent_need&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;parent_needs&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;parent_needs_back&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;parts&quot;</span><span class="p">:</span> <span class="p">{},</span>
+                    <span class="s2">&quot;post_template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;pre_template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;section_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Needed documentation&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;sections&quot;</span><span class="p">:</span> <span class="p">[</span>
+                        <span class="s2">&quot;Needed documentation&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;Scenario&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;Sphinx Mega Tutorial for Companies&quot;</span>
+                    <span class="p">],</span>
+                    <span class="s2">&quot;service&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;signature&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;specific&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;style&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[],</span>
+                    <span class="s2">&quot;template&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+                    <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Use case example&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;uc&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;type_name&quot;</span><span class="p">:</span> <span class="s2">&quot;Use case&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span>
+                <span class="p">}</span>
+            <span class="p">},</span>
+            <span class="s2">&quot;needs_amount&quot;</span><span class="p">:</span> <span class="mi">10</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>And this file and any other file following the same syntax, can be imported by using <code class="docutils literal notranslate"><span class="pre">needimport</span></code>.
+This allows you to extract data from external systems like JIRA, write it to a <code class="docutils literal notranslate"><span class="pre">needs.json</span></code> compatible file
+and import this into your project.</p>
+</section>
+<section id="more-features">
+<h3>More Features<a class="headerlink" href="#more-features" title="Link to this heading">#</a></h3>
+<p><a class="reference external" href="https://sphinx-needs.com">Sphinx-Needs</a> provides much more features, like dynamic field values, pie charts, need parts, filters based on
+Python statements or even Python files.
+It also has over <strong>40</strong> configuration options, so that it can be adopted to each existing process or tool chain.</p>
+<p>See more examples and get the details by reading the <a class="reference external" href="https://sphinxcontrib-needs.readthedocs.io/en/latest/">Sphinx-Needs Docs</a>.</p>
+</section>
+</section>
+<section id="user-story">
+<h2>User story<a class="headerlink" href="#user-story" title="Link to this heading">#</a></h2>
+<p>Sphinx-Needs is used worldwide by engineering related companies to document their development of software and hardware.</p>
+<p>One of my favored project is an ECU development project of a german automotive company.
+Nearly 2.000 engineers are working on it and they use <a class="reference external" href="https://www.sphinx-doc.org">Sphinx</a> and <a class="reference external" href="https://sphinx-needs.com">Sphinx-Needs</a> for documenting their Software
+Requirements, creating Specifications, planning Test Cases and documenting final Test Case Run Results.</p>
+<p>They have multiple Sphinx projects, all linked together using intersphinx and the
+<code class="docutils literal notranslate"><span class="pre">external_needs</span></code> feature of <a class="reference external" href="https://sphinx-needs.com">Sphinx-Needs</a>.
+Overall they plan to create 130.000 need objects in their documentation.</p>
+<p>Their benefit for using a docs-as-code approach are:</p>
+<ul class="simple">
+<li><p>More flexibility and full control.</p></li>
+<li><p>Faster documentation creation.</p></li>
+<li><p>Higher motivation for developers to write docs.</p></li>
+<li><p>Team specific analysis and documentations.</p></li>
+<li><p>No or less license fees for other Requirement tools.</p></li>
+<li><p>Im/Export of data from external systems.</p></li>
+<li><p>Single documentation, which can be deployed and safely archived for the next 10-20 years.</p></li>
+</ul>
+<p>So <strong>Objects included documentation</strong> is come to stay :)</p>
+<img alt="../../_images/docs_as_code_enhanced_end.png" class="align-center" src="../../_images/docs_as_code_enhanced_end.png" />
+<div class="need_container docutils container" id="SNCB-6344321d">
+<table class="need needs_grid_content_footer needs_layout_meta needs_style_clean needs_type_metadata table" id="DACE">
+<tbody>
+<tr class="content row-odd"><td class="content"><p>Explains the reason for and features of object orientated documentations.</p></td>
+</tr>
+<tr class="footer row-even"><td class="footer"><div class="needs_footer line-block">
+<div class="line"><span><span class="needs needs_collapse" id="target__hide__content"><span class="needs collapsed collapse_is_hidden">Hide page metadata</span><span class="needs visible">Show page metadata</span></span> </span></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+
+<div class="section ablog__blog_comments">
+  
+  
+
+
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+    
+    
+    <a href="meta_data_per_page.html">
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>Page meta data in Sphinx</span>
+    </a>
+    
+  </span>
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+    
+    
+    <a href="sphinx_extension_dev.html">
+      <span>Sphinx Extension Development: Tips & Tricks</span>
+      
+      <i class="fa fa-arrow-circle-right" ></i>
+      
+    </a>
+    
+  </span>
+</div>
+
+  
+  
+  <div class="section ablog__comments">
+    <h2>Comments</h2>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = "danwos";
+      var disqus_identifier = "/posts/2021/docs-as-code-enhanced/";
+      var disqus_title = "Docs-as-Code Enhanced";
+      var disqus_url = "https://daniel-woste.de/posts/2021/docs-as-code-enhanced";
+
+      (function () {
+        var dsq = document.createElement("script");
+        dsq.type = "text/javascript";
+        dsq.async = true;
+        dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+        (
+          document.getElementsByTagName("head")[0] ||
+          document.getElementsByTagName("body")[0]
+        ).appendChild(dsq);
+      })();
+    </script>
+    <noscript>
+      Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript">
+        comments powered by Disqus.</a ></noscript >
+    <a href="https://disqus.com" class="dsq-brlink">
+      comments powered by <span class="logo-disqus">Disqus</span>
+    </a >
+  </div>
+  
+</div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#textual-and-technical-representation">Textual and technical representation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objects-included-documentation">Objects included documentation</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#use-case-requirements-in-sw-architecture">Use case: Requirements in SW Architecture</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sphinx-sphinx-needs">Sphinx &amp; Sphinx-Needs</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#object-creation">Object creation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#object-linking">Object Linking</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tables">Tables</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#flowcharts">Flowcharts</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#export-and-import">Export and Import</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#more-features">More Features</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#user-story">User story</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/posts/2021/docs-as-code-enhanced.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2021, Daniel Woste.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

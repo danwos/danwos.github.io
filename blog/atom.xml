@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <id>https://daniel-woste.de</id>
+  <title>danwos</title>
+  <updated>2025-07-15T20:37:29.786116+00:00</updated>
+  <link href="https://daniel-woste.de"/>
+  <link href="https://daniel-woste.de/blog/atom.xml" rel="self"/>
+  <generator uri="https://ablog.readthedocs.io/" version="0.11.6">ABlog</generator>
+  <entry>
+    <id>https://daniel-woste.de/posts/2025/toolchain_comparison.html</id>
+    <title>Toolchain comparison</title>
+    <updated>2025-07-15T00:00:00+00:00</updated>
+    <author>
+      <name>Daniel Woste</name>
+    </author>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;At some point, every project faces the challenge of selecting a tool
+or, as systems become more complex, an entire toolchain. Choosing a
+toolchain also means deciding against one or more alternatives.
+Unfortunately, these decisions are often based on subjective criteria
+rather than objective facts: personal experience, missing features,
+anecdotal success stories from other teams, or simply a lack of access
+to comprehensive information and user requirements.&lt;/p&gt;
+&lt;p&gt;This article presents a &lt;strong&gt;toolchain comparison spreadsheet, free of
+charge&lt;/strong&gt; and open for modification and internal use. It is prefilled
+with tools from the docs-as-code ecosystem and, most importantly, &lt;strong&gt;includes
+over 160 user requirements&lt;/strong&gt; collected from automotive software
+projects (150–1,500 users) over recent years.&lt;/p&gt;
+&lt;img alt="https://daniel-woste.de/_images/01_toolchain_comparison.png" class="align-center" src="https://daniel-woste.de/_images/01_toolchain_comparison.png" /&gt;&lt;/p&gt;
+</content>
+    <link href="https://daniel-woste.de/posts/2025/toolchain_comparison.html"/>
+    <summary>At some point, every project faces the challenge of selecting a tool
+or, as systems become more complex, an entire toolchain. Choosing a
+toolchain also means deciding against one or more alternatives.
+Unfortunately, these decisions are often based on subjective criteria
+rather than objective facts: personal experience, missing features,
+anecdotal success stories from other teams, or simply a lack of access
+to comprehensive information and user requirements.This article presents a toolchain comparison spreadsheet, free of
+charge and open for modification and internal use. It is prefilled
+with tools from the docs-as-code ecosystem and, most importantly, includes
+over 160 user requirements collected from automotive software
+projects (150–1,500 users) over recent years.</summary>
+    <category term="update" label="update"/>
+    <published>2025-07-15T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel-woste.de/posts/2024/Documentation_as_Code_in_Automotive_System_Software_Engineering.html</id>
+    <title>Documentation as Code in Automotive System/Software Engineering</title>
+    <updated>2024-01-23T00:00:00+00:00</updated>
+    <author>
+      <name>Dr. Momcilo Krunic</name>
+    </author>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Some days ago I stumbled over a PDF paper by Dr. Momcilo Krunic from 2023, in which he describes a docs-as-code implementation for an ASPICE-compliant SW development project at an Automotive supplier.
+And what can I say? This article by Dr. Momcilo Krunic is the best overview I have ever read, regarding the introduction of docs-as-code in a professional Automotive SW project.
+Therefore I decided to get in contact with him and ask for permission to republish his outstanding work in an HTML version so that single chapters are easier to link and share.
+It’s 100% in sync with the original post, I only needed to change 1-2 reference styles for technical reasons.
+And I added also some personal notes as dropdowns, pointing to extensions or slightly different implementation ideas.&lt;/p&gt;
+&lt;p&gt;This post was written and published by &lt;a class="reference external" href="https://www.linkedin.com/in/momcilokrunic/"&gt;Dr. Momcilo Krunic&lt;/a&gt;, as a paper for the &lt;a class="reference external" href="https://eejournal.ktu.lt/index.php/elt%3E"&gt;Elektronika ir Elektrotechnika journal&lt;/a&gt;.
+The original version can be downloaded as PDF from &lt;a class="reference external" href="https://www.researchgate.net/publication/373746697_Documentation_as_Code_in_Automotive_SystemSoftware_Engineering%3E"&gt;ResearchGate&lt;/a&gt;.
+Original sources are available on &lt;a class="reference external" href="https://gitlab.com/momcilo_krunic/elektronika_ir_elektrotechnika_2023"&gt;a gitlab repository&lt;/a&gt; under &lt;a class="reference external" href="https://creativecommons.org/licenses/by/4.0/"&gt;Creative Common License 4.0&lt;/a&gt;.
+It’s also worth to visit his new startup: &lt;a class="reference external" href="https://labsoft.ai/"&gt;labsoft.ai&lt;/a&gt;.&lt;/p&gt;
+&lt;img alt="https://daniel-woste.de/_images/03_dac_automotive.png" class="align-center" src="https://daniel-woste.de/_images/03_dac_automotive.png" /&gt;&lt;/p&gt;
+</content>
+    <link href="https://daniel-woste.de/posts/2024/Documentation_as_Code_in_Automotive_System_Software_Engineering.html"/>
+    <summary>Some days ago I stumbled over a PDF paper by Dr. Momcilo Krunic from 2023, in which he describes a docs-as-code implementation for an ASPICE-compliant SW development project at an Automotive supplier.
+And what can I say? This article by Dr. Momcilo Krunic is the best overview I have ever read, regarding the introduction of docs-as-code in a professional Automotive SW project.
+Therefore I decided to get in contact with him and ask for permission to republish his outstanding work in an HTML version so that single chapters are easier to link and share.
+It’s 100% in sync with the original post, I only needed to change 1-2 reference styles for technical reasons.
+And I added also some personal notes as dropdowns, pointing to extensions or slightly different implementation ideas.This post was written and published by Dr. Momcilo Krunic, as a paper for the Elektronika ir Elektrotechnika journal.
+The original version can be downloaded as PDF from ResearchGate.
+Original sources are available on a gitlab repository under Creative Common License 4.0.
+It’s also worth to visit his new startup: labsoft.ai.</summary>
+    <category term="Automotiveengineering" label="Automotive engineering"/>
+    <category term="documentation" label="documentation"/>
+    <category term="softwareengineering" label="software engineering"/>
+    <category term="softwaresystems" label="software systems"/>
+    <published>2024-01-23T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel-woste.de/posts/2024/manager_pov.html</id>
+    <title>Manager POV: What’s the benefit of docs-as-code?</title>
+    <updated>2024-01-02T00:00:00+00:00</updated>
+    <author>
+      <name>Daniel Woste</name>
+    </author>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;In the last 2-3 years one of my main tasks was to convince people to use a docs-as-code approach for their SW project.
+The hard part is not to convince SW developers to use it, as they are often already doing it.
+But team leaders and managers, as their concerns are often not related to single features, but more about process
+and toolchain compliance and integration. And for sure the question of all questions: What’s the monetary benefit?&lt;/p&gt;
+&lt;p&gt;So if you are a CEO, a manager, a team leader or just want to understand the big picture, grab a coffee/tea, sit back and let me explain:
+How docs-as-code will save you money and still increase the product quality.&lt;/p&gt;
+&lt;img alt="https://daniel-woste.de/_images/02_manager_pov.png" class="align-center" src="https://daniel-woste.de/_images/02_manager_pov.png" /&gt;&lt;/p&gt;
+</content>
+    <link href="https://daniel-woste.de/posts/2024/manager_pov.html"/>
+    <summary>In the last 2-3 years one of my main tasks was to convince people to use a docs-as-code approach for their SW project.
+The hard part is not to convince SW developers to use it, as they are often already doing it.
+But team leaders and managers, as their concerns are often not related to single features, but more about process
+and toolchain compliance and integration. And for sure the question of all questions: What’s the monetary benefit?So if you are a CEO, a manager, a team leader or just want to understand the big picture, grab a coffee/tea, sit back and let me explain:
+How docs-as-code will save you money and still increase the product quality.</summary>
+    <category term="dac" label="dac"/>
+    <category term="docs-as-code" label="docs-as-code"/>
+    <category term="manager" label="manager"/>
+    <category term="pov" label="pov"/>
+    <published>2024-01-02T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel-woste.de/posts/2021/process_documents.html</id>
+    <title>Process documents with Sphinx-Needs</title>
+    <updated>2021-12-02T00:00:00+00:00</updated>
+    <author>
+      <name>Daniel Woste</name>
+    </author>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;Documenting processes is often a separate task in companies. Done by an extra department/team for processes, workflows
+and tools (PMT). And published in specific formats, which are not reusable or referencable by project specific
+documentations. But being able to link project requirements to process steps would help developers to understand
+the need for such requirements.&lt;/p&gt;
+&lt;p&gt;This post explains how the docs-as-code approach can be used to document processes and workflows.&lt;/p&gt;
+&lt;img alt="https://daniel-woste.de/_images/processes_with_sphinx_needs.png" class="align-center" src="https://daniel-woste.de/_images/processes_with_sphinx_needs.png" /&gt;&lt;/p&gt;
+</content>
+    <link href="https://daniel-woste.de/posts/2021/process_documents.html"/>
+    <summary>Documenting processes is often a separate task in companies. Done by an extra department/team for processes, workflows
+and tools (PMT). And published in specific formats, which are not reusable or referencable by project specific
+documentations. But being able to link project requirements to process steps would help developers to understand
+the need for such requirements.This post explains how the docs-as-code approach can be used to document processes and workflows.</summary>
+    <category term="process" label="process"/>
+    <category term="sphinx" label="sphinx"/>
+    <category term="sphinx-needs" label="sphinx-needs"/>
+    <category term="workflow" label="workflow"/>
+    <published>2021-12-02T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel-woste.de/posts/2021/open_needs_db.html</id>
+    <title>Open-Needs-DB gets funded</title>
+    <updated>2021-11-29T00:00:00+00:00</updated>
+    <author>
+      <name>Daniel Woste</name>
+    </author>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;The &lt;a class="reference external" href="https://prototypefund.de/"&gt;Prototype Fund&lt;/a&gt; supports and finances Open-Needs-DB from March to September 2022.&lt;/p&gt;
+&lt;p&gt;The &lt;a class="reference external" href="https://www.bmbf.de/bmbf/en/home/home_node.html"&gt;Federal Ministry of Education and Research&lt;/a&gt; created this program
+to support developers in Germany during the creation of digital prototypes for topics in the area of
+Civic Tech, Data Literacy, IT Security and Software Infrastructure.&lt;/p&gt;
+&lt;img alt="https://daniel-woste.de/_images/open_needs_funded.png" class="align-center" src="https://daniel-woste.de/_images/open_needs_funded.png" /&gt;&lt;/p&gt;
+</content>
+    <link href="https://daniel-woste.de/posts/2021/open_needs_db.html"/>
+    <summary>The Prototype Fund supports and finances Open-Needs-DB from March to September 2022.The Federal Ministry of Education and Research created this program
+to support developers in Germany during the creation of digital prototypes for topics in the area of
+Civic Tech, Data Literacy, IT Security and Software Infrastructure.</summary>
+    <category term="openneeds" label="openneeds"/>
+    <category term="requirements" label="requirements"/>
+    <category term="sphinx" label="sphinx"/>
+    <published>2021-11-29T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel-woste.de/posts/2021/sphinx_extension_dev.html</id>
+    <title>Sphinx Extension Development: Tips &amp; Tricks</title>
+    <updated>2021-11-22T00:00:00+00:00</updated>
+    <author>
+      <name>Daniel Woste</name>
+    </author>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;In the last year I have written some Sphinx extensions and figured out some stuff, which I want to share here.&lt;/p&gt;
+&lt;p&gt;First of all, the documentation for Sphinx extension development is not so detailed.
+There is a &lt;a class="reference external" href="https://www.sphinx-doc.org/en/1.0/extensions.html"&gt;tutorial available&lt;/a&gt; by the Sphinx team,
+but the used example project is quite simple.&lt;/p&gt;
+&lt;img alt="https://daniel-woste.de/_images/sphinx_extension_dev.png" class="align-center" src="https://daniel-woste.de/_images/sphinx_extension_dev.png" /&gt;&lt;/p&gt;
+</content>
+    <link href="https://daniel-woste.de/posts/2021/sphinx_extension_dev.html"/>
+    <summary>In the last year I have written some Sphinx extensions and figured out some stuff, which I want to share here.First of all, the documentation for Sphinx extension development is not so detailed.
+There is a tutorial available by the Sphinx team,
+but the used example project is quite simple.</summary>
+    <category term="docs-as-code" label="docs-as-code"/>
+    <category term="extensions" label="extensions"/>
+    <category term="sphinx" label="sphinx"/>
+    <category term="tips" label="tips"/>
+    <published>2021-11-22T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel-woste.de/posts/2021/docs-as-code-enhanced.html</id>
+    <title>Docs-as-Code Enhanced</title>
+    <updated>2021-11-19T00:00:00+00:00</updated>
+    <author>
+      <name>Daniel Woste</name>
+    </author>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;For most of us “Docs-as-Code” mostly means to store the documentation files beside the project sources in git.
+Also editing the sources in an already used IDE and using the CI system to build it, are 2 important use cases why
+docs-as-code is chosen to create documentation.&lt;/p&gt;
+&lt;p&gt;But these features have nothing to do with the documentation content itself.
+What if the content itself can be treated as code? What if the content / documentation language provides features,
+which we already know from our programming languages?&lt;/p&gt;
+&lt;img alt="https://daniel-woste.de/_images/docs_as_code_enhanced.png" class="align-center" src="https://daniel-woste.de/_images/docs_as_code_enhanced.png" /&gt;&lt;/p&gt;
+</content>
+    <link href="https://daniel-woste.de/posts/2021/docs-as-code-enhanced.html"/>
+    <summary>For most of us “Docs-as-Code” mostly means to store the documentation files beside the project sources in git.
+Also editing the sources in an already used IDE and using the CI system to build it, are 2 important use cases why
+docs-as-code is chosen to create documentation.But these features have nothing to do with the documentation content itself.
+What if the content itself can be treated as code? What if the content / documentation language provides features,
+which we already know from our programming languages?</summary>
+    <category term="docs-as-code" label="docs-as-code"/>
+    <category term="sphinx" label="sphinx"/>
+    <category term="sphinx-needs" label="sphinx-needs"/>
+    <published>2021-11-19T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel-woste.de/posts/2021/meta_data_per_page.html</id>
+    <title>Page meta data in Sphinx</title>
+    <updated>2021-11-18T00:00:00+00:00</updated>
+    <author>
+      <name>Daniel Woste</name>
+    </author>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;In bigger Sphinx projects, written by hundreds of authors, you often need to store additional data to somehow
+have the overall page creation and update process under control.&lt;/p&gt;
+&lt;p&gt;This data can be stored and maintained as meta-data on top of each rst file.&lt;/p&gt;
+&lt;img alt="https://daniel-woste.de/_images/page_meta_data.png" src="https://daniel-woste.de/_images/page_meta_data.png" /&gt;&lt;/p&gt;
+</content>
+    <link href="https://daniel-woste.de/posts/2021/meta_data_per_page.html"/>
+    <summary>In bigger Sphinx projects, written by hundreds of authors, you often need to store additional data to somehow
+have the overall page creation and update process under control.This data can be stored and maintained as meta-data on top of each rst file.</summary>
+    <category term="meta" label="meta"/>
+    <category term="sphinx" label="sphinx"/>
+    <category term="sphinx-needs" label="sphinx-needs"/>
+    <published>2021-11-18T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel-woste.de/posts/2021/sphinx_needs_string_links.html</id>
+    <title>String2Link transformation with Sphinx-Needs</title>
+    <updated>2021-11-16T00:00:00+00:00</updated>
+    <author>
+      <name>Daniel Woste</name>
+    </author>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;&lt;a class="reference external" href="https://www.sphinx-needs.com/"&gt;Sphinx-Needs&lt;/a&gt; got a new cool feature to easily create links of a given string for
+options. The &lt;a class="reference external" href="https://sphinxcontrib-needs.readthedocs.io/en/latest/configuration.html#needs-string-links"&gt;string-links feature&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This allows to just set e.g. a github issue id and get a link to exactly this issue in the final docs.&lt;/p&gt;
+&lt;/p&gt;
+</content>
+    <link href="https://daniel-woste.de/posts/2021/sphinx_needs_string_links.html"/>
+    <summary>Sphinx-Needs got a new cool feature to easily create links of a given string for
+options. The string-links feature.This allows to just set e.g. a github issue id and get a link to exactly this issue in the final docs.</summary>
+    <category term="links" label="links"/>
+    <category term="sphinx" label="sphinx"/>
+    <category term="sphinx-needs" label="sphinx-needs"/>
+    <published>2021-11-16T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel-woste.de/posts/2021/pycharm_file_watchers.html</id>
+    <title>PyCharm File Watchers for Sphinx projects</title>
+    <updated>2021-11-05T00:00:00+00:00</updated>
+    <author>
+      <name>Daniel Woste</name>
+    </author>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;I often have the case that I want to see my documentation as fast as possible.&lt;/p&gt;
+&lt;p&gt;And I know there are “Preview” IDE-Extensions available, which want to solve this problem.&lt;/p&gt;
+&lt;img alt="https://daniel-woste.de/_images/1_general_settings.png" src="https://daniel-woste.de/_images/1_general_settings.png" style="width: 80%;" /&gt;&lt;/p&gt;
+</content>
+    <link href="https://daniel-woste.de/posts/2021/pycharm_file_watchers.html"/>
+    <summary>I often have the case that I want to see my documentation as fast as possible.And I know there are “Preview” IDE-Extensions available, which want to solve this problem.</summary>
+    <category term="pycharm" label="pycharm"/>
+    <category term="sphinx" label="sphinx"/>
+    <category term="watchers" label="watchers"/>
+    <published>2021-11-05T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel-woste.de/posts/2021/page_reactivation.html</id>
+    <title>Page reactivation</title>
+    <updated>2021-11-02T00:00:00+00:00</updated>
+    <author>
+      <name>Daniel Woste</name>
+    </author>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;For a long, long time I had no private representation on the internet, as most of my work was done for open-source
+projects, so that I added my thoughts to their websites and documentation pages.&lt;/p&gt;
+&lt;p&gt;Now, I’m planing something big ;)&lt;/p&gt;
+&lt;/p&gt;
+</content>
+    <link href="https://daniel-woste.de/posts/2021/page_reactivation.html"/>
+    <summary>For a long, long time I had no private representation on the internet, as most of my work was done for open-source
+projects, so that I added my thoughts to their websites and documentation pages.Now, I’m planing something big ;)</summary>
+    <category term="blog" label="blog"/>
+    <category term="page" label="page"/>
+    <category term="sphinx" label="sphinx"/>
+    <published>2021-11-02T00:00:00+00:00</published>
+  </entry>
+  <entry>
+    <id>https://daniel-woste.de/posts/2021/job_advertisement_sphinx_needs.html</id>
+    <title>Job advertisement for Sphinx-Needs</title>
+    <updated>2021-11-02T00:00:00+00:00</updated>
+    <author>
+      <name>Daniel Woste</name>
+    </author>
+    <content type="html">&lt;p class="ablog-post-excerpt"&gt;&lt;p&gt;I just have detected the first job advertisement, which asks for &lt;a class="reference external" href="https://sphinx-needs.com"&gt;Sphinx-Needs&lt;/a&gt;as skill.
+Yeah 🥳&lt;/p&gt;
+&lt;p&gt;The job is for a
+&lt;a class="reference external" href="https://www.bosch.de/karriere/job/REF113902H-docs-as-code-development-engineer"&gt;Docs-As-Code Development engineer&lt;/a&gt;
+at Bosch in Leonberg, Germany.&lt;/p&gt;
+&lt;img alt="https://daniel-woste.de/_images/bosch-sphinx-needs.png" class="align-center" src="https://daniel-woste.de/_images/bosch-sphinx-needs.png" style="width: 70%;" /&gt;&lt;/p&gt;
+</content>
+    <link href="https://daniel-woste.de/posts/2021/job_advertisement_sphinx_needs.html"/>
+    <summary>I just have detected the first job advertisement, which asks for Sphinx-Needsas skill.
+Yeah 🥳The job is for a
+Docs-As-Code Development engineer
+at Bosch in Leonberg, Germany.</summary>
+    <category term="job" label="job"/>
+    <category term="sphinx" label="sphinx"/>
+    <category term="sphinx-needs" label="sphinx-needs"/>
+    <published>2021-11-02T00:00:00+00:00</published>
+  </entry>
+</feed>

@@ -1,0 +1,1184 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Page meta data in Sphinx &#8212; danwos  documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_style.css?v=92936fa5" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/modern.css?v=803738c0" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=e3bc0ac0" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-0MZ0221M7W"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-0MZ0221M7W');
+            </script>
+    <script src="../../_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5"></script>
+    <script src="../../_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d"></script>
+    <script src="../../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
+    <script src="../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
+    <script src="../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-0MZ0221M7W');
+            </script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'posts/2021/meta_data_per_page';</script>
+    <link rel="author" title="About these documents" href="../../about.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+
+<link
+  rel="alternate"
+  type="application/atom+xml"
+  href="../../blog/atom.xml"
+  title="danwos"
+/>
+
+
+
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this site..."
+         aria-label="Search this site..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/danwos_white.png" class="logo__image only-light" alt="danwos  documentation - Home"/>
+    <script>document.write(`<img src="../../_static/danwos_white.png" class="logo__image only-dark" alt="danwos  documentation - Home"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../blog.html">
+                        Blog
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../about.html">
+                        About me
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects.html">
+                        Projects
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../ideas.html">
+                        Ideas
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/danwos/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/danwos" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/in/daniel-woste-362b6252/" title="LinkedIn" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">LinkedIn</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.xing.com/profile/Daniel_Woste/" title="Xing" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-xing fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Xing</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://useblocks.com" title="My company useblocks" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-briefcase fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">My company useblocks</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script>
+    </div>
+  
+
+  
+    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+      <span class="fa-solid fa-outdent"></span>
+    </label>
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item">
+<nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../blog.html">
+                        Blog
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../about.html">
+                        About me
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../projects.html">
+                        Projects
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="../../ideas.html">
+                        Ideas
+                      </a>
+                    </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/danwos/" title="GitHub" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://twitter.com/danwos" title="Twitter" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-twitter fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Twitter</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.linkedin.com/in/daniel-woste-362b6252/" title="LinkedIn" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-linkedin fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">LinkedIn</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://www.xing.com/profile/Daniel_Woste/" title="Xing" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-xing fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">Xing</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://useblocks.com" title="My company useblocks" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-solid fa-briefcase fa-lg" aria-hidden="true"></i></span>
+            <span class="sr-only">My company useblocks</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<div class="ablog-sidebar-item ablog__postcard">
+
+
+<h2>
+  
+  
+  <i class="fa fa-calendar"></i>
+  
+  18 November 2021
+  
+</h2>
+<ul>
+  <div class="ablog-sidebar-item ablog__postcard2">
+
+
+<li id="ablog-sidebar-item author ablog__author">
+  <span>
+    
+    <i class="fa-fw fa fa-user"></i>
+    
+    </span>
+  
+  
+  <a href="../../blog/author/daniel-woste.html">Daniel Woste</a>
+  
+  
+  
+</li>
+
+
+
+
+
+<li id="ablog-sidebar-item tags ablog__tags">
+  <span>
+    
+    
+    <i class="fa-fw fa fa-tags"></i>
+    
+    
+    </span>
+  
+  
+  <a href="../../blog/tag/sphinx-needs.html">sphinx-needs</a>
+  
+  
+  
+  
+  
+  <a href="../../blog/tag/meta.html">meta</a>
+  
+  
+  
+  
+  
+  <a href="../../blog/tag/sphinx.html">sphinx</a>
+  
+  
+  
+</li>
+
+
+<li id="ablog-sidebar-item comments ablog__comments">
+  <script type="text/javascript">
+    var disqus_shortname = "danwos";
+
+    (function () {
+      var s = document.createElement("script");
+      s.async = true;
+      s.type = "text/javascript";
+      s.src = "//" + disqus_shortname + ".disqus.com/count.js";
+      (
+        document.getElementsByTagName("HEAD")[0] ||
+        document.getElementsByTagName("BODY")[0]
+      ).appendChild(s);
+    })();
+  </script>
+  
+  <i class="fa-fw fa fa-comments"></i>
+  
+  <a href="#disqus_thread" data-disqus-identifier="/posts/2021/meta_data_per_page/" >
+    
+  </a >
+</li>
+
+</div>
+</ul>
+</div>
+</div>
+        <div class="sidebar-primary-item">
+<div class="ablog-sidebar-item ablog__recentposts">
+<h3>
+  <a href="../../blog.html">Recent Posts</a>
+</h3>
+<ul>
+  
+  
+  <li>
+    <a href="../2025/toolchain_comparison.html">
+      15 July - Toolchain comparison
+    </a>
+  </li>
+  
+  <li>
+    <a href="../2024/Documentation_as_Code_in_Automotive_System_Software_Engineering.html">
+      23 January - Documentation as Code in Automotive System/Software Engineering
+    </a>
+  </li>
+  
+  <li>
+    <a href="../2024/manager_pov.html">
+      02 January - Manager POV: What’s the benefit of docs-as-code?
+    </a>
+  </li>
+  
+  <li>
+    <a href="process_documents.html">
+      02 December - Process documents with Sphinx-Needs
+    </a>
+  </li>
+  
+  <li>
+    <a href="open_needs_db.html">
+      29 November - Open-Needs-DB gets funded
+    </a>
+  </li>
+  
+</ul>
+</div>
+</div>
+        <div class="sidebar-primary-item">
+<div class="ablog-sidebar-item ablog__archive">
+<h3>
+  <a href="../../blog/archive.html">Archives</a>
+</h3>
+<ul>
+  
+  
+  <li>
+    <a href="../../blog/2025.html">2025 (1)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../../blog/2024.html">2024 (2)</a>
+  </li>
+  
+  
+  
+  <li>
+    <a href="../../blog/2021.html">2021 (9)</a>
+  </li>
+  
+  
+</ul>
+</div>
+</div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+
+
+<nav aria-label="Breadcrumb">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">Page meta...</li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+<section class="tex2jax_ignore mathjax_ignore" id="page-meta-data-in-sphinx">
+<h1>Page meta data in Sphinx<a class="headerlink" href="#page-meta-data-in-sphinx" title="Link to this heading">#</a></h1>
+<figure class="align-center">
+<img alt="../../_images/page_meta_data.png" src="../../_images/page_meta_data.png" />
+</figure>
+<p>In bigger Sphinx projects, written by hundreds of authors, you often need to store additional data to somehow
+have the overall page creation and update process under control.</p>
+<p>This data can be stored and maintained as meta-data on top of each rst file.</p>
+<p>The main questions about a page are often:</p>
+<ul class="simple">
+<li><p>Who is responsible?</p></li>
+<li><p>Who has made the last changes?</p></li>
+<li><p>When was the last change?</p></li>
+<li><p>What is the content/goal of the page (short excerpt)?</p></li>
+<li><p>What is the status? Still a draft?</p></li>
+<li><p>Is there any critical content? Internal use only?</p></li>
+</ul>
+<p>You can answer these questions on the page itself as part of the normal content.
+But that normally does not look nice and the information can not be reused.</p>
+<p>A better approach is to use <a class="reference external" href="https://sphinx-needs.com">Sphinx-Needs</a>, which allows us to set a need-object at the beginning
+of each page. This object is highly configurable and can be presented in filterable tables.</p>
+<p>So what are our goals?</p>
+<ol class="arabic simple">
+<li><p>We need an object, which represents the current page</p></li>
+<li><p>The object shall be able to store information for author, last_changed date and tags</p></li>
+<li><p>The object shall have a title, which is the same as the one of the current page</p></li>
+<li><p>It shall be possible to write a short excerpt</p></li>
+<li><p>The user can hide/show the related object details</p></li>
+</ol>
+<p>So the final result in a rst file may look like:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">Page Meta Data in Sphinx </span>
+<span class="gh">========================</span>
+
+<span class="p">..</span> <span class="ow">metadata</span><span class="p">::</span>
+   <span class="nc">:id:</span> META_DATA
+   <span class="nc">:author:</span> Mr. Nicc Guy
+   <span class="nc">:tags:</span> sphinx, sphinx-needs, meta, collapse, content, style
+   <span class="nc">:last_changed:</span> 21.21.2020
+
+   Chapter to explain the usage of <span class="s">``metadata``</span> on headline/chapter level.
+
+<span class="c">.. and more ..</span>
+</pre></div>
+</div>
+<p>And in our documentation it will be presented as:</p>
+<a class="reference internal image-reference" href="../../_images/page_meta_data_final.png"><img alt="../../_images/page_meta_data_final.png" class="align-center" src="../../_images/page_meta_data_final.png" style="width: 70%;" />
+</a>
+<p><a class="reference external" href="https://sphinx-needs.com">Sphinx-Needs</a> already provides the fields <code class="docutils literal notranslate"><span class="pre">id</span></code>, <code class="docutils literal notranslate"><span class="pre">tags</span></code>. It also handles the <code class="docutils literal notranslate"><span class="pre">title</span></code> and the <code class="docutils literal notranslate"><span class="pre">content</span></code>
+for us.</p>
+<p>The used need type <code class="docutils literal notranslate"><span class="pre">metadata</span></code> is new, so we need to configure it in our <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file.
+We also need to create the additional fields.</p>
+<p>By default, Sphinx-Needs forces the user to set a title for a need. This we need to deactivate as well.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># conf.py</span>
+
+<span class="c1"># Allows needs without a title, as it will be set automatically</span>
+<span class="n">needs_title_optional</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1"># Meta need type</span>
+<span class="n">needs_types</span> <span class="o">=</span> <span class="p">[</span><span class="nb">dict</span><span class="p">(</span><span class="n">directive</span><span class="o">=</span><span class="s2">&quot;metadata&quot;</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s2">&quot;Meta data&quot;</span><span class="p">,</span> <span class="n">prefix</span><span class="o">=</span><span class="s2">&quot;M_&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;#BFD8D2&quot;</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">&quot;node&quot;</span><span class="p">),</span>
+               <span class="c1"># Other need types</span>
+              <span class="p">]</span>
+
+<span class="c1"># author and last_changed option</span>
+<span class="n">needs_extra_options</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;author&#39;</span><span class="p">,</span> <span class="s1">&#39;last_changed&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Now, we already can create the meta-need and build the docs without any warning.</p>
+<p>What is missing is a title, which should be copied from the page directly.
+For this we can use the Sphinx-Needs feature
+<a class="reference external" href="https://sphinxcontrib-needs.readthedocs.io/en/latest/dynamic_functions.html">Dynamic functions</a>
+and <a class="reference external" href="https://sphinxcontrib-needs.readthedocs.io/en/latest/configuration.html#needs-global-options">Global Options</a>.</p>
+<p>We use the <code class="docutils literal notranslate"><span class="pre">copy</span></code> function to use the values of the already collected <code class="docutils literal notranslate"><span class="pre">section_name</span></code> also for <code class="docutils literal notranslate"><span class="pre">title</span></code>.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">meta</span><span class="p">::</span> {{copy(&quot;section_name&quot;)}}
+</pre></div>
+</div>
+<p>As we do not want to set this <code class="docutils literal notranslate"><span class="pre">copy</span></code>-line on every meta-need by hand, we can configure a global option:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">needs_global_options</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;{{copy(&quot;section_name&quot;)}}&#39;</span><span class="p">,</span> <span class="s1">&#39;type == &quot;metadata&quot; and title is False&#39;</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The above config sets the <code class="docutils literal notranslate"><span class="pre">title</span></code> only for needs of type <code class="docutils literal notranslate"><span class="pre">metadata</span></code> and if the title is not set.
+So the user is still able to manually set a specific title.</p>
+<p>Let’s see how a current metadata-need would look like.</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">metadata</span><span class="p">::</span>
+   <span class="nc">:id:</span> META_DATA
+   <span class="nc">:author:</span> danwos
+   <span class="nc">:tags:</span> sphinx, sphinx-needs, meta
+   <span class="nc">:last_changed:</span> 18.11.2021 
+   
+   Explains how to set meta data for a Sphinx page.
+</pre></div>
+</div>
+<p><strong>Result</strong>:</p>
+<div class="need_container docutils container" id="SNCB-4a137a5e">
+<table class="need needs_grid_simple needs_layout_clean needs_style_none needs_type_metadata table" id="META_DATA">
+<tbody>
+<tr class="need head row-odd"><td class="need head"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Meta data</span></span>: </span><strong><span></span></strong><span> <span class="needs-id"><a class="reference internal" href="#META_DATA" title="META_DATA">META_DATA</a></span>  <span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="need meta row-even"><td class="need meta"><div class="needs_meta line-block">
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">sphinx</span><span class="needs_spacer">, </span><span class="needs_data">sphinx-needs</span><span class="needs_spacer">, </span><span class="needs_data">meta</span></span></span></div>
+<div class="line"><span class="needs_last_changed"><span class="needs_label">last_changed: </span><span class="needs_data">18.11.2021</span></span></div>
+<div class="line"><span class="needs_author"><span class="needs_label">author: </span><span class="needs_data">danwos</span></span></div>
+<div class="line"><span class="needs_example"><span class="needs_label">example: </span><span class="needs_data">True</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+</tr>
+<tr class="need content row-odd"><td class="need content" colspan="1"><p>Explains how to set meta data for a Sphinx page.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>This already looks good, regarding the data.
+But layout and style is not so nice. Also we want to hide it from the user.</p>
+<p>Both problems can be solved by configuring and using a custom
+<a class="reference external" href="https://sphinxcontrib-needs.readthedocs.io/en/latest/layout_styles.html">Sphinx-Needs layout</a>
+, which hides all unnecessary options and gives us full control of the content.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># conf.py</span>
+<span class="n">needs_layouts</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;meta&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s1">&#39;grid&#39;</span><span class="p">:</span> <span class="s1">&#39;content_footer&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;layout&#39;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s1">&#39;footer&#39;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="s1">&#39;&lt;&lt;collapse_button(&quot;content&quot;, &#39;</span>
+                <span class="s1">&#39;collapsed=&quot;Hide metadata&quot;, visible=&quot;Show metadata&quot;, initial=False)&gt;&gt; &#39;</span><span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The grid <code class="docutils literal notranslate"><span class="pre">content_footer</span></code> contains 2 areas for content and a footer only.
+So no area for a title or for the option values is available.</p>
+<p>We will use the content-area to show the needed data only.
+The footer is used to show or hide the content part.</p>
+<p>All we need to do is to set <code class="docutils literal notranslate"><span class="pre">meta</span></code> as value for <code class="docutils literal notranslate"><span class="pre">layout</span></code> for each <code class="docutils literal notranslate"><span class="pre">metadata</span></code> need.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">needs_global_options</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;{{copy(&quot;section_name&quot;)}}&#39;</span><span class="p">,</span> <span class="s1">&#39;type == &quot;metadata&quot; and title is False&#39;</span><span class="p">),</span>
+   <span class="s1">&#39;layout&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;meta&#39;</span><span class="p">,</span> <span class="s1">&#39;type == &quot;metadata&quot;&#39;</span><span class="p">)</span>  <span class="c1"># This line is new</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="need_container docutils container" id="SNCB-ee02cfa0">
+<table class="need needs_grid_content_footer needs_layout_meta_example needs_style_none needs_type_metadata table" id="META_DATA_2">
+<tbody>
+<tr class="content row-odd"><td class="content"><p>Explains how to set meta data for a Sphinx page.</p></td>
+</tr>
+<tr class="footer row-even"><td class="footer"><div class="needs_footer line-block">
+<div class="line"><span><span class="needs needs_collapse" id="target__hide__content"><span class="needs collapsed collapse_is_hidden">Hide metadata</span><span class="needs visible">Show metadata</span></span> </span></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Okay, the collapse feature works, if you click on “Show metadata”.</p>
+<p>But the content area is only showing the content of the need.
+We need to replace it with some more information.
+Lets use the
+<a class="reference external" href="https://sphinxcontrib-needs.readthedocs.io/en/latest/directives/need.html#need-template">Sphinx-Needs template feature</a>
+to define the correct content.</p>
+<p>Create a folder <code class="docutils literal notranslate"><span class="pre">needs_templates</span></code> on the root folder of your sphinx project.
+Then add a file called <code class="docutils literal notranslate"><span class="pre">metadata_template.need</span></code> with the following content:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="nc">:Title:</span> {{title}}
+<span class="nc">:Author:</span> {{author}}
+<span class="nc">:Tags:</span> {{tags|join(&quot;, &quot;)}}
+<span class="nc">:Last changed:</span> {{last_changed}}
+
+{{content}}
+</pre></div>
+</div>
+<p>And again we need to use
+<a class="reference external" href="https://sphinxcontrib-needs.readthedocs.io/en/latest/configuration.html#needs-global-options">Global Options</a>
+to activate it for all <code class="docutils literal notranslate"><span class="pre">metadata</span></code> needs.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">needs_global_options</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;{{copy(&quot;section_name&quot;)}}&#39;</span><span class="p">,</span> <span class="s1">&#39;type == &quot;metadata&quot; and title is False&#39;</span><span class="p">),</span>
+   <span class="s1">&#39;layout&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;meta&#39;</span><span class="p">,</span> <span class="s1">&#39;type == &quot;metadata&quot;&#39;</span><span class="p">),</span>
+   <span class="s1">&#39;template&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;metadata_template&#39;</span><span class="p">,</span> <span class="s1">&#39;type == &quot;metadata&quot;&#39;</span><span class="p">)</span>  <span class="c1"># This line is new</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Result</strong></p>
+<div class="need_container docutils container" id="SNCB-058d9675">
+<table class="need needs_grid_content_footer needs_layout_meta_example needs_style_none needs_type_metadata table" id="META_DATA_3">
+<tbody>
+<tr class="content row-odd"><td class="content"><p>Explains how to set meta data for a Sphinx page.</p></td>
+</tr>
+<tr class="footer row-even"><td class="footer"><div class="needs_footer line-block">
+<div class="line"><span><span class="needs needs_collapse" id="target__hide__content"><span class="needs collapsed collapse_is_hidden">Hide metadata</span><span class="needs visible">Show metadata</span></span> </span></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Nice, now the metadata need shows required data only.</p>
+<p>Last thing we can do is to present the metadata not so prominent, so that it does not
+disturb the reader.</p>
+<p>For this we can use the <code class="docutils literal notranslate"><span class="pre">style</span></code> <code class="docutils literal notranslate"><span class="pre">clean</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">needs_global_options</span> <span class="o">=</span> <span class="p">{</span>
+   <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;{{copy(&quot;section_name&quot;)}}&#39;</span><span class="p">,</span> <span class="s1">&#39;type == &quot;metadata&quot; and title is False&#39;</span><span class="p">),</span>
+   <span class="s1">&#39;layout&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;meta&#39;</span><span class="p">,</span> <span class="s1">&#39;type == &quot;metadata&quot;&#39;</span><span class="p">),</span>
+   <span class="s1">&#39;template&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;metadata_template&#39;</span><span class="p">,</span> <span class="s1">&#39;type == &quot;metadata&quot;&#39;</span><span class="p">),</span>
+   <span class="s1">&#39;style&#39;</span><span class="p">:</span> <span class="p">(</span><span class="s1">&#39;clean&#39;</span><span class="p">,</span> <span class="s1">&#39;type == &quot;metadata&quot;&#39;</span><span class="p">)</span>  <span class="c1"># This line is new</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Result</strong></p>
+<div class="need_container docutils container" id="SNCB-0d085512">
+<table class="need needs_grid_content_footer needs_layout_meta_example needs_style_clean needs_type_metadata table" id="META_DATA_4">
+<tbody>
+<tr class="content row-odd"><td class="content"><dl class="field-list simple">
+<dt class="field-odd">Title<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+<dt class="field-even">Author<span class="colon">:</span></dt>
+<dd class="field-even"><p>danwos</p>
+</dd>
+<dt class="field-odd">Tags<span class="colon">:</span></dt>
+<dd class="field-odd"><p>sphinx, sphinx-needs, meta, collapse, content, style</p>
+</dd>
+<dt class="field-even">Last changed<span class="colon">:</span></dt>
+<dd class="field-even"><p>18.11.2021</p>
+</dd>
+</dl>
+<p>Explains how to set meta data for a Sphinx page.</p>
+</td>
+</tr>
+<tr class="footer row-even"><td class="footer"><div class="needs_footer line-block">
+<div class="line"><span><span class="needs needs_collapse" id="target__hide__content"><span class="needs collapsed collapse_is_hidden">Hide metadata</span><span class="needs visible">Show metadata</span></span> </span></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>That’s it. We now have a discreet <code class="docutils literal notranslate"><span class="pre">metadata</span></code> need, which shows required data only.</p>
+<p>But we can also use some css-customization to get a nice “button” for the “Show metadata” text:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># conf.py</span>
+<span class="n">html_css_files</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;custom.css&#39;</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="c">/* _static/custom.css */</span>
+<span class="nt">table</span><span class="p">.</span><span class="nc">needs_layout_meta</span><span class="w"> </span><span class="nt">span</span><span class="p">.</span><span class="nc">collapse</span><span class="w"> </span><span class="nt">span</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#555</span><span class="p">;</span>
+<span class="w">    </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#aaa</span><span class="p">;</span>
+<span class="w">    </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Result</strong></p>
+<div class="need_container docutils container" id="SNCB-8d8eaa50">
+<table class="need needs_grid_content_footer needs_layout_meta_example needs_style_clean needs_type_metadata table" id="META_DATA_5">
+<tbody>
+<tr class="content row-odd"><td class="content"><dl class="field-list simple">
+<dt class="field-odd">Title<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p></dd>
+<dt class="field-even">Author<span class="colon">:</span></dt>
+<dd class="field-even"><p>danwos</p>
+</dd>
+<dt class="field-odd">Tags<span class="colon">:</span></dt>
+<dd class="field-odd"><p>sphinx, sphinx-needs, meta, collapse, content, style</p>
+</dd>
+<dt class="field-even">Last changed<span class="colon">:</span></dt>
+<dd class="field-even"><p>18.11.2021</p>
+</dd>
+</dl>
+<p>Explains how to set meta data for a Sphinx page.</p>
+</td>
+</tr>
+<tr class="footer row-even"><td class="footer"><div class="needs_footer line-block">
+<div class="line"><span><span class="needs needs_collapse" id="target__hide__content"><span class="needs collapsed collapse_is_hidden">Hide metadata</span><span class="needs visible">Show metadata</span></span> </span></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="headlines">
+<h2>Headlines<a class="headerlink" href="#headlines" title="Link to this heading">#</a></h2>
+<p>Another nice thing is, that we can use the <code class="docutils literal notranslate"><span class="pre">metadata</span></code> need also for additional headlines/chapters
+on the same page, because the title is always set to the last headline.</p>
+<p>So we can define different authors and other data in a single file.</p>
+<section id="headlines-example">
+<h3>Headlines Example<a class="headerlink" href="#headlines-example" title="Link to this heading">#</a></h3>
+<p><strong>Example</strong></p>
+<div class="need_container docutils container" id="SNCB-e7dbbfc2">
+<table class="need needs_grid_content_footer needs_layout_meta needs_style_clean needs_type_metadata table" id="META_DATA_6">
+<tbody>
+<tr class="content row-odd"><td class="content"><p>Chapter to explain the usage of <code class="docutils literal notranslate"><span class="pre">metadata</span></code> on headline/chapter level.</p></td>
+</tr>
+<tr class="footer row-even"><td class="footer"><div class="needs_footer line-block">
+<div class="line"><span><span class="needs needs_collapse" id="target__hide__content"><span class="needs collapsed collapse_is_hidden">Hide page metadata</span><span class="needs visible">Show page metadata</span></span> </span></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="forecast">
+<h2>Forecast<a class="headerlink" href="#forecast" title="Link to this heading">#</a></h2>
+<p>Right now, nearly all the data must be set by hand, e.g. the author.
+As Sphinx and Sphinx-Needs are following the docs-as-code approach, you normally
+have the doc-project stored on some version control system like <strong>git</strong>.</p>
+<p>And <strong>git</strong> already as some information, which may be nice.
+Last commit on this file? Last author? Last change? All this information is there.</p>
+<p>So an update of this <code class="docutils literal notranslate"><span class="pre">metadata</span></code> concept would be to catch this information automatically from git.
+But this topic will be part of another blog post. So stay tuned…</p>
+<div class="need_container docutils container" id="SNCB-800f398e">
+<table class="need needs_grid_content_footer needs_layout_meta needs_style_clean needs_type_metadata table" id="PAGE_META_DATA">
+<tbody>
+<tr class="content row-odd"><td class="content"><p>Explains how to set meta data for a Sphinx page.</p></td>
+</tr>
+<tr class="footer row-even"><td class="footer"><div class="needs_footer line-block">
+<div class="line"><span><span class="needs needs_collapse" id="target__hide__content"><span class="needs collapsed collapse_is_hidden">Hide page metadata</span><span class="needs visible">Show page metadata</span></span> </span></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+
+<div class="section ablog__blog_comments">
+  
+  
+
+
+<div class="section ablog__prev-next">
+  <span class="ablog__prev">
+    
+    
+    <a href="sphinx_needs_string_links.html">
+      
+      <i class="fa fa-arrow-circle-left"></i>
+      
+      <span>String2Link transformation with Sphinx-Needs</span>
+    </a>
+    
+  </span>
+  <span class="ablog__spacer">&nbsp;</span>
+  <span class="ablog__next">
+    
+    
+    <a href="docs-as-code-enhanced.html">
+      <span>Docs-as-Code Enhanced</span>
+      
+      <i class="fa fa-arrow-circle-right" ></i>
+      
+    </a>
+    
+  </span>
+</div>
+
+  
+  
+  <div class="section ablog__comments">
+    <h2>Comments</h2>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = "danwos";
+      var disqus_identifier = "/posts/2021/meta_data_per_page/";
+      var disqus_title = "Page meta data in Sphinx";
+      var disqus_url = "https://daniel-woste.de/posts/2021/meta_data_per_page";
+
+      (function () {
+        var dsq = document.createElement("script");
+        dsq.type = "text/javascript";
+        dsq.async = true;
+        dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+        (
+          document.getElementsByTagName("head")[0] ||
+          document.getElementsByTagName("body")[0]
+        ).appendChild(dsq);
+      })();
+    </script>
+    <noscript>
+      Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript">
+        comments powered by Disqus.</a ></noscript >
+    <a href="https://disqus.com" class="dsq-brlink">
+      comments powered by <span class="logo-disqus">Disqus</span>
+    </a >
+  </div>
+  
+</div>
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#headlines">Headlines</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#headlines-example">Headlines Example</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#forecast">Forecast</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/posts/2021/meta_data_per_page.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2021, Daniel Woste.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.4.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
