@@ -26,78 +26,78 @@ projects (150–1,500 users) over recent years.
    :align: center
    :target: https://docs.google.com/spreadsheets/d/13MwtKcdgjgT5v-j7CKwhIIQ9zKbR5_G-N56Uhz-0QaM
 
-.. note::
-
-   The spreadsheet is released under the brand of my company 
-   `useblocks <https://useblocks.com>`__, which provides professional
-   tools for the Docs-as-Code environment.
-
-Summary
--------
-
-The **toolchain comparison spreadsheet** is provided as a Google
-Spreadsheet, available here: https://docs.google.com/spreadsheets/d/13MwtKcdgjgT5v-j7CKwhIIQ9zKbR5_G-N56Uhz-0QaM
-
-You can view and comment online, create your own copy, or download it
-in Excel format.
-
-The spreadsheet is designed to compare two toolchains, each consisting
-of multiple tools.
-
-It offers three main views:
-
-* **Requirements**: Define and weight requirements to generate a
-  project-specific list of needs.
-* **Comparison**: Mark each requirement as fulfilled or not for each
-  toolchain.
-* **Analysis**: Identify which tools have the greatest impact on the
-  overall toolchain evaluation.
-
-The first toolchain is prefilled and supports the docs-as-code
-approach, including tools like Sphinx, Sphinx-Needs, PlantUML, and
-more.
-
-The second toolchain is left undefined so you can adapt it to your
-specific needs.
-
-The **Requirements** sheet already contains over 160 requirements,
-categorized by process role and task. Requirements are filterable by
-topic and benefit category, and each can be assigned a
-project-specific value.
-
-Prefilled Docs-as-Code data
+Prefilled Docs-as-Code Data
 ---------------------------
 
-The spreadsheet already contains process roles, tools and other
-criteria which are often used in Docs-as-Code projects and where
-collected in Automotive projects at international OEM and TIER-1
-companies.
+The spreadsheet already contains process roles, tools, and other
+criteria commonly used in Docs-as-Code projects, collected from
+automotive projects at international OEM and Tier-1 companies.
 
-Predecessors of this spreadsheet were also used in multiple projects
-to support the decision making in certain toolchain evaluations.
+Earlier versions of this spreadsheet have been used in multiple
+projects to support decision-making during toolchain evaluations.
 
 Requirements
 ~~~~~~~~~~~~
 
-Over 160 requirments are already avaialble, togehter with their
-process role, a rough task description, and a first weighting.
+Over 160 requirements are already available, each with its associated
+process role, a brief task description, and an initial weighting.
 
-Some examples from the requirement data:
+Some example requirements:
 
-* As a **Req. Manager**, I want to **create versions and baseline**.
+* As a **Req. Manager**, I want to **create versions and baselines**.
 * As an **Architect**, I want to **write PlantUML diagrams in object
   content**.
 * As a **SW Developer**, I want to **test the documentation links**.
-* As a **Req. Manager**, I want to **have free configurable object
+* As a **Req. Manager**, I want to **have freely configurable object
   types**.
 * As a **Process Eng.**, I want to **define the rules for requirement
-  Ids**.
-* As a **DevOps**, I want to **build html and export data to files
+  IDs**.
+* As a **DevOps**, I want to **build HTML and export data to files
   during one build**.
-* As a **Req. Manager**, I want to **integrate/copy IBM Doors issues as
-  objects into my docs**.
+* As a **Req. Manager**, I want to **integrate or copy IBM Doors issues
+  as objects into my docs**.
 * As a **Project Lead**, I want to **find triggers for performance
-  problems (bottle necks)**.
+  problems (bottlenecks)**.
+
+The full list of requirements can be found in the `sheet <https://docs.google.com/spreadsheets/d/13MwtKcdgjgT5v-j7CKwhIIQ9zKbR5_G-N56Uhz-0QaM/edit?gid=955912988#gid=955912988>`__.
+
+Configuration
+~~~~~~~~~~~~~
+
+Prefilled process roles include:
+
+* DevOps
+* Manager
+* Process Eng.
+* Project Lead
+* Quality Eng.
+* Req. Manager
+* SW Architect
+* SW Developer
+* SW Tester
+* System Eng.
+
+Available (but extendable) tools are:
+
+* AsciiDoc - https://asciidoc.org/
+* Docker - https://docs.docker.com/
+* Doxygen - https://www.doxygen.nl/manual/
+* Git - https://git-scm.com/doc
+* GitHub - https://docs.github.com/
+* Isso - https://posativ.org/isso/docs/
+* Jupyter - https://docs.jupyter.org/
+* Open-Needs IDE
+* SNE
+* Sphinx - https://www.sphinx-doc.org/
+* Sphinx-Needs - https://sphinx-needs.readthedocs.io/
+* Sphinx-PlantUML - https://sphinxcontrib-plantuml.readthedocs.io/
+* Sphinx-Preview
+* Sphinx-Test-Reports - https://sphinx-test-reports.readthedocs.io/
+* VS Code RST Preview - https://marketplace.visualstudio.com/items?itemName=lextudio.restructuredtext
+* ubCode - https://useblocks.com/products/ubcode/
+* ubTrace - https://useblocks.com/products/ubtrace
+* ubc - https://useblocks.com/
+* ubConnect - https://useblocks.com/
 
 The list of all requirments can be seen in the `sheet <https://docs.google.com/spreadsheets/d/13MwtKcdgjgT5v-j7CKwhIIQ9zKbR5_G-N56Uhz-0QaM/edit?gid=955912988#gid=955912988>`__.
 
