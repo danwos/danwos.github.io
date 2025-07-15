@@ -26,6 +26,12 @@ projects (150–1,500 users) over recent years.
    :align: center
    :target: https://docs.google.com/spreadsheets/d/13MwtKcdgjgT5v-j7CKwhIIQ9zKbR5_G-N56Uhz-0QaM
 
+.. note::
+
+   The spreadsheet is released under the brand of my company 
+   `useblocks <https://useblocks.com>`__, which provides professional
+   tools for the Docs-as-Code environment.
+
 Summary
 -------
 
