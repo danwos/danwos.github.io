@@ -26,6 +26,14 @@ npm run build    # static site in dist/
 | `src/assets/monsters/` | cut-out monsters, downscaled from the brain masters |
 | `legacy/` | the old Sphinx site, source for the blog migration |
 
+## Feedback
+
+`npm run dev` shows the Astro toolbar at the bottom of the page. Its
+**Feedback** app (speech bubble) lets you click any element and leave a
+comment; open comments show as numbered pins. Comments land in
+`.feedback/feedback.json` (git-ignored) with page, element, nearby heading,
+viewport and theme – an agent works through them and marks them done.
+
 ## Languages
 
 German is the master. Every other language is a translation of the German

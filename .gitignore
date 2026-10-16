@@ -27,3 +27,6 @@ poetry.lock
 node_modules/
 .astro/
 dist/
+
+# Feedback from the dev toolbar (read by agents, not published)
+.feedback/
