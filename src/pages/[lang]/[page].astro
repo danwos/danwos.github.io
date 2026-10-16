@@ -1,0 +1,29 @@
+---
+// Imprint and privacy: /<lang>/imprint/ and /<lang>/privacy/ (same slug in every language).
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { langOf, slugOf } from '../../lib/content';
+import type { Lang } from '../../i18n';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('legal');
+  return entries.map((entry) => ({ params: { lang: langOf(entry.id), page: slugOf(entry.id) }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const lang = Astro.params.lang as Lang;
+const { Content } = await render(entry);
+---
+<Base lang={lang} title={entry.data.title}>
+  <section class="section">
+    <div class="wrap prose">
+      <h1>{entry.data.title}</h1>
+      {entry.data.draft_note && <p class="note">{entry.data.draft_note}</p>}
+      <Content />
+    </div>
+  </section>
+</Base>
+<style>
+  .prose :global(h2) { font-size: 24px; margin: 32px 0 8px }
+  .note { padding: 12px 16px; border-left: 5px solid var(--accent); background: var(--accent-soft); border-radius: 12px }
+</style>

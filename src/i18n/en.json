@@ -1,5 +1,5 @@
 {
-  "_translated_from": "22bf13b8a4a5",
+  "_translated_from": "07008b1a71ff",
   "meta": {
     "title": "danwos – Daniel Woste",
     "description": "Daniel Woste builds small tools for large teams: docs-as-code, test quality, decisions and knowledge."
@@ -49,16 +49,17 @@
   "blog": {
     "title": "Thoughts",
     "lead": "Posts, videos and explainer images on docs-as-code, quality and tools.",
-    "soon": "The existing posts are moving house and will appear here soon.",
+    "soon": "The existing posts are moving over and will appear here soon.",
     "alt": "The danwos monster"
   },
   "about": {
     "title": "About me",
     "text": [
-      "I'm a software developer and wrote Sphinx-Needs and a number of other docs-as-code tools that run in large engineering projects today.",
+      "I'm a software developer. I founded useblocks and, as team lead, built Sphinx-Needs and a number of other docs-as-code tools that run in large engineering projects today. Today I support useblocks as an advisor.",
       "What drives me is how large, distributed teams keep track: of requirements, tests, decisions and the knowledge in between. My tools are small, honest and solve one problem properly."
     ],
-    "alt": "The danwos monster, mascot of Daniel and danwos"
+    "alt": "The danwos monster, mascot of Daniel and danwos",
+    "photoAlt": "Daniel Woste"
   },
   "archive": {
     "title": "Archive",
@@ -79,6 +80,8 @@
     "cta": "Interested in this project? Let's talk."
   },
   "footer": {
-    "draft": "Draft – not published yet."
+    "draft": "Draft – not published yet.",
+    "imprint": "Imprint",
+    "privacy": "Privacy"
   }
 }

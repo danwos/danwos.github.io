@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "danwos – Daniel Woste",
-    "description": "Daniel Woste baut kleine Werkzeuge für große Teams: Docs-as-Code, Testqualität, Entscheidungen und Wissen."
+    "description": "Daniel Woste baut kleine Tools für große Teams: Docs-as-Code, Testqualität, Entscheidungen und Wissen."
   },
   "nav": {
     "projects": "Projekte",
@@ -17,7 +17,7 @@
   "hero": {
     "eyebrow": "Docs-as-Code · Tools · Ideen",
     "title": "Kleine Tools, mit Sorgfalt gebaut – und eine Crew aus Monstern.",
-    "lead": "Ich bin Daniel. Ich baue Werkzeuge, mit denen große Teams ihr Wissen, ihre Qualität und ihre Entscheidungen im Griff behalten. Jedes Projekt hat sein eigenes Monster.",
+    "lead": "Ich bin Daniel. Ich baue Tools, mit denen große Teams ihr Wissen, ihre Qualität und ihre Entscheidungen im Griff behalten. Jedes Projekt hat sein eigenes Monster.",
     "primary": "Projekte ansehen",
     "secondary": "Mit mir arbeiten",
     "crewAlt": "Die danwos-Crew: fünf Monster, eines für danwos und eines für jedes aktuelle Projekt"
@@ -47,17 +47,18 @@
   },
   "blog": {
     "title": "Gedanken",
-    "lead": "Beiträge, Videos und Erklärbilder zu Docs-as-Code, Qualität und Werkzeugen.",
+    "lead": "Beiträge, Videos und Erklärbilder zu Docs-as-Code, Qualität und Tools.",
     "soon": "Die bisherigen Beiträge ziehen gerade um und erscheinen bald hier.",
     "alt": "Das danwos-Monster"
   },
   "about": {
     "title": "Über mich",
     "text": [
-      "Ich bin Softwareentwickler und habe Sphinx-Needs und eine Reihe weiterer Docs-as-Code-Werkzeuge geschrieben, die heute in großen Entwicklungsprojekten laufen.",
-      "Mich treibt um, wie große, verteilte Teams den Überblick behalten: über Anforderungen, Tests, Entscheidungen und das Wissen dazwischen. Meine Werkzeuge sind klein, ehrlich und lösen ein Problem richtig."
+      "Ich bin Softwareentwickler. Ich habe useblocks gegründet und dort als Teamlead Sphinx-Needs und eine Reihe weiterer Docs-as-Code-Tools gebaut, die heute in großen Entwicklungsprojekten laufen. Heute begleite ich useblocks als Advisor.",
+      "Mich treibt um, wie große, verteilte Teams den Überblick behalten: über Anforderungen, Tests, Entscheidungen und das Wissen dazwischen. Meine Tools sind klein, ehrlich und lösen ein Problem richtig."
     ],
-    "alt": "Das danwos-Monster, Maskottchen von Daniel und danwos"
+    "alt": "Das danwos-Monster, Maskottchen von Daniel und danwos",
+    "photoAlt": "Daniel Woste"
   },
   "archive": {
     "title": "Archiv",
@@ -78,6 +79,8 @@
     "cta": "Interesse an diesem Projekt? Lass uns reden."
   },
   "footer": {
-    "draft": "Entwurf – noch nicht veröffentlicht."
+    "draft": "Entwurf – noch nicht veröffentlicht.",
+    "imprint": "Impressum",
+    "privacy": "Datenschutz"
   }
 }

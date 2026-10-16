@@ -4,6 +4,8 @@ import Hero from '../../components/Hero.astro';
 import ProjectCard from '../../components/ProjectCard.astro';
 import ArchiveCard from '../../components/ArchiveCard.astro';
 import Split from '../../components/Split.astro';
+import { Image } from 'astro:assets';
+import photo from '../../assets/people/daniel-woste.png';
 import { projectsFor, ideasFor } from '../../lib/content';
 import { t, locales, type Lang } from '../../i18n';
 
@@ -55,10 +57,13 @@ const ideas = await ideasFor(lang);
 
   <section id="about" class="section">
     <div class="wrap">
-      <Split monster="danwos" alt={s.about.alt}>
-        <h2>{s.about.title}</h2>
-        {s.about.text.map((p) => <p>{p}</p>)}
-      </Split>
+      <div class="split">
+        <div class="img photo"><Image src={photo} alt={s.about.photoAlt} widths={[256]} sizes="240px" /></div>
+        <div>
+          <h2>{s.about.title}</h2>
+          {s.about.text.map((p) => <p>{p}</p>)}
+        </div>
+      </div>
     </div>
   </section>
 
@@ -93,5 +98,6 @@ const ideas = await ideasFor(lang);
   .archive { margin-top: 32px }
   .ideas { padding-left: 20px; margin: 16px 0 0 }
   .ideas li { margin-bottom: 8px; max-width: 64ch }
+  .photo :global(img) { border-radius: 50%; border: 2px solid var(--outline); box-shadow: 4px 4px 0 var(--shadow); max-width: 240px }
   .actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 20px }
 </style>

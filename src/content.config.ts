@@ -32,4 +32,13 @@ const ideas = defineCollection({
   }),
 });
 
-export const collections = { projects, ideas };
+const legal = defineCollection({
+  loader: glob({ pattern: '*/*.md', base: './src/content/legal' }),
+  schema: z.object({
+    title: z.string(),
+    draft_note: z.string().optional(),
+    translated_from: z.string().optional(),
+  }),
+});
+
+export const collections = { projects, ideas, legal };
