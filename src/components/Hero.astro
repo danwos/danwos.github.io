@@ -40,7 +40,7 @@ const crew = [
   .crew :global(img) { position: absolute; width: 34%; height: auto; filter: drop-shadow(0 6px 10px #0002) }
   .crew :global(.lead) { width: 50%; left: 25%; bottom: 0; z-index: 3 }
   .crew :global(.m1) { left: 2%; top: 4% }
-  .crew :global(.m2) { right: 2%; top: 0 }
+  .crew :global(.m2) { right: 2%; top: 0; transform: scaleX(-1) } /* deciwa faces the group */
   .crew :global(.m3) { left: 0; bottom: 2%; z-index: 2 }
   .crew :global(.m4) { right: -1%; bottom: 0; z-index: 2; width: 48% } /* faktwerk is wider than tall – shown a bit bigger than quawa */
   @media (max-width: 760px) {
