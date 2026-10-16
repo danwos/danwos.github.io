@@ -1,0 +1,90 @@
+---
+import logoLight from '../assets/logo/logo-horizontal.svg';
+import logoDark from '../assets/logo/logo-horizontal-dark.svg';
+import { t, path, locales, switchPath, type Lang } from '../i18n';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const s = t(lang);
+const home = path(lang);
+const links = [
+  ['projects', s.nav.projects], ['ideas', s.nav.ideas], ['blog', s.nav.blog],
+  ['about', s.nav.about], ['contact', s.nav.contact],
+] as const;
+---
+<header class="topbar">
+  <nav class="in" aria-label="danwos">
+    <a class="brand" href={home} aria-label="danwos – Start">
+      <img class="logo-light" src={logoLight.src} alt="danwos" width="150" height="40" />
+      <img class="logo-dark" src={logoDark.src} alt="danwos" width="150" height="40" />
+    </a>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="nav-links">{s.nav.menu}</button>
+    <ul id="nav-links" class="links">
+      {links.map(([id, label]) => <li><a href={`${home}#${id}`}>{label}</a></li>)}
+    </ul>
+    <div class="tools">
+      <ul class="langs" aria-label={s.nav.language}>
+        {locales.map((l) => (
+          <li><a href={switchPath(Astro.url.pathname, l as Lang)} hreflang={l} lang={l} data-lang={l}
+                 aria-current={l === lang ? 'true' : undefined}>{l.toUpperCase()}</a></li>
+        ))}
+      </ul>
+      <button class="theme" type="button" aria-label={s.nav.theme} title={s.nav.theme}>◐</button>
+    </div>
+  </nav>
+</header>
+
+<script>
+  const root = document.documentElement;
+  document.querySelector('.theme')?.addEventListener('click', () => {
+    const dark = root.dataset.theme ? root.dataset.theme === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    const next = dark ? 'light' : 'dark';
+    root.dataset.theme = next;
+    try { localStorage.setItem('theme', next); } catch {}
+  });
+  document.querySelectorAll<HTMLAnchorElement>('[data-lang]').forEach((a) =>
+    a.addEventListener('click', () => { try { localStorage.setItem('lang', a.dataset.lang!); } catch {} }),
+  );
+  const menu = document.querySelector<HTMLButtonElement>('.menu');
+  const nav = document.querySelector('.topbar nav');
+  menu?.addEventListener('click', () => {
+    const open = menu.getAttribute('aria-expanded') !== 'true';
+    menu.setAttribute('aria-expanded', String(open));
+    nav?.classList.toggle('open', open);
+  });
+  document.querySelectorAll('#nav-links a').forEach((a) => a.addEventListener('click', () => {
+    menu?.setAttribute('aria-expanded', 'false'); nav?.classList.remove('open');
+  }));
+</script>
+
+<style>
+  .topbar { position: sticky; top: 0; z-index: 10; background: var(--bg); border-bottom: 1px solid var(--line) }
+  .in { max-width: var(--max); margin: 0 auto; padding: 10px 16px; display: flex; align-items: center; gap: 20px }
+  .brand { display: flex; line-height: 0 }
+  .brand img { height: 36px; width: auto }
+  .logo-dark { display: none }
+  @media (prefers-color-scheme: dark) {
+    :global(:root:not([data-theme="light"])) .logo-light { display: none }
+    :global(:root:not([data-theme="light"])) .logo-dark { display: block }
+  }
+  :global(:root[data-theme="dark"]) .logo-light { display: none }
+  :global(:root[data-theme="dark"]) .logo-dark { display: block }
+  ul { list-style: none; margin: 0; padding: 0; display: flex }
+  .links { gap: 22px; margin-left: auto }
+  .links a { color: var(--ink); text-decoration: none; font-weight: 600; padding: 4px 0; border-bottom: 3px solid transparent }
+  .links a:hover { color: var(--primary); border-image: var(--stripe-thin) 1 }
+  .tools { display: flex; align-items: center; gap: 12px }
+  .langs { gap: 2px; font-size: 14px }
+  .langs a { color: var(--muted); text-decoration: none; font-weight: 600; padding: 4px 6px; border-radius: 6px }
+  .langs a[aria-current] { color: var(--ink); background: var(--primary-soft) }
+  button { font: 600 15px var(--font-body); color: var(--ink); background: var(--surface); border: 2px solid var(--line); border-radius: 10px; padding: 4px 10px; cursor: pointer }
+  .theme { font-size: 18px; line-height: 1; padding: 6px 9px }
+  .menu { display: none; margin-left: auto }
+  @media (max-width: 760px) {
+    .in { flex-wrap: wrap; gap: 12px }
+    .menu { display: block }
+    .links { display: none; order: 3; width: 100%; flex-direction: column; gap: 4px; padding: 8px 0 }
+    .open .links { display: flex }
+    .links a { display: block; padding: 8px 0 }
+  }
+</style>

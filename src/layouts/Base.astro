@@ -1,0 +1,36 @@
+---
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { t, locales, switchPath, type Lang } from '../i18n';
+
+interface Props { lang: Lang; title?: string; description?: string }
+const { lang, title, description } = Astro.props;
+const s = t(lang);
+const pageTitle = title ? `${title} – danwos` : s.meta.title;
+const site = Astro.site!;
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description ?? s.meta.description} />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, site)} />
+    {locales.map((l) => <link rel="alternate" hreflang={l} href={new URL(switchPath(Astro.url.pathname, l as Lang), site)} />)}
+    <link rel="alternate" hreflang="x-default" href={new URL('/', site)} />
+    <!-- Set the chosen theme before the first paint; without a choice the browser setting applies. -->
+    <script is:inline>
+      try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <a class="skip" href="#main">{s.nav.skip}</a>
+    <Nav lang={lang} />
+    <main id="main"><slot /></main>
+    <Footer lang={lang} />
+  </body>
+</html>

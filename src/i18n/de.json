@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "title": "danwos – Daniel Woste",
+    "description": "Daniel Woste baut kleine Werkzeuge für große Teams: Docs-as-Code, Testqualität, Entscheidungen und Wissen."
+  },
+  "nav": {
+    "projects": "Projekte",
+    "ideas": "Ideen",
+    "blog": "Gedanken",
+    "about": "Über mich",
+    "contact": "Kontakt",
+    "menu": "Menü",
+    "theme": "Hell oder dunkel",
+    "language": "Sprache",
+    "skip": "Zum Inhalt"
+  },
+  "hero": {
+    "eyebrow": "Docs-as-Code · Tools · Ideen",
+    "title": "Kleine Tools, mit Sorgfalt gebaut – und eine Crew aus Monstern.",
+    "lead": "Ich bin Daniel. Ich baue Werkzeuge, mit denen große Teams ihr Wissen, ihre Qualität und ihre Entscheidungen im Griff behalten. Jedes Projekt hat sein eigenes Monster.",
+    "primary": "Projekte ansehen",
+    "secondary": "Mit mir arbeiten",
+    "crewAlt": "Die danwos-Crew: fünf Monster, eines für danwos und eines für jedes aktuelle Projekt"
+  },
+  "projects": {
+    "title": "Woran ich gerade arbeite",
+    "lead": "Neue Projekte – manche schon im Code, manche noch eine Idee. Jedes hat eine eigene Seite: welches Problem es löst und warum ich es baue.",
+    "more": "Mehr erfahren"
+  },
+  "status": {
+    "idea": "Idee",
+    "concept": "Konzept",
+    "alpha": "Alpha",
+    "beta": "Beta",
+    "done": "Fertig",
+    "cancelled": "Eingestellt"
+  },
+  "role": {
+    "created": "erstellt",
+    "maintained": "gepflegt",
+    "hired": "beauftragt"
+  },
+  "ideas": {
+    "title": "Ideen",
+    "lead": "Noch nicht begonnen, aber schon da. Ein, zwei Sätze pro Idee – wenn dich eine reizt, lass uns reden.",
+    "alt": "Das Baby-Monster steht für Ideen"
+  },
+  "blog": {
+    "title": "Gedanken",
+    "lead": "Beiträge, Videos und Erklärbilder zu Docs-as-Code, Qualität und Werkzeugen.",
+    "soon": "Die bisherigen Beiträge ziehen gerade um und erscheinen bald hier.",
+    "alt": "Das danwos-Monster"
+  },
+  "about": {
+    "title": "Über mich",
+    "text": [
+      "Ich bin Softwareentwickler und habe Sphinx-Needs und eine Reihe weiterer Docs-as-Code-Werkzeuge geschrieben, die heute in großen Entwicklungsprojekten laufen.",
+      "Mich treibt um, wie große, verteilte Teams den Überblick behalten: über Anforderungen, Tests, Entscheidungen und das Wissen dazwischen. Meine Werkzeuge sind klein, ehrlich und lösen ein Problem richtig."
+    ],
+    "alt": "Das danwos-Monster, Maskottchen von Daniel und danwos"
+  },
+  "archive": {
+    "title": "Archiv",
+    "lead": "Ältere Projekte. Einige laufen bis heute, andere haben ihren Dienst getan – die Oma hat sie alle gesehen.",
+    "alt": "Die Oma, Hüterin des Archivs"
+  },
+  "contact": {
+    "title": "Lass uns reden",
+    "lead": "Du hast ein Problem, das zu einem dieser Projekte passt, oder eine Idee, die nach einem Monster ruft? Schreib mir.",
+    "alt": "Das Monster mit zwei Köpfen steht für Kontakt"
+  },
+  "project": {
+    "back": "Zur Übersicht",
+    "wip": "Diese Seite entsteht gerade. Hier folgen das Problem, meine Motivation und wie es funktioniert.",
+    "links": "Links",
+    "status": "Stand",
+    "role": "Rolle",
+    "cta": "Interesse an diesem Projekt? Lass uns reden."
+  },
+  "footer": {
+    "draft": "Entwurf – noch nicht veröffentlicht."
+  }
+}

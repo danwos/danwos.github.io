@@ -1,0 +1,23 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { slugOf } from '../lib/content';
+import { t, path, type Lang } from '../i18n';
+
+interface Props { lang: Lang; entry: CollectionEntry<'projects'> }
+const { lang, entry } = Astro.props;
+const s = t(lang);
+const d = entry.data;
+---
+<a class="acard" href={path(lang, `projects/${slugOf(entry.id)}/`)}>
+  <h3>{d.title}</h3>
+  <p>{d.summary}</p>
+  <span class="roles">{d.role.map((r) => s.role[r]).join(' · ')}</span>
+</a>
+<style>
+  .acard { display: block; padding: 16px; border: 1px solid var(--line); border-top: 4px solid var(--moss); border-radius: var(--radius);
+    background: var(--surface); color: inherit; text-decoration: none; transition: transform .1s, box-shadow .1s }
+  .acard:hover { transform: translateY(-2px); box-shadow: 4px 4px 0 var(--shadow) }
+  h3 { font-size: 20px; margin: 0 0 6px }
+  p { color: var(--muted); font-size: 15px; margin-bottom: 8px }
+  .roles { font-size: 13px; color: var(--moss); font-weight: 600 }
+</style>

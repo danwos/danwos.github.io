@@ -1,0 +1,30 @@
+---
+// "/" picks the language: saved choice → browser languages → German.
+// GitHub Pages is static, so this happens in the browser.
+import { locales, defaultLocale } from '../i18n/locales.mjs';
+---
+<!doctype html>
+<html lang={defaultLocale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>danwos</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    {locales.map((l) => <link rel="alternate" hreflang={l} href={new URL(`/${l}/`, Astro.site)} />)}
+    <script is:inline define:vars={{ locales, defaultLocale }}>
+      let lang;
+      try { lang = localStorage.getItem('lang'); } catch (e) {}
+      if (!locales.includes(lang)) {
+        lang = (navigator.languages || [navigator.language || ''])
+          .map((l) => (l || '').slice(0, 2).toLowerCase())
+          .find((l) => locales.includes(l)) || defaultLocale;
+      }
+      location.replace('/' + lang + '/' + location.hash);
+    </script>
+    <noscript><meta http-equiv="refresh" content={`0; url=/${defaultLocale}/`} /></noscript>
+  </head>
+  <body>
+    {locales.map((l) => <p><a href={`/${l}/`} hreflang={l}>{l.toUpperCase()}</a></p>)}
+  </body>
+</html>

@@ -1,0 +1,84 @@
+{
+  "_translated_from": "22bf13b8a4a5",
+  "meta": {
+    "title": "danwos – Daniel Woste",
+    "description": "Daniel Woste builds small tools for large teams: docs-as-code, test quality, decisions and knowledge."
+  },
+  "nav": {
+    "projects": "Projects",
+    "ideas": "Ideas",
+    "blog": "Thoughts",
+    "about": "About",
+    "contact": "Contact",
+    "menu": "Menu",
+    "theme": "Light or dark",
+    "language": "Language",
+    "skip": "Skip to content"
+  },
+  "hero": {
+    "eyebrow": "Docs-as-code · tools · ideas",
+    "title": "Small tools, built with care – and a crew of monsters.",
+    "lead": "I'm Daniel. I build tools that help large teams keep their knowledge, their quality and their decisions under control. Every project has its own monster.",
+    "primary": "See the projects",
+    "secondary": "Work with me",
+    "crewAlt": "The danwos crew: five monsters, one for danwos and one for each current project"
+  },
+  "projects": {
+    "title": "What I'm working on",
+    "lead": "New projects – some already in code, some still an idea. Each has its own page: what problem it solves and why I'm building it.",
+    "more": "Learn more"
+  },
+  "status": {
+    "idea": "Idea",
+    "concept": "Concept",
+    "alpha": "Alpha",
+    "beta": "Beta",
+    "done": "Done",
+    "cancelled": "Cancelled"
+  },
+  "role": {
+    "created": "created",
+    "maintained": "maintained",
+    "hired": "hired"
+  },
+  "ideas": {
+    "title": "Ideas",
+    "lead": "Not started yet, but already there. One or two sentences per idea – if one catches your eye, let's talk.",
+    "alt": "The baby monster stands for ideas"
+  },
+  "blog": {
+    "title": "Thoughts",
+    "lead": "Posts, videos and explainer images on docs-as-code, quality and tools.",
+    "soon": "The existing posts are moving house and will appear here soon.",
+    "alt": "The danwos monster"
+  },
+  "about": {
+    "title": "About me",
+    "text": [
+      "I'm a software developer and wrote Sphinx-Needs and a number of other docs-as-code tools that run in large engineering projects today.",
+      "What drives me is how large, distributed teams keep track: of requirements, tests, decisions and the knowledge in between. My tools are small, honest and solve one problem properly."
+    ],
+    "alt": "The danwos monster, mascot of Daniel and danwos"
+  },
+  "archive": {
+    "title": "Archive",
+    "lead": "Older projects. Some still run today, others have done their job – grandma has seen them all.",
+    "alt": "Grandma, keeper of the archive"
+  },
+  "contact": {
+    "title": "Let's talk",
+    "lead": "You have a problem that fits one of these projects, or an idea that calls for a monster? Write to me.",
+    "alt": "The two-headed monster stands for contact"
+  },
+  "project": {
+    "back": "Back to overview",
+    "wip": "This page is in the making. The problem, my motivation and how it works follow here.",
+    "links": "Links",
+    "status": "Status",
+    "role": "Role",
+    "cta": "Interested in this project? Let's talk."
+  },
+  "footer": {
+    "draft": "Draft – not published yet."
+  }
+}

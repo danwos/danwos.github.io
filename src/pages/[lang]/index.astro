@@ -1,0 +1,97 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import ProjectCard from '../../components/ProjectCard.astro';
+import ArchiveCard from '../../components/ArchiveCard.astro';
+import Split from '../../components/Split.astro';
+import { projectsFor, ideasFor } from '../../lib/content';
+import { t, locales, type Lang } from '../../i18n';
+
+export function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+const s = t(lang);
+const projects = await projectsFor(lang);
+const current = projects.filter((p) => p.data.era === 'current');
+const archive = projects.filter((p) => p.data.era === 'archive');
+const ideas = await ideasFor(lang);
+---
+<Base lang={lang}>
+  <Hero lang={lang} />
+
+  <section id="projects" class="section">
+    <div class="wrap">
+      <h2>{s.projects.title}</h2>
+      <p class="lead">{s.projects.lead}</p>
+      <div class="grid cards">
+        {current.map((entry) => <ProjectCard lang={lang} entry={entry} />)}
+      </div>
+    </div>
+  </section>
+
+  <section id="ideas" class="section">
+    <div class="wrap">
+      <Split monster="baby" alt={s.ideas.alt}>
+        <h2>{s.ideas.title}</h2>
+        <p class="lead">{s.ideas.lead}</p>
+        <ul class="ideas">
+          {ideas.map((i) => <li><strong>{i.data.title}</strong> – {i.data.summary}</li>)}
+        </ul>
+      </Split>
+    </div>
+  </section>
+
+  <section id="blog" class="section">
+    <div class="wrap">
+      <Split monster="danwos" alt={s.blog.alt} reverse>
+        <h2>{s.blog.title}</h2>
+        <p class="lead">{s.blog.lead}</p>
+        <p class="muted">{s.blog.soon}</p>
+      </Split>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="wrap">
+      <Split monster="danwos" alt={s.about.alt}>
+        <h2>{s.about.title}</h2>
+        {s.about.text.map((p) => <p>{p}</p>)}
+      </Split>
+    </div>
+  </section>
+
+  <section id="archive" class="section">
+    <div class="wrap">
+      <Split monster="grandma" alt={s.archive.alt} reverse>
+        <h2>{s.archive.title}</h2>
+        <p class="lead">{s.archive.lead}</p>
+      </Split>
+      <div class="grid archive">
+        {archive.map((entry) => <ArchiveCard lang={lang} entry={entry} />)}
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="wrap">
+      <Split monster="two-heads" alt={s.contact.alt}>
+        <h2>{s.contact.title}</h2>
+        <p class="lead">{s.contact.lead}</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/daniel-woste-362b6252/">LinkedIn</a>
+          <a class="btn btn-secondary" href="https://github.com/danwos">GitHub</a>
+        </div>
+      </Split>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .cards { margin-top: 32px }
+  .archive { margin-top: 32px }
+  .ideas { padding-left: 20px; margin: 16px 0 0 }
+  .ideas li { margin-bottom: 8px; max-width: 64ch }
+  .actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 20px }
+</style>

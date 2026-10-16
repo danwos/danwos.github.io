@@ -1,0 +1,16 @@
+---
+import { t, type Lang } from '../i18n';
+interface Props { lang: Lang }
+const s = t(Astro.props.lang);
+---
+<footer>
+  <div class="wrap row">
+    <span>© {new Date().getFullYear()} Daniel Woste · danwos</span>
+    <span class="draft">{s.footer.draft}</span>
+  </div>
+</footer>
+<style>
+  footer { margin-top: 0; border-top: 10px solid; border-image: var(--stripe) 10; color: var(--muted); font-size: 14px }
+  .row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding-top: 24px; padding-bottom: 40px }
+  .draft { color: var(--accent) }
+</style>

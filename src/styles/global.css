@@ -1,0 +1,53 @@
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/bricolage-grotesque";
+@import "@fontsource/jetbrains-mono/400.css";
+@import "./tokens.css";
+
+* { box-sizing: border-box }
+html { scroll-behavior: smooth; scroll-padding-top: 80px }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto } * { transition: none !important } }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.65 var(--font-body) }
+img { max-width: 100%; height: auto }
+
+h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.12; letter-spacing: -.01em; text-wrap: balance }
+h1 { font-size: 48px; font-weight: 800; margin: .3em 0 }
+h2 { font-size: 36px; font-weight: 800; margin: 0 0 12px }
+h3 { font-size: 24px; font-weight: 700; margin: 20px 0 6px }
+p { margin: 0 0 12px; max-width: 70ch }
+.lead { font-size: 20px; color: var(--muted); max-width: 62ch }
+.muted { color: var(--muted) }
+
+a { color: var(--primary); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px }
+a:hover { text-decoration-color: var(--accent) }
+:focus-visible { outline: 3px solid var(--primary); outline-offset: 3px; border-radius: 4px }
+code { font: 15px var(--font-mono); background: var(--primary-soft); padding: 1px 5px; border-radius: 5px }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 16px }
+.section { padding: 72px 0 }
+.section + .section { border-top: 1px solid var(--line) }
+.skip { position: absolute; left: -999px } .skip:focus { left: 16px; top: 8px; z-index: 20; background: var(--surface); padding: 8px 12px }
+
+/* buttons – 2px outline with offset shadow, the street-art touch */
+.btn { display: inline-flex; align-items: center; gap: 8px; font: 600 16px var(--font-body); padding: 10px 18px; border-radius: var(--radius-sm);
+  border: 2px solid var(--outline); cursor: pointer; text-decoration: none; transition: transform .08s, box-shadow .08s }
+.btn-primary { background: var(--primary); color: var(--on-primary); box-shadow: 3px 3px 0 var(--shadow) }
+.btn-secondary { background: var(--surface); color: var(--ink); box-shadow: 3px 3px 0 var(--shadow) }
+.btn:hover { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--shadow) }
+.btn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--shadow) }
+
+.tag { display: inline-block; font: 600 12px var(--font-body); padding: 2px 10px; border-radius: 20px; background: var(--primary-soft); color: var(--primary) }
+.tag.idea, .tag.concept { background: var(--moss-soft); color: var(--moss) }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px }
+
+/* picture and text: monster one third, text two thirds */
+.split { display: grid; grid-template-columns: 1fr 2fr; gap: 32px; align-items: center }
+.split.rev { grid-template-columns: 2fr 1fr } .split.rev .img { order: 2 }
+.split .img img { width: 100%; max-width: 260px; display: block; margin: auto }
+
+@media (max-width: 760px) {
+  h1 { font-size: 36px } h2 { font-size: 28px }
+  .section { padding: 48px 0 }
+  .split, .split.rev { grid-template-columns: 1fr } .split.rev .img { order: 0 }
+  .split .img img { max-width: 180px }
+}

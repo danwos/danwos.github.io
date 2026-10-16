@@ -22,3 +22,8 @@ poetry.lock
 .devcontainer/
 .vscode/
 .dockerignore
+
+# Astro
+node_modules/
+.astro/
+dist/
