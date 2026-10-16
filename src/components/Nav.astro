@@ -20,7 +20,7 @@ const links = [
     </a>
     <button class="menu" type="button" aria-expanded="false" aria-controls="nav-links">{s.nav.menu}</button>
     <ul id="nav-links" class="links">
-      {links.map(([id, label]) => <li><a href={id === 'blog' ? `${home}blog/` : `${home}#${id}`}>{label}</a></li>)}
+      {links.map(([id, label]) => <li><a href={id === 'blog' || id === 'ideas' ? `${home}${id}/` : `${home}#${id}`}>{label}</a></li>)}
     </ul>
     <div class="tools">
       <ul class="langs" aria-label={s.nav.language}>

@@ -27,6 +27,8 @@ const ideas = defineCollection({
   schema: z.object({
     title: z.string(),
     summary: z.string(),
+    // key into ideaCategories in src/i18n/<lang>.json
+    category: z.string(),
     order: z.number().default(100),
     translated_from: z.string().optional(),
   }),

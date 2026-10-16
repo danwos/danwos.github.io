@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "danwos – Daniel Woste",
-    "description": "Daniel Woste baut kleine Tools für große Teams: Docs-as-Code, Testqualität, Entscheidungen und Wissen."
+    "description": "Daniel Woste baut SW-Tools für große Teams: Docs-as-Code, AI, Testqualität, Entscheidungen und Wissen."
   },
   "nav": {
     "projects": "Projekte",
@@ -15,16 +15,16 @@
     "skip": "Zum Inhalt"
   },
   "hero": {
-    "eyebrow": "Docs-as-Code · Tools · Ideen",
-    "title": "Kleine Tools, mit Sorgfalt gebaut – und eine Crew aus Monstern.",
-    "lead": "Ich bin Daniel. Ich baue Tools, mit denen große Teams ihr Wissen, ihre Qualität und ihre Entscheidungen im Griff behalten. Jedes Projekt hat sein eigenes Monster.",
+    "eyebrow": "Docs-as-Code · AI · SW-Tools",
+    "title": "SW-Tools, hilfreich as hell – und eine Crew aus Monstern.",
+    "lead": "Ich bin Daniel. Ich baue SW-Tools, mit denen große Teams ihr Wissen, ihre Qualität und ihre Entscheidungen im Griff behalten.",
     "primary": "Projekte ansehen",
     "secondary": "Mit mir arbeiten",
     "crewAlt": "Die danwos-Crew: fünf Monster, eines für danwos und eines für jedes aktuelle Projekt"
   },
   "projects": {
     "title": "Woran ich gerade arbeite",
-    "lead": "Neue Projekte – manche schon im Code, manche noch eine Idee. Jedes hat eine eigene Seite: welches Problem es löst und warum ich es baue.",
+    "lead": "Neue Projekte – manche schon im Code, manche noch eine Idee.",
     "more": "Mehr erfahren"
   },
   "status": {
@@ -42,8 +42,13 @@
   },
   "ideas": {
     "title": "Ideen",
-    "lead": "Noch nicht begonnen, aber schon da. Ein, zwei Sätze pro Idee – wenn dich eine reizt, lass uns reden.",
-    "alt": "Das Baby-Monster steht für Ideen"
+    "lead": "Noch nicht begonnen, aber schon da. Wenn dich eine reizt, lass uns reden.",
+    "alt": "Das Baby-Monster steht für Ideen",
+    "all": "Alle Ideen",
+    "pageLead": "Noch nicht begonnen, aber schon da. Wenn dich eine reizt, lass uns reden.",
+    "toc": "Inhalt",
+    "ideasCount": "Ideen",
+    "ideaOne": "Idee"
   },
   "blog": {
     "title": "Blog",
@@ -58,13 +63,13 @@
     "minutes": "Min. Lesezeit",
     "tags": "Themen",
     "rss": "RSS-Feed",
-    "pageLead": "Alles, was ich zu Docs-as-Code, Qualität und Tools geschrieben habe – neueste Beiträge zuerst."
+    "pageLead": "Alles, was ich zu Docs-as-Code, Qualität und Tools geschrieben habe."
   },
   "about": {
     "title": "Über mich",
     "text": [
-      "Ich bin Softwareentwickler. Ich habe useblocks gegründet und dort als Teamlead Sphinx-Needs und eine Reihe weiterer Docs-as-Code-Tools gebaut, die heute in großen Entwicklungsprojekten laufen. Heute begleite ich useblocks als Advisor.",
-      "Mich treibt um, wie große, verteilte Teams den Überblick behalten: über Anforderungen, Tests, Entscheidungen und das Wissen dazwischen. Meine Tools sind klein, ehrlich und lösen ein Problem richtig."
+      "Ich bin Softwareentwickler und baue am liebsten Tools, die anderen die Arbeit leichter machen. Dafür habe ich useblocks gegründet und als Teamlead Sphinx-Needs und viele weitere Docs-as-Code-Tools mitgebaut – sie laufen heute in großen Entwicklungsprojekten. Inzwischen begleite ich useblocks als Advisor.",
+      "Mich treibt um, wie große, verteilte Teams den Überblick behalten – über Anforderungen, Tests, Entscheidungen und das Wissen dazwischen. Meine Tools sind klein und fokussiert: Jedes löst genau ein Problem."
     ],
     "alt": "Das danwos-Monster, Maskottchen von Daniel und danwos",
     "photoAlt": "Daniel Woste"
@@ -91,5 +96,15 @@
     "draft": "Entwurf – noch nicht veröffentlicht.",
     "imprint": "Impressum",
     "privacy": "Datenschutz"
+  },
+  "ideaCategories": {
+    "docs-as-code": {
+      "title": "Docs-as-Code",
+      "teaser": "Dokumentation, die mehr kann als Text: Kennzahlen, lebendiger Code, weniger Doppelpflege."
+    },
+    "automotive": {
+      "title": "Automotive",
+      "teaser": "Architektur und Anforderungen aus der Fahrzeugentwicklung direkt in die Doku holen."
+    }
   }
 }

@@ -1,8 +1,8 @@
 {
-  "_translated_from": "279ac93d4ce4",
+  "_translated_from": "0a3bd7b6f14a",
   "meta": {
     "title": "danwos – Daniel Woste",
-    "description": "Daniel Woste builds small tools for large teams: docs-as-code, test quality, decisions and knowledge."
+    "description": "Daniel Woste builds SW tools for large teams: docs-as-code, AI, test quality, decisions and knowledge."
   },
   "nav": {
     "projects": "Projects",
@@ -16,16 +16,16 @@
     "skip": "Skip to content"
   },
   "hero": {
-    "eyebrow": "Docs-as-code · tools · ideas",
-    "title": "Small tools, built with care – and a crew of monsters.",
-    "lead": "I'm Daniel. I build tools that help large teams keep their knowledge, their quality and their decisions under control. Every project has its own monster.",
+    "eyebrow": "Docs-as-code · AI · SW tools",
+    "title": "SW tools, helpful as hell – and a crew of monsters.",
+    "lead": "I'm Daniel. I build SW tools that help large teams keep their knowledge, their quality and their decisions under control.",
     "primary": "See the projects",
     "secondary": "Work with me",
     "crewAlt": "The danwos crew: five monsters, one for danwos and one for each current project"
   },
   "projects": {
     "title": "What I'm working on",
-    "lead": "New projects – some already in code, some still an idea. Each has its own page: what problem it solves and why I'm building it.",
+    "lead": "New projects – some already in code, some still an idea.",
     "more": "Learn more"
   },
   "status": {
@@ -43,8 +43,13 @@
   },
   "ideas": {
     "title": "Ideas",
-    "lead": "Not started yet, but already there. One or two sentences per idea – if one catches your eye, let's talk.",
-    "alt": "The baby monster stands for ideas"
+    "lead": "Not started yet, but already there. If one catches your eye, let's talk.",
+    "alt": "The baby monster stands for ideas",
+    "all": "All ideas",
+    "pageLead": "Not started yet, but already there. If one catches your eye, let's talk.",
+    "toc": "Contents",
+    "ideasCount": "ideas",
+    "ideaOne": "idea"
   },
   "blog": {
     "title": "Blog",
@@ -59,13 +64,13 @@
     "minutes": "min read",
     "tags": "Topics",
     "rss": "RSS feed",
-    "pageLead": "Everything I've written about docs-as-code, quality and tools – newest first."
+    "pageLead": "Everything I've written about docs-as-code, quality and tools."
   },
   "about": {
     "title": "About me",
     "text": [
-      "I'm a software developer. I founded useblocks and, as team lead, built Sphinx-Needs and a number of other docs-as-code tools that run in large engineering projects today. Today I support useblocks as an advisor.",
-      "What drives me is how large, distributed teams keep track: of requirements, tests, decisions and the knowledge in between. My tools are small, honest and solve one problem properly."
+      "I'm a software developer, and what I like building most are tools that make other people's work easier. That's why I founded useblocks, where I helped build Sphinx-Needs and many other docs-as-code tools as team lead – they run in large engineering projects today. These days I support useblocks as an advisor.",
+      "What drives me is how large, distributed teams keep track – of requirements, tests, decisions and the knowledge in between. My tools are small and focused: each one solves exactly one problem."
     ],
     "alt": "The danwos monster, mascot of Daniel and danwos",
     "photoAlt": "Daniel Woste"
@@ -92,5 +97,15 @@
     "draft": "Draft – not published yet.",
     "imprint": "Imprint",
     "privacy": "Privacy"
+  },
+  "ideaCategories": {
+    "docs-as-code": {
+      "title": "Docs-as-code",
+      "teaser": "Documentation that does more than text: metrics, living code, less duplicate work."
+    },
+    "automotive": {
+      "title": "Automotive",
+      "teaser": "Bring architecture and requirements from vehicle development straight into the docs."
+    }
   }
 }

@@ -1,0 +1,77 @@
+---
+import { render } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import Split from '../../../components/Split.astro';
+import { ideasFor, slugOf } from '../../../lib/content';
+import { t, locales, type Lang } from '../../../i18n';
+
+export function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+const s = t(lang);
+const ideas = await Promise.all(
+  (await ideasFor(lang)).map(async (entry) => ({ entry, slug: slugOf(entry.id), Content: (await render(entry)).Content })),
+);
+const categories = Object.entries(s.ideaCategories)
+  .map(([key, c]) => ({ key, ...c, ideas: ideas.filter((i) => i.entry.data.category === key) }))
+  .filter((c) => c.ideas.length > 0);
+---
+<Base lang={lang} title={s.ideas.title} description={s.ideas.pageLead}>
+  <section class="section head">
+    <div class="wrap">
+      <Split monster="baby" alt={s.ideas.alt}>
+        <h1>{s.ideas.title}</h1>
+        <p class="lead">{s.ideas.pageLead}</p>
+      </Split>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap layout">
+      <nav class="toc" aria-label={s.ideas.toc}>
+        <p class="toc-title">{s.ideas.toc}</p>
+        <ol>
+          {categories.map((c) => (
+            <li>
+              <a href={`#${c.key}`}>{c.title}</a>
+              <ol>{c.ideas.map((i) => <li><a href={`#${i.slug}`}>{i.entry.data.title}</a></li>)}</ol>
+            </li>
+          ))}
+        </ol>
+      </nav>
+      <div class="prose">
+        {categories.map((c) => (
+          <section id={c.key} class="cat">
+            <h2>{c.title}</h2>
+            <p class="lead">{c.teaser}</p>
+            {c.ideas.map(({ entry, slug, Content }) => (
+              <article id={slug} class="idea">
+                <h3>{entry.data.title}</h3>
+                <p>{entry.data.summary}</p>
+                <Content />
+              </article>
+            ))}
+          </section>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
+<style>
+  .head { padding-bottom: 32px }
+  .layout { display: grid; grid-template-columns: 240px 1fr; gap: 48px; align-items: start }
+  .toc { position: sticky; top: 80px; font-size: 15px }
+  .toc-title { font: 600 12px var(--font-body); text-transform: uppercase; letter-spacing: .06em; color: var(--muted) }
+  .toc ol { list-style: none; padding: 0; margin: 0 }
+  .toc > ol > li { margin-bottom: 12px }
+  .toc > ol > li > a { font-weight: 600; color: var(--ink); text-decoration: none }
+  .toc ol ol { padding-left: 12px; border-left: 2px solid var(--line); margin-top: 4px }
+  .toc ol ol a { color: var(--muted); text-decoration: none } .toc a:hover { color: var(--primary) }
+  .cat + .cat { margin-top: 56px }
+  .cat h2 { margin-top: 0 }
+  .idea { padding: 16px 20px; border: 1px solid var(--line); border-left: 5px solid var(--moss); border-radius: 12px; margin: 16px 0; background: var(--surface) }
+  .idea h3 { margin: 0 0 6px }
+  .idea p:last-child { margin-bottom: 0 }
+  @media (max-width: 760px) { .layout { grid-template-columns: 1fr } .toc { position: static } }
+</style>
