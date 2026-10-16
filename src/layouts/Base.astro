@@ -22,6 +22,7 @@ const site = Astro.site!;
     <link rel="canonical" href={new URL(Astro.url.pathname, site)} />
     {locales.map((l) => <link rel="alternate" hreflang={l} href={new URL(switchPath(Astro.url.pathname, l as Lang), site)} />)}
     <link rel="alternate" hreflang="x-default" href={new URL('/', site)} />
+    <link rel="alternate" type="application/rss+xml" title={`danwos – Blog (${lang})`} href={`/${lang}/rss.xml`} />
     <!-- Set the chosen theme before the first paint; without a choice the browser setting applies. -->
     <script is:inline>
       try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}

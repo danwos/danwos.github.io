@@ -1,0 +1,59 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection, render } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import { langOf, slugOf } from '../../../lib/content';
+import { formatDate, readingMinutes } from '../../../lib/format';
+import { t, path, type Lang } from '../../../i18n';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('blog', (e) => import.meta.env.DEV || !e.data.draft);
+  return entries.map((entry) => ({ params: { lang: langOf(entry.id), slug: slugOf(entry.id) }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const lang = Astro.params.lang as Lang;
+const s = t(lang);
+const d = entry.data;
+const slug = slugOf(entry.id);
+const { Content } = await render(entry);
+// A German translation of an English original links back to it.
+const showOriginal = lang === 'de' && d.original === 'en';
+---
+<Base lang={lang} title={d.title} description={d.summary}>
+  <article>
+    <header class="wrap narrow">
+      <a class="back" href={path(lang, 'blog/')}>← {s.blog.back}</a>
+      <h1>{d.title}</h1>
+      <p class="meta">
+        <time datetime={d.date.toISOString()}>{formatDate(d.date, lang)}</time>
+        <span>· {readingMinutes(entry.body)} {s.blog.minutes}</span>
+      </p>
+      {d.tags.length > 0 && <ul class="tags" aria-label={s.blog.tags}>{d.tags.map((tag) => <li class="tag">{tag}</li>)}</ul>}
+    </header>
+    {d.cover && (
+      <div class="wrap cover">
+        <Image src={d.cover} alt="" widths={[800, 1200, 1600]} sizes="(max-width: 1120px) 100vw, 1088px" loading="eager" />
+      </div>
+    )}
+    <div class="wrap narrow prose">
+      {showOriginal && (
+        <p class="original">{s.blog.originalEn} <a href={path('en', `blog/${slug}/`)} hreflang="en">{s.blog.originalLink}</a></p>
+      )}
+      <Content />
+      <p class="end"><a class="btn btn-secondary" href={path(lang, 'blog/')}>{s.blog.back}</a></p>
+    </div>
+  </article>
+</Base>
+<style>
+  article { padding: 40px 0 72px }
+  .narrow { max-width: 760px }
+  .back { font-weight: 600; text-decoration: none }
+  h1 { margin: 12px 0 8px }
+  .meta { color: var(--muted); font-size: 15px; display: flex; gap: 6px; flex-wrap: wrap }
+  .tags { list-style: none; padding: 0; margin: 8px 0 0; display: flex; gap: 6px; flex-wrap: wrap }
+  .cover { margin: 24px auto 32px }
+  .cover :global(img) { width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--line) }
+  .original { padding: 12px 16px; border-left: 5px solid var(--primary); background: var(--primary-soft); border-radius: 12px; font-size: 15px }
+  .end { margin-top: 48px }
+</style>

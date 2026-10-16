@@ -6,8 +6,9 @@ import ArchiveCard from '../../components/ArchiveCard.astro';
 import Split from '../../components/Split.astro';
 import { Image } from 'astro:assets';
 import photo from '../../assets/people/daniel-woste.png';
-import { projectsFor, ideasFor } from '../../lib/content';
-import { t, locales, type Lang } from '../../i18n';
+import PostCard from '../../components/PostCard.astro';
+import { projectsFor, ideasFor, postsFor } from '../../lib/content';
+import { t, path, locales, type Lang } from '../../i18n';
 
 export function getStaticPaths() {
   return locales.map((lang) => ({ params: { lang } }));
@@ -19,6 +20,7 @@ const projects = await projectsFor(lang);
 const current = projects.filter((p) => p.data.era === 'current');
 const archive = projects.filter((p) => p.data.era === 'archive');
 const ideas = await ideasFor(lang);
+const latest = (await postsFor(lang)).slice(0, 3);
 ---
 <Base lang={lang}>
   <Hero lang={lang} />
@@ -50,8 +52,11 @@ const ideas = await ideasFor(lang);
       <Split monster="danwos-sitting" alt={s.blog.alt} reverse>
         <h2>{s.blog.title}</h2>
         <p class="lead">{s.blog.lead}</p>
-        <p class="muted">{s.blog.soon}</p>
+        <a class="btn btn-secondary" href={path(lang, 'blog/')}>{s.blog.all} →</a>
       </Split>
+      <div class="grid posts">
+        {latest.map((entry) => <PostCard lang={lang} entry={entry} />)}
+      </div>
     </div>
   </section>
 
@@ -96,6 +101,7 @@ const ideas = await ideasFor(lang);
 <style>
   .cards { margin-top: 32px; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)) }
   .archive { margin-top: 32px }
+  .posts { margin-top: 32px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) }
   .ideas { padding-left: 20px; margin: 16px 0 0 }
   .ideas li { margin-bottom: 8px; max-width: 64ch }
   .photo :global(img) { border-radius: 50%; border: 2px solid var(--outline); box-shadow: 4px 4px 0 var(--shadow); max-width: 240px }

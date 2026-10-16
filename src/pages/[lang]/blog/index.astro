@@ -1,0 +1,45 @@
+---
+import Base from '../../../layouts/Base.astro';
+import PostCard from '../../../components/PostCard.astro';
+import Split from '../../../components/Split.astro';
+import { postsFor } from '../../../lib/content';
+import { t, path, locales, type Lang } from '../../../i18n';
+
+export function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+const s = t(lang);
+const posts = await postsFor(lang);
+const years = [...new Set(posts.map((p) => p.data.date.getUTCFullYear()))];
+---
+<Base lang={lang} title={s.blog.title} description={s.blog.pageLead}>
+  <section class="section head">
+    <div class="wrap">
+      <Split monster="danwos-sitting" alt={s.blog.alt} reverse>
+        <h1>{s.blog.title}</h1>
+        <p class="lead">{s.blog.pageLead}</p>
+        <p><a href={path(lang, 'rss.xml')}>{s.blog.rss}</a></p>
+      </Split>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      {posts.length === 0 && <p class="muted">{s.blog.empty}</p>}
+      {years.map((year) => (
+        <div class="year">
+          <h2>{year}</h2>
+          <div class="grid posts">
+            {posts.filter((p) => p.data.date.getUTCFullYear() === year).map((entry) => <PostCard lang={lang} entry={entry} />)}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+</Base>
+<style>
+  .head { padding-bottom: 32px }
+  .year + .year { margin-top: 48px }
+  .posts { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); margin-top: 16px }
+</style>

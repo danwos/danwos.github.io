@@ -1,9 +1,12 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import mdx from '@astrojs/mdx';
+import { legacyRedirects } from './src/integrations/legacy-redirects.mjs';
 import { locales, defaultLocale } from './src/i18n/locales.mjs';
 
 export default defineConfig({
   site: 'https://danwos.dev',
+  integrations: [mdx(), legacyRedirects()],
   trailingSlash: 'always',
   i18n: {
     locales,

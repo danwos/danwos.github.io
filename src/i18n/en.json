@@ -1,5 +1,5 @@
 {
-  "_translated_from": "07008b1a71ff",
+  "_translated_from": "279ac93d4ce4",
   "meta": {
     "title": "danwos – Daniel Woste",
     "description": "Daniel Woste builds small tools for large teams: docs-as-code, test quality, decisions and knowledge."
@@ -7,7 +7,7 @@
   "nav": {
     "projects": "Projects",
     "ideas": "Ideas",
-    "blog": "Thoughts",
+    "blog": "Blog",
     "about": "About",
     "contact": "Contact",
     "menu": "Menu",
@@ -47,10 +47,19 @@
     "alt": "The baby monster stands for ideas"
   },
   "blog": {
-    "title": "Thoughts",
+    "title": "Blog",
     "lead": "Posts, videos and explainer images on docs-as-code, quality and tools.",
-    "soon": "The existing posts are moving over and will appear here soon.",
-    "alt": "The danwos monster"
+    "alt": "The danwos monster sitting and thinking",
+    "all": "All posts",
+    "read": "Read more",
+    "back": "All posts",
+    "empty": "No posts yet.",
+    "originalEn": "",
+    "originalLink": "",
+    "minutes": "min read",
+    "tags": "Topics",
+    "rss": "RSS feed",
+    "pageLead": "Everything I've written about docs-as-code, quality and tools – newest first."
   },
   "about": {
     "title": "About me",

@@ -32,6 +32,24 @@ const ideas = defineCollection({
   }),
 });
 
+// Posts: src/content/blog/<lang>/<slug>/index.md(x). German is the master;
+// migrated posts keep `original: en` and their old Sphinx path in `legacy`.
+const blog = defineCollection({
+  loader: glob({ pattern: '*/*/index.{md,mdx}', base: './src/content/blog' }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      date: z.coerce.date(),
+      summary: z.string(),
+      tags: z.array(z.string()).default([]),
+      cover: image().optional(),
+      original: z.enum(['de', 'en']).default('de'),
+      legacy: z.string().optional(),
+      draft: z.boolean().default(false),
+      translated_from: z.string().optional(),
+    }),
+});
+
 const legal = defineCollection({
   loader: glob({ pattern: '*/*.md', base: './src/content/legal' }),
   schema: z.object({
@@ -41,4 +59,4 @@ const legal = defineCollection({
   }),
 });
 
-export const collections = { projects, ideas, legal };
+export const collections = { projects, ideas, blog, legal };

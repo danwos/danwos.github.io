@@ -6,7 +6,7 @@
   "nav": {
     "projects": "Projekte",
     "ideas": "Ideen",
-    "blog": "Gedanken",
+    "blog": "Blog",
     "about": "Über mich",
     "contact": "Kontakt",
     "menu": "Menü",
@@ -46,10 +46,19 @@
     "alt": "Das Baby-Monster steht für Ideen"
   },
   "blog": {
-    "title": "Gedanken",
+    "title": "Blog",
     "lead": "Beiträge, Videos und Erklärbilder zu Docs-as-Code, Qualität und Tools.",
-    "soon": "Die bisherigen Beiträge ziehen gerade um und erscheinen bald hier.",
-    "alt": "Das danwos-Monster"
+    "alt": "Das danwos-Monster sitzt und denkt nach",
+    "all": "Alle Beiträge",
+    "read": "Weiterlesen",
+    "back": "Alle Beiträge",
+    "empty": "Noch keine Beiträge.",
+    "originalEn": "Dieser Beitrag erschien ursprünglich auf Englisch.",
+    "originalLink": "Zum Original",
+    "minutes": "Min. Lesezeit",
+    "tags": "Themen",
+    "rss": "RSS-Feed",
+    "pageLead": "Alles, was ich zu Docs-as-Code, Qualität und Tools geschrieben habe – neueste Beiträge zuerst."
   },
   "about": {
     "title": "Über mich",
