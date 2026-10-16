@@ -1,0 +1,806 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1771px" preserveAspectRatio="none" style="width:1211px;height:1771px;background:#FFFFFF;" version="1.1" viewBox="0 0 1211 1771" width="1211px" zoomAndPan="magnify"><defs/><g><rect fill="none" height="26.2969" id="_title" style="stroke:none;stroke-width:1.0;" width="207" x="495" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="197" x="500" y="22.9951">Jira breakdown structure</text><!--MD5=[af4333968f7601771cd871118be06d97]
+cluster LEGEND--><g id="cluster_LEGEND"><path d="M968.5,43.2969 L1026.5,43.2969 A3.75,3.75 0 0 1 1029,45.7969 L1036,65.5938 L1201.5,65.5938 A2.5,2.5 0 0 1 1204,68.0938 L1204,581.2969 A2.5,2.5 0 0 1 1201.5,583.7969 L968.5,583.7969 A2.5,2.5 0 0 1 966,581.2969 L966,45.7969 A2.5,2.5 0 0 1 968.5,43.2969 " fill="none" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="966" x2="1036" y1="65.5938" y2="65.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="970" y="58.292">LEGEND</text></g><!--MD5=[5cb0f946f4be3e57c1eb576679c06866]
+cluster StoryContainer--><g id="cluster_StoryContainer"><rect fill="none" height="1137" rx="2.5" ry="2.5" style="stroke:#444444;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="1063" x="7" y="628.7969"/><text fill="#444444" font-family="sans-serif" font-size="6" font-style="italic" lengthAdjust="spacing" textLength="38" x="519.5" y="636.3662">«boundary»</text><text fill="#444444" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="48" x="514.5" y="655.6484">Story</text><text fill="#444444" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="80" x="498.5" y="670.5605">[Container]</text></g><!--MD5=[84b36835dc7da470603d6aaa3acf3218]
+entity component_c4--><g id="elem_component_c4"><rect fill="#85BBF0" height="94.5" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="145" x="1012.5" y="70.2969"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="1042.5" y="91.4355">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="102" x="1034" y="109.1172">Component</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="119" x="1023.5" y="124.0293">[Jira entity used for</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="121" x="1022.5" y="137.998">development of ALL</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="89" x="1040.5" y="151.9668">requirements]</text></g><!--MD5=[5d23c1ca537f99af445f8a8afccf1681]
+entity component_cs--><g id="elem_component_cs"><rect fill="#1E90FF" height="127.0938" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="223" x="973.5" y="448.7969"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="203" x="983.5" y="469.9355">«component_customer_specific»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="161" x="1001.5" y="487.6172">Customer Specific</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="102" x="1034" y="506.2422">Component</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="119" x="1023.5" y="521.1543">[Jira entity used for</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="161" x="1002.5" y="535.123">development of Customer</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="199" x="985.5" y="549.0918">specific requirements where full</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="138" x="1016" y="563.0605">V-model is developed]</text></g><!--MD5=[6bd7bf6871e891fab51e1374f264dc82]
+entity Story--><g id="elem_Story"><rect fill="#85BBF0" height="94.5" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="205" x="397.5" y="681.7969"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="457.5" y="702.9355">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="48" x="476" y="720.6172">Story</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="181" x="407.5" y="735.5293">[Jira entity that contains DoD</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="129" x="433.5" y="749.498">for a single Software</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="457.5" y="763.4668">Requirement]</text></g><!--MD5=[b712c817571426263d751d194f9198a6]
+entity Code_implementation_sub_task--><g id="elem_Code_implementation_sub_task"><rect fill="#1E90FF" height="131.75" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="223" x="316.5" y="1625.7969"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="203" x="326.5" y="1646.9355">«component_customer_specific»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="113" x="368.5" y="1664.6172">Source Code</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="136" x="357" y="1683.2422">implementation</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="79" x="388.5" y="1701.8672">Sub-task</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="189" x="331.5" y="1716.7793">[Jira entity related to a Source</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="161" x="345.5" y="1730.748">Code implementation of a</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="182" x="337" y="1744.7168">single Software requirement]</text></g><!--MD5=[269a26d03dd7d242fe9f3cc9fc16c377]
+entity SRD_sub_task--><g id="elem_SRD_sub_task"><rect fill="#85BBF0" height="94.5" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="190" x="237" y="913.7969"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="289.5" y="934.9355">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="121" x="271.5" y="952.6172">SRD Sub-task</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="149" x="255.5" y="967.5293">[Jira entity related to an</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="166" x="247" y="981.498">implementation of a single</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="170" x="247" y="995.4668">Software requirement SRD]</text></g><!--MD5=[331c479da13f763baeda9087bf9e941b]
+entity PAD_sub_task--><g id="elem_PAD_sub_task"><rect fill="#85BBF0" height="94.5" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="190" x="89" y="1283.7969"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="141.5" y="1304.9355">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="122" x="123" y="1322.6172">PAD Sub-task</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="149" x="107.5" y="1337.5293">[Jira entity related to an</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="166" x="99" y="1351.498">implementation of a single</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="170" x="99" y="1365.4668">Software requirement PAD]</text></g><!--MD5=[8ffb73a1a0a797dba575c37f5e38af69]
+entity SAD_sub_task--><g id="elem_SAD_sub_task"><rect fill="#1E90FF" height="94.5" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="223" x="314.5" y="1283.7969"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="203" x="324.5" y="1304.9355">«component_customer_specific»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="121" x="365.5" y="1322.6172">SAD Sub-task</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="149" x="349.5" y="1337.5293">[Jira entity related to an</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="166" x="341" y="1351.498">implementation of a single</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="170" x="341" y="1365.4668">Software requirement PAD]</text></g><!--MD5=[34836b9353e0be22d06e6218550b34d3]
+entity UDD_sub_task--><g id="elem_UDD_sub_task"><rect fill="#1E90FF" height="94.5" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="223" x="58.5" y="1644.2969"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="203" x="68.5" y="1665.4355">«component_customer_specific»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="123" x="108.5" y="1683.1172">UDD Sub-task</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="149" x="93.5" y="1698.0293">[Jira entity related to an</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="166" x="85" y="1711.998">implementation of a single</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="172" x="84" y="1725.9668">Software requirement UDD]</text></g><!--MD5=[0126345bdab9b67227df87bebf821d20]
+entity UTS_sub_task--><g id="elem_UTS_sub_task"><rect fill="#1E90FF" height="94.5" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="223" x="576.5" y="1644.2969"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="203" x="586.5" y="1665.4355">«component_customer_specific»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="119" x="628.5" y="1683.1172">UTS Sub-task</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="149" x="611.5" y="1698.0293">[Jira entity related to an</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="166" x="603" y="1711.998">implementation of a single</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="169" x="603.5" y="1725.9668">Software requirement UTS]</text></g><!--MD5=[b2ae03a6a5c022c409ad35f265b249c8]
+entity UTR_sub_task--><g id="elem_UTR_sub_task"><rect fill="#1E90FF" height="94.5" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="223" x="835.5" y="1644.2969"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="203" x="845.5" y="1665.4355">«component_customer_specific»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="120" x="887" y="1683.1172">UTR Sub-task</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="149" x="870.5" y="1698.0293">[Jira entity related to an</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="166" x="862" y="1711.998">implementation of a single</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="169" x="862.5" y="1725.9668">Software requirement UTR]</text></g><!--MD5=[797440d63bb5c6e753cd1e4c13b5c85f]
+entity ITS_sub_task--><g id="elem_ITS_sub_task"><rect fill="#85BBF0" height="94.5" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="190" x="573" y="1283.7969"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="625.5" y="1304.9355">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="113" x="611.5" y="1322.6172">ITS Sub-task</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="149" x="591.5" y="1337.5293">[Jira entity related to an</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="166" x="583" y="1351.498">implementation of a single</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="163" x="586.5" y="1365.4668">Software requirement ITS]</text></g><!--MD5=[d309c190a2c7e4e6ed2876541fd7abc9]
+entity ITR_sub_task--><g id="elem_ITR_sub_task"><rect fill="#85BBF0" height="94.5" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="190" x="798" y="1283.7969"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="850.5" y="1304.9355">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="114" x="836" y="1322.6172">ITR Sub-task</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="149" x="816.5" y="1337.5293">[Jira entity related to an</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="166" x="808" y="1351.498">implementation of a single</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="163" x="811.5" y="1365.4668">Software requirement ITR]</text></g><!--MD5=[2b41a3e9d9a4b5e55835dba7bc5de188]
+entity STS_sub_task--><g id="elem_STS_sub_task"><rect fill="#85BBF0" height="94.5" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="190" x="647" y="913.7969"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="699.5" y="934.9355">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="118" x="683" y="952.6172">STS Sub-task</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="149" x="665.5" y="967.5293">[Jira entity related to an</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="166" x="657" y="981.498">implementation of a single</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="168" x="658" y="995.4668">Software requirement STS]</text></g><!--MD5=[9d9aa0cf3afbfc2f74fef6276145db9c]
+entity STR_sub_task--><g id="elem_STR_sub_task"><rect fill="#85BBF0" height="94.5" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="190" x="872" y="913.7969"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="924.5" y="934.9355">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="119" x="907.5" y="952.6172">STR Sub-task</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="149" x="890.5" y="967.5293">[Jira entity related to an</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="166" x="882" y="981.498">implementation of a single</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="168" x="883" y="995.4668">Software requirement STR]</text></g><!--MD5=[32461f62f3d9c758b54e79b6ff02c6b9]
+entity Capability--><g id="elem_Capability"><rect fill="#85BBF0" height="108.4688" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="220" x="390" y="63.7969"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="457.5" y="84.9355">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="84" x="458" y="102.6172">Capability</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="199" x="400.5" y="117.5293">[Jira entity that bundles number</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="200" x="400" y="131.498">of Customer Input requirements</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="180" x="408" y="145.4668">(LAH/QLAH) from one Domain</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="172" x="414" y="159.4355">(eg. Health, Persistency...)]</text></g><!--MD5=[ac0333c8166f7554db8978fc4f31e1d1]
+entity Feature--><g id="elem_Feature"><rect fill="#85BBF0" height="94.5" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="219" x="390.5" y="262.7969"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="457.5" y="283.9355">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="69" x="465.5" y="301.6172">Feature</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="199" x="400.5" y="316.5293">[Jira entity that bundles number</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="193" x="401.5" y="330.498">of Customer input requirement</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="198" x="401" y="344.4668">(LAH/QLAH) from one Capability]</text></g><!--MD5=[96e5315e4548cb5b4e24033a52ab97df]
+entity Epic--><g id="elem_Epic"><rect fill="#85BBF0" height="94.5" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="205" x="397.5" y="464.7969"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="457.5" y="485.9355">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="35" x="482.5" y="503.6172">Epic</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="181" x="407.5" y="518.5293">[Jira entity that contains DoD</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="170" x="413" y="532.498">for a single Customer input</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="155" x="422.5" y="546.4668">requirement (LAH/QLAH)]</text></g><!--MD5=[5cd2d874e3cba21e5fd8ea2c5b9a5751]
+entity User_manual_sub_task--><g id="elem_User_manual_sub_task"><rect fill="#85BBF0" height="108.4688" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="214" x="744" y="256.2969"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="808.5" y="277.4355">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="194" x="754" y="295.1172">User Manual Sub-task</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="141" x="778.5" y="310.0293">[Jira entity related to a</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="145" x="776.5" y="323.998">contribution of a single</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="178" x="760" y="337.9668">Software requirement to the</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="83" x="809.5" y="351.9355">User Manual]</text></g><!--MD5=[76fb9bb2d562ba873960bc8d725d6e10]
+entity Release_notes_sub_task--><g id="elem_Release_notes_sub_task"><rect fill="#85BBF0" height="127.0938" rx="2.5" ry="2.5" style="stroke:#78A8D8;stroke-width:0.5;" width="202" x="54" y="246.7969"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="112.5" y="267.9355">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="128" x="88" y="285.6172">Release Notes</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="79" x="115.5" y="304.2422">Sub-task</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="141" x="82.5" y="319.1543">[Jira entity related to a</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="145" x="80.5" y="333.123">contribution of a single</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="178" x="64" y="347.0918">Software requirement to the</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="96" x="107" y="361.0605">Release Notes]</text></g><!--MD5=[6fe1dc9706b4a4198a44bc6c8b0aaff7]
+link component_c4 to component_cs--><!--MD5=[5300ff562bc9bae2bfae26a4c6fbe473]
+link Capability to Feature--><g id="link_Capability_Feature"><path d="M500,171.9312 C500,198.7245 500,230.9416 500,257.5445 " fill="none" id="Capability-to-Feature" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="500,262.7869,504,253.7869,500,257.7869,496,253.7869,500,262.7869" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="98" x="501" y="213.9355">Decomposes to</text></g><!--MD5=[b4749df92101fb381e8986c4a85e3cae]
+link Feature to Epic--><g id="link_Feature_Epic"><path d="M500,357.9123 C500,388.3446 500,427.8511 500,459.2812 " fill="none" id="Feature-to-Epic" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="500,464.6516,504,455.6516,500,459.6516,496,455.6516,500,464.6516" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="98" x="501" y="415.9355">Decomposes to</text></g><!--MD5=[6ab11f24b82524798efb4d993fa07f69]
+link Epic to Story--><g id="link_Epic_Story"><path d="M500,559.9185 C500,594.4031 500,641.0187 500,676.6169 " fill="none" id="Epic-to-Story" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="500,681.7864,504,672.7864,500,676.7864,496,672.7864,500,681.7864" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="98" x="501" y="617.9355">Decomposes to</text></g><!--MD5=[8774648a54a3249dd1d467c06bb7fcef]
+link Story to SRD_sub_task--><g id="link_Story_SRD_sub_task"><path d="M413.5462,777.0583 C390.9378,793.4977 368.7863,813.8944 354,837.7969 C341.0049,858.8039 335.2063,885.4391 332.7782,908.5917 " fill="none" id="Story-to-SRD_sub_task" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="332.2835,913.7811,337.1197,905.2014,332.7581,908.8036,329.1558,904.442,332.2835,913.7811" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="98" x="355" y="849.9355">Decomposes to</text></g><!--MD5=[9a1e57968d5fbd134ba865c8f9356117]
+link Story to PAD_sub_task--><g id="link_Story_PAD_sub_task"><path d="M397.4622,766.1503 C333.1484,795.3308 255.6953,843.0897 219,913.7969 C183.6194,981.9707 210.0055,1015.9214 244,1084.7969 C275.779,1149.1836 360.0397,1158.5395 328,1222.7969 C316.6076,1245.645 297.8573,1264.9478 277.5941,1280.6451 " fill="none" id="Story-to-PAD_sub_task" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="273.523,1283.7364,283.1097,1281.4792,277.505,1280.7126,278.2717,1275.1079,273.523,1283.7364" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="98" x="245" y="1081.9355">Decomposes to</text></g><!--MD5=[8363be9e3b18f0490eea8c75c1ca14aa]
+link Story to SAD_sub_task--><g id="link_Story_SAD_sub_task"><path d="M494.1315,777.038 C480.4895,888.0176 446.7229,1162.713 432.4908,1278.4936 " fill="none" id="Story-to-SAD_sub_task" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="431.8691,1283.5509,436.9372,1275.1061,432.4791,1278.5882,428.997,1274.1301,431.8691,1283.5509" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="98" x="460" y="1081.9355">Decomposes to</text></g><!--MD5=[c1a772eaaf402ffabb9325062ba9dfdd]
+link Story to Code_implementation_sub_task--><g id="link_Story_Code_implementation_sub_task"><path d="M397.4915,741.3277 C288.6033,757.0407 132,789.3621 132,845.2969 C132,845.2969 132,845.2969 132,1039.2969 C132,1121.667 196.0112,1149.7217 158,1222.7969 C136.2075,1264.6921 95.7188,1243.5588 71,1283.7969 C41.5052,1331.8096 53,1352.9483 53,1409.2969 C53,1409.2969 53,1409.2969 53,1564.2969 C53,1676.9951 193.4842,1586.2078 299,1625.7969 C303.2378,1627.3869 307.5171,1629.0794 311.8112,1630.8522 " fill="none" id="Story-to-Code_implementation_sub_task" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="316.4752,1632.8063,309.72,1625.6392,311.8636,1630.8742,306.6286,1633.0178,316.4752,1632.8063" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="98" x="166" y="1219.9355">Decomposes to</text></g><!--MD5=[8cea3ac2a1be9867947fc93a03d9e52c]
+link Story to UDD_sub_task--><g id="link_Story_UDD_sub_task"><path d="M397.325,735.2654 C264.5119,745.8558 50,773.9969 50,845.2969 C50,845.2969 50,845.2969 50,1177.2969 C50,1281.5094 16,1305.0844 16,1409.2969 C16,1409.2969 16,1409.2969 16,1564.2969 C16,1596.0913 35.7164,1621.4566 61.0398,1640.923 " fill="none" id="Story-to-UDD_sub_task" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="65.15,1643.9966,60.3379,1635.4033,61.1458,1641.0022,55.5469,1641.8101,65.15,1643.9966" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="98" x="50" y="1219.9355">Decomposes to</text></g><!--MD5=[18ca6b11f0f64e2a01d528808c07cad0]
+link Story to UTS_sub_task--><g id="link_Story_UTS_sub_task"><path d="M514.728,776.9306 C538.4505,852.3982 584.2548,992.6093 602,1008.7969 C641.2244,1044.5783 800.6028,1027.734 833,1069.7969 C874.6668,1123.8949 778.8957,1167.5306 819,1222.7969 C870.3439,1293.552 949.7509,1216.8752 1006,1283.7969 C1042.2561,1326.9322 1024,1352.9483 1024,1409.2969 C1024,1409.2969 1024,1409.2969 1024,1564.2969 C1024,1659.8455 906.7343,1590.3603 818,1625.7969 C805.964,1630.6036 793.5421,1636.1277 781.3701,1641.8902 " fill="none" id="Story-to-UTS_sub_task" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="776.5375,1644.1964,786.3828,1643.9301,781.05,1642.0429,782.9372,1636.7102,776.5375,1644.1964" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="98" x="820" y="1219.9355">Decomposes to</text></g><!--MD5=[72977c982dbba44423c32d72fe4c20f1]
+link Story to UTR_sub_task--><g id="link_Story_UTR_sub_task"><path d="M524.7918,776.9825 C543.7017,813.9531 569.9861,866.6599 591,913.7969 C609.5162,955.3312 594.741,978.8925 629,1008.7969 C670.416,1044.9485 696.101,1023.8331 749,1038.7969 C792.9579,1051.2315 809.0478,1044.3696 847,1069.7969 C995.1803,1169.0751 1061,1230.9333 1061,1409.2969 C1061,1409.2969 1061,1409.2969 1061,1564.2969 C1061,1594.0504 1043.5342,1620.0459 1022.2756,1640.6667 " fill="none" id="Story-to-UTR_sub_task" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1018.5506,1644.1912,1027.8371,1640.9109,1022.1824,1640.7546,1022.3387,1635.0999,1018.5506,1644.1912" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="98" x="1018" y="1219.9355">Decomposes to</text></g><!--MD5=[7dfd00c7d71dd35cb0a16e7209b2bfab]
+link Story to ITS_sub_task--><g id="link_Story_ITS_sub_task"><path d="M499.746,776.9673 C500.5873,833.3654 505.6331,929.6001 528,1008.7969 C532.16,1023.5267 534.194,1027.2779 543,1039.7969 C570.0325,1078.2273 617,1068.3112 617,1115.2969 C617,1115.2969 617,1115.2969 617,1215.2969 C617,1237.2 624.714,1259.6118 634.1419,1278.8237 " fill="none" id="Story-to-ITS_sub_task" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="636.5721,1283.6369,636.0863,1273.8,634.3185,1279.1735,628.945,1277.4058,636.5721,1283.6369" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="98" x="607" y="1081.9355">Decomposes to</text></g><!--MD5=[a5ad8c2bffe4f79a891d212d3f4c5274]
+link Story to ITR_sub_task--><g id="link_Story_ITR_sub_task"><path d="M508.6095,776.908 C522.5476,851.9799 550.0016,991.1825 565,1008.7969 C611.3907,1063.279 667.7076,1015.2312 714,1069.7969 C759.1276,1122.9897 711.065,1164.2571 749,1222.7969 C763.4427,1245.0844 784.1292,1264.5164 805.3343,1280.5376 " fill="none" id="Story-to-ITR_sub_task" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="809.5805,1283.6962,804.7467,1275.1151,805.5687,1280.7119,799.9719,1281.534,809.5805,1283.6962" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="98" x="726" y="1081.9355">Decomposes to</text></g><!--MD5=[fdc9d75492334f710f95857bd5a2ac8f]
+link Story to STS_sub_task--><g id="link_Story_STS_sub_task"><path d="M581.7483,776.8856 C595.0937,786.0951 608.3483,796.2022 620,806.7969 C653.5172,837.2736 685.0324,877.6096 707.6333,909.4249 " fill="none" id="Story-to-STS_sub_task" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="710.623,913.657,708.6974,903.9982,707.7382,909.5731,702.1632,908.6139,710.623,913.657" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="98" x="665" y="849.9355">Decomposes to</text></g><!--MD5=[5122e89762765937146a53db41c6bd99]
+link Story to STR_sub_task--><g id="link_Story_STR_sub_task"><path d="M602.7279,765.1375 C654.502,784.4806 717.6637,810.0548 772,837.7969 C814.0125,859.2469 858.6186,887.083 894.5502,910.897 " fill="none" id="Story-to-STR_sub_task" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="898.8884,913.7805,893.6073,905.4672,894.7244,911.0127,889.1789,912.1297,898.8884,913.7805" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="98" x="801" y="849.9355">Decomposes to</text></g><!--MD5=[0700ddc82f9ebdd3556da4f0cb31edc8]
+link Feature to User_manual_sub_task--><g id="link_Feature_User_manual_sub_task"><path d="M609.6148,310.2969 C650.6889,310.2969 697.3955,310.2969 738.7084,310.2969 " fill="none" id="Feature-to-User_manual_sub_task" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="743.7191,310.2969,734.7191,306.2969,738.7191,310.2969,734.7191,314.2969,743.7191,310.2969" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="98" x="627.75" y="304.4355">Decomposes to</text></g><!--MD5=[91f5b57263c9bac4c181af67a1d02de3]
+reverse link Release_notes_sub_task to Feature--><g id="link_Release_notes_sub_task_Feature"><path d="M261.4008,310.2969 C302.3449,310.2969 349.1427,310.2969 390.3843,310.2969 " fill="none" id="Release_notes_sub_task-backto-Feature" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="256.1803,310.2969,265.1803,314.2969,261.1803,310.2969,265.1803,306.2969,256.1803,310.2969" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="98" x="274.25" y="304.4355">Decomposes to</text></g><!--MD5=[2418ee12d44fe99831589699f7aaee41]
+link SRD_sub_task to PAD_sub_task--><!--MD5=[1cf375e24bb91031be1d9366e1f267c0]
+link SRD_sub_task to SAD_sub_task--><!--MD5=[cd77ef0ecea1849ac2809eadf50a1f1a]
+link SAD_sub_task to UDD_sub_task--><!--MD5=[0909534dfbdb9709d0232fa8b0ba46c0]
+link SAD_sub_task to Code_implementation_sub_task--><!--MD5=[02ee98a96d0ce091e2598ea7eea3cdb7]
+link UDD_sub_task to UTS_sub_task--><!--MD5=[09801712145637d93bbb7c250e1a0d3f]
+link UDD_sub_task to UTR_sub_task--><!--MD5=[0bbd4d84508a414e840335b79ee860bd]
+link PAD_sub_task to ITS_sub_task--><!--MD5=[98f6b902c041fe2ccb16213d99e69cd4]
+link PAD_sub_task to ITR_sub_task--><!--MD5=[586e07c7ab40012fe1c366188c3037e3]
+@startuml
+!include C4_Container.puml
+!include adas_blades/C4_Component_CS.puml
+
+title "Jira breakdown structure"
+
+COMPONENTS_LEGEND()
+
+!include building_blocks_C2/Capability.puml
+!include building_blocks_C2/Feature.puml
+!include building_blocks_C2/Epic.puml
+Container_Boundary(StoryContainer, "Story"){
+    !include building_blocks_C2/Story.puml
+    !include building_blocks_C2/Story_Sub_tasks/Code_implementation_sub_task.puml
+    !include building_blocks_C2/Story_Sub_tasks/SRD_sub_task.puml
+    !include building_blocks_C2/Story_Sub_tasks/PAD_sub_task.puml
+    !include building_blocks_C2/Story_Sub_tasks/SAD_sub_task.puml
+    !include building_blocks_C2/Story_Sub_tasks/UDD_sub_task.puml
+    !include building_blocks_C2/Story_Sub_tasks/UTS_sub_task.puml
+    !include building_blocks_C2/Story_Sub_tasks/UTR_sub_task.puml
+    !include building_blocks_C2/Story_Sub_tasks/ITS_sub_task.puml
+    !include building_blocks_C2/Story_Sub_tasks/ITR_sub_task.puml
+    !include building_blocks_C2/Story_Sub_tasks/STS_sub_task.puml
+    !include building_blocks_C2/Story_Sub_tasks/STR_sub_task.puml
+}
+!include building_blocks_C2/Story_Sub_tasks/User_manual_sub_task.puml
+!include building_blocks_C2/Story_Sub_tasks/Release_notes_sub_task.puml
+
+Capability-d->Feature: Decomposes to
+Feature-d->Epic: Decomposes to
+Epic-d->Story: Decomposes to
+Story-d->SRD_sub_task: Decomposes to
+Story-d->PAD_sub_task: Decomposes to
+Story-d->SAD_sub_task: Decomposes to
+Story-d->Code_implementation_sub_task: Decomposes to
+Story-d->UDD_sub_task: Decomposes to
+Story-d->UTS_sub_task: Decomposes to
+Story-d->UTR_sub_task: Decomposes to
+Story-d->ITS_sub_task: Decomposes to
+Story-d->ITR_sub_task: Decomposes to
+Story-d->STS_sub_task: Decomposes to
+Story-d->STR_sub_task: Decomposes to
+
+Feature-r->User_manual_sub_task: Decomposes to
+Feature-l->Release_notes_sub_task: Decomposes to
+ 
+SRD_sub_task - -[hidden]d-> PAD_sub_task
+SRD_sub_task - -[hidden]d-> SAD_sub_task
+SAD_sub_task - -[hidden]d-> UDD_sub_task
+SAD_sub_task - -[hidden]d-> Code_implementation_sub_task
+UDD_sub_task - -[hidden]r-> UTS_sub_task
+UDD_sub_task - -[hidden]r-> UTR_sub_task
+PAD_sub_task - -[hidden]r-> ITS_sub_task
+PAD_sub_task - -[hidden]r-> ITR_sub_task
+
+@enduml
+
+@startuml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam defaultTextAlignment center
+
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam LegendBorderColor transparent
+skinparam LegendBackgroundColor transparent
+skinparam LegendFontColor #FFFFFF
+
+skinparam shadowing<<legendArea>> false
+skinparam rectangle<<legendArea>> {
+    backgroundcolor #00000000
+    bordercolor #00000000
+}
+
+skinparam rectangle {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam database {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam queue {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam arrow {
+    Color #666666
+    FontColor #666666
+    FontSize 12
+}
+
+skinparam actor {
+    StereotypeFontSize 12
+    shadowing false
+    style awesome
+}
+
+skinparam person {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam package {
+    StereotypeFontSize 6
+    StereotypeFontColor transparent
+    FontStyle plain
+    BackgroundColor transparent
+}
+
+skinparam rectangle<<boundary>> {
+    Shadowing false
+    StereotypeFontSize 6
+    StereotypeFontColor transparent
+    FontColor #444444
+    BorderColor #444444
+    BackgroundColor transparent
+    BorderStyle dashed
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam database<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam queue<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam actor<<person>> {
+    StereotypeFontColor #08427B
+    FontColor #08427B
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam person<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+
+
+skinparam rectangle<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam database<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam actor<<external_person>> {
+    StereotypeFontColor #686868
+    FontColor #686868
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam person<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+
+
+skinparam rectangle<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam database<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam queue<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam actor<<system>> {
+    StereotypeFontColor #1168BD
+    FontColor #1168BD
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam person<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+
+
+skinparam rectangle<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam database<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam actor<<external_system>> {
+    StereotypeFontColor #999999
+    FontColor #999999
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam person<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+
+
+
+
+
+sprite $person [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000025788300000000005886410000000000000
+000000000007DFFFFFFD9643347BFFFFFFFB400000000000
+0000000004EFFFFFFFFFFFFFFFFFFFFFFFFFFB1000000000
+000000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFD200000000
+00000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE10000000
+0000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB0000000
+000000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5000000
+000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD000000
+000009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF200000
+00000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF600000
+00000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF800000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00000EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF700000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+0000008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD3000000
+000000014555555555555555555555555555555300000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+sprite $person2 [48x48/16] {
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000002578888300000000005888864100000000000
+0000000007DFFFFFFFFD9643347BFFFFFFFFFB4000000000
+00000004EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB10000000
+0000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD2000000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+00003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+0000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF50000
+0003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD0000
+0009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF2000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+0009FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFF2000
+0003FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFD0000
+0000BFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFF50000
+00003FFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFB00000
+000006FFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFE100000
+0000007FFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFD2000000
+00000004EFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFB10000000
+0000000007DF8FFFFFFFFFFFFFFFFFFFFFF8FB4000000000
+000000000002578888888888888888888864100000000000
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam database<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam queue<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam actor<<container>> {
+    StereotypeFontColor #438DD5
+    FontColor #438DD5
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam person<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+
+
+skinparam rectangle<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam database<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam queue<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam actor<<external_container>> {
+    StereotypeFontColor #B3B3B3
+    FontColor #B3B3B3
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam person<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam database<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam queue<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam actor<<component>> {
+    StereotypeFontColor #85BBF0
+    FontColor #85BBF0
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam person<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+
+
+skinparam rectangle<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam database<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam queue<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam actor<<external_component>> {
+    StereotypeFontColor #CCCCCC
+    FontColor #CCCCCC
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam person<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<component_customer_specific>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor DodgerBlue
+    BorderColor #78A8D8
+}
+skinparam database<<component_customer_specific>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor DodgerBlue
+    BorderColor #78A8D8
+}
+skinparam queue<<component_customer_specific>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor DodgerBlue
+    BorderColor #78A8D8
+}
+skinparam actor<<component_customer_specific>> {
+    StereotypeFontColor DodgerBlue
+    FontColor DodgerBlue
+    BackgroundColor DodgerBlue
+    BorderColor #78A8D8
+}
+skinparam person<<component_customer_specific>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor DodgerBlue
+    BorderColor #78A8D8
+}
+
+
+
+
+
+title "Jira breakdown structure"
+
+package LEGEND  { 
+rectangle "==Component\n//<size:12>[Jira entity used for development of ALL requirements]</size>//" <<component>> as component_c4 
+rectangle "==Customer Specific Component\n//<size:12>[Jira entity used for development of Customer specific requirements where full V-model is developed]</size>//" <<component_customer_specific>> as component_cs 
+
+component_c4 -[hidden]- component_cs
+}
+
+rectangle "==Capability\n//<size:12>[Jira entity that bundles number of Customer Input requirements (LAH/QLAH) from one Domain (eg. Health, Persistency...)]</size>//" <<component>> as Capability 
+rectangle "==Feature\n//<size:12>[Jira entity that bundles number of Customer input requirement (LAH/QLAH) from one Capability]</size>//" <<component>> as Feature 
+rectangle "==Epic\n//<size:12>[Jira entity that contains DoD for a single Customer input requirement (LAH/QLAH)]</size>//" <<component>> as Epic 
+rectangle "==Story\n<size:12>[Container]</size>" <<boundary>> as StoryContainer {
+rectangle "==Story\n//<size:12>[Jira entity that contains DoD for a single Software Requirement]</size>//" <<component>> as Story 
+rectangle "==Source Code implementation Sub-task\n//<size:12>[Jira entity related to a Source Code implementation of a single Software requirement]</size>//" <<component_customer_specific>> as Code_implementation_sub_task 
+rectangle "==SRD Sub-task\n//<size:12>[Jira entity related to an implementation of a single Software requirement SRD]</size>//" <<component>> as SRD_sub_task 
+rectangle "==PAD Sub-task\n//<size:12>[Jira entity related to an implementation of a single Software requirement PAD]</size>//" <<component>> as PAD_sub_task 
+rectangle "==SAD Sub-task\n//<size:12>[Jira entity related to an implementation of a single Software requirement PAD]</size>//" <<component_customer_specific>> as SAD_sub_task 
+rectangle "==UDD Sub-task\n//<size:12>[Jira entity related to an implementation of a single Software requirement UDD]</size>//" <<component_customer_specific>> as UDD_sub_task 
+rectangle "==UTS Sub-task\n//<size:12>[Jira entity related to an implementation of a single Software requirement UTS]</size>//" <<component_customer_specific>> as UTS_sub_task 
+rectangle "==UTR Sub-task\n//<size:12>[Jira entity related to an implementation of a single Software requirement UTR]</size>//" <<component_customer_specific>> as UTR_sub_task 
+rectangle "==ITS Sub-task\n//<size:12>[Jira entity related to an implementation of a single Software requirement ITS]</size>//" <<component>> as ITS_sub_task 
+rectangle "==ITR Sub-task\n//<size:12>[Jira entity related to an implementation of a single Software requirement ITR]</size>//" <<component>> as ITR_sub_task 
+rectangle "==STS Sub-task\n//<size:12>[Jira entity related to an implementation of a single Software requirement STS]</size>//" <<component>> as STS_sub_task 
+rectangle "==STR Sub-task\n//<size:12>[Jira entity related to an implementation of a single Software requirement STR]</size>//" <<component>> as STR_sub_task 
+}
+rectangle "==User Manual Sub-task\n//<size:12>[Jira entity related to a contribution of a single Software requirement to the User Manual]</size>//" <<component>> as User_manual_sub_task 
+rectangle "==Release Notes Sub-task\n//<size:12>[Jira entity related to a contribution of a single Software requirement to the Release Notes]</size>//" <<component>> as Release_notes_sub_task 
+
+Capability-d->Feature: Decomposes to
+Feature-d->Epic: Decomposes to
+Epic-d->Story: Decomposes to
+Story-d->SRD_sub_task: Decomposes to
+Story-d->PAD_sub_task: Decomposes to
+Story-d->SAD_sub_task: Decomposes to
+Story-d->Code_implementation_sub_task: Decomposes to
+Story-d->UDD_sub_task: Decomposes to
+Story-d->UTS_sub_task: Decomposes to
+Story-d->UTR_sub_task: Decomposes to
+Story-d->ITS_sub_task: Decomposes to
+Story-d->ITR_sub_task: Decomposes to
+Story-d->STS_sub_task: Decomposes to
+Story-d->STR_sub_task: Decomposes to
+
+Feature-r->User_manual_sub_task: Decomposes to
+Feature-l->Release_notes_sub_task: Decomposes to
+ 
+SRD_sub_task - -[hidden]d-> PAD_sub_task
+SRD_sub_task - -[hidden]d-> SAD_sub_task
+SAD_sub_task - -[hidden]d-> UDD_sub_task
+SAD_sub_task - -[hidden]d-> Code_implementation_sub_task
+UDD_sub_task - -[hidden]r-> UTS_sub_task
+UDD_sub_task - -[hidden]r-> UTR_sub_task
+PAD_sub_task - -[hidden]r-> ITS_sub_task
+PAD_sub_task - -[hidden]r-> ITR_sub_task
+
+@enduml
+
+PlantUML version 1.2022.12(Sun Oct 23 18:12:26 UTC 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
