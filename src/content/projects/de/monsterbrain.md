@@ -5,5 +5,5 @@ era: "current"
 status: "idea"
 monster: "monsterbrain"
 role: [created]
-order: 10
+order: 20
 ---

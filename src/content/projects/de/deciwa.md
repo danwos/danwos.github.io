@@ -5,5 +5,5 @@ era: "current"
 status: "idea"
 monster: "deciwa"
 role: [created]
-order: 30
+order: 10
 ---

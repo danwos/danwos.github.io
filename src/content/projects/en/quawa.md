@@ -5,6 +5,6 @@ era: "current"
 status: "idea"
 monster: "quawa"
 role: [created]
-order: 20
-translated_from: "56644f2fd42a"
+order: 30
+translated_from: "a4749a6f1f49"
 ---

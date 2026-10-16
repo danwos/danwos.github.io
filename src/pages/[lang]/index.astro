@@ -94,7 +94,7 @@ const ideas = await ideasFor(lang);
 </Base>
 
 <style>
-  .cards { margin-top: 32px }
+  .cards { margin-top: 32px; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)) }
   .archive { margin-top: 32px }
   .ideas { padding-left: 20px; margin: 16px 0 0 }
   .ideas li { margin-bottom: 8px; max-width: 64ch }
