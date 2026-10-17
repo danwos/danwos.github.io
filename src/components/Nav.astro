@@ -9,7 +9,7 @@ const s = t(lang);
 const home = path(lang);
 const links = [
   ['projects', s.nav.projects], ['about', s.nav.about], ['blog', s.nav.blog],
-  ['archive', s.nav.archive], ['contact', s.nav.contact],
+  ['ideas', s.nav.ideas], ['archive', s.nav.archive], ['contact', s.nav.contact],
 ] as const;
 ---
 <header class="topbar">
@@ -20,7 +20,7 @@ const links = [
     </a>
     <button class="menu" type="button" aria-expanded="false" aria-controls="nav-links">{s.nav.menu}</button>
     <ul id="nav-links" class="links">
-      {links.map(([id, label]) => <li><a href={id === 'blog' ? `${home}${id}/` : `${home}#${id}`}>{label}</a></li>)}
+      {links.map(([id, label]) => <li><a href={id === 'blog' || id === 'ideas' ? `${home}${id}/` : `${home}#${id}`}>{label}</a></li>)}
     </ul>
     <div class="tools">
       <ul class="langs" aria-label={s.nav.language}>

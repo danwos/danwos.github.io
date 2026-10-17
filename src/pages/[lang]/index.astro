@@ -34,16 +34,6 @@ const latest = (await postsFor(lang)).slice(0, 3);
     </div>
   </section>
 
-  <section id="ideas" class="section">
-    <div class="wrap">
-      <Split monster="baby" alt={s.ideas.alt}>
-        <h2>{s.ideas.title}</h2>
-        <p class="lead">{s.ideas.lead}</p>
-        <a class="btn btn-secondary" href={path(lang, 'ideas/')}>{s.ideas.all} →</a>
-      </Split>
-    </div>
-  </section>
-
   <section id="visualizations" class="section">
     <div class="wrap">
       <Split monster="square-arms" alt={s.viz.alt} reverse>
@@ -79,9 +69,19 @@ const latest = (await postsFor(lang)).slice(0, 3);
     </div>
   </section>
 
+  <section id="ideas" class="section">
+    <div class="wrap">
+      <Split monster="baby" alt={s.ideas.alt}>
+        <h2>{s.ideas.title}</h2>
+        <p class="lead">{s.ideas.lead}</p>
+        <a class="btn btn-secondary" href={path(lang, 'ideas/')}>{s.ideas.all} →</a>
+      </Split>
+    </div>
+  </section>
+
   <section id="archive" class="section">
     <div class="wrap">
-      <Split monster="grandma" alt={s.archive.alt}>
+      <Split monster="grandma" alt={s.archive.alt} reverse>
         <h2>{s.archive.title}</h2>
         <p class="lead">{s.archive.lead}</p>
       </Split>
@@ -93,7 +93,7 @@ const latest = (await postsFor(lang)).slice(0, 3);
 
   <section id="contact" class="section">
     <div class="wrap">
-      <Split monster="two-heads" alt={s.contact.alt} reverse>
+      <Split monster="two-heads" alt={s.contact.alt}>
         <h2>{s.contact.title}</h2>
         <p class="lead">{s.contact.lead}</p>
         <div class="actions">
