@@ -8,8 +8,8 @@ const { lang } = Astro.props;
 const s = t(lang);
 const home = path(lang);
 const links = [
-  ['projects', s.nav.projects], ['visualizations', s.nav.visualizations], ['about', s.nav.about], ['blog', s.nav.blog],
-  ['ideas', s.nav.ideas], ['archive', s.nav.archive], ['contact', s.nav.contact],
+  ['projects', s.nav.projects], ['visualizations', s.nav.visualizations], ['blog', s.nav.blog],
+  ['ideas', s.nav.ideas], ['archive', s.nav.archive], ['about', s.nav.about], ['contact', s.nav.contact],
 ] as const;
 ---
 <header class="topbar">

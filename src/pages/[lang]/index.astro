@@ -44,21 +44,9 @@ const latest = (await postsFor(lang)).slice(0, 3);
     </div>
   </section>
 
-  <section id="about" class="section">
-    <div class="wrap">
-      <div class="split">
-        <div class="img photo"><Image src={photo} alt={s.about.photoAlt} widths={[256]} sizes="240px" /></div>
-        <div>
-          <h2>{s.about.title}</h2>
-          {s.about.text.map((p) => <p>{p}</p>)}
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section id="blog" class="section">
     <div class="wrap">
-      <Split monster="danwos-sitting" alt={s.blog.alt} reverse>
+      <Split monster="danwos-sitting" alt={s.blog.alt}>
         <h2>{s.blog.title}</h2>
         <p class="lead">{s.blog.lead}</p>
         <a class="btn btn-secondary" href={path(lang, 'blog/')}>{s.blog.all} →</a>
@@ -71,7 +59,7 @@ const latest = (await postsFor(lang)).slice(0, 3);
 
   <section id="ideas" class="section">
     <div class="wrap">
-      <Split monster="baby" alt={s.ideas.alt}>
+      <Split monster="baby" alt={s.ideas.alt} reverse>
         <h2>{s.ideas.title}</h2>
         <p class="lead">{s.ideas.lead}</p>
         <a class="btn btn-secondary" href={path(lang, 'ideas/')}>{s.ideas.all} →</a>
@@ -81,12 +69,24 @@ const latest = (await postsFor(lang)).slice(0, 3);
 
   <section id="archive" class="section">
     <div class="wrap">
-      <Split monster="grandma" alt={s.archive.alt} reverse>
+      <Split monster="grandma" alt={s.archive.alt}>
         <h2>{s.archive.title}</h2>
         <p class="lead">{s.archive.lead}</p>
       </Split>
       <div class="grid archive">
         {archive.map((entry) => <ArchiveCard lang={lang} entry={entry} />)}
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="wrap">
+      <div class="split rev">
+        <div class="img photo"><Image src={photo} alt={s.about.photoAlt} widths={[256]} sizes="240px" /></div>
+        <div>
+          <h2>{s.about.title}</h2>
+          {s.about.text.map((p) => <p>{p}</p>)}
+        </div>
       </div>
     </div>
   </section>
