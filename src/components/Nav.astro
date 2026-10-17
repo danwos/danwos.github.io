@@ -13,7 +13,7 @@ const links = [
   ['ideas', s.nav.ideas], ['about', s.nav.about], ['contact', s.nav.contact],
 ] as const;
 // Pages of their own; the rest are sections of the start page. Projects show up once there is one.
-const pages = ['tools', 'projects', 'views', 'blog', 'ideas'];
+const pages = ['tools', 'projects', 'views', 'blog', 'ideas', 'about'];
 const hasProjects = (await projectsFor(lang)).length > 0;
 const shown = links.filter(([id]) => id !== 'projects' || hasProjects);
 ---

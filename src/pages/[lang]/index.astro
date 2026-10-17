@@ -99,6 +99,7 @@ const flip = () => side++ % 2 === 0;
         <div>
           <h2>{s.about.title}</h2>
           {s.about.text.map((p) => <p>{p}</p>)}
+          <a class="btn btn-secondary" href={path(lang, 'about/')}>{s.about.more} →</a>
         </div>
       </div>
     </div>

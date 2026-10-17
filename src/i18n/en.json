@@ -1,5 +1,5 @@
 {
-  "_translated_from": "7b0ec7e8c8ba",
+  "_translated_from": "4d8af8d0b290",
   "meta": {
     "title": "danwos – Daniel Woste",
     "description": "Daniel Woste builds SW tools for large teams: docs-as-code, AI, test quality, decisions and knowledge."
@@ -77,7 +77,10 @@
       "What drives me is how large, distributed teams keep track – of requirements, tests, decisions and the knowledge in between. My tools are small and focused: each one solves exactly one problem."
     ],
     "alt": "The danwos monster, mascot of Daniel and danwos",
-    "photoAlt": "Daniel Woste"
+    "photoAlt": "Daniel Woste",
+    "more": "More about me",
+    "cv": "Career",
+    "cta": "Want to work together? Let's talk."
   },
   "archive": {
     "title": "Archive",

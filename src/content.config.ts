@@ -85,6 +85,23 @@ const views = defineCollection({
   }),
 });
 
+// About page: longer text per language, plus CV stations (one file each, newest first by order).
+const about = defineCollection({
+  loader: glob({ pattern: '*/*.md', base: './src/content/about' }),
+  schema: z.object({ title: z.string(), translated_from: z.string().optional() }),
+});
+
+const cv = defineCollection({
+  loader: glob({ pattern: '*/*.md', base: './src/content/cv' }),
+  schema: z.object({
+    period: z.string().default(''),
+    role: z.string(),
+    org: z.string(),
+    order: z.number().default(100),
+    translated_from: z.string().optional(),
+  }),
+});
+
 const legal = defineCollection({
   loader: glob({ pattern: '*/*.md', base: './src/content/legal' }),
   schema: z.object({
@@ -94,4 +111,4 @@ const legal = defineCollection({
   }),
 });
 
-export const collections = { tools, projects, ideas, blog, views, legal };
+export const collections = { tools, projects, ideas, blog, views, about, cv, legal };
