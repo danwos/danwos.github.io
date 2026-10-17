@@ -1,5 +1,5 @@
 ---
-period: "seit 2022"
+period: "since 2022"
 role: "Organizing team and IT lead"
 org: "Kids' clothes and toy market"
 kind: volunteer

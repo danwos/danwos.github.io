@@ -1,5 +1,5 @@
 ---
-period: "heute"
+period: "seit 2026"
 role: "Advisor"
 org: "useblocks"
 order: 20
