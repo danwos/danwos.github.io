@@ -18,5 +18,5 @@ result: |
 
   Based on this, the company later rolled out docs-as-code company-wide.
 tools: [sphinx-needs, sphinx-test-reports]
-translated_from: "3c6bc1865378"
+translated_from: "37e0d24ddcae"
 ---
