@@ -12,7 +12,8 @@
     "menu": "Menü",
     "theme": "Hell oder dunkel",
     "language": "Sprache",
-    "skip": "Zum Inhalt"
+    "skip": "Zum Inhalt",
+    "archive": "Archiv"
   },
   "hero": {
     "eyebrow": "Docs-as-Code · AI · SW-Tools",
@@ -42,13 +43,20 @@
   },
   "ideas": {
     "title": "Ideen",
-    "lead": "Noch nicht begonnen, aber schon da. Wenn dich eine reizt, lass uns reden.",
+    "lead": "Dinge, die ich gern bauen würde – noch nicht begonnen, aber schon durchdacht. Es geht um Probleme, die mir immer wieder begegnen: Doku, die nicht zum Code passt, Kennzahlen, die niemand sieht, Architektur und Anforderungen, die nichts voneinander wissen. Wenn dich etwas davon reizt, lass uns reden.",
     "alt": "Das Baby-Monster steht für Ideen",
-    "all": "Alle Ideen",
-    "pageLead": "Noch nicht begonnen, aber schon da. Wenn dich eine reizt, lass uns reden.",
+    "all": "Zur Ideensammlung",
+    "pageLead": "Dinge, die ich gern bauen würde – noch nicht begonnen, aber schon durchdacht. Wenn dich eine Idee reizt, lass uns reden.",
     "toc": "Inhalt",
-    "ideasCount": "Ideen",
-    "ideaOne": "Idee"
+    "problem": "Problem",
+    "solution": "Lösung",
+    "tech": "Tech",
+    "statusLabel": "Umsetzung",
+    "status": {
+      "unlikely": "eher nicht",
+      "likely": "wahrscheinlich",
+      "definitely": "auf jeden Fall"
+    }
   },
   "blog": {
     "title": "Blog",
@@ -96,15 +104,5 @@
     "draft": "Entwurf – noch nicht veröffentlicht.",
     "imprint": "Impressum",
     "privacy": "Datenschutz"
-  },
-  "ideaCategories": {
-    "docs-as-code": {
-      "title": "Docs-as-Code",
-      "teaser": "Dokumentation, die mehr kann als Text: Kennzahlen, lebendiger Code, weniger Doppelpflege."
-    },
-    "automotive": {
-      "title": "Automotive",
-      "teaser": "Architektur und Anforderungen aus der Fahrzeugentwicklung direkt in die Doku holen."
-    }
   }
 }

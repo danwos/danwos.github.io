@@ -7,7 +7,7 @@ import Split from '../../components/Split.astro';
 import { Image } from 'astro:assets';
 import photo from '../../assets/people/daniel-woste.png';
 import PostCard from '../../components/PostCard.astro';
-import { projectsFor, ideasFor, postsFor } from '../../lib/content';
+import { projectsFor, postsFor } from '../../lib/content';
 import { t, path, locales, type Lang } from '../../i18n';
 
 export function getStaticPaths() {
@@ -19,10 +19,6 @@ const s = t(lang);
 const projects = await projectsFor(lang);
 const current = projects.filter((p) => p.data.era === 'current');
 const archive = projects.filter((p) => p.data.era === 'archive');
-const ideas = await ideasFor(lang);
-const countLabel = (n: number) => `${n} ${n === 1 ? s.ideas.ideaOne : s.ideas.ideasCount}`;
-// only categories that have ideas
-const categories = Object.entries(s.ideaCategories).filter(([key]) => ideas.some((i) => i.data.category === key));
 const latest = (await postsFor(lang)).slice(0, 3);
 ---
 <Base lang={lang}>
@@ -45,39 +41,30 @@ const latest = (await postsFor(lang)).slice(0, 3);
         <p class="lead">{s.ideas.lead}</p>
         <a class="btn btn-secondary" href={path(lang, 'ideas/')}>{s.ideas.all} →</a>
       </Split>
-      <div class="grid cats">
-        {categories.map(([key, c]) => (
-          <a class="cat" href={path(lang, `ideas/#${key}`)}>
-            <h3>{c.title}</h3>
-            <p>{c.teaser}</p>
-            <span class="count">{countLabel(ideas.filter((i) => i.data.category === key).length)} →</span>
-          </a>
-        ))}
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="wrap">
+      <div class="split rev">
+        <div class="img photo"><Image src={photo} alt={s.about.photoAlt} widths={[256]} sizes="240px" /></div>
+        <div>
+          <h2>{s.about.title}</h2>
+          {s.about.text.map((p) => <p>{p}</p>)}
+        </div>
       </div>
     </div>
   </section>
 
   <section id="blog" class="section">
     <div class="wrap">
-      <Split monster="danwos-sitting" alt={s.blog.alt} reverse>
+      <Split monster="danwos-sitting" alt={s.blog.alt}>
         <h2>{s.blog.title}</h2>
         <p class="lead">{s.blog.lead}</p>
         <a class="btn btn-secondary" href={path(lang, 'blog/')}>{s.blog.all} →</a>
       </Split>
       <div class="grid posts">
         {latest.map((entry) => <PostCard lang={lang} entry={entry} />)}
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="section">
-    <div class="wrap">
-      <div class="split">
-        <div class="img photo"><Image src={photo} alt={s.about.photoAlt} widths={[256]} sizes="240px" /></div>
-        <div>
-          <h2>{s.about.title}</h2>
-          {s.about.text.map((p) => <p>{p}</p>)}
-        </div>
       </div>
     </div>
   </section>
@@ -112,13 +99,6 @@ const latest = (await postsFor(lang)).slice(0, 3);
   .cards { margin-top: 32px; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)) }
   .archive { margin-top: 32px }
   .posts { margin-top: 32px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) }
-  .cats { margin-top: 32px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)) }
-  .cat { display: flex; flex-direction: column; padding: 16px; border: 1px solid var(--line); border-top: 4px solid var(--moss); border-radius: var(--radius);
-    background: var(--surface); color: inherit; text-decoration: none; transition: transform .1s, box-shadow .1s }
-  .cat:hover { transform: translateY(-2px); box-shadow: 4px 4px 0 var(--shadow) }
-  .cat h3 { margin: 0 0 6px; font-size: 20px }
-  .cat p { color: var(--muted); font-size: 15px }
-  .cat .count { margin-top: auto; color: var(--primary); font-weight: 600 }
   .photo :global(img) { border-radius: 50%; border: 2px solid var(--outline); box-shadow: 4px 4px 0 var(--shadow); max-width: 240px }
   .actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 20px }
 </style>

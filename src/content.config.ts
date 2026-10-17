@@ -27,9 +27,12 @@ const ideas = defineCollection({
   schema: z.object({
     title: z.string(),
     summary: z.string(),
-    // key into ideaCategories in src/i18n/<lang>.json
-    category: z.string(),
+    // how likely it gets built
+    status: z.enum(['unlikely', 'likely', 'definitely']),
     order: z.number().default(100),
+    problem: z.string(),
+    solution: z.string(),
+    tech: z.string(),
     translated_from: z.string().optional(),
   }),
 });
