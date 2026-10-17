@@ -1,5 +1,5 @@
 {
-  "_translated_from": "808c31ff67e6",
+  "_translated_from": "7b0ec7e8c8ba",
   "meta": {
     "title": "danwos – Daniel Woste",
     "description": "Daniel Woste builds SW tools for large teams: docs-as-code, AI, test quality, decisions and knowledge."
@@ -41,7 +41,7 @@
   "ideas": {
     "title": "Ideas",
     "lead": "Things I'd like to build – not started yet, but thought through. They're about problems I keep running into: docs that don't match the code, metrics nobody sees, architecture and requirements that know nothing about each other. If any of it catches your eye, let's talk.",
-    "alt": "The baby monster stands for ideas",
+    "alt": "The danwos monster sketching an idea",
     "all": "Browse the ideas",
     "pageLead": "Things I'd like to build – not started yet, but thought through. If an idea catches your eye, let's talk.",
     "toc": "Contents",
@@ -113,13 +113,13 @@
     "title": "Views",
     "lead": "Good views make complex relations clear in seconds; bad ones hide them. I care about how to show information, data structures and workflows from large projects – requirements, tests, dependencies, decisions – so that people can work with them. My thoughts on it, with examples.",
     "more": "See the views",
-    "alt": "The square monster with long arms stands for views"
+    "alt": "The danwos monster building with bricks"
   },
   "projects": {
     "title": "Projects",
     "lead": "Large teams, tough starting points – and what we made of them.",
     "all": "All projects",
-    "alt": "The danwos monster flying like a superhero",
+    "alt": "The danwos monster sorting cards on a kanban board",
     "toc": "Contents",
     "context": "Context",
     "industry": "Industry",

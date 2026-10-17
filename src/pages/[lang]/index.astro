@@ -40,7 +40,7 @@ const flip = () => side++ % 2 === 0;
   {hasProjects && (
     <section id="projects" class="section">
       <div class="wrap">
-        <Split monster="danwos-flying" alt={s.projects.alt} reverse={flip()}>
+        <Split monster="danwos-kanban" alt={s.projects.alt} reverse={flip()}>
           <h2>{s.projects.title}</h2>
           <p class="lead">{s.projects.lead}</p>
           <a class="btn btn-secondary" href={path(lang, 'projects/')}>{s.projects.all} →</a>
@@ -61,7 +61,7 @@ const flip = () => side++ % 2 === 0;
 
   <section id="views" class="section">
     <div class="wrap">
-      <Split monster="square-arms" alt={s.views.alt} reverse={flip()}>
+      <Split monster="danwos-bricks" alt={s.views.alt} reverse={flip()}>
         <h2>{s.views.title}</h2>
         <p class="lead">{s.views.lead}</p>
         <a class="btn btn-secondary" href={path(lang, 'views/')}>{s.views.more} →</a>
@@ -84,7 +84,7 @@ const flip = () => side++ % 2 === 0;
 
   <section id="ideas" class="section">
     <div class="wrap">
-      <Split monster="baby" alt={s.ideas.alt} reverse={flip()}>
+      <Split monster="danwos-sketching" alt={s.ideas.alt} reverse={flip()}>
         <h2>{s.ideas.title}</h2>
         <p class="lead">{s.ideas.lead}</p>
         <a class="btn btn-secondary" href={path(lang, 'ideas/')}>{s.ideas.all} →</a>

@@ -40,7 +40,7 @@
   "ideas": {
     "title": "Ideen",
     "lead": "Dinge, die ich gern bauen würde – noch nicht begonnen, aber schon durchdacht. Es geht um Probleme, die mir immer wieder begegnen: Doku, die nicht zum Code passt, Kennzahlen, die niemand sieht, Architektur und Anforderungen, die nichts voneinander wissen. Wenn dich etwas davon reizt, lass uns reden.",
-    "alt": "Das Baby-Monster steht für Ideen",
+    "alt": "Das danwos-Monster skizziert eine Idee",
     "all": "Zur Ideensammlung",
     "pageLead": "Dinge, die ich gern bauen würde – noch nicht begonnen, aber schon durchdacht. Wenn dich eine Idee reizt, lass uns reden.",
     "toc": "Inhalt",
@@ -112,13 +112,13 @@
     "title": "Views",
     "lead": "Gute Darstellungen machen komplexe Zusammenhänge in Sekunden klar, schlechte verstecken sie. Mich beschäftigt, wie man Informationen, Datenstrukturen und Workflows aus großen Projekten – Anforderungen, Tests, Abhängigkeiten, Entscheidungen – so zeigt, dass Menschen damit arbeiten können. Meine Gedanken dazu, mit Beispielen.",
     "more": "Zu den Views",
-    "alt": "Das eckige Monster mit langen Armen steht für Views"
+    "alt": "Das danwos-Monster baut mit Bausteinen"
   },
   "projects": {
     "title": "Projekte",
     "lead": "Große Teams, schwierige Ausgangslagen – und was wir daraus gemacht haben.",
     "all": "Alle Projekte",
-    "alt": "Das danwos-Monster fliegt wie ein Superheld",
+    "alt": "Das danwos-Monster sortiert Karten am Kanban-Board",
     "toc": "Inhalt",
     "context": "Kontext",
     "industry": "Branche",
