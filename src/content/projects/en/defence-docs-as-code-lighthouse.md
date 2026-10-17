@@ -3,8 +3,9 @@ title: "A docs-as-code lighthouse project in defence"
 summary: "At a Tier-1 defence supplier, a software team of 40 showed that docs-as-code works and makes the work more efficient – with Sphinx-Needs, CI and the company's own branding."
 industry: "Defence, Tier-1 supplier, software development"
 team: "Software development team of 40 people"
+period: "2026"
 role: "Consulting, implementation and training"
-order: 20
+order: 10
 problem: |
   A Tier-1 defence supplier wanted to know whether docs-as-code fits its software development. A lighthouse project was to answer two questions: Is it feasible, and does it make the work noticeably more efficient?
 
@@ -16,5 +17,5 @@ approach: |
 result: |
   The lighthouse project showed that docs-as-code is feasible in a defence setting and makes the work more efficient – backed by evidence, not just claimed.
 tools: [sphinx-needs]
-translated_from: "84309e98a536"
+translated_from: "0da556d812be"
 ---

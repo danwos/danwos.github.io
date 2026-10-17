@@ -3,8 +3,9 @@ title: "Moving legacy data to docs-as-code"
 summary: "A proof of concept at a Tier-1 supplier: requirements, specifications, code and tests of an ECU project in a docs-as-code toolchain – the model was later rolled out across the whole company."
 industry: "Automotive, Tier-1 supplier, ECU development"
 team: "Project with about 500 people; proof of concept with 3 people and about 40 users"
+period: "2025"
 role: "Consulting and implementation"
-order: 10
+order: 20
 problem: |
   An ECU project with about 500 people had collected data in classic tools for years: software requirements, specifications, code and tests – maintained separately and hard to connect.
 
@@ -18,5 +19,5 @@ result: |
 
   Based on this, the company later rolled out docs-as-code company-wide.
 tools: [sphinx-needs, sphinx-test-reports]
-translated_from: "37e0d24ddcae"
+translated_from: "e629bb2035b8"
 ---

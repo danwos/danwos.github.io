@@ -4,8 +4,9 @@ title: "Bestandsdaten in Docs-as-Code überführt"
 summary: "Machbarkeitsnachweis bei einem Tier-1-Zulieferer: Anforderungen, Spezifikationen, Code und Tests eines Steuergeräte-Projekts laufen in einer Docs-as-Code-Toolchain – und das Modell wurde danach im ganzen Unternehmen ausgerollt."
 industry: "Automotive, Tier-1-Zulieferer, Steuergeräte-Entwicklung"
 team: "Projekt mit ca. 500 Leuten; Machbarkeitsnachweis mit 3 Leuten und ca. 40 Nutzern"
+period: "2025"
 role: "Beratung und Umsetzung"
-order: 10
+order: 20
 problem: |
   Ein Steuergeräte-Projekt mit rund 500 Leuten hatte über Jahre Daten in klassischen Werkzeugen angesammelt: Software-Anforderungen, Spezifikationen, Code und Tests – getrennt voneinander gepflegt und schwer zu verbinden.
 
