@@ -104,5 +104,11 @@
     "draft": "Entwurf – noch nicht veröffentlicht.",
     "imprint": "Impressum",
     "privacy": "Datenschutz"
+  },
+  "viz": {
+    "title": "Visualisierungen",
+    "lead": "Gute Grafiken machen komplexe Zusammenhänge in Sekunden klar, schlechte verstecken sie. Mich beschäftigt, wie man Informationen aus großen Projekten – Anforderungen, Tests, Abhängigkeiten, Entscheidungen – so zeigt, dass Menschen damit arbeiten können. Meine Gedanken dazu, mit Beispielen.",
+    "more": "Zu den Visualisierungen",
+    "alt": "Das eckige Monster mit langen Armen steht für Visualisierungen"
   }
 }

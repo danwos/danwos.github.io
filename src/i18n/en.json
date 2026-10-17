@@ -1,5 +1,5 @@
 {
-  "_translated_from": "7e9ab92396b8",
+  "_translated_from": "287bc3aaad6b",
   "meta": {
     "title": "danwos – Daniel Woste",
     "description": "Daniel Woste builds SW tools for large teams: docs-as-code, AI, test quality, decisions and knowledge."
@@ -105,5 +105,11 @@
     "draft": "Draft – not published yet.",
     "imprint": "Imprint",
     "privacy": "Privacy"
+  },
+  "viz": {
+    "title": "Visualizations",
+    "lead": "Good graphics make complex relations clear in seconds; bad ones hide them. I care about how to show information from large projects – requirements, tests, dependencies, decisions – so that people can work with it. My thoughts on it, with examples.",
+    "more": "See the visualizations",
+    "alt": "The square monster with long arms stands for visualizations"
   }
 }

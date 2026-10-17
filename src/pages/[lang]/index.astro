@@ -44,9 +44,19 @@ const latest = (await postsFor(lang)).slice(0, 3);
     </div>
   </section>
 
+  <section id="visualizations" class="section">
+    <div class="wrap">
+      <Split monster="square-arms" alt={s.viz.alt} reverse>
+        <h2>{s.viz.title}</h2>
+        <p class="lead">{s.viz.lead}</p>
+        <a class="btn btn-secondary" href={path(lang, 'visualizations/')}>{s.viz.more} →</a>
+      </Split>
+    </div>
+  </section>
+
   <section id="about" class="section">
     <div class="wrap">
-      <div class="split rev">
+      <div class="split">
         <div class="img photo"><Image src={photo} alt={s.about.photoAlt} widths={[256]} sizes="240px" /></div>
         <div>
           <h2>{s.about.title}</h2>
@@ -58,7 +68,7 @@ const latest = (await postsFor(lang)).slice(0, 3);
 
   <section id="blog" class="section">
     <div class="wrap">
-      <Split monster="danwos-sitting" alt={s.blog.alt}>
+      <Split monster="danwos-sitting" alt={s.blog.alt} reverse>
         <h2>{s.blog.title}</h2>
         <p class="lead">{s.blog.lead}</p>
         <a class="btn btn-secondary" href={path(lang, 'blog/')}>{s.blog.all} →</a>
@@ -71,7 +81,7 @@ const latest = (await postsFor(lang)).slice(0, 3);
 
   <section id="archive" class="section">
     <div class="wrap">
-      <Split monster="grandma" alt={s.archive.alt} reverse>
+      <Split monster="grandma" alt={s.archive.alt}>
         <h2>{s.archive.title}</h2>
         <p class="lead">{s.archive.lead}</p>
       </Split>
@@ -83,7 +93,7 @@ const latest = (await postsFor(lang)).slice(0, 3);
 
   <section id="contact" class="section">
     <div class="wrap">
-      <Split monster="two-heads" alt={s.contact.alt}>
+      <Split monster="two-heads" alt={s.contact.alt} reverse>
         <h2>{s.contact.title}</h2>
         <p class="lead">{s.contact.lead}</p>
         <div class="actions">

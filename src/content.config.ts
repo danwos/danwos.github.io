@@ -55,6 +55,15 @@ const blog = defineCollection({
     }),
 });
 
+// Visualizations: one page per language for now; concrete content follows.
+const visualizations = defineCollection({
+  loader: glob({ pattern: '*/*.md', base: './src/content/visualizations' }),
+  schema: z.object({
+    title: z.string(),
+    translated_from: z.string().optional(),
+  }),
+});
+
 const legal = defineCollection({
   loader: glob({ pattern: '*/*.md', base: './src/content/legal' }),
   schema: z.object({
@@ -64,4 +73,4 @@ const legal = defineCollection({
   }),
 });
 
-export const collections = { projects, ideas, blog, legal };
+export const collections = { projects, ideas, blog, visualizations, legal };

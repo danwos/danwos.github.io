@@ -1,0 +1,35 @@
+---
+import { getCollection, render } from 'astro:content';
+import { langOf } from '../../../lib/content';
+import Base from '../../../layouts/Base.astro';
+import Split from '../../../components/Split.astro';
+import { t, locales, type Lang } from '../../../i18n';
+
+export function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+const s = t(lang);
+// Body text comes from src/content/visualizations/<lang>/index.md once there is content.
+const [entry] = await getCollection('visualizations', (e) => langOf(e.id) === lang && !!e.body?.trim());
+const { Content } = entry ? await render(entry) : { Content: null };
+---
+<Base lang={lang} title={s.viz.title} description={s.viz.lead}>
+  <section class="section head">
+    <div class="wrap">
+      <Split monster="square-arms" alt={s.viz.alt}>
+        <h1>{s.viz.title}</h1>
+        <p class="lead">{s.viz.lead}</p>
+      </Split>
+    </div>
+  </section>
+  {Content && (
+    <section class="section">
+      <div class="wrap prose"><Content /></div>
+    </section>
+  )}
+</Base>
+<style>
+  .head { padding-bottom: 32px }
+</style>
