@@ -57,7 +57,7 @@
   "blog": {
     "title": "Blog",
     "lead": "Beiträge, Videos und Erklärbilder zu Docs-as-Code, Qualität und Tools.",
-    "alt": "Das danwos-Monster sitzt und denkt nach",
+    "alt": "Das danwos-Monster liest auf einem Stapel Bücher",
     "all": "Alle Beiträge",
     "read": "Weiterlesen",
     "back": "Alle Beiträge",
@@ -118,7 +118,7 @@
     "title": "Projekte",
     "lead": "Große Teams, schwierige Ausgangslagen – und was wir daraus gemacht haben.",
     "all": "Alle Projekte",
-    "alt": "Ein Monster steht für die Projekte",
+    "alt": "Das danwos-Monster fliegt wie ein Superheld",
     "toc": "Inhalt",
     "context": "Kontext",
     "industry": "Branche",
@@ -128,6 +128,7 @@
     "problem": "Problem",
     "approach": "Was wir gemacht haben",
     "result": "Ergebnis",
-    "tools": "Eingesetzte Tools"
+    "tools": "Eingesetzte Tools",
+    "read": "Weiterlesen"
   }
 }

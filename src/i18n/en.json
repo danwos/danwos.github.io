@@ -1,5 +1,5 @@
 {
-  "_translated_from": "52db5ec4ea71",
+  "_translated_from": "808c31ff67e6",
   "meta": {
     "title": "danwos – Daniel Woste",
     "description": "Daniel Woste builds SW tools for large teams: docs-as-code, AI, test quality, decisions and knowledge."
@@ -58,7 +58,7 @@
   "blog": {
     "title": "Blog",
     "lead": "Posts, videos and explainer images on docs-as-code, quality and tools.",
-    "alt": "The danwos monster sitting and thinking",
+    "alt": "The danwos monster reading on a stack of books",
     "all": "All posts",
     "read": "Read more",
     "back": "All posts",
@@ -119,7 +119,7 @@
     "title": "Projects",
     "lead": "Large teams, tough starting points – and what we made of them.",
     "all": "All projects",
-    "alt": "A monster stands for the projects",
+    "alt": "The danwos monster flying like a superhero",
     "toc": "Contents",
     "context": "Context",
     "industry": "Industry",
@@ -129,6 +129,7 @@
     "problem": "Problem",
     "approach": "What we did",
     "result": "Result",
-    "tools": "Tools used"
+    "tools": "Tools used",
+    "read": "Read more"
   }
 }

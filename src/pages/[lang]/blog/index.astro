@@ -17,7 +17,7 @@ const years = [...new Set(posts.map((p) => p.data.date.getUTCFullYear()))];
 <Base lang={lang} title={s.blog.title} description={s.blog.pageLead}>
   <section class="section head">
     <div class="wrap">
-      <Split monster="danwos-sitting" alt={s.blog.alt} reverse>
+      <Split monster="danwos-books" alt={s.blog.alt} reverse>
         <h1>{s.blog.title}</h1>
         <p class="lead">{s.blog.pageLead}</p>
         <p><a href={path(lang, 'rss.xml')}>{s.blog.rss}</a></p>

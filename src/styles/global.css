@@ -43,7 +43,7 @@ code { font: 15px var(--font-mono); background: var(--primary-soft); padding: 1p
 /* picture and text: monster one third, text two thirds */
 .split { display: grid; grid-template-columns: 1fr 2fr; gap: 32px; align-items: center }
 .split.rev { grid-template-columns: 2fr 1fr } .split.rev .img { order: 2 }
-.split .img img { width: 100%; max-width: 260px; display: block; margin: auto }
+.split .img img { width: auto; max-width: min(100%, 260px); max-height: 340px; display: block; margin: auto }
 
 @media (max-width: 760px) {
   h1 { font-size: 36px } h2 { font-size: 28px }

@@ -6,7 +6,7 @@ import Split from '../../components/Split.astro';
 import { Image } from 'astro:assets';
 import photo from '../../assets/people/daniel-woste.png';
 import PostCard from '../../components/PostCard.astro';
-import { toolsFor, projectsFor, postsFor } from '../../lib/content';
+import { toolsFor, projectsFor, postsFor, slugOf } from '../../lib/content';
 import { t, path, locales, type Lang } from '../../i18n';
 
 export function getStaticPaths() {
@@ -16,7 +16,8 @@ export function getStaticPaths() {
 const lang = Astro.params.lang as Lang;
 const s = t(lang);
 const current = (await toolsFor(lang)).filter((p) => p.data.era === 'current');
-const hasProjects = (await projectsFor(lang)).length > 0;
+const latestProjects = (await projectsFor(lang)).slice(0, 3);
+const hasProjects = latestProjects.length > 0;
 const latest = (await postsFor(lang)).slice(0, 3);
 // Picture and text alternate sides from section to section, also when a section is hidden.
 let side = 0;
@@ -39,11 +40,21 @@ const flip = () => side++ % 2 === 0;
   {hasProjects && (
     <section id="projects" class="section">
       <div class="wrap">
-        <Split monster="danwos" alt={s.projects.alt} reverse={flip()}>
+        <Split monster="danwos-flying" alt={s.projects.alt} reverse={flip()}>
           <h2>{s.projects.title}</h2>
           <p class="lead">{s.projects.lead}</p>
           <a class="btn btn-secondary" href={path(lang, 'projects/')}>{s.projects.all} →</a>
         </Split>
+        <div class="grid pteasers">
+          {latestProjects.map((p) => (
+            <a class="pteaser" href={path(lang, `projects/#${slugOf(p.id)}`)}>
+              <span class="industry">{p.data.industry}</span>
+              <h3>{p.data.title}</h3>
+              <p>{p.data.summary}</p>
+              <span class="more">{s.projects.read} →</span>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   )}
@@ -60,7 +71,7 @@ const flip = () => side++ % 2 === 0;
 
   <section id="blog" class="section">
     <div class="wrap">
-      <Split monster="danwos-sitting" alt={s.blog.alt} reverse={flip()}>
+      <Split monster="danwos-books" alt={s.blog.alt} reverse={flip()}>
         <h2>{s.blog.title}</h2>
         <p class="lead">{s.blog.lead}</p>
         <a class="btn btn-secondary" href={path(lang, 'blog/')}>{s.blog.all} →</a>
@@ -110,6 +121,14 @@ const flip = () => side++ % 2 === 0;
 <style>
   .cards { margin-top: 32px; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)) }
   .more { margin-top: 24px }
+  .pteasers { margin-top: 32px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) }
+  .pteaser { display: flex; flex-direction: column; padding: 16px; border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: var(--radius);
+    background: var(--surface); color: inherit; text-decoration: none; transition: transform .1s, box-shadow .1s }
+  .pteaser:hover { transform: translateY(-2px); box-shadow: 4px 4px 0 var(--shadow) }
+  .pteaser .industry { font-size: 13px; color: var(--muted) }
+  .pteaser h3 { font-size: 20px; margin: 6px 0 }
+  .pteaser p { color: var(--muted); font-size: 15px }
+  .pteaser .more { margin-top: auto; color: var(--primary); font-weight: 600 }
   .posts { margin-top: 32px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) }
   .photo :global(img) { border-radius: 50%; border: 2px solid var(--outline); box-shadow: 4px 4px 0 var(--shadow); max-width: 240px }
   .actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 20px }
