@@ -8,4 +8,4 @@ Dafür habe ich useblocks gegründet und als Teamlead Sphinx-Needs und viele wei
 
 Mit danwos baue ich jetzt eigene Tools – klein, fokussiert, jedes für genau ein Problem – und berate Teams, die ihre Dokumentation, ihre Qualität und ihre Entscheidungen in den Griff bekommen wollen.
 
-Ich lebe mit meiner Familie und unseren drei Kindern in NRW, in der Nähe von Dortmund. Neben der Arbeit engagiere ich mich ehrenamtlich – heute im Orga-Team eines Kindermarkts, früher in der Flüchtlingshilfe.
+Ich lebe mit meiner Familie und unseren drei Kindern in NRW, in der Nähe von Dortmund. Neben der Arbeit engagiere ich mich ehrenamtlich – heute im Orga-Team eines Kinderklamotten- und Spielzeugmarkts, früher in der Flüchtlingshilfe.

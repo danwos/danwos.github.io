@@ -1,9 +1,9 @@
 ---
 period: "seit 2022"
 role: "Orga-Team und IT-Verantwortlicher"
-org: "Kindermarkt"
+org: "Kinderklamotten- und Spielzeugmarkt"
 kind: volunteer
 order: 10
 ---
 
-Ich organisiere den Kindermarkt mit und kümmere mich um die IT.
+Ich organisiere den Markt mit und kümmere mich um die IT.

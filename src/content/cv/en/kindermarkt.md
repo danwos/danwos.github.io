@@ -1,10 +1,10 @@
 ---
 period: "seit 2022"
 role: "Organizing team and IT lead"
-org: "Children's market"
+org: "Kids' clothes and toy market"
 kind: volunteer
 order: 10
-translated_from: "2a0284399381"
+translated_from: "944c8f2facd1"
 ---
 
-I help organize the children's market and take care of its IT.
+I help organize the market and take care of its IT.
