@@ -11,11 +11,11 @@ problem: |
 
   The proof had to be solid, because it was meant to be the base for further decisions.
 approach: |
-  Together with a software team of 40, I implemented docs-as-code with Sphinx-Needs and ubCode from useblocks. A CI system builds and checks the documentation on every change.
+  Together with a software team of 40, I implemented docs-as-code with Sphinx-Needs and [ubCode](https://ubcode.useblocks.com) from useblocks. A CI system builds and checks the documentation on every change.
 
   HTML and PDF output carry the company's branding, so the documents fit right into the company's usual look. We adjusted the existing workflows only slightly, so the team could switch without a big upheaval. Trainings helped everyone get started.
 result: |
   The lighthouse project showed that docs-as-code is feasible in a defence setting and makes the work more efficient – backed by evidence, not just claimed.
 tools: [sphinx-needs]
-translated_from: "093d93962f75"
+translated_from: "b4d8dd6154eb"
 ---

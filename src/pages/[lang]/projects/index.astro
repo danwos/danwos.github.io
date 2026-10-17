@@ -16,6 +16,9 @@ const s = t(lang);
 const projects = (await projectsFor(lang)).map((e) => ({ ...e.data, slug: slugOf(e.id) }));
 const toolNames = Object.fromEntries((await toolsFor(lang)).map((e) => [slugOf(e.id), e.data.title]));
 const paragraphs = (text: string) => text.trim().split(/\n\s*\n/);
+// Story text is plain text; only Markdown links [label](https://…) become links.
+const esc = (x: string) => x.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const inline = (x: string) => esc(x).replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, '<a href="$2">$1</a>');
 ---
 <Base lang={lang} title={s.projects.title} description={s.projects.lead}>
   <section class="section head">
@@ -44,11 +47,11 @@ const paragraphs = (text: string) => text.trim().split(/\n\s*\n/);
               <dt>{s.projects.role}</dt><dd>{p.role}</dd>
             </dl>
             <h3>{s.projects.problem}</h3>
-            {paragraphs(p.problem).map((x) => <p>{x}</p>)}
+            {paragraphs(p.problem).map((x) => <p set:html={inline(x)} />)}
             <h3>{s.projects.approach}</h3>
-            {paragraphs(p.approach).map((x) => <p>{x}</p>)}
+            {paragraphs(p.approach).map((x) => <p set:html={inline(x)} />)}
             <h3>{s.projects.result}</h3>
-            {paragraphs(p.result).map((x) => <p>{x}</p>)}
+            {paragraphs(p.result).map((x) => <p set:html={inline(x)} />)}
             {p.tools.length > 0 && (
               <p class="tools">{s.projects.tools}: {p.tools.map((slug, i) => (
                 <>{i > 0 && ', '}<a href={path(lang, `tools/${slug}/`)}>{toolNames[slug] ?? slug}</a></>

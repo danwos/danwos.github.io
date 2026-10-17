@@ -12,7 +12,7 @@ problem: |
 
   Der Nachweis musste belastbar sein, denn er sollte als Grundlage für weitere Entscheidungen dienen.
 approach: |
-  Mit einem Software-Team aus 40 Leuten habe ich Docs-as-Code mit Sphinx-Needs und ubCode von useblocks umgesetzt. Ein CI-System baut und prüft die Dokumentation bei jeder Änderung.
+  Mit einem Software-Team aus 40 Leuten habe ich Docs-as-Code mit Sphinx-Needs und [ubCode](https://ubcode.useblocks.com) von useblocks umgesetzt. Ein CI-System baut und prüft die Dokumentation bei jeder Änderung.
 
   HTML- und PDF-Ausgaben tragen das Branding des Unternehmens, sodass die Dokumente direkt in die gewohnte Unternehmenswelt passen. Die bestehenden Workflows haben wir nur leicht angepasst, damit das Team ohne großen Umbruch umsteigen konnte. Trainings haben den Einstieg begleitet.
 result: |

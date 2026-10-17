@@ -69,8 +69,8 @@ Enthaltene (und erweiterbare) Tools:
 - Sphinx-Preview
 - Sphinx-Test-Reports – <https://sphinx-test-reports.readthedocs.io/>
 - VS Code RST Preview – <https://marketplace.visualstudio.com/items?itemName=lextudio.restructuredtext>
-- ubCode – <https://useblocks.com/products/ubcode/>
-- ubTrace – <https://useblocks.com/products/ubtrace>
+- ubCode – <https://ubcode.useblocks.com>
+- ubTrace – <https://ubtrace.useblocks.com>
 - ubc – <https://useblocks.com/>
 - ubConnect – <https://useblocks.com/>
 

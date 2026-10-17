@@ -6,7 +6,7 @@ tags: [docs-as-code, tools, requirements]
 cover: ../../../../assets/blog/toolchain-comparison/01_toolchain_comparison.png
 original: en
 legacy: posts/2025/toolchain_comparison
-translated_from: "309939ea26fc"
+translated_from: "65c25a0464f9"
 ---
 
 At some point, every project faces the challenge of selecting a tool or, as systems become more complex, an entire toolchain. Choosing a toolchain also means deciding against one or more alternatives. Unfortunately, these decisions are often based on subjective criteria rather than objective facts: personal experience, missing features, anecdotal success stories from other teams, or simply a lack of access to comprehensive information and user requirements.
@@ -70,8 +70,8 @@ Available (but extendable) tools are:
 - Sphinx-Preview
 - Sphinx-Test-Reports – <https://sphinx-test-reports.readthedocs.io/>
 - VS Code RST Preview – <https://marketplace.visualstudio.com/items?itemName=lextudio.restructuredtext>
-- ubCode – <https://useblocks.com/products/ubcode/>
-- ubTrace – <https://useblocks.com/products/ubtrace>
+- ubCode – <https://ubcode.useblocks.com>
+- ubTrace – <https://ubtrace.useblocks.com>
 - ubc – <https://useblocks.com/>
 - ubConnect – <https://useblocks.com/>
 
