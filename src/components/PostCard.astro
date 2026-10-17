@@ -14,7 +14,7 @@ const d = entry.data;
 <a class="post" href={path(lang, `blog/${slugOf(entry.id)}/`)}>
   {d.cover
     ? <Image src={d.cover} alt="" widths={[400, 800]} sizes="(max-width: 760px) 100vw, 360px" class="cover" />
-    : <div class="cover stage"><Image src={monster('danwos-books')} alt="" widths={[240]} sizes="160px" /></div>}
+    : <div class="cover stage"><Image src={monster('danwos-sitting')} alt="" widths={[240]} sizes="160px" /></div>}
   <div class="body">
     <time datetime={d.date.toISOString()}>{formatDate(d.date, lang)}</time>
     <h3>{d.title}</h3>
