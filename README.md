@@ -1,30 +1,61 @@
 # danwos.dev
 
 Website of Daniel Woste / danwos. Static site built with [Astro](https://astro.build),
-deployed to GitHub Pages.
+deployed to GitHub Pages. German is the master language, English is a
+reviewed translation.
 
 Concept, decisions and project facts live in the brain
 (`~/brain/danwos/20_facts/projects/website/`), not in this repository.
 
-## Run
+## Get started
+
+Requirements: Git, Node.js 22 or newer (tested with 24), npm.
 
 ```bash
+git clone git@github.com:danwos/danwos.github.io.git
+cd danwos.github.io
+git switch danwos_new
 npm install
-npm run dev      # http://localhost:4321
-npm run build    # static site in dist/
+npm run dev        # dev server with hot reload: http://localhost:4321
 ```
+
+Other commands:
+
+```bash
+npm run build                # static site in dist/
+npm run preview              # serve dist/ locally: http://localhost:4321
+npm run check:translations   # list English pages whose German master changed
+```
+
+`/` picks the language from the browser; `/de/` and `/en/` open a language
+directly.
 
 ## Structure
 
 | Path | Content |
 |---|---|
 | `src/pages/index.astro` | `/` – picks the language (saved choice → browser → German) |
-| `src/pages/[lang]/` | start page and project pages per language |
-| `src/content/<collection>/<lang>/` | projects and ideas, one Markdown file each |
+| `src/pages/[lang]/` | start page and all pages per language |
+| `src/content/tools/<lang>/` | tools (current and archive), one file each → `/<lang>/tools/` |
+| `src/content/projects/<lang>/` | stories from consulting work → `/<lang>/projects/` (template: `de/_template.md`) |
+| `src/content/views/<lang>/` | views page text → `/<lang>/views/` |
+| `src/content/blog/<lang>/<slug>/` | blog posts → `/<lang>/blog/`, RSS at `/<lang>/rss.xml` |
+| `src/content/ideas/<lang>/` | ideas with problem, solution, tech, status → `/<lang>/ideas/` |
+| `src/content/about/`, `src/content/cv/` | about text and career stations → `/<lang>/about/` |
+| `src/content/legal/<lang>/` | imprint and privacy |
 | `src/i18n/` | languages and UI strings (`de.json` is the master) |
 | `src/styles/tokens.css` | colours, fonts, radii from the danwos branding paper |
-| `src/assets/monsters/` | cut-out monsters, downscaled from the brain masters |
-| `legacy/` | the old Sphinx site, source for the blog migration |
+| `src/assets/monsters/`, `src/assets/people/` | cut-out monsters and portraits, downscaled from the brain |
+| `src/integrations/` | redirects for old Sphinx URLs, dev-only feedback app |
+| `legacy/` | the old Sphinx site, kept until release |
+
+## Languages
+
+German is the master. Every translation stores the hash of its German file
+in `translated_from` (UI strings: `_translated_from`).
+`npm run check:translations` lists outdated translations; the CI runs it on
+every build. A new language: add its code to `src/i18n/locales.mjs`, add
+`src/i18n/<code>.json` and `src/content/*/<code>/`.
 
 ## Feedback
 
@@ -34,15 +65,16 @@ comment; open comments show as numbered pins. Comments land in
 `.feedback/feedback.json` (git-ignored) with page, element, nearby heading,
 viewport and theme – an agent works through them and marks them done.
 
-## Languages
+## Deployment
 
-German is the master. Every other language is a translation of the German
-file and stores its hash in `translated_from` (`_translated_from` in the UI
-strings), so outdated translations can be found.
+`.github/workflows/website.yml` builds every push and pull request and
+deploys to GitHub Pages **only from `main`**. `danwos_new` is never published.
 
 ## Before release
 
+- fill in address and email in `src/content/legal/` (imprint, privacy) and contact
 - remove `<meta name="robots" content="noindex">` in `src/layouts/Base.astro`
-- add `public/CNAME` with `danwos.dev`, set Pages source to "GitHub Actions"
-- imprint and privacy pages
-- redirect pages for old Sphinx URLs, remove `legacy/`
+  and `src/pages/index.astro`, and the draft note in the footer
+- add `public/CNAME` with `danwos.dev`, set DNS, set the Pages source to "GitHub Actions"
+- forward `danwos.de` and `daniel-woste.de` (keeping the path) to `https://danwos.dev`
+- remove `legacy/`, merge `danwos_new` into `main`
