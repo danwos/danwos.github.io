@@ -3,8 +3,9 @@
 title: "Feature-Planung mit Sphinx-Needs"
 summary: "Bei useblocks läuft die Bedarfsplanung für Produkt-Features in Sphinx-Needs – vom Kundenwunsch über das Problem bis zum Feature, zur Roadmap und zu den Aufgaben der Entwicklungsteams."
 industry: "Software-Tools, useblocks (intern)"
-role: "Konzept und Umsetzung"
-order: 40
+period: "2025–2026"
+role: "CPO und Product Owner einer Software-Lösung"
+order: 15
 problem: |
   Kundenwünsche kommen über viele Wege: aus Projekten, Gesprächen, Supportanfragen. Schnell geht dabei verloren, woher ein Wunsch kam, welches Problem dahintersteckt und was am Ende daraus geworden ist.
 
