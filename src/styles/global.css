@@ -54,12 +54,13 @@ code { font: 15px var(--font-mono); background: var(--primary-soft); padding: 1p
 
 /* long-form text from Markdown: blog posts, project pages, legal pages */
 .prose { font-size: 18px }
-.prose h2 { font-size: 30px; margin: 48px 0 12px }
+.prose h2 { font-size: 30px; margin: 48px 0 12px; clear: both }
 .prose h3 { font-size: 22px; margin: 32px 0 8px }
 .prose p, .prose li { max-width: 70ch }
 .prose ul, .prose ol { padding-left: 24px; margin: 0 0 16px }
 .prose li { margin-bottom: 4px }
 .prose img { display: block; width: 100%; height: auto; margin: 24px 0; border-radius: 14px; border: 1px solid var(--line) }
+.prose video { display: block; clear: both; width: 100%; height: auto; margin: 24px 0; border-radius: 14px; border: 1px solid var(--line); background: var(--stage) }
 .prose hr { border: 0; height: 6px; margin: 40px 0; border-radius: 4px; background: var(--stripe) }
 .prose blockquote { margin: 16px 0; padding: 4px 16px; border-left: 4px solid var(--line); color: var(--muted) }
 .prose pre { font: 14px/1.6 var(--font-mono); padding: 16px; border-radius: 12px; overflow: auto; border: 2px solid var(--outline) }

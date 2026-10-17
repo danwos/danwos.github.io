@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import Lightbox from '../components/Lightbox.astro';
 import { t, locales, switchPath, type Lang } from '../i18n';
 
 interface Props { lang: Lang; title?: string; description?: string }
@@ -33,5 +34,6 @@ const site = Astro.site!;
     <Nav lang={lang} />
     <main id="main"><slot /></main>
     <Footer lang={lang} />
+    <Lightbox lang={lang} />
   </body>
 </html>

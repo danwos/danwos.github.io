@@ -114,6 +114,7 @@
     "links": "Links",
     "status": "Stand",
     "role": "Rolle",
+    "pictures": "Bilder",
     "cta": "Interesse an diesem Tool? Lass uns reden."
   },
   "views": {
@@ -138,5 +139,7 @@
     "result": "Ergebnis",
     "tools": "Eingesetzte Tools",
     "read": "Weiterlesen"
-  }
+  },
+  "lightbox": { "open": "Bild vergrößern", "close": "Schließen" },
+  "stage": { "sketch": "Skizze", "mockup": "Mockup", "prototype": "Prototyp", "product": "Produkt" }
 }

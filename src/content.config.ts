@@ -8,9 +8,11 @@ import { z } from 'astro/zod';
 
 // Tools: what Daniel builds – current ones and the archive.
 const tools = defineCollection({
-  loader: glob({ pattern: '*/*.md', base: './src/content/tools' }),
+  loader: glob({ pattern: '*/*.{md,mdx}', base: './src/content/tools' }),
   schema: z.object({
     title: z.string(),
+    subtitle: z.string().optional(), // e.g. what the name stands for
+    pictures: z.enum(['sketch', 'mockup', 'prototype', 'product']).optional(), // how far along the screenshots on the page are
     summary: z.string(),
     era: z.enum(['current', 'archive']),
     status: z.enum(['idea', 'concept', 'alpha', 'beta', 'done', 'cancelled']),

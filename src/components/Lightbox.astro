@@ -1,0 +1,44 @@
+---
+import { t, type Lang } from '../i18n';
+
+// Click on a picture in running text (screenshots, photos) to see it almost full screen.
+// Cut-out monsters (.scene) stay as they are.
+interface Props { lang: Lang }
+const s = t(Astro.props.lang);
+---
+<dialog class="lightbox" aria-label={s.lightbox.open} data-open-label={s.lightbox.open}>
+  <button class="close" type="button" aria-label={s.lightbox.close}>×</button>
+  <img alt="" />
+  <p></p>
+</dialog>
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>('dialog.lightbox');
+  if (dialog) {
+    const big = dialog.querySelector('img')!;
+    const caption = dialog.querySelector('p')!;
+    const label = dialog.dataset.openLabel ?? '';
+    const show = (img: HTMLImageElement) => {
+      big.src = img.dataset.full || img.currentSrc || img.src;
+      big.alt = img.alt;
+      caption.textContent = img.alt;
+      dialog.showModal();
+    };
+    document.querySelectorAll<HTMLImageElement>('.prose img:not(.scene)').forEach((img) => {
+      img.classList.add('zoomable');
+      img.tabIndex = 0;
+      img.setAttribute('role', 'button');
+      img.setAttribute('aria-label', `${label}: ${img.alt}`);
+      img.addEventListener('click', () => show(img));
+      img.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); show(img); } });
+    });
+    dialog.addEventListener('click', () => dialog.close());
+  }
+</script>
+<style is:global>
+  .prose img.zoomable { cursor: zoom-in }
+  dialog.lightbox { max-width: 96vw; max-height: 96vh; padding: 0; border: 0; background: transparent; overflow: visible; cursor: zoom-out }
+  dialog.lightbox::backdrop { background: rgba(10, 18, 28, .86) }
+  dialog.lightbox img { display: block; max-width: 96vw; max-height: 88vh; width: auto; height: auto; border-radius: 12px; margin: 0 auto }
+  dialog.lightbox p { margin: 10px auto 0; max-width: 80ch; text-align: center; color: #E8EDF3; font-size: 15px }
+  dialog.lightbox .close { position: fixed; top: 14px; right: 18px; width: 40px; height: 40px; border-radius: 50%; border: 2px solid #E8EDF3; background: rgba(10, 18, 28, .6); color: #E8EDF3; font-size: 24px; line-height: 1; cursor: pointer }
+</style>
