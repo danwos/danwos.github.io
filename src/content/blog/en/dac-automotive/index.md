@@ -5,8 +5,9 @@ summary: "The best overview I know of docs-as-code in a professional automotive 
 tags: [docs-as-code, automotive, aspice]
 cover: ../../../../assets/blog/dac-automotive/03_dac_automotive.png
 original: en
+author: "Dr. Momcilo Krunic"
 legacy: posts/2024/Documentation_as_Code_in_Automotive_System_Software_Engineering
-translated_from: "f102f39b30a7"
+translated_from: "e76bc58b0dd9"
 ---
 
 A while ago I came across a paper by Dr. Momcilo Krunic from 2023, in which he describes a docs-as-code implementation for an ASPICE-compliant software project at an automotive supplier.

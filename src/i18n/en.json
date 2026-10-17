@@ -1,5 +1,5 @@
 {
-  "_translated_from": "4ad42b7c81c8",
+  "_translated_from": "bd54837b7550",
   "meta": {
     "title": "danwos – Daniel Woste",
     "description": "Daniel Woste builds SW tools for large teams: docs-as-code, AI, test quality, decisions and knowledge."
@@ -68,7 +68,10 @@
     "minutes": "min read",
     "tags": "Topics",
     "rss": "RSS feed",
-    "pageLead": "Everything I've written about docs-as-code, quality and tools."
+    "pageLead": "Everything I've written about docs-as-code, quality and tools.",
+    "writtenBy": "Written by",
+    "publishedBy": "Published by",
+    "authorBio": "I build SW tools for large teams – around docs-as-code, AI, quality and decisions. I founded useblocks and helped build Sphinx-Needs."
   },
   "about": {
     "title": "About me",

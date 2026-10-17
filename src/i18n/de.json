@@ -67,7 +67,10 @@
     "minutes": "Min. Lesezeit",
     "tags": "Themen",
     "rss": "RSS-Feed",
-    "pageLead": "Alles, was ich zu Docs-as-Code, Qualität und Tools geschrieben habe."
+    "pageLead": "Alles, was ich zu Docs-as-Code, Qualität und Tools geschrieben habe.",
+    "writtenBy": "Geschrieben von",
+    "publishedBy": "Veröffentlicht von",
+    "authorBio": "Ich baue SW-Tools für große Teams – rund um Docs-as-Code, AI, Qualität und Entscheidungen. Ich habe useblocks gegründet und Sphinx-Needs mitgebaut."
   },
   "about": {
     "title": "Über mich",

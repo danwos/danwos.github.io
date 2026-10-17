@@ -50,6 +50,7 @@ const blog = defineCollection({
       tags: z.array(z.string()).default([]),
       cover: image().optional(),
       original: z.enum(['de', 'en']).default('de'),
+      author: z.string().optional(), // only for posts by someone else; Daniel published them
       legacy: z.string().optional(),
       draft: z.boolean().default(false),
       translated_from: z.string().optional(),

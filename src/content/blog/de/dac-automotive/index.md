@@ -5,6 +5,7 @@ summary: "Der beste Überblick, den ich zu Docs-as-Code in einem professionellen
 tags: [docs-as-code, automotive, aspice]
 cover: ../../../../assets/blog/dac-automotive/03_dac_automotive.png
 original: en
+author: "Dr. Momcilo Krunic"
 legacy: posts/2024/Documentation_as_Code_in_Automotive_System_Software_Engineering
 ---
 

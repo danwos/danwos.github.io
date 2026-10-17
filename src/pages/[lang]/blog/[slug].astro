@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import { getCollection, render } from 'astro:content';
 import Base from '../../../layouts/Base.astro';
+import AuthorBox from '../../../components/AuthorBox.astro';
 import { langOf, slugOf } from '../../../lib/content';
 import { formatDate, readingMinutes } from '../../../lib/format';
 import { t, path, type Lang } from '../../../i18n';
@@ -41,6 +42,7 @@ const showOriginal = lang === 'de' && d.original === 'en';
         <p class="original">{s.blog.originalEn} <a href={path('en', `blog/${slug}/`)} hreflang="en">{s.blog.originalLink}</a></p>
       )}
       <Content />
+      <AuthorBox lang={lang} externalAuthor={d.author} />
       <p class="end"><a class="btn btn-secondary" href={path(lang, 'blog/')}>{s.blog.back}</a></p>
     </div>
   </article>

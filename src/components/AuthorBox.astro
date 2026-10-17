@@ -1,0 +1,33 @@
+---
+// End of every blog post: who wrote it and how to get in touch.
+// Posts by another author (frontmatter `author`) say "published by" instead.
+import { Image } from 'astro:assets';
+import portrait from '../assets/people/daniel-illustrated.webp';
+import { t, path, type Lang } from '../i18n';
+
+interface Props { lang: Lang; externalAuthor?: string }
+const { lang, externalAuthor } = Astro.props;
+const s = t(lang);
+---
+<aside class="author">
+  <Image src={portrait} alt={s.about.photoAlt} widths={[120, 240]} sizes="120px" class="pic" />
+  <div>
+    <p class="by">{externalAuthor ? s.blog.publishedBy : s.blog.writtenBy}</p>
+    <p class="name">Daniel Woste</p>
+    <p class="bio">{s.blog.authorBio}</p>
+    <p class="links">
+      <a href={path(lang, 'about/')}>{s.about.more} →</a>
+      <a href={`${path(lang)}#contact`}>{s.contact.title} →</a>
+    </p>
+  </div>
+</aside>
+<style>
+  .author { display: grid; grid-template-columns: 120px 1fr; gap: 20px; align-items: center; margin-top: 48px; padding: 20px;
+    background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--primary); border-radius: var(--radius) }
+  .author :global(.pic) { width: 120px; height: auto; margin: 0; border: 0; border-radius: 0 }
+  .by { font: 600 12px var(--font-body); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 }
+  .name { font: 800 22px var(--font-display); margin: 2px 0 6px }
+  .bio { font-size: 16px; color: var(--muted); margin: 0 0 10px }
+  .links { display: flex; gap: 20px; flex-wrap: wrap; margin: 0; font-weight: 600 }
+  @media (max-width: 560px) { .author { grid-template-columns: 1fr } .author :global(.pic) { width: 96px } }
+</style>
