@@ -2,12 +2,12 @@
 title: "Docs-as-code for an ADAS project"
 summary: "In the central team of a Tier-1 supplier, I introduced docs-as-code in an ADAS project for an OEM – from data migration, tooling and CI to processes, monitoring and training."
 industry: "Automotive, Tier-1 supplier and OEM, advanced driver assistance systems (ADAS)"
-team: "ADAS project with about 750 people at the Tier-1 and as many at the OEM; central docs-as-code team"
+team: "ADAS project with up to 1,500 people at the Tier-1 and OEM; central docs-as-code team"
 period: "2021–2024"
 role: "Consulting, tool development, CI, training and support"
 order: 30
 problem: |
-  An ADAS project for an OEM, with about 750 people on each side. Requirements and tickets lived in classic requirements and ticket tools, and those were not going away overnight.
+  An ADAS project for an OEM, with up to 1,500 people at the Tier-1 and OEM combined. Requirements and tickets lived in classic requirements and ticket tools, and those were not going away overnight.
 
   Docs-as-code was to become the base for requirements, specifications and evidence. That took more than a tool: legacy data, interfaces to the existing tools, a CI that stays fast at this size, and teams willing to come along.
 approach: |
@@ -21,5 +21,5 @@ result: |
 
   The improvements to Sphinx, Sphinx-Needs and Sphinx-Test-Reports went into the open-source projects, so they help others too.
 tools: [sphinx-needs, sphinx-test-reports]
-translated_from: "7101aa9fdd00"
+translated_from: "35978da11014"
 ---
