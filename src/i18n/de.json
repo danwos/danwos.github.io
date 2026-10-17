@@ -13,7 +13,8 @@
     "theme": "Hell oder dunkel",
     "language": "Sprache",
     "skip": "Zum Inhalt",
-    "archive": "Archiv"
+    "archive": "Archiv",
+    "visualizations": "Visualisierungen"
   },
   "hero": {
     "eyebrow": "Docs-as-Code · AI · SW-Tools",
