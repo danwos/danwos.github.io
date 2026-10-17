@@ -1,5 +1,5 @@
 {
-  "_translated_from": "bd54837b7550",
+  "_translated_from": "fca7f093cf89",
   "meta": {
     "title": "danwos – Daniel Woste",
     "description": "Daniel Woste builds SW tools for large teams: docs-as-code, AI, test quality, decisions and knowledge."
@@ -83,6 +83,7 @@
     "photoAlt": "Illustrated portrait of Daniel Woste with the danwos monster on his shoulder",
     "more": "More about me",
     "cv": "Career",
+    "volunteer": "Volunteering",
     "cta": "Want to work together? Let's talk.",
     "deskAlt": "Daniel Woste at his desk, next to figurines of the danwos monster and deciwa"
   },

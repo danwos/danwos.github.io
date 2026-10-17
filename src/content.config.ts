@@ -86,7 +86,8 @@ const views = defineCollection({
   }),
 });
 
-// About page: longer text per language, plus CV stations (one file each, newest first by order).
+// About page: longer text per language, plus CV stations (one file each, newest first by order);
+// `kind: volunteer` stations get their own list.
 const about = defineCollection({
   loader: glob({ pattern: '*/*.md', base: './src/content/about' }),
   schema: z.object({ title: z.string(), translated_from: z.string().optional() }),
@@ -98,6 +99,7 @@ const cv = defineCollection({
     period: z.string().default(''),
     role: z.string(),
     org: z.string(),
+    kind: z.enum(['work', 'volunteer']).default('work'),
     order: z.number().default(100),
     translated_from: z.string().optional(),
   }),
