@@ -4,7 +4,7 @@ import Hero from '../../components/Hero.astro';
 import ToolCard from '../../components/ToolCard.astro';
 import Split from '../../components/Split.astro';
 import { Image } from 'astro:assets';
-import photo from '../../assets/people/daniel-woste.png';
+import portrait from '../../assets/people/daniel-illustrated.webp';
 import PostCard from '../../components/PostCard.astro';
 import { toolsFor, projectsFor, postsFor, slugOf } from '../../lib/content';
 import { t, path, locales, type Lang } from '../../i18n';
@@ -95,7 +95,7 @@ const flip = () => side++ % 2 === 0;
   <section id="about" class="section">
     <div class="wrap">
       <div class:list={['split', { rev: flip() }]}>
-        <div class="img photo"><Image src={photo} alt={s.about.photoAlt} widths={[256]} sizes="240px" /></div>
+        <div class="img portrait"><Image src={portrait} alt={s.about.photoAlt} widths={[300, 600]} sizes="300px" /></div>
         <div>
           <h2>{s.about.title}</h2>
           {s.about.text.map((p) => <p>{p}</p>)}
@@ -131,6 +131,6 @@ const flip = () => side++ % 2 === 0;
   .pteaser p { color: var(--muted); font-size: 15px }
   .pteaser .more { margin-top: auto; color: var(--primary); font-weight: 600 }
   .posts { margin-top: 32px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) }
-  .photo :global(img) { border-radius: 50%; border: 2px solid var(--outline); box-shadow: 4px 4px 0 var(--shadow); max-width: 240px }
+  .portrait :global(img) { max-width: 300px; max-height: 300px }
   .actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 20px }
 </style>
