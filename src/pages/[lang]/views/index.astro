@@ -11,16 +11,16 @@ export function getStaticPaths() {
 
 const lang = Astro.params.lang as Lang;
 const s = t(lang);
-// Body text comes from src/content/visualizations/<lang>/index.md once there is content.
-const [entry] = await getCollection('visualizations', (e) => langOf(e.id) === lang && !!e.body?.trim());
+// Body text comes from src/content/views/<lang>/index.md once there is content.
+const [entry] = await getCollection('views', (e) => langOf(e.id) === lang && !!e.body?.trim());
 const { Content } = entry ? await render(entry) : { Content: null };
 ---
-<Base lang={lang} title={s.viz.title} description={s.viz.lead}>
+<Base lang={lang} title={s.views.title} description={s.views.lead}>
   <section class="section head">
     <div class="wrap">
-      <Split monster="square-arms" alt={s.viz.alt}>
-        <h1>{s.viz.title}</h1>
-        <p class="lead">{s.viz.lead}</p>
+      <Split monster="square-arms" alt={s.views.alt}>
+        <h1>{s.views.title}</h1>
+        <p class="lead">{s.views.lead}</p>
       </Split>
     </div>
   </section>

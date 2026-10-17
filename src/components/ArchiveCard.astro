@@ -3,12 +3,12 @@ import type { CollectionEntry } from 'astro:content';
 import { slugOf } from '../lib/content';
 import { t, path, type Lang } from '../i18n';
 
-interface Props { lang: Lang; entry: CollectionEntry<'projects'> }
+interface Props { lang: Lang; entry: CollectionEntry<'tools'> }
 const { lang, entry } = Astro.props;
 const s = t(lang);
 const d = entry.data;
 ---
-<a class="acard" href={path(lang, `projects/${slugOf(entry.id)}/`)}>
+<a class="acard" href={path(lang, `tools/${slugOf(entry.id)}/`)}>
   <h3>{d.title}</h3>
   <p>{d.summary}</p>
   <span class="roles">{d.role.map((r) => s.role[r]).join(' · ')}</span>

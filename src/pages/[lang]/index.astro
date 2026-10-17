@@ -1,13 +1,12 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Hero from '../../components/Hero.astro';
-import ProjectCard from '../../components/ProjectCard.astro';
-import ArchiveCard from '../../components/ArchiveCard.astro';
+import ToolCard from '../../components/ToolCard.astro';
 import Split from '../../components/Split.astro';
 import { Image } from 'astro:assets';
 import photo from '../../assets/people/daniel-woste.png';
 import PostCard from '../../components/PostCard.astro';
-import { projectsFor, postsFor } from '../../lib/content';
+import { toolsFor, projectsFor, postsFor } from '../../lib/content';
 import { t, path, locales, type Lang } from '../../i18n';
 
 export function getStaticPaths() {
@@ -16,37 +15,52 @@ export function getStaticPaths() {
 
 const lang = Astro.params.lang as Lang;
 const s = t(lang);
-const projects = await projectsFor(lang);
-const current = projects.filter((p) => p.data.era === 'current');
-const archive = projects.filter((p) => p.data.era === 'archive');
+const current = (await toolsFor(lang)).filter((p) => p.data.era === 'current');
+const hasProjects = (await projectsFor(lang)).length > 0;
 const latest = (await postsFor(lang)).slice(0, 3);
+// Picture and text alternate sides from section to section, also when a section is hidden.
+let side = 0;
+const flip = () => side++ % 2 === 0;
 ---
 <Base lang={lang}>
   <Hero lang={lang} />
 
-  <section id="projects" class="section">
+  <section id="tools" class="section">
     <div class="wrap">
-      <h2>{s.projects.title}</h2>
-      <p class="lead">{s.projects.lead}</p>
+      <h2>{s.tools.title}</h2>
+      <p class="lead">{s.tools.lead}</p>
       <div class="grid cards">
-        {current.map((entry) => <ProjectCard lang={lang} entry={entry} />)}
+        {current.map((entry) => <ToolCard lang={lang} entry={entry} />)}
       </div>
+      <p class="more"><a class="btn btn-secondary" href={path(lang, 'tools/')}>{s.tools.all} →</a></p>
     </div>
   </section>
 
-  <section id="visualizations" class="section">
+  {hasProjects && (
+    <section id="projects" class="section">
+      <div class="wrap">
+        <Split monster="danwos" alt={s.projects.alt} reverse={flip()}>
+          <h2>{s.projects.title}</h2>
+          <p class="lead">{s.projects.lead}</p>
+          <a class="btn btn-secondary" href={path(lang, 'projects/')}>{s.projects.all} →</a>
+        </Split>
+      </div>
+    </section>
+  )}
+
+  <section id="views" class="section">
     <div class="wrap">
-      <Split monster="square-arms" alt={s.viz.alt} reverse>
-        <h2>{s.viz.title}</h2>
-        <p class="lead">{s.viz.lead}</p>
-        <a class="btn btn-secondary" href={path(lang, 'visualizations/')}>{s.viz.more} →</a>
+      <Split monster="square-arms" alt={s.views.alt} reverse={flip()}>
+        <h2>{s.views.title}</h2>
+        <p class="lead">{s.views.lead}</p>
+        <a class="btn btn-secondary" href={path(lang, 'views/')}>{s.views.more} →</a>
       </Split>
     </div>
   </section>
 
   <section id="blog" class="section">
     <div class="wrap">
-      <Split monster="danwos-sitting" alt={s.blog.alt}>
+      <Split monster="danwos-sitting" alt={s.blog.alt} reverse={flip()}>
         <h2>{s.blog.title}</h2>
         <p class="lead">{s.blog.lead}</p>
         <a class="btn btn-secondary" href={path(lang, 'blog/')}>{s.blog.all} →</a>
@@ -59,7 +73,7 @@ const latest = (await postsFor(lang)).slice(0, 3);
 
   <section id="ideas" class="section">
     <div class="wrap">
-      <Split monster="baby" alt={s.ideas.alt} reverse>
+      <Split monster="baby" alt={s.ideas.alt} reverse={flip()}>
         <h2>{s.ideas.title}</h2>
         <p class="lead">{s.ideas.lead}</p>
         <a class="btn btn-secondary" href={path(lang, 'ideas/')}>{s.ideas.all} →</a>
@@ -67,21 +81,9 @@ const latest = (await postsFor(lang)).slice(0, 3);
     </div>
   </section>
 
-  <section id="archive" class="section">
-    <div class="wrap">
-      <Split monster="grandma" alt={s.archive.alt}>
-        <h2>{s.archive.title}</h2>
-        <p class="lead">{s.archive.lead}</p>
-      </Split>
-      <div class="grid archive">
-        {archive.map((entry) => <ArchiveCard lang={lang} entry={entry} />)}
-      </div>
-    </div>
-  </section>
-
   <section id="about" class="section">
     <div class="wrap">
-      <div class="split rev">
+      <div class:list={['split', { rev: flip() }]}>
         <div class="img photo"><Image src={photo} alt={s.about.photoAlt} widths={[256]} sizes="240px" /></div>
         <div>
           <h2>{s.about.title}</h2>
@@ -93,7 +95,7 @@ const latest = (await postsFor(lang)).slice(0, 3);
 
   <section id="contact" class="section">
     <div class="wrap">
-      <Split monster="two-heads" alt={s.contact.alt}>
+      <Split monster="two-heads" alt={s.contact.alt} reverse={flip()}>
         <h2>{s.contact.title}</h2>
         <p class="lead">{s.contact.lead}</p>
         <div class="actions">
@@ -107,7 +109,7 @@ const latest = (await postsFor(lang)).slice(0, 3);
 
 <style>
   .cards { margin-top: 32px; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)) }
-  .archive { margin-top: 32px }
+  .more { margin-top: 24px }
   .posts { margin-top: 32px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) }
   .photo :global(img) { border-radius: 50%; border: 2px solid var(--outline); box-shadow: 4px 4px 0 var(--shadow); max-width: 240px }
   .actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 20px }

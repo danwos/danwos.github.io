@@ -13,21 +13,16 @@
     "theme": "Hell oder dunkel",
     "language": "Sprache",
     "skip": "Zum Inhalt",
-    "archive": "Archiv",
-    "visualizations": "Visualisierungen"
+    "tools": "Tools",
+    "views": "Views"
   },
   "hero": {
     "eyebrow": "Docs-as-Code · AI · SW-Tools",
     "title": "SW-Tools, hilfreich as hell – und eine Crew aus Monstern.",
     "lead": "Ich bin Daniel. Ich baue SW-Tools, mit denen große Teams ihr Wissen, ihre Qualität und ihre Entscheidungen im Griff behalten.",
-    "primary": "Projekte ansehen",
+    "primary": "Tools ansehen",
     "secondary": "Mit mir arbeiten",
     "crewAlt": "Die danwos-Crew: fünf Monster, eines für danwos und eines für jedes aktuelle Projekt"
-  },
-  "projects": {
-    "title": "Woran ich gerade arbeite",
-    "lead": "Neue Projekte – manche schon im Code, manche noch eine Idee.",
-    "more": "Mehr erfahren"
   },
   "status": {
     "idea": "Idee",
@@ -93,23 +88,46 @@
     "lead": "Du hast ein Problem, das zu einem dieser Projekte passt, oder eine Idee, die nach einem Monster ruft? Schreib mir.",
     "alt": "Das Monster mit zwei Köpfen steht für Kontakt"
   },
-  "project": {
-    "back": "Zur Übersicht",
-    "wip": "Diese Seite entsteht gerade. Hier folgen das Problem, meine Motivation und wie es funktioniert.",
-    "links": "Links",
-    "status": "Stand",
-    "role": "Rolle",
-    "cta": "Interesse an diesem Projekt? Lass uns reden."
-  },
   "footer": {
     "draft": "Entwurf – noch nicht veröffentlicht.",
     "imprint": "Impressum",
     "privacy": "Datenschutz"
   },
-  "viz": {
-    "title": "Visualisierungen",
-    "lead": "Gute Grafiken machen komplexe Zusammenhänge in Sekunden klar, schlechte verstecken sie. Mich beschäftigt, wie man Informationen aus großen Projekten – Anforderungen, Tests, Abhängigkeiten, Entscheidungen – so zeigt, dass Menschen damit arbeiten können. Meine Gedanken dazu, mit Beispielen.",
-    "more": "Zu den Visualisierungen",
-    "alt": "Das eckige Monster mit langen Armen steht für Visualisierungen"
+  "tools": {
+    "title": "Tools",
+    "lead": "Woran ich gerade arbeite – manche Tools schon im Code, manche noch eine Idee.",
+    "more": "Mehr erfahren",
+    "all": "Alle Tools und Archiv",
+    "pageLead": "Was ich baue – und was ich gebaut habe."
+  },
+  "tool": {
+    "back": "Alle Tools",
+    "wip": "Diese Seite entsteht gerade. Hier folgen das Problem, meine Motivation und wie es funktioniert.",
+    "links": "Links",
+    "status": "Stand",
+    "role": "Rolle",
+    "cta": "Interesse an diesem Tool? Lass uns reden."
+  },
+  "views": {
+    "title": "Views",
+    "lead": "Gute Darstellungen machen komplexe Zusammenhänge in Sekunden klar, schlechte verstecken sie. Mich beschäftigt, wie man Informationen, Datenstrukturen und Workflows aus großen Projekten – Anforderungen, Tests, Abhängigkeiten, Entscheidungen – so zeigt, dass Menschen damit arbeiten können. Meine Gedanken dazu, mit Beispielen.",
+    "more": "Zu den Views",
+    "alt": "Das eckige Monster mit langen Armen steht für Views"
+  },
+  "projects": {
+    "title": "Projekte",
+    "lead": "Große Teams, schwierige Ausgangslagen – und was wir daraus gemacht haben.",
+    "all": "Alle Projekte",
+    "alt": "Ein Monster steht für die Projekte",
+    "toc": "Inhalt",
+    "context": "Kontext",
+    "industry": "Branche",
+    "team": "Team",
+    "period": "Zeitraum",
+    "role": "Meine Rolle",
+    "problem": "Problem",
+    "approach": "Was wir gemacht haben",
+    "result": "Ergebnis",
+    "tools": "Eingesetzte Tools"
   }
 }

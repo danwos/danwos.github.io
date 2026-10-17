@@ -6,8 +6,9 @@ import { z } from 'astro/zod';
 // German files are the master; translations carry `translated_from`,
 // the hash of the German file they were made from.
 
-const projects = defineCollection({
-  loader: glob({ pattern: '*/*.md', base: './src/content/projects' }),
+// Tools: what Daniel builds – current ones and the archive.
+const tools = defineCollection({
+  loader: glob({ pattern: '*/*.md', base: './src/content/tools' }),
   schema: z.object({
     title: z.string(),
     summary: z.string(),
@@ -55,9 +56,29 @@ const blog = defineCollection({
     }),
 });
 
-// Visualizations: one page per language for now; concrete content follows.
-const visualizations = defineCollection({
-  loader: glob({ pattern: '*/*.md', base: './src/content/visualizations' }),
+// Projects: stories from consulting work, anonymized unless the client agreed.
+const projects = defineCollection({
+  loader: glob({ pattern: '*/*.md', base: './src/content/projects' }),
+  schema: z.object({
+    title: z.string(),
+    summary: z.string(),
+    industry: z.string(),
+    team: z.string().optional(),
+    period: z.string().optional(),
+    role: z.string(),
+    order: z.number().default(100),
+    problem: z.string(),
+    approach: z.string(),
+    result: z.string(),
+    tools: z.array(z.string()).default([]), // slugs of entries in the tools collection
+    draft: z.boolean().default(false),
+    translated_from: z.string().optional(),
+  }),
+});
+
+// Views: thoughts on showing information, data structures and workflows; one page per language for now.
+const views = defineCollection({
+  loader: glob({ pattern: '*/*.md', base: './src/content/views' }),
   schema: z.object({
     title: z.string(),
     translated_from: z.string().optional(),
@@ -73,4 +94,4 @@ const legal = defineCollection({
   }),
 });
 
-export const collections = { projects, ideas, blog, visualizations, legal };
+export const collections = { tools, projects, ideas, blog, views, legal };

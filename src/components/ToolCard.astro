@@ -5,12 +5,12 @@ import { monster } from '../lib/monsters';
 import { slugOf } from '../lib/content';
 import { t, path, type Lang } from '../i18n';
 
-interface Props { lang: Lang; entry: CollectionEntry<'projects'> }
+interface Props { lang: Lang; entry: CollectionEntry<'tools'> }
 const { lang, entry } = Astro.props;
 const s = t(lang);
 const d = entry.data;
 ---
-<a class="pcard" href={path(lang, `projects/${slugOf(entry.id)}/`)}>
+<a class="pcard" href={path(lang, `tools/${slugOf(entry.id)}/`)}>
   <div class="art">
     {d.monster && <Image src={monster(d.monster)} alt="" widths={[240, 480]} sizes="240px" />}
   </div>
@@ -18,7 +18,7 @@ const d = entry.data;
     <span class={`tag ${d.status}`}>{s.status[d.status]}</span>
     <h3>{d.title}</h3>
     <p>{d.summary}</p>
-    <span class="more">{s.projects.more} →</span>
+    <span class="more">{s.tools.more} →</span>
   </div>
 </a>
 <style>

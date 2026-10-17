@@ -2,15 +2,20 @@
 import logoLight from '../assets/logo/logo-horizontal.svg';
 import logoDark from '../assets/logo/logo-horizontal-dark.svg';
 import { t, path, locales, switchPath, type Lang } from '../i18n';
+import { projectsFor } from '../lib/content';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const s = t(lang);
 const home = path(lang);
 const links = [
-  ['projects', s.nav.projects], ['visualizations', s.nav.visualizations], ['blog', s.nav.blog],
-  ['ideas', s.nav.ideas], ['archive', s.nav.archive], ['about', s.nav.about], ['contact', s.nav.contact],
+  ['tools', s.nav.tools], ['projects', s.nav.projects], ['views', s.nav.views], ['blog', s.nav.blog],
+  ['ideas', s.nav.ideas], ['about', s.nav.about], ['contact', s.nav.contact],
 ] as const;
+// Pages of their own; the rest are sections of the start page. Projects show up once there is one.
+const pages = ['tools', 'projects', 'views', 'blog', 'ideas'];
+const hasProjects = (await projectsFor(lang)).length > 0;
+const shown = links.filter(([id]) => id !== 'projects' || hasProjects);
 ---
 <header class="topbar">
   <nav class="in" aria-label="danwos">
@@ -20,7 +25,7 @@ const links = [
     </a>
     <button class="menu" type="button" aria-expanded="false" aria-controls="nav-links">{s.nav.menu}</button>
     <ul id="nav-links" class="links">
-      {links.map(([id, label]) => <li><a href={id === 'blog' || id === 'ideas' || id === 'visualizations' ? `${home}${id}/` : `${home}#${id}`}>{label}</a></li>)}
+      {shown.map(([id, label]) => <li><a href={pages.includes(id) ? `${home}${id}/` : `${home}#${id}`}>{label}</a></li>)}
     </ul>
     <div class="tools">
       <ul class="langs" aria-label={s.nav.language}>

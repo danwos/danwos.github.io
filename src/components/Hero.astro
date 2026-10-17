@@ -6,7 +6,7 @@ import { t, path, type Lang } from '../i18n';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const s = t(lang);
-// The group appears only on danwos-level pages: danwos in front, the current projects around it.
+// The group appears only on danwos-level pages: danwos in front, the current tools around it.
 const crew = [
   { name: 'monsterbrain', cls: 'm1' }, { name: 'deciwa', cls: 'm2' },
   { name: 'quawa', cls: 'm3' }, { name: 'faktwerk', cls: 'm4' }, { name: 'danwos', cls: 'lead' },
@@ -19,7 +19,7 @@ const crew = [
       <h1>{s.hero.title}</h1>
       <p class="lead">{s.hero.lead}</p>
       <div class="actions">
-        <a class="btn btn-primary" href={`${path(lang)}#projects`}>{s.hero.primary}</a>
+        <a class="btn btn-primary" href={`${path(lang)}#tools`}>{s.hero.primary}</a>
         <a class="btn btn-secondary" href={`${path(lang)}#contact`}>{s.hero.secondary}</a>
       </div>
     </div>

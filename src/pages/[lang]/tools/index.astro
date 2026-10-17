@@ -1,0 +1,44 @@
+---
+import Base from '../../../layouts/Base.astro';
+import ToolCard from '../../../components/ToolCard.astro';
+import ArchiveCard from '../../../components/ArchiveCard.astro';
+import Split from '../../../components/Split.astro';
+import { toolsFor } from '../../../lib/content';
+import { t, locales, type Lang } from '../../../i18n';
+
+export function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+const s = t(lang);
+const tools = await toolsFor(lang);
+const current = tools.filter((p) => p.data.era === 'current');
+const archive = tools.filter((p) => p.data.era === 'archive');
+---
+<Base lang={lang} title={s.tools.title} description={s.tools.pageLead}>
+  <section class="section">
+    <div class="wrap">
+      <h1>{s.tools.title}</h1>
+      <p class="lead">{s.tools.pageLead}</p>
+      <div class="grid cards">
+        {current.map((entry) => <ToolCard lang={lang} entry={entry} />)}
+      </div>
+    </div>
+  </section>
+  <section id="archive" class="section">
+    <div class="wrap">
+      <Split monster="grandma" alt={s.archive.alt} reverse>
+        <h2>{s.archive.title}</h2>
+        <p class="lead">{s.archive.lead}</p>
+      </Split>
+      <div class="grid archive">
+        {archive.map((entry) => <ArchiveCard lang={lang} entry={entry} />)}
+      </div>
+    </div>
+  </section>
+</Base>
+<style>
+  .cards { margin-top: 32px; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)) }
+  .archive { margin-top: 32px }
+</style>

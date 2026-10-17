@@ -7,7 +7,7 @@ import { langOf, slugOf } from '../../../lib/content';
 import { t, path, type Lang } from '../../../i18n';
 
 export async function getStaticPaths() {
-  const entries = await getCollection('projects');
+  const entries = await getCollection('tools');
   return entries.map((entry) => ({ params: { lang: langOf(entry.id), slug: slugOf(entry.id) }, props: { entry } }));
 }
 
@@ -15,7 +15,7 @@ const { entry } = Astro.props;
 const lang = Astro.params.lang as Lang;
 const s = t(lang);
 const d = entry.data;
-// Archived projects all share the grandma; a current project shows only its own monster.
+// Archived tools all share the grandma; a current tool shows only its own monster.
 const art = d.era === 'archive' ? 'grandma' : d.monster;
 const { Content } = await render(entry);
 const empty = !entry.body?.trim();
@@ -25,12 +25,12 @@ const empty = !entry.body?.trim();
     <div class="wrap split">
       <div class="img">{art && <Image src={monster(art)} alt="" widths={[260, 520]} sizes="260px" loading="eager" />}</div>
       <div>
-        <a class="back" href={`${path(lang)}#${d.era === 'archive' ? 'archive' : 'projects'}`}>← {s.project.back}</a>
+        <a class="back" href={path(lang, `tools/${d.era === 'archive' ? '#archive' : ''}`)}>← {s.tool.back}</a>
         <h1>{d.title}</h1>
         <p class="lead">{d.summary}</p>
         <p class="meta">
           <span class={`tag ${d.status}`}>{s.status[d.status]}</span>
-          {d.role.length > 0 && <span class="muted">{s.project.role}: {d.role.map((r) => s.role[r]).join(', ')}</span>}
+          {d.role.length > 0 && <span class="muted">{s.tool.role}: {d.role.map((r) => s.role[r]).join(', ')}</span>}
           {d.period && <span class="muted">{d.period}</span>}
         </p>
       </div>
@@ -38,14 +38,14 @@ const empty = !entry.body?.trim();
   </section>
   <section class="section">
     <div class="wrap prose">
-      {empty ? <p class="wip">{s.project.wip}</p> : <Content />}
+      {empty ? <p class="wip">{s.tool.wip}</p> : <Content />}
       {d.links.length > 0 && (
         <>
-          <h2>{s.project.links}</h2>
+          <h2>{s.tool.links}</h2>
           <ul>{d.links.map((l) => <li><a href={l.url}>{l.label}</a></li>)}</ul>
         </>
       )}
-      <p class="cta"><a class="btn btn-primary" href={`${path(lang)}#contact`}>{s.project.cta}</a></p>
+      <p class="cta"><a class="btn btn-primary" href={`${path(lang)}#contact`}>{s.tool.cta}</a></p>
     </div>
   </section>
 </Base>

@@ -1,5 +1,5 @@
 {
-  "_translated_from": "5a1a3fc52874",
+  "_translated_from": "52db5ec4ea71",
   "meta": {
     "title": "danwos – Daniel Woste",
     "description": "Daniel Woste builds SW tools for large teams: docs-as-code, AI, test quality, decisions and knowledge."
@@ -14,21 +14,16 @@
     "theme": "Light or dark",
     "language": "Language",
     "skip": "Skip to content",
-    "archive": "Archive",
-    "visualizations": "Visualizations"
+    "tools": "Tools",
+    "views": "Views"
   },
   "hero": {
     "eyebrow": "Docs-as-code · AI · SW tools",
     "title": "SW tools, helpful as hell – and a crew of monsters.",
     "lead": "I'm Daniel. I build SW tools that help large teams keep their knowledge, their quality and their decisions under control.",
-    "primary": "See the projects",
+    "primary": "See the tools",
     "secondary": "Work with me",
     "crewAlt": "The danwos crew: five monsters, one for danwos and one for each current project"
-  },
-  "projects": {
-    "title": "What I'm working on",
-    "lead": "New projects – some already in code, some still an idea.",
-    "more": "Learn more"
   },
   "status": {
     "idea": "Idea",
@@ -94,23 +89,46 @@
     "lead": "You have a problem that fits one of these projects, or an idea that calls for a monster? Write to me.",
     "alt": "The two-headed monster stands for contact"
   },
-  "project": {
-    "back": "Back to overview",
-    "wip": "This page is in the making. The problem, my motivation and how it works follow here.",
-    "links": "Links",
-    "status": "Status",
-    "role": "Role",
-    "cta": "Interested in this project? Let's talk."
-  },
   "footer": {
     "draft": "Draft – not published yet.",
     "imprint": "Imprint",
     "privacy": "Privacy"
   },
-  "viz": {
-    "title": "Visualizations",
-    "lead": "Good graphics make complex relations clear in seconds; bad ones hide them. I care about how to show information from large projects – requirements, tests, dependencies, decisions – so that people can work with it. My thoughts on it, with examples.",
-    "more": "See the visualizations",
-    "alt": "The square monster with long arms stands for visualizations"
+  "tools": {
+    "title": "Tools",
+    "lead": "What I'm working on – some tools already in code, some still an idea.",
+    "more": "Learn more",
+    "all": "All tools and archive",
+    "pageLead": "What I build – and what I've built."
+  },
+  "tool": {
+    "back": "All tools",
+    "wip": "This page is in the making. The problem, my motivation and how it works follow here.",
+    "links": "Links",
+    "status": "Status",
+    "role": "Role",
+    "cta": "Interested in this tool? Let's talk."
+  },
+  "views": {
+    "title": "Views",
+    "lead": "Good views make complex relations clear in seconds; bad ones hide them. I care about how to show information, data structures and workflows from large projects – requirements, tests, dependencies, decisions – so that people can work with them. My thoughts on it, with examples.",
+    "more": "See the views",
+    "alt": "The square monster with long arms stands for views"
+  },
+  "projects": {
+    "title": "Projects",
+    "lead": "Large teams, tough starting points – and what we made of them.",
+    "all": "All projects",
+    "alt": "A monster stands for the projects",
+    "toc": "Contents",
+    "context": "Context",
+    "industry": "Industry",
+    "team": "Team",
+    "period": "Period",
+    "role": "My role",
+    "problem": "Problem",
+    "approach": "What we did",
+    "result": "Result",
+    "tools": "Tools used"
   }
 }

@@ -1,0 +1,77 @@
+---
+// Stories from consulting work. The page (and its nav entry) only exists once there is a project.
+import { getCollection } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import Split from '../../../components/Split.astro';
+import { projectsFor, toolsFor, langOf, slugOf } from '../../../lib/content';
+import { t, path, locales, type Lang } from '../../../i18n';
+
+export async function getStaticPaths() {
+  const all = await getCollection('projects', (e) => !e.data.draft);
+  return locales.filter((lang) => all.some((e) => langOf(e.id) === lang)).map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+const s = t(lang);
+const projects = (await projectsFor(lang)).map((e) => ({ ...e.data, slug: slugOf(e.id) }));
+const toolNames = Object.fromEntries((await toolsFor(lang)).map((e) => [slugOf(e.id), e.data.title]));
+const paragraphs = (text: string) => text.trim().split(/\n\s*\n/);
+---
+<Base lang={lang} title={s.projects.title} description={s.projects.lead}>
+  <section class="section head">
+    <div class="wrap">
+      <Split monster="danwos" alt={s.projects.alt}>
+        <h1>{s.projects.title}</h1>
+        <p class="lead">{s.projects.lead}</p>
+      </Split>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap layout">
+      <nav class="toc" aria-label={s.projects.toc}>
+        <p class="toc-title">{s.projects.toc}</p>
+        <ol>{projects.map((p) => <li><a href={`#${p.slug}`}>{p.title}</a></li>)}</ol>
+      </nav>
+      <div>
+        {projects.map((p) => (
+          <article id={p.slug} class="project">
+            <h2>{p.title}</h2>
+            <p class="lead">{p.summary}</p>
+            <dl class="context">
+              <dt>{s.projects.industry}</dt><dd>{p.industry}</dd>
+              {p.team && <><dt>{s.projects.team}</dt><dd>{p.team}</dd></>}
+              {p.period && <><dt>{s.projects.period}</dt><dd>{p.period}</dd></>}
+              <dt>{s.projects.role}</dt><dd>{p.role}</dd>
+            </dl>
+            <h3>{s.projects.problem}</h3>
+            {paragraphs(p.problem).map((x) => <p>{x}</p>)}
+            <h3>{s.projects.approach}</h3>
+            {paragraphs(p.approach).map((x) => <p>{x}</p>)}
+            <h3>{s.projects.result}</h3>
+            {paragraphs(p.result).map((x) => <p>{x}</p>)}
+            {p.tools.length > 0 && (
+              <p class="tools">{s.projects.tools}: {p.tools.map((slug, i) => (
+                <>{i > 0 && ', '}<a href={path(lang, `tools/${slug}/`)}>{toolNames[slug] ?? slug}</a></>
+              ))}</p>
+            )}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
+<style>
+  .head { padding-bottom: 32px }
+  .layout { display: grid; grid-template-columns: 260px 1fr; gap: 48px; align-items: start }
+  .toc { position: sticky; top: 80px; font-size: 15px }
+  .toc-title { font: 600 12px var(--font-body); text-transform: uppercase; letter-spacing: .06em; color: var(--muted) }
+  .toc ol { list-style: none; padding: 0 0 0 12px; margin: 0; border-left: 2px solid var(--line) }
+  .toc li { padding: 4px 0 } .toc a { color: var(--ink); font-weight: 600; text-decoration: none }
+  .project + .project { margin-top: 40px; padding-top: 40px; border-top: 1px solid var(--line) }
+  .project h2 { margin: 0 0 6px }
+  .project h3 { font-size: 18px; margin: 24px 0 6px; color: var(--primary) }
+  .context { display: grid; grid-template-columns: max-content 1fr; gap: 4px 16px; font-size: 15px; padding: 12px 16px; border-radius: 12px; background: var(--stage) }
+  .context dt { font-weight: 600 } .context dd { margin: 0 }
+  .tools { color: var(--muted); font-size: 15px }
+  @media (max-width: 760px) { .layout { grid-template-columns: 1fr; gap: 24px } .toc { position: static } }
+</style>
