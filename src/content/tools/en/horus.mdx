@@ -1,0 +1,74 @@
+---
+title: "Horus"
+summary: "Shows Sphinx-Needs data as a glowing 3D city you can fly through."
+era: "archive"
+status: "cancelled"
+pictures: "prototype"
+role: [created]
+period: "2026"
+order: 70
+translated_from: "bac68c0f5665"
+---
+
+import Screen from '../../../components/Screen.astro';
+import city from '../../../assets/tools/horus/city.png';
+import select from '../../../assets/tools/horus/select.png';
+import problems from '../../../assets/tools/horus/problems.png';
+import ride from '../../../assets/tools/horus/ride.png';
+
+## Why Horus
+
+A Sphinx-Needs project quickly grows to a few hundred requirements,
+specifications and tests. As a table or graph, that soon gets hard to read:
+you see single rows and arrows, but no feel for how big an area is, where
+things cluster and where the gaps are.
+
+With Horus I wanted to try whether a spatial view helps. The idea: data as a
+city you move through like a place you know – inspired by the neon world of
+the TRON movies.
+
+<video src="/videos/horus-demo-en.mp4" poster="/videos/horus-demo-en.jpg" autoplay muted loop playsinline controls preload="metadata"></video>
+
+## Every need a floor
+
+Every tower is a group of needs, every floor a single need with its ID and
+title. The color shows the status. You decide how the city is built: cities,
+districts and towers can be grouped by type, tag, folder or status. In the
+Sphinx-Needs demo, for example, the folders become three cities and the
+types their districts.
+
+<Screen src={city} alt="The Sphinx-Needs demo as a city: one tower per need type, the floors glow in the color of their status." />
+
+You fly through the city with keyboard and mouse, or jump straight to a
+city, a district or a need from the navigator. Links between needs run as
+glowing arcs from tower to tower.
+
+## One click, and you're at the need
+
+A click on a floor opens the need with its content, metadata and all its
+links. Click a link and the camera flies there. A double click shows the
+full content with tables and lists.
+
+<Screen src={select} alt="A software requirement is selected. Its content and links are on the right; in the city, the links run as arcs to other towers." />
+
+## Errors show from far away
+
+When Sphinx-Needs checks your needs against a schema, Horus shows the
+violations right in the city. Affected floors and districts glow red, the
+navigator counts them, and the need tells you which rule it breaks.
+
+<Screen src={problems} alt="Color scheme “Problems”: single floors in the tower of functional safety requirements glow red. On the right, the message that a safety-critical requirement has no link." />
+
+## At street level and from above
+
+From the street you see how the towers stand to each other. From high above,
+the city turns into a flat map where every area is as large as its group.
+
+<Screen src={ride} alt="Street-level view across a city of glowing towers." />
+
+## Status
+
+Horus is a prototype from spring 2026 and runs in the browser. It reads any
+`needs.json` the Sphinx-Needs needs builder creates – besides the demo also
+the roughly 1,400 needs of Eclipse S-CORE. I did not develop it further, and
+the code is not public.
