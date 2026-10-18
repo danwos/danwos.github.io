@@ -1,5 +1,5 @@
 {
-  "_translated_from": "1d8596e14deb",
+  "_translated_from": "a866e27b39d0",
   "meta": {
     "title": "danwos – Daniel Woste",
     "description": "Daniel Woste builds SW tools for large teams: docs-as-code, AI, test quality, decisions and knowledge."
@@ -120,9 +120,23 @@
   },
   "views": {
     "title": "Views",
-    "lead": "Good views make complex relations clear in seconds; bad ones hide them. I care about how to show information, data structures and workflows from large projects – requirements, tests, dependencies, decisions – so that people can work with them. My thoughts on it, with examples.",
+    "lead": "Good views make complex relations clear in seconds; bad ones hide them. I care about how to show information, data structures and workflows from large projects so that people sense problems instead of having to read them.",
     "more": "See the views",
-    "alt": "The danwos monster building with bricks"
+    "alt": "The danwos monster building with bricks",
+    "demoText": "As text",
+    "demoColor": "As color",
+    "demoAlt": "100 pull requests as colored cells, one of them is red",
+    "rollExplode": "Pull apart",
+    "rollJoin": "Put together",
+    "rollGood": "good",
+    "rollFair": "fair",
+    "rollBad": "critical",
+    "rollHint": "Drag to turn the roll, click it to pull it apart. Hover over a piece to see its score. The scores are an example.",
+    "rollAlt": "3D model of a pull request as a roll of eight discs, one disc per quality criterion, colored by score",
+    "netLowest": "lowest score",
+    "netClose": "Close",
+    "netHint": "Drag to turn the network, click a roll to see it large. Hover over a roll to see its lowest score. The data is an example.",
+    "netAlt": "3D network of 48 pull requests in four layers – app, service, library, platform –, each a small quality roll, connected by their dependencies. Three of them are red and orange in many places."
   },
   "projects": {
     "title": "Projects",

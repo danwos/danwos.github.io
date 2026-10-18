@@ -1,0 +1,70 @@
+---
+import { t, type Lang } from '../i18n';
+import { discsFor } from '../lib/quality';
+import type { Disc } from '../lib/roll3d';
+
+// One pull request as a 3D roll (MDX pages): every disc is a quality criterion, every pie piece
+// a part of it, the colour its score. Drag to rotate, click the roll to pull the discs apart.
+// three.js loads only when the roll comes into view. The list below is the same data as text.
+// `manual`: empty frame that a script fills (the network's modal), not mounted on its own.
+interface Props { lang: Lang; data?: Disc[]; manual?: boolean }
+const { lang, manual = false } = Astro.props;
+const s = t(lang).views;
+const data = Astro.props.data ?? discsFor(lang);
+---
+<figure class="qroll" data-roll={manual ? undefined : JSON.stringify(data)} data-manual={manual ? '' : undefined}
+  data-explode={s.rollExplode} data-join={s.rollJoin}>
+  <div class="stage" role="img" aria-label={s.rollAlt}>
+    <div class="tip" hidden></div>
+  </div>
+  <div class="bar">
+    <button class="btn btn-secondary toggle" type="button">{s.rollExplode}</button>
+    <ul class="legend">
+      <li><i class="good"></i>{s.rollGood} ≥ 80</li>
+      <li><i class="fair"></i>{s.rollFair} 60–79</li>
+      <li><i class="bad"></i>{s.rollBad} &lt; 60</li>
+    </ul>
+  </div>
+  <figcaption>{s.rollHint}</figcaption>
+  {!manual && (
+    <ul class="sr">
+      {data.map((d) => <li>{d.name}: {d.parts.map((p) => `${p.name} ${p.v}`).join(', ')}</li>)}
+    </ul>
+  )}
+</figure>
+
+<script>
+  import { mountRoll } from '../lib/roll3d';
+
+  document.querySelectorAll<HTMLElement>('.qroll:not([data-manual])').forEach((fig) => {
+    const io = new IntersectionObserver(([e]) => {
+      if (!e.isIntersecting) return;
+      io.disconnect();
+      mountRoll(fig, JSON.parse(fig.dataset.roll!)).catch((err) => console.error('QualityRoll', err));
+    }, { rootMargin: '200px' });
+    io.observe(fig);
+  });
+</script>
+
+<style>
+  .qroll { --good: #2A9D8F; --fair: #E0A43A; --bad: #D7381E;
+    margin: 24px 0; padding: 0; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); overflow: hidden; clear: both }
+  .stage { position: relative; aspect-ratio: 16 / 9; max-height: 480px; width: 100%; background: var(--stage); touch-action: pan-y }
+  .stage :global(canvas) { display: block; cursor: grab }
+  .stage :global(.labels) { position: absolute; inset: 0; pointer-events: none }
+  .stage :global(.label) { font: 600 13px var(--font-body); color: var(--ink); background: var(--surface); border: 2px solid var(--outline);
+    border-radius: 8px; padding: 2px 8px; white-space: nowrap; opacity: 0; transition: opacity .3s }
+  .qroll.open .stage :global(.label) { opacity: 1 }
+  .tip { position: absolute; pointer-events: none; font: 600 13px var(--font-body); color: var(--ink); background: var(--surface);
+    border: 1px solid var(--line); border-left: 5px solid var(--good); border-radius: 8px; padding: 4px 10px; white-space: nowrap; z-index: 2 }
+  .tip.fair { border-left-color: var(--fair) } .tip.bad { border-left-color: var(--bad) }
+  .toggle { padding: 6px 14px; font-size: 14px }
+  .bar { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; padding: 12px 16px 0 }
+  .legend { list-style: none; display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 0; padding: 0; font-size: 13px; color: var(--muted) }
+  .legend li { margin: 0; display: flex; align-items: center; gap: 6px }
+  .legend i { width: 12px; height: 12px; border-radius: 3px; border: 1px solid var(--outline) }
+  .legend .good { background: var(--good) } .legend .fair { background: var(--fair) } .legend .bad { background: var(--bad) }
+  figcaption { font-size: 14px; color: var(--muted); padding: 6px 16px 14px }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap }
+  @media (max-width: 560px) { .stage { aspect-ratio: 3 / 4; max-height: 560px } }
+</style>

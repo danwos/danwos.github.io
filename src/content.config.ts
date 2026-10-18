@@ -81,7 +81,7 @@ const projects = defineCollection({
 
 // Views: thoughts on showing information, data structures and workflows; one page per language for now.
 const views = defineCollection({
-  loader: glob({ pattern: '*/*.md', base: './src/content/views' }),
+  loader: glob({ pattern: '*/*.{md,mdx}', base: './src/content/views' }),
   schema: z.object({
     title: z.string(),
     translated_from: z.string().optional(),

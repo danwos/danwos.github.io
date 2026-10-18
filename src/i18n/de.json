@@ -119,9 +119,23 @@
   },
   "views": {
     "title": "Views",
-    "lead": "Gute Darstellungen machen komplexe Zusammenhänge in Sekunden klar, schlechte verstecken sie. Mich beschäftigt, wie man Informationen, Datenstrukturen und Workflows aus großen Projekten – Anforderungen, Tests, Abhängigkeiten, Entscheidungen – so zeigt, dass Menschen damit arbeiten können. Meine Gedanken dazu, mit Beispielen.",
+    "lead": "Gute Darstellungen machen komplexe Zusammenhänge in Sekunden klar, schlechte verstecken sie. Mich beschäftigt, wie man Informationen, Datenstrukturen und Workflows aus großen Projekten so zeigt, dass Menschen Probleme spüren, statt sie lesen zu müssen.",
     "more": "Zu den Views",
-    "alt": "Das danwos-Monster baut mit Bausteinen"
+    "alt": "Das danwos-Monster baut mit Bausteinen",
+    "demoText": "Als Text",
+    "demoColor": "Als Farbe",
+    "demoAlt": "100 Pull Requests als farbige Felder, eines davon ist rot",
+    "rollExplode": "Auseinanderziehen",
+    "rollJoin": "Zusammensetzen",
+    "rollGood": "gut",
+    "rollFair": "mittel",
+    "rollBad": "kritisch",
+    "rollHint": "Ziehen dreht die Rolle, ein Klick auf die Rolle zieht sie auseinander. Fährst du über ein Stück, siehst du seinen Wert. Die Werte sind ein Beispiel.",
+    "rollAlt": "3D-Modell eines Pull Requests als Rolle aus acht Scheiben, eine Scheibe pro Qualitätskriterium, farbig nach Qualitätswert",
+    "netLowest": "niedrigster Wert",
+    "netClose": "Schließen",
+    "netHint": "Ziehen dreht das Netz, ein Klick auf eine Rolle zeigt sie groß. Fährst du über eine Rolle, siehst du ihren niedrigsten Wert. Die Daten sind ein Beispiel.",
+    "netAlt": "3D-Netz aus 48 Pull Requests in vier Schichten – App, Service, Bibliothek, Plattform –, jeder als kleine Qualitätsrolle, verbunden über ihre Abhängigkeiten. Drei davon sind an vielen Stellen rot und orange."
   },
   "projects": {
     "title": "Projekte",

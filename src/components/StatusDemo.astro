@@ -1,0 +1,69 @@
+---
+import { t, type Lang } from '../i18n';
+
+// The same 100 pull request states twice: as words and as colour. Exactly one of them failed.
+// Colours: every calm state stays below 2:1 against the card, failure is at least 2.8:1
+// against each of them and 5:1 against the card – plus a different hue and an icon.
+interface Props { lang: Lang }
+const s = t(Astro.props.lang).views;
+const states = ['ok', 'in progress', 'backlog', 'cancelled'] as const;
+const weights = [55, 20, 15, 10]; // share of each calm state in percent
+const failed = 67;
+// fixed pseudo-random sequence, so the page is the same on every build
+let seed = 7;
+const next = () => (seed = (seed * 48271) % 2147483647) / 2147483647;
+const pick = () => {
+  let r = next() * 100;
+  for (let i = 0; i < states.length; i++) if ((r -= weights[i]) < 0) return states[i];
+  return states[0];
+};
+const prs = Array.from({ length: 100 }, (_, i) => ({ id: 1201 + i, state: i === failed ? 'failure' : pick() }));
+const cls = (state: string) => state.replace(' ', '-');
+---
+<div class="status-demo">
+  <figure>
+    <figcaption>{s.demoText}</figcaption>
+    <ol class="words">
+      {prs.map((p) => <li>#{p.id} {p.state}</li>)}
+    </ol>
+  </figure>
+  <figure>
+    <figcaption>{s.demoColor}</figcaption>
+    <ol class="cells" aria-label={s.demoAlt}>
+      {prs.map((p) => <li class={cls(p.state)} title={`#${p.id} ${p.state}`}>{p.state === 'failure' ? '!' : ''}</li>)}
+    </ol>
+    <ul class="legend">
+      {[...states, 'failure'].map((state) => <li><i class={cls(state)}></i>{state}</li>)}
+    </ul>
+  </figure>
+</div>
+<style>
+  .status-demo {
+    --ok: #8CC5BF; --in-progress: #C3CF9E; --backlog: #E1E6EC; --cancelled: #C4CBD3; --failure: #C8321B; --on-failure: #FFFFFF;
+    display: grid; grid-template-columns: 3fr 2fr; gap: 16px; margin: 24px 0; clear: both
+  }
+  @media (prefers-color-scheme: dark) {
+    :global(:root:not([data-theme="light"])) .status-demo {
+      --ok: #17544E; --in-progress: #3F4C2A; --backlog: #1E3348; --cancelled: #34465A; --failure: #FF5A3C; --on-failure: #1B1A22
+    }
+  }
+  :global(:root[data-theme="dark"]) .status-demo {
+    --ok: #17544E; --in-progress: #3F4C2A; --backlog: #1E3348; --cancelled: #34465A; --failure: #FF5A3C; --on-failure: #1B1A22
+  }
+  figure { margin: 0; padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface) }
+  figcaption { font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin-bottom: 10px }
+  ol, ul { list-style: none; margin: 0; padding: 0 }
+  .words { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0 10px; font: 11px/1.55 var(--font-mono); color: var(--muted) }
+  .words li { margin: 0; white-space: nowrap }
+  .cells { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px }
+  .cells li { aspect-ratio: 1; margin: 0; border-radius: 4px; display: grid; place-items: center; font: 700 12px var(--font-body) }
+  .ok { background: var(--ok) } .in-progress { background: var(--in-progress) } .backlog { background: var(--backlog) }
+  .cancelled { background: var(--cancelled) } .failure { background: var(--failure); color: var(--on-failure) }
+  .legend { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-top: 12px; font-size: 12px; color: var(--muted) }
+  .legend li { margin: 0; display: flex; align-items: center; gap: 5px }
+  .legend i { width: 10px; height: 10px; border-radius: 2px }
+  @media (max-width: 760px) {
+    .status-demo { grid-template-columns: 1fr }
+    .words { grid-template-columns: repeat(2, 1fr) }
+  }
+</style>

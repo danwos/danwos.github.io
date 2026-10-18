@@ -1,0 +1,143 @@
+---
+title: "Views"
+translated_from: "0039b37a3471"
+---
+
+import Scene from '../../../components/Scene.astro';
+import Screens from '../../../components/Screens.astro';
+import StatusDemo from '../../../components/StatusDemo.astro';
+import ToolLinks from '../../../components/ToolLinks.astro';
+import QualityRoll from '../../../components/QualityRoll.astro';
+import QualityNetwork from '../../../components/QualityNetwork.astro';
+import city from '../../../assets/tools/horus/city.png';
+import select from '../../../assets/tools/horus/select.png';
+import problems from '../../../assets/tools/horus/problems.png';
+
+## One pull request, many eyes
+
+For a developer, a pull request is mostly code and green tests. For me, a
+lot more hangs on it: the feature itself, UI and UX, the docs, the marketing
+colors, code quality and maintainability, how deep and how good the tests
+really are, whether the requirements are met or quietly drifting away – and
+quite a bit more.
+
+Showing all of that in a way you grasp quickly is a challenge. For a single
+pull request, dashboards and comments do the job. But once I want to keep an
+eye on dozens of pull requests across a whole product, it gets hard. What's
+left are dashboards for single checks – never everything at once.
+
+## The needle in the haystack
+
+In the end I'm looking for the needle in the haystack. And it looks
+different for every role:
+
+| Role | The needle |
+|---|---|
+| Developer | the one red test among a hundred green ones |
+| Project lead | the feature that has been stuck for days |
+| Test | the change that is barely tested |
+| Customers | the requirement that wasn't implemented |
+| Marketing | the wrong color in the new screen |
+| Legal | the new license in the dependencies |
+| Controlling | the effort that is getting out of hand |
+
+## Reading is slow
+
+I believe reading words is one of the poorer ways to take in a situation.
+When a hundred pull requests say "ok", "in progress", "backlog" and
+"cancelled" in the status column, the one row that says "failure" is hard to
+find. As a color or an icon, it jumps right out.
+
+<StatusDemo lang="en" />
+
+## Feel it, don't read it
+
+That's where my motive comes from: problems should be something you sense
+and feel intuitively. I don't want to have to read to understand a
+situation.
+
+So besides text, visual cues matter most – colors, shapes and structures.
+With large amounts of data, depth helps too: a space in 3D instead of flat
+text in a table. Sound could play an important role as well, but in
+everyday office life it's hard to fit into the workflows.
+
+## Patterns everyone knows
+
+When it comes to showing things, I like to borrow ideas and concepts that
+already exist, because people understand them intuitively. Almost anyone
+can read a road map and make sense of its structures and colors: wide
+roads, dense cities, empty land in between. Apply that kind of view to other
+data, and you quickly get a feel for a topic.
+
+With [Horus](/en/tools/horus/) I tried this playfully on real Sphinx-Needs
+data. The needs stand in space as a glowing city: every group a tower, every
+need a floor, the color shows the status. Schema violations glow red – you
+see them from afar without reading a single line.
+
+<Screens images={[
+  { src: city, alt: "The Sphinx-Needs demo as a city: one tower per need type, the floors glow in the color of their status." },
+  { src: select, alt: "A selected need with its content and links, which run as arcs to other towers." },
+  { src: problems, alt: "Schema violations: single floors in the tower of functional safety requirements glow red." },
+]} />
+
+The video and a closer look at how Horus works are on the
+[Horus tool page](/en/tools/horus/).
+
+## What science fiction already knew
+
+<Scene monster="danwos-grid" wide alt="The danwos monster stands amazed in a 3D grid, surrounded by floating, connected objects" />
+
+A strong source of ideas for me are the computer interfaces in science
+fiction movies and series. Be it the colorful 2D layout of the consoles in
+Star Trek or the 3D networks in which the android brains in "Ghost in the
+Shell" think.
+
+Often the ideas are pretty far out – and they show up surprisingly early.
+In the 1995 classic "Hackers", files rise up as 3D towers, and a virus runs
+across the screen as a cookie monster.
+
+Today AI delivers data in amounts that people have to review, check and
+approve. Every idea has to be welcome there, no matter how much it breaks
+with the current state of things.
+
+## A pull request to turn around
+
+A small experiment shows what this could look like: a pull request as a
+roll. Every disc is a quality criterion – tests, docs, requirements, legal
+and more. Every disc is split again into pie pieces, the tests for example
+into unit, integration and system. The color shows how well each piece is
+doing.
+
+From the outside you see at a glance whether something glows red anywhere.
+Only when you want to look closer do you pull the roll apart and read
+what's behind it.
+
+<QualityRoll lang="en" />
+
+## Dozens of pull requests at once
+
+One roll helps with one pull request. It gets interesting with dozens.
+Here, 48 pull requests from four layers of a product stand in space – app,
+service, library and platform –, connected wherever one depends on another.
+Most of them are green. Where it turns red and orange, you see it right
+away, even among all the others. One click brings the roll up close.
+
+<QualityNetwork lang="en" />
+
+## Working inside the data
+
+<Scene monster="danwos-vr" left wide alt="The danwos monster lies on a curved lounger wearing a VR headset, keyboard on the left, mouse on the right, and works" />
+
+Virtual reality headsets could carry this new world, and with them other
+models for the desk and the workplace. Instead of tables on two screens,
+the project surrounds you as a space – and the problem glows right where it
+is.
+
+## Tools for views and visualization
+
+I've built some of this already. Horus is the city of needs. Sphinx-Preview
+shows what's behind a link when you hover over it, without leaving the page.
+Sphinx-Data-Viewer turns large JSON data into a tree that you unfold only as
+far as you need.
+
+<ToolLinks lang="en" tools={['horus', 'sphinx-preview', 'sphinx-data-viewer']} />

@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+import ArchiveCard from './ArchiveCard.astro';
+import { langOf, slugOf } from '../lib/content';
+import type { Lang } from '../i18n';
+
+// Cards for a few tools named by slug (MDX pages), in the given order.
+interface Props { lang: Lang; tools: string[] }
+const { lang, tools } = Astro.props;
+const all = await getCollection('tools', (e) => langOf(e.id) === lang);
+const entries = tools.map((slug) => all.find((e) => slugOf(e.id) === slug)).filter((e) => !!e);
+---
+<div class="grid tool-links">
+  {entries.map((entry) => <ArchiveCard lang={lang} entry={entry} />)}
+</div>
+<style>
+  .tool-links { margin: 24px 0; clear: both }
+</style>
