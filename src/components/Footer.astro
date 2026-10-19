@@ -10,7 +10,6 @@ const s = t(lang);
     <span class="links">
       <a href={path(lang, 'imprint/')}>{s.footer.imprint}</a>
       <a href={path(lang, 'privacy/')}>{s.footer.privacy}</a>
-      <span class="draft">{s.footer.draft}</span>
     </span>
   </div>
 </footer>
@@ -19,5 +18,4 @@ const s = t(lang);
   .row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding-top: 24px; padding-bottom: 40px }
   .links { display: flex; gap: 16px; flex-wrap: wrap }
   .links a { color: var(--muted) }
-  .draft { color: var(--accent) }
 </style>

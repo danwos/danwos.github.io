@@ -1,7 +1,6 @@
 ---
 title: "Privacy"
-draft_note: "Draft – not legally reviewed yet. Placeholders in square brackets will follow."
-translated_from: "24e9657281a7"
+translated_from: "2642e311749b"
 ---
 <!-- Research, not legal advice. Translation; the German version is binding. -->
 
@@ -11,8 +10,8 @@ In short: this site sets no cookies, counts no visits and embeds nothing from th
 
 ## Controller
 
-Daniel Woste, [street and number], [postal code, city], Germany  
-Email: [email address]
+Daniel Woste, Germany  
+Email: [daniel.woste@useblocks.com](mailto:daniel.woste@useblocks.com)
 
 ## Hosting on GitHub Pages
 

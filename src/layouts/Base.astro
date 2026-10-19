@@ -18,7 +18,6 @@ const site = Astro.site!;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
     <meta name="description" content={description ?? s.meta.description} />
-    <meta name="robots" content="noindex" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="canonical" href={new URL(Astro.url.pathname, site)} />
     {locales.map((l) => <link rel="alternate" hreflang={l} href={new URL(switchPath(Astro.url.pathname, l as Lang), site)} />)}

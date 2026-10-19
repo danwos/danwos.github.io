@@ -47,7 +47,6 @@ directly.
 | `src/styles/tokens.css` | colours, fonts, radii from the danwos branding paper |
 | `src/assets/monsters/`, `src/assets/people/` | cut-out monsters and portraits, downscaled from the brain |
 | `src/integrations/` | redirects for old Sphinx URLs, dev-only feedback app |
-| `legacy/` | the old Sphinx site, kept until release |
 
 ## Languages
 
@@ -68,13 +67,12 @@ viewport and theme – an agent works through them and marks them done.
 ## Deployment
 
 `.github/workflows/website.yml` builds every push and pull request and
-deploys to GitHub Pages **only from `main`**. `danwos_new` is never published.
+deploys to GitHub Pages **only from `main`** (Pages source "GitHub Actions").
+The site is `https://danwos.dev` (`public/CNAME`); `www.danwos.dev` points to
+it. A sitemap (`/sitemap-index.xml`) is built with every deploy and named in
+`public/robots.txt`.
 
-## Before release
+## Open after release
 
-- fill in address and email in `src/content/legal/` (imprint, privacy) and contact
-- remove `<meta name="robots" content="noindex">` in `src/layouts/Base.astro`
-  and `src/pages/index.astro`, and the draft note in the footer
-- add `public/CNAME` with `danwos.dev`, set DNS, set the Pages source to "GitHub Actions"
+- postal address in `src/content/legal/` (imprint, privacy)
 - forward `danwos.de` and `daniel-woste.de` (keeping the path) to `https://danwos.dev`
-- remove `legacy/`, merge `danwos_new` into `main`

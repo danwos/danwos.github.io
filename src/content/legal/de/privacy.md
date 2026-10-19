@@ -1,6 +1,5 @@
 ---
 title: "Datenschutz"
-draft_note: "Entwurf – rechtlich noch nicht geprüft. Platzhalter in eckigen Klammern folgen."
 ---
 <!-- Research, not legal advice. -->
 
@@ -8,8 +7,8 @@ Kurz gesagt: Diese Seite setzt keine Cookies, zählt keine Besuche und bindet ni
 
 ## Verantwortlich
 
-Daniel Woste, [Straße und Hausnummer], [PLZ Ort], Deutschland  
-E-Mail: [E-Mail-Adresse]
+Daniel Woste, Deutschland  
+E-Mail: [daniel.woste@useblocks.com](mailto:daniel.woste@useblocks.com)
 
 ## Hosting über GitHub Pages
 
