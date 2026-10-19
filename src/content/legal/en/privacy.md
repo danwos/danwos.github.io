@@ -1,6 +1,6 @@
 ---
 title: "Privacy"
-translated_from: "2642e311749b"
+translated_from: "0b3454c35519"
 ---
 <!-- Research, not legal advice. Translation; the German version is binding. -->
 
@@ -11,7 +11,7 @@ In short: this site sets no cookies, counts no visits and embeds nothing from th
 ## Controller
 
 Daniel Woste, Germany  
-Email: [daniel.woste@useblocks.com](mailto:daniel.woste@useblocks.com)
+Email: [daniel.woste@gmail.com](mailto:daniel.woste@gmail.com)
 
 ## Hosting on GitHub Pages
 

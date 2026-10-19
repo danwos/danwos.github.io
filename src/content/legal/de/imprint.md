@@ -10,7 +10,7 @@ Deutschland
 
 ## Kontakt
 
-E-Mail: [daniel.woste@useblocks.com](mailto:daniel.woste@useblocks.com)
+E-Mail: [daniel.woste@gmail.com](mailto:daniel.woste@gmail.com)
 
 ## Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
 
