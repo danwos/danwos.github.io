@@ -1,0 +1,153 @@
+---
+title: "monsterbrain"
+subtitle: "Ein Gehirn für dich und deine KI-Agenten"
+summary: "Ein Gehirn für Menschen und KI-Agenten: Wissen, Konzepte und Ergebnisse in einer klaren Ordnerstruktur."
+era: "current"
+status: "idea"
+pictures: "mockup"
+monster: "monsterbrain"
+role: [created]
+order: 20
+---
+
+import Scene from '../../../components/Scene.astro';
+import Screen from '../../../components/Screen.astro';
+import ToolLinks from '../../../components/ToolLinks.astro';
+import KnowledgeFlow from '../../../components/KnowledgeFlow.astro';
+import viewer from '../../../assets/tools/monsterbrain/viewer.png';
+import welcome from '../../../assets/tools/monsterbrain/viewer-readme.png';
+
+## Warum monsterbrain
+
+<Scene monster="monsterbrain-crying" alt="monsterbrain weint dicke Tränen" />
+
+Mit KI-Agenten zu arbeiten fühlt sich oft an wie mit einem sehr klugen
+Kollegen ohne Gedächtnis. Jede Sitzung beginnt bei null. Was du gestern
+erklärt hast, steckt in einem alten Chat, in einer `CLAUDE.md`, die immer
+länger wird, oder in den Kommentaren zu einem Pull Request. Und irgendwann
+weiß niemand mehr, was davon bestätigt ist und was nur ein Entwurf war.
+
+Ich führe danwos mit KI-Agenten, die sich um Produkt, Technik, Marketing und
+Recht kümmern. Die brauchen einen Ort, an dem sie alle dasselbe Wissen finden –
+und an dem klar ist, was gilt. Daraus ist monsterbrain entstanden: ein
+einziger Ordner, den Menschen und Agenten gleichermaßen lesen und pflegen.
+
+## Ein Ordner, klare Schichten
+
+monsterbrain ist kein Programm mit Datenbank, sondern eine Ordnerstruktur aus
+einfachem Markdown, YAML und JSON, versioniert mit Git. Jede Schicht hat eine
+klare Aufgabe und klare Regeln, wer dort lesen und schreiben darf.
+
+| Ordner | Was drin liegt | Wer schreibt |
+|---|---|---|
+| `20_facts` | die geprüfte Wahrheit, auch verbindliche Texte | nur über eine Freigabe |
+| `10_concepts` | laufende Arbeit, ein Ordner pro Konzept | frei, im eigenen Konzept |
+| `30_outputs` | fertige Ergebnisse: PDFs, Folien, Seiten | nur zum Ablegen |
+| `40_sources` | Belege und fremdes Material, unverändert | nur zum Ablegen |
+| `50_assets` | Logos, Schriften, Vorlagen | nach Rückfrage |
+| `90_archive` | erledigte Konzepte, Altbestand | nur durch Verschieben |
+| `00_system` | Agenten, Skills, Vorlagen, Skripte | nach Rückfrage |
+
+Jede Datei beginnt mit einer kurzen Zusammenfassung. Ein Agent liest erst die,
+dann entscheidet er, ob er weiterliest. Das spart Tokens und hält den Kontext
+schlank.
+
+## Wie Wissen entsteht
+
+Agenten schreiben nie direkt in die Fakten. Sie arbeiten in einem Konzept,
+sammeln dort Belege, Entwürfe und offene Fragen. Erst wenn du das Konzept
+freigibst, verteilt der Skill `close-concept` die Ergebnisse: Erkenntnisse
+wandern in die Fakten, fertige Dateien in die Outputs, das Konzept ins Archiv.
+
+<KnowledgeFlow lang="de" />
+
+Jeder Fakt steht an genau einer Stelle. Widersprechen sich zwei Aussagen,
+meldet der Agent das, statt zu raten.
+
+## Agenten und Skills
+
+<Scene monster="monsterbrain-flying" alt="monsterbrain fliegt mit ausgestreckten Armen" left />
+
+Jede Rolle ist eine einzelne Markdown-Datei: was sie tut, was sie liest, wo sie
+schreiben darf. Werkzeuge wie Claude Code laden diese Dateien direkt, es gibt
+keine zweite Konfiguration. Wiederkehrende Abläufe sind Skills – ein neues
+Projekt anlegen, ein Konzept abschließen.
+
+Dazu kommt eine feste Lesereihenfolge: erst die Regeln, dann das Inhaltsverzeichnis
+des passenden Ordners, dann nur die Zusammenfassungen, und erst zum Schluss
+einzelne Dateien. Der Agent findet schnell, was er braucht, ohne den ganzen
+Ordner zu lesen.
+
+## Beruflich und privat, sauber getrennt
+
+<Scene monster="monsterbrain-relaxed" alt="monsterbrain liegt entspannt auf der Seite, den Kopf aufgestützt" />
+
+Ein Gehirn, mehrere Welten: Firma, Verein, Haus und Familie können im selben
+monsterbrain leben, jede in ihrem eigenen Bereich. Die Bereiche teilen nichts
+miteinander, jeder hat eigene Regeln, eigene Rollen und, wenn nötig, eine
+eigene Sprache. Ein Agent arbeitet immer in genau einem Bereich und sieht die
+anderen nicht.
+
+Bei mir liegen so die Firma und die Gründung eines Vereins nebeneinander, ohne
+dass sich irgendetwas vermischt.
+
+## Sehen, wie alles zusammenhängt
+
+Ordner und Dateien sind für Agenten ideal, für Menschen auf Dauer etwas
+mühsam. Deshalb bekommt monsterbrain einen Viewer: links der Dateibaum, in der
+Mitte die gerenderte Datei. Rechts oben zeigt ein Graph, worauf die Datei
+verweist und wer auf sie verweist, darunter stehen ihre Metadaten – Status,
+Tags, Schicht, letzter Commit.
+
+<Screen src={viewer} alt="Der monsterbrain-Viewer mit dem Projekt garden-app: links der Dateibaum, in der Mitte die README, rechts der Graph mit allen Links und die Metadaten." />
+
+Ein Klick auf einen Link oder einen Knoten im Graphen, und du bist in der
+nächsten Datei. Die Farben zeigen die Schicht, so siehst du auf einen Blick,
+ob ein Fakt sauber belegt ist und welches Konzept gerade daran arbeitet.
+
+## Zusammen mit deciwa
+
+Agenten schreiben viel, und am Ende musst du es freigeben. Zusammen mit deciwa
+geht das schneller: du prüfst direkt auf der Datei, gibst Feedback oder
+bestätigst eine Aussage, und monsterbrain weiß, was davon gilt.
+
+<ToolLinks lang="de" tools={['deciwa']} />
+
+## Was im Repository steckt
+
+Das Repository enthält die komplette Struktur zum Loslegen: die Ordner, die
+Regeln für Agenten, Vorlagen, Skills, Rollen und ein paar Skripte. Dazu kommt
+ein Beispiel-Gehirn mit erfundenem Inhalt – eine kleine Designfirma und ein
+privater Bereich. Daran siehst du, wie alles zusammenspielt, die Tutorials
+bauen darauf auf, und es dient gleichzeitig als Testdaten.
+
+<Screen src={welcome} alt="Die Startseite des Beispiel-Gehirns im Viewer, mit monsterbrain im Bild." />
+
+```text
+example-brain/
+├── AGENTS.md          Regeln für alle Agenten
+├── README.md          hier geht's los
+├── 00_system/         Skills, Vorlagen, Skripte
+├── studio/            die Firma
+│   ├── AGENTS.md
+│   ├── 00_system/agents/
+│   ├── 10_concepts/
+│   ├── 20_facts/
+│   ├── 30_outputs/
+│   ├── 40_sources/
+│   ├── 50_assets/
+│   └── 90_archive/
+└── home/              privat, sauber getrennt
+```
+
+Die Texte stehen unter MIT-Lizenz. Die Bilder von monsterbrain liegen in einem
+eigenen Ordner mit eigener Lizenz und bleiben geschützt.
+
+## Stand
+
+<Scene monster="monsterbrain-sitting" alt="monsterbrain sitzt entspannt auf dem Boden" />
+
+Das Gehirn selbst läuft bei mir jeden Tag – diese Website ist darin geplant
+und gebaut worden. Das Repository zum Loslegen, der Viewer und die
+Verbindung mit deciwa folgen. In Blogbeiträgen erkläre ich nach und nach die
+einzelnen Teile.

@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import { monster } from '../lib/monsters';
+import { slugOf } from '../lib/content';
+import { t, path, type Lang } from '../i18n';
+
+interface Props { lang: Lang; entry: CollectionEntry<'tools'> }
+const { lang, entry } = Astro.props;
+const s = t(lang);
+const d = entry.data;
+---
+<a class="pcard" href={path(lang, `tools/${slugOf(entry.id)}/`)}>
+  <div class="art">
+    {d.monster && <Image src={monster(d.monster)} alt="" widths={[240, 480]} sizes="240px" />}
+  </div>
+  <div class="body">
+    <span class={`tag ${d.status}`}>{s.status[d.status]}</span>
+    <h3>{d.title}</h3>
+    <p>{d.summary}</p>
+    <span class="more">{s.tools.more} →</span>
+  </div>
+</a>
+<style>
+  .pcard { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column;
+    color: inherit; text-decoration: none; transition: transform .1s, box-shadow .1s }
+  .pcard:hover { transform: translateY(-2px); box-shadow: 4px 4px 0 var(--shadow) }
+  /* fixed stage height, so title and text line up across cards whatever the monster's shape */
+  .art { position: relative; background: var(--stage); aspect-ratio: 4 / 3; border-bottom: 1px solid var(--line) }
+  .art :global(img) { position: absolute; inset: 7%; width: 86%; height: 86%; object-fit: contain }
+  .body { padding: 16px; display: flex; flex-direction: column; flex: 1 }
+  .tag { align-self: flex-start }
+  h3 { margin: 8px 0 4px }
+  p { color: var(--muted); font-size: 16px }
+  .more { margin-top: auto; color: var(--primary); font-weight: 600 }
+</style>

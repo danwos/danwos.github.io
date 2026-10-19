@@ -1,0 +1,12 @@
+---
+import { Image } from 'astro:assets';
+import { monster } from '../lib/monsters';
+
+// Picture and text: the cut-out monster takes one third, the text two thirds.
+interface Props { monster: string; alt: string; reverse?: boolean }
+const { monster: name, alt, reverse = false } = Astro.props;
+---
+<div class:list={['split', { rev: reverse }]}>
+  <div class="img"><Image src={monster(name)} alt={alt} widths={[260, 520]} sizes="(max-width: 760px) 180px, 260px" /></div>
+  <div><slot /></div>
+</div>

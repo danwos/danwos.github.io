@@ -1,6 +1,0 @@
-:Title: {{title}}
-:Author: {{author}}
-:Tags: {{tags|join(", ")}}
-:Last changed: {{last_changed}}
-
-{{content}}

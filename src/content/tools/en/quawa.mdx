@@ -1,0 +1,116 @@
+---
+title: "quawa"
+subtitle: "quality watcher"
+summary: "Checks whether the tests of AI-written code really test."
+era: "current"
+status: "idea"
+monster: "quawa"
+role: [created]
+order: 30
+translated_from: "7854c73e6e63"
+---
+
+import QuawaCheck from '../../../components/QuawaCheck.astro';
+import QuawaStages from '../../../components/QuawaStages.astro';
+
+## Why quawa
+
+AI agents write code and the matching tests along with it. The pipeline is
+green, everyone is happy. But many of those tests check exactly what the code
+already does – not what it is supposed to do. Whether they would catch a real
+bug, nobody can tell from the pull request.
+
+There is a second pattern too: an agent is told to turn a red pipeline green
+and takes the shortest path. It loosens an assertion, marks a test as `skip`,
+or makes sure a failure in CI no longer blocks anything. In the diff it looks
+harmless, and in review it slips through easily.
+
+quawa is meant to answer one question: **Can I trust a green CI on AI code?**
+
+## Eight questions for every pull request
+
+| Signal | What quawa wants to know |
+|---|---|
+| Mutation score | How many deliberately planted bugs do the tests catch? |
+| Test tampering | Was a test weakened instead of fixing the code? |
+| Over-mocking | Does the test check the behavior or only its own mock? |
+| Test levels | Is the changed code covered only by unit tests, or by integration and E2E too? |
+| Redundant tests | Which tests catch nothing extra and only cost CI time? |
+| CI integrity | Do the tests run at all, and does a failure block the merge? |
+| Test-aware code | Does the production code behave differently under test than in production? |
+| Parameters and environment | Have edge cases, runs or platforms quietly disappeared? |
+
+## How quawa checks
+
+Two paths run side by side. The diff checks read only the changes to tests,
+code and CI configuration – they need no test run and are therefore fast.
+Mutation testing plants small bugs in the changed lines, say a `>` instead of
+`>=`, and watches whether the tests notice. quawa sums both up in a short card
+in the pull request, with details one click away.
+
+<QuawaCheck lang="en" />
+
+Only together do they give a clear diagnosis: if many planted bugs survive
+and assertions were weakened at the same time, you know not just *that* a
+test checks nothing, but also *why*.
+
+## How to spot cheating
+
+Most tricks are plain to see in the diff once you know what to look for:
+
+```diff
+- expect(total).toEqual(42)
++ expect(total).toBeDefined()
+```
+
+A few more from the same toolbox:
+
+- a new `continue-on-error: true` in the test job, and red no longer blocks anything
+- an `if (process.env.NODE_ENV === 'test')` in production code
+- a `/* istanbul ignore next */` that polishes coverage
+- edge cases like `null` or `-1` quietly vanishing from a `test.each`
+- a coverage gate dropping from 90 to 40 percent
+
+Any one of these changes can be right on its own. That's why quawa shows them
+with the exact location and remembers exceptions once they are justified.
+
+## No AI inside
+
+quawa checks AI code but needs no AI to do it. Every check is a fixed rule:
+deterministic, traceable and the same on every run. The compute runs in your
+own CI, and source code never leaves your repository. Reports are per team,
+repository or agent – never per person.
+
+## Right in the agents' workflow *(planned)*
+
+quawa helps most before a pull request even exists. Through an MCP server and
+a hook for Claude Code or Cursor, the agent checks itself, and a change that
+removes assertions is stopped right away. Tests a human is responsible for
+can be marked as protected. A VS Code extension shows surviving bugs right
+next to the line of code.
+
+## How it can grow
+
+<QuawaStages lang="en" />
+
+The start is deliberately small: a GitHub Action for TypeScript and
+JavaScript that comments on the pull request. After that come more patterns,
+UI tests with Playwright and more languages. In stage three the watcher
+becomes a dashboard that shows *effective* rather than measured coverage –
+only the lines where tests really catch planted bugs. And in the end it is
+about more than tests: agent rules, type checks and security scanners are
+protection layers an agent can loosen, too.
+
+## What quawa doesn't do
+
+quawa doesn't write tests or run UI tests – there are good tools for that
+already. It doesn't link requirements or produce compliance evidence. And it
+doesn't scan for vulnerabilities itself; it only reports when a pull request
+weakens the scanners you already have.
+
+## Status
+
+An idea with a worked-out business case. Next I'll talk to teams working with
+AI agents in TypeScript and Python and try the existing open source tools
+myself. The check engine is meant to be released as open source, so every
+rule stays visible.

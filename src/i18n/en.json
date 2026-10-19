@@ -1,0 +1,159 @@
+{
+  "_translated_from": "5cf07759d257",
+  "meta": {
+    "title": "danwos – Daniel Woste",
+    "description": "Daniel Woste builds SW tools for large teams: docs-as-code, AI, test quality, decisions and knowledge."
+  },
+  "nav": {
+    "projects": "Projects",
+    "ideas": "Ideas",
+    "blog": "Blog",
+    "about": "About",
+    "contact": "Contact",
+    "menu": "Menu",
+    "theme": "Light or dark",
+    "language": "Language",
+    "skip": "Skip to content",
+    "tools": "Tools",
+    "views": "Views"
+  },
+  "hero": {
+    "eyebrow": "Docs-as-code · AI · SW tools",
+    "title": "SW tools, helpful as hell – and a crew of monsters.",
+    "lead": "I'm Daniel. I build SW tools that help large teams keep their knowledge, their quality and their decisions under control.",
+    "primary": "See the tools",
+    "secondary": "Work with me",
+    "crewAlt": "The danwos crew: five monsters, one for danwos and one for each current project"
+  },
+  "status": {
+    "idea": "Idea",
+    "concept": "Concept",
+    "alpha": "Alpha",
+    "beta": "Beta",
+    "done": "Done",
+    "cancelled": "Cancelled"
+  },
+  "role": {
+    "created": "created",
+    "maintained": "maintained",
+    "hired": "hired"
+  },
+  "ideas": {
+    "title": "Ideas",
+    "lead": "Things I'd like to build – not started yet, but thought through. They're about problems I keep running into: docs that don't match the code, metrics nobody sees, architecture and requirements that know nothing about each other. If any of it catches your eye, let's talk.",
+    "alt": "The danwos monster sketching an idea",
+    "all": "Browse the ideas",
+    "pageLead": "Things I'd like to build – not started yet, but thought through. If an idea catches your eye, let's talk.",
+    "toc": "Contents",
+    "problem": "Problem",
+    "solution": "Solution",
+    "tech": "Tech",
+    "statusLabel": "Will I build it?",
+    "status": {
+      "unlikely": "probably not",
+      "likely": "likely",
+      "definitely": "definitely"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "lead": "Posts, videos and explainer images on docs-as-code, quality and tools.",
+    "alt": "The danwos monster reading on a stack of books",
+    "all": "All posts",
+    "read": "Read more",
+    "back": "All posts",
+    "empty": "No posts yet.",
+    "originalEn": "",
+    "originalLink": "",
+    "minutes": "min read",
+    "tags": "Topics",
+    "rss": "RSS feed",
+    "pageLead": "Everything I've written about docs-as-code, quality and tools.",
+    "writtenBy": "Written by",
+    "publishedBy": "Published by",
+    "authorBio": "I build SW tools for large teams – around docs-as-code, AI, quality and decisions. I founded useblocks and helped build Sphinx-Needs."
+  },
+  "about": {
+    "title": "About me",
+    "text": [
+      "I'm a software developer, and what I like building most are tools that make other people's work easier. That's why I founded useblocks, where I helped build Sphinx-Needs and many other docs-as-code tools as team lead – they run in large engineering projects today. These days I support useblocks as an advisor.",
+      "What drives me is how large, distributed teams keep track – of requirements, tests, decisions and the knowledge in between. My tools are small and focused: each one solves exactly one problem."
+    ],
+    "alt": "The danwos monster, mascot of Daniel and danwos",
+    "photoAlt": "Illustrated portrait of Daniel Woste with the danwos monster on his shoulder",
+    "more": "More about me",
+    "cv": "Career",
+    "volunteer": "Volunteering",
+    "cta": "Want to work together? Let's talk.",
+    "deskAlt": "Daniel Woste at his desk, next to figurines of the danwos monster and deciwa"
+  },
+  "archive": {
+    "title": "Archive",
+    "lead": "Older projects. Some still run today, others have done their job – grandma has seen them all.",
+    "alt": "Grandma, keeper of the archive"
+  },
+  "contact": {
+    "title": "Let's talk",
+    "lead": "You have a problem that fits one of these projects, or an idea that calls for a monster? Write to me.",
+    "alt": "The two-headed monster stands for contact"
+  },
+  "footer": {
+    "imprint": "Imprint",
+    "privacy": "Privacy"
+  },
+  "tools": {
+    "title": "Tools",
+    "lead": "What I'm working on – some tools already in code, some still an idea.",
+    "more": "Learn more",
+    "all": "All tools and archive",
+    "pageLead": "What I build – and what I've built."
+  },
+  "tool": {
+    "back": "All tools",
+    "wip": "This page is in the making. The problem, my motivation and how it works follow here.",
+    "links": "Links",
+    "status": "Status",
+    "role": "Role",
+    "pictures": "Pictures",
+    "cta": "Interested in this tool? Let's talk."
+  },
+  "views": {
+    "title": "Views",
+    "lead": "Good views make complex relations clear in seconds; bad ones hide them. I care about how to show information, data structures and workflows from large projects so that people sense problems instead of having to read them.",
+    "more": "See the views",
+    "alt": "The danwos monster building with bricks",
+    "demoText": "As text",
+    "demoColor": "As color",
+    "demoAlt": "100 pull requests as colored cells, one of them is red",
+    "rollExplode": "Pull apart",
+    "rollJoin": "Put together",
+    "rollGood": "good",
+    "rollFair": "fair",
+    "rollBad": "critical",
+    "rollHint": "Drag to turn the roll, click it to pull it apart. Hover over a piece to see its score. The scores are an example.",
+    "rollAlt": "3D model of a pull request as a roll of eight discs, one disc per quality criterion, colored by score",
+    "netLowest": "lowest score",
+    "netClose": "Close",
+    "netHint": "Drag to turn the network, click a roll to see it large. Hover over a roll to see its lowest score. The data is an example.",
+    "netAlt": "3D network of 48 pull requests in four layers – app, service, library, platform –, each a small quality roll, connected by their dependencies. Three of them are red and orange in many places."
+  },
+  "projects": {
+    "title": "Projects",
+    "lead": "Large teams, tough starting points – and what we made of them.",
+    "all": "All projects",
+    "alt": "The danwos monster sorting cards on a kanban board",
+    "toc": "Contents",
+    "context": "Context",
+    "industry": "Industry",
+    "team": "Team",
+    "period": "Period",
+    "role": "My role",
+    "problem": "Problem",
+    "approach": "What we did",
+    "result": "Result",
+    "tools": "Tools used",
+    "read": "Read more"
+  },
+  "lightbox": { "open": "Enlarge image", "close": "Close" },
+  "stage": { "sketch": "Sketch", "mockup": "Mockup", "prototype": "Prototype", "product": "Product" }
+}

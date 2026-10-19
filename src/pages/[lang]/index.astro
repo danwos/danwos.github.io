@@ -1,0 +1,136 @@
+---
+import Base from '../../layouts/Base.astro';
+import Hero from '../../components/Hero.astro';
+import ToolCard from '../../components/ToolCard.astro';
+import Split from '../../components/Split.astro';
+import { Image } from 'astro:assets';
+import portrait from '../../assets/people/daniel-illustrated.webp';
+import PostCard from '../../components/PostCard.astro';
+import { toolsFor, projectsFor, postsFor, slugOf } from '../../lib/content';
+import { t, path, locales, type Lang } from '../../i18n';
+
+export function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+const s = t(lang);
+const current = (await toolsFor(lang)).filter((p) => p.data.era === 'current');
+const latestProjects = (await projectsFor(lang)).slice(0, 3);
+const hasProjects = latestProjects.length > 0;
+const latest = (await postsFor(lang)).slice(0, 3);
+// Picture and text alternate sides from section to section, also when a section is hidden.
+let side = 0;
+const flip = () => side++ % 2 === 0;
+---
+<Base lang={lang}>
+  <Hero lang={lang} />
+
+  <section id="tools" class="section">
+    <div class="wrap">
+      <h2>{s.tools.title}</h2>
+      <p class="lead">{s.tools.lead}</p>
+      <div class="grid cards">
+        {current.map((entry) => <ToolCard lang={lang} entry={entry} />)}
+      </div>
+      <p class="more"><a class="btn btn-secondary" href={path(lang, 'tools/')}>{s.tools.all} →</a></p>
+    </div>
+  </section>
+
+  {hasProjects && (
+    <section id="projects" class="section">
+      <div class="wrap">
+        <Split monster="danwos-kanban" alt={s.projects.alt} reverse={flip()}>
+          <h2>{s.projects.title}</h2>
+          <p class="lead">{s.projects.lead}</p>
+          <a class="btn btn-secondary" href={path(lang, 'projects/')}>{s.projects.all} →</a>
+        </Split>
+        <div class="grid pteasers">
+          {latestProjects.map((p) => (
+            <a class="pteaser" href={path(lang, `projects/#${slugOf(p.id)}`)}>
+              <span class="industry">{p.data.industry}</span>
+              <h3>{p.data.title}</h3>
+              <p>{p.data.summary}</p>
+              <span class="more">{s.projects.read} →</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <section id="views" class="section">
+    <div class="wrap">
+      <Split monster="danwos-bricks" alt={s.views.alt} reverse={flip()}>
+        <h2>{s.views.title}</h2>
+        <p class="lead">{s.views.lead}</p>
+        <a class="btn btn-secondary" href={path(lang, 'views/')}>{s.views.more} →</a>
+      </Split>
+    </div>
+  </section>
+
+  <section id="blog" class="section">
+    <div class="wrap">
+      <Split monster="danwos-books" alt={s.blog.alt} reverse={flip()}>
+        <h2>{s.blog.title}</h2>
+        <p class="lead">{s.blog.lead}</p>
+        <a class="btn btn-secondary" href={path(lang, 'blog/')}>{s.blog.all} →</a>
+      </Split>
+      <div class="grid posts">
+        {latest.map((entry) => <PostCard lang={lang} entry={entry} />)}
+      </div>
+    </div>
+  </section>
+
+  <section id="ideas" class="section">
+    <div class="wrap">
+      <Split monster="danwos-sketching" alt={s.ideas.alt} reverse={flip()}>
+        <h2>{s.ideas.title}</h2>
+        <p class="lead">{s.ideas.lead}</p>
+        <a class="btn btn-secondary" href={path(lang, 'ideas/')}>{s.ideas.all} →</a>
+      </Split>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="wrap">
+      <div class:list={['split', { rev: flip() }]}>
+        <div class="img portrait"><Image src={portrait} alt={s.about.photoAlt} widths={[300, 600]} sizes="300px" /></div>
+        <div>
+          <h2>{s.about.title}</h2>
+          {s.about.text.map((p) => <p>{p}</p>)}
+          <a class="btn btn-secondary" href={path(lang, 'about/')}>{s.about.more} →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="wrap">
+      <Split monster="two-heads" alt={s.contact.alt} reverse={flip()}>
+        <h2>{s.contact.title}</h2>
+        <p class="lead">{s.contact.lead}</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/daniel-woste-362b6252/">LinkedIn</a>
+          <a class="btn btn-secondary" href="https://github.com/danwos">GitHub</a>
+        </div>
+      </Split>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .cards { margin-top: 32px; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)) }
+  .more { margin-top: 24px }
+  .pteasers { margin-top: 32px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) }
+  .pteaser { display: flex; flex-direction: column; padding: 16px; border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: var(--radius);
+    background: var(--surface); color: inherit; text-decoration: none; transition: transform .1s, box-shadow .1s }
+  .pteaser:hover { transform: translateY(-2px); box-shadow: 4px 4px 0 var(--shadow) }
+  .pteaser .industry { font-size: 13px; color: var(--muted) }
+  .pteaser h3 { font-size: 20px; margin: 6px 0 }
+  .pteaser p { color: var(--muted); font-size: 15px }
+  .pteaser .more { margin-top: auto; color: var(--primary); font-weight: 600 }
+  .posts { margin-top: 32px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) }
+  .portrait :global(img) { max-width: 300px; max-height: 300px }
+  .actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 20px }
+</style>

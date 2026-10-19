@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "title": "danwos – Daniel Woste",
+    "description": "Daniel Woste baut SW-Tools für große Teams: Docs-as-Code, AI, Testqualität, Entscheidungen und Wissen."
+  },
+  "nav": {
+    "projects": "Projekte",
+    "ideas": "Ideen",
+    "blog": "Blog",
+    "about": "Über mich",
+    "contact": "Kontakt",
+    "menu": "Menü",
+    "theme": "Hell oder dunkel",
+    "language": "Sprache",
+    "skip": "Zum Inhalt",
+    "tools": "Tools",
+    "views": "Views"
+  },
+  "hero": {
+    "eyebrow": "Docs-as-Code · AI · SW-Tools",
+    "title": "SW-Tools, hilfreich as hell – und eine Crew aus Monstern.",
+    "lead": "Ich bin Daniel. Ich baue SW-Tools, mit denen große Teams ihr Wissen, ihre Qualität und ihre Entscheidungen im Griff behalten.",
+    "primary": "Tools ansehen",
+    "secondary": "Mit mir arbeiten",
+    "crewAlt": "Die danwos-Crew: fünf Monster, eines für danwos und eines für jedes aktuelle Projekt"
+  },
+  "status": {
+    "idea": "Idee",
+    "concept": "Konzept",
+    "alpha": "Alpha",
+    "beta": "Beta",
+    "done": "Fertig",
+    "cancelled": "Eingestellt"
+  },
+  "role": {
+    "created": "erstellt",
+    "maintained": "gepflegt",
+    "hired": "beauftragt"
+  },
+  "ideas": {
+    "title": "Ideen",
+    "lead": "Dinge, die ich gern bauen würde – noch nicht begonnen, aber schon durchdacht. Es geht um Probleme, die mir immer wieder begegnen: Doku, die nicht zum Code passt, Kennzahlen, die niemand sieht, Architektur und Anforderungen, die nichts voneinander wissen. Wenn dich etwas davon reizt, lass uns reden.",
+    "alt": "Das danwos-Monster skizziert eine Idee",
+    "all": "Zur Ideensammlung",
+    "pageLead": "Dinge, die ich gern bauen würde – noch nicht begonnen, aber schon durchdacht. Wenn dich eine Idee reizt, lass uns reden.",
+    "toc": "Inhalt",
+    "problem": "Problem",
+    "solution": "Lösung",
+    "tech": "Tech",
+    "statusLabel": "Umsetzung",
+    "status": {
+      "unlikely": "eher nicht",
+      "likely": "wahrscheinlich",
+      "definitely": "auf jeden Fall"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "lead": "Beiträge, Videos und Erklärbilder zu Docs-as-Code, Qualität und Tools.",
+    "alt": "Das danwos-Monster liest auf einem Stapel Bücher",
+    "all": "Alle Beiträge",
+    "read": "Weiterlesen",
+    "back": "Alle Beiträge",
+    "empty": "Noch keine Beiträge.",
+    "originalEn": "Dieser Beitrag erschien ursprünglich auf Englisch.",
+    "originalLink": "Zum Original",
+    "minutes": "Min. Lesezeit",
+    "tags": "Themen",
+    "rss": "RSS-Feed",
+    "pageLead": "Alles, was ich zu Docs-as-Code, Qualität und Tools geschrieben habe.",
+    "writtenBy": "Geschrieben von",
+    "publishedBy": "Veröffentlicht von",
+    "authorBio": "Ich baue SW-Tools für große Teams – rund um Docs-as-Code, AI, Qualität und Entscheidungen. Ich habe useblocks gegründet und Sphinx-Needs mitgebaut."
+  },
+  "about": {
+    "title": "Über mich",
+    "text": [
+      "Ich bin Softwareentwickler und baue am liebsten Tools, die anderen die Arbeit leichter machen. Dafür habe ich useblocks gegründet und als Teamlead Sphinx-Needs und viele weitere Docs-as-Code-Tools mitgebaut – sie laufen heute in großen Entwicklungsprojekten. Inzwischen begleite ich useblocks als Advisor.",
+      "Mich treibt um, wie große, verteilte Teams den Überblick behalten – über Anforderungen, Tests, Entscheidungen und das Wissen dazwischen. Meine Tools sind klein und fokussiert: Jedes löst genau ein Problem."
+    ],
+    "alt": "Das danwos-Monster, Maskottchen von Daniel und danwos",
+    "photoAlt": "Gezeichnetes Porträt von Daniel Woste mit dem danwos-Monster auf der Schulter",
+    "more": "Mehr über mich",
+    "cv": "Stationen",
+    "volunteer": "Ehrenamt",
+    "cta": "Lust, zusammenzuarbeiten? Lass uns reden.",
+    "deskAlt": "Daniel Woste am Schreibtisch, neben ihm Figuren des danwos-Monsters und von deciwa"
+  },
+  "archive": {
+    "title": "Archiv",
+    "lead": "Ältere Projekte. Einige laufen bis heute, andere haben ihren Dienst getan – die Oma hat sie alle gesehen.",
+    "alt": "Die Oma, Hüterin des Archivs"
+  },
+  "contact": {
+    "title": "Lass uns reden",
+    "lead": "Du hast ein Problem, das zu einem dieser Projekte passt, oder eine Idee, die nach einem Monster ruft? Schreib mir.",
+    "alt": "Das Monster mit zwei Köpfen steht für Kontakt"
+  },
+  "footer": {
+    "imprint": "Impressum",
+    "privacy": "Datenschutz"
+  },
+  "tools": {
+    "title": "Tools",
+    "lead": "Woran ich gerade arbeite – manche Tools schon im Code, manche noch eine Idee.",
+    "more": "Mehr erfahren",
+    "all": "Alle Tools und Archiv",
+    "pageLead": "Was ich baue – und was ich gebaut habe."
+  },
+  "tool": {
+    "back": "Alle Tools",
+    "wip": "Diese Seite entsteht gerade. Hier folgen das Problem, meine Motivation und wie es funktioniert.",
+    "links": "Links",
+    "status": "Stand",
+    "role": "Rolle",
+    "pictures": "Bilder",
+    "cta": "Interesse an diesem Tool? Lass uns reden."
+  },
+  "views": {
+    "title": "Views",
+    "lead": "Gute Darstellungen machen komplexe Zusammenhänge in Sekunden klar, schlechte verstecken sie. Mich beschäftigt, wie man Informationen, Datenstrukturen und Workflows aus großen Projekten so zeigt, dass Menschen Probleme spüren, statt sie lesen zu müssen.",
+    "more": "Zu den Views",
+    "alt": "Das danwos-Monster baut mit Bausteinen",
+    "demoText": "Als Text",
+    "demoColor": "Als Farbe",
+    "demoAlt": "100 Pull Requests als farbige Felder, eines davon ist rot",
+    "rollExplode": "Auseinanderziehen",
+    "rollJoin": "Zusammensetzen",
+    "rollGood": "gut",
+    "rollFair": "mittel",
+    "rollBad": "kritisch",
+    "rollHint": "Ziehen dreht die Rolle, ein Klick auf die Rolle zieht sie auseinander. Fährst du über ein Stück, siehst du seinen Wert. Die Werte sind ein Beispiel.",
+    "rollAlt": "3D-Modell eines Pull Requests als Rolle aus acht Scheiben, eine Scheibe pro Qualitätskriterium, farbig nach Qualitätswert",
+    "netLowest": "niedrigster Wert",
+    "netClose": "Schließen",
+    "netHint": "Ziehen dreht das Netz, ein Klick auf eine Rolle zeigt sie groß. Fährst du über eine Rolle, siehst du ihren niedrigsten Wert. Die Daten sind ein Beispiel.",
+    "netAlt": "3D-Netz aus 48 Pull Requests in vier Schichten – App, Service, Bibliothek, Plattform –, jeder als kleine Qualitätsrolle, verbunden über ihre Abhängigkeiten. Drei davon sind an vielen Stellen rot und orange."
+  },
+  "projects": {
+    "title": "Projekte",
+    "lead": "Große Teams, schwierige Ausgangslagen – und was wir daraus gemacht haben.",
+    "all": "Alle Projekte",
+    "alt": "Das danwos-Monster sortiert Karten am Kanban-Board",
+    "toc": "Inhalt",
+    "context": "Kontext",
+    "industry": "Branche",
+    "team": "Team",
+    "period": "Zeitraum",
+    "role": "Meine Rolle",
+    "problem": "Problem",
+    "approach": "Was wir gemacht haben",
+    "result": "Ergebnis",
+    "tools": "Eingesetzte Tools",
+    "read": "Weiterlesen"
+  },
+  "lightbox": { "open": "Bild vergrößern", "close": "Schließen" },
+  "stage": { "sketch": "Skizze", "mockup": "Mockup", "prototype": "Prototyp", "product": "Produkt" }
+}

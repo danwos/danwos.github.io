@@ -1,0 +1,16 @@
+---
+import { Image } from 'astro:assets';
+import { monster } from '../lib/monsters';
+
+// A cut-out monster floating beside running text (MDX pages), right by default; `wide` for landscape scenes.
+interface Props { monster: string; alt: string; left?: boolean; wide?: boolean }
+const { monster: name, alt, left = false, wide = false } = Astro.props;
+---
+<Image class:list={['scene', { left, wide }]} src={monster(name)} alt={alt} widths={wide ? [340, 680] : [220, 440]} sizes={wide ? '(max-width: 760px) 260px, 340px' : '(max-width: 760px) 160px, 220px'} />
+<style>
+  .scene { float: right; width: 220px; height: auto; margin: 0 0 16px 24px; border: 0; border-radius: 0 }
+  .scene.left { float: left; margin: 0 24px 16px 0 }
+  .scene.wide { width: 340px }
+  @media (max-width: 760px) { .scene, .scene.left { float: none; display: block; width: 160px; margin: 8px auto 16px }
+    .scene.wide { width: 260px } }
+</style>

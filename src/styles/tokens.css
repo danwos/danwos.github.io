@@ -1,0 +1,30 @@
+/* danwos design tokens – from the branding paper
+   (brain: danwos/30_outputs/branding/2026-10_danwos-branding-paper.html).
+   Light is the default; dark follows the browser unless the visitor chose a theme. */
+:root {
+  --bg: #FFFFFF; --surface: #FFFFFF; --stage: #F4F6F8; --ink: #1B1A22; --muted: #5B6472; --line: #E1E6EC;
+  --primary: #0F766E; --on-primary: #FFFFFF; --primary-soft: #0F766E14; --accent: #E2725B; --accent-soft: #E2725B1A;
+  --moss: #5E6E35; --moss-soft: #8A9A5B26; --outline: #1B1A22; --shadow: #1B1A22; --input: #FFFFFF;
+  --stripe: repeating-linear-gradient(-35deg, #14B8A6 0 18px, #E2725B 18px 30px, #D8C3A5 30px 40px);
+  --stripe-thin: repeating-linear-gradient(-35deg, #14B8A6 0 6px, #E2725B 6px 10px, #D8C3A5 10px 13px);
+  --font-display: "Bricolage Grotesque Variable", "Bricolage Grotesque", Inter, system-ui, sans-serif;
+  --font-body: "Inter Variable", Inter, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --radius-sm: 10px; --radius: 16px; --radius-lg: 20px;
+  --max: 1120px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0D1B2A; --surface: #132538; --stage: #0D1B2A; --ink: #E8EDF3; --muted: #9FB0C3; --line: #22384F;
+    --primary: #14B8A6; --on-primary: #0D1B2A; --primary-soft: #14B8A61F; --accent: #E2725B; --accent-soft: #E2725B26;
+    --moss: #A9B97A; --moss-soft: #8A9A5B33; --outline: #05080D; --shadow: #05080D; --input: #0F2131;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0D1B2A; --surface: #132538; --stage: #0D1B2A; --ink: #E8EDF3; --muted: #9FB0C3; --line: #22384F;
+  --primary: #14B8A6; --on-primary: #0D1B2A; --primary-soft: #14B8A61F; --accent: #E2725B; --accent-soft: #E2725B26;
+  --moss: #A9B97A; --moss-soft: #8A9A5B33; --outline: #05080D; --shadow: #05080D; --input: #0F2131;
+  color-scheme: dark;
+}

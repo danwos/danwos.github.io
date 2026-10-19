@@ -1,0 +1,67 @@
+---
+import type { Lang } from '../i18n';
+
+// One fact, many views: sources feed the facts once, every role gets its own view of them (faktwerk tool page).
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = {
+  de: {
+    label: 'Quellen wie GitHub, Jira und Dokumente liefern Fakten in einen gemeinsamen Kern. Daraus entstehen Sichten für verschiedene Rollen: ein Bericht für die Geschäftsführung, eine Tabelle für das Projektmanagement, Details für die Entwicklung, eine Übersicht für das Marketing. Entscheidungen gehen zurück an die Quelle.',
+    sources: 'Quellen', facts: 'Fakten', once: 'einmal gepflegt', back: 'Freigabe zurück',
+    views: [['Geschäftsführung', 'Bericht'], ['Projektmanagement', 'Tabelle'], ['Entwicklung', 'Details'], ['Marketing', 'Was heißt das für uns?']],
+    docs: 'Dokumente',
+  },
+  en: {
+    label: 'Sources such as GitHub, Jira and documents feed facts into one shared core. Views for different roles come out of it: a report for management, a table for project management, details for engineering, an overview for marketing. Decisions go back to the source.',
+    sources: 'sources', facts: 'facts', once: 'maintained once', back: 'approval back',
+    views: [['Management', 'report'], ['Project management', 'table'], ['Engineering', 'details'], ['Marketing', 'what does it mean for us?']],
+    docs: 'documents',
+  },
+}[lang];
+const srcs = ['GitHub', 'Jira', t.docs];
+---
+<figure class="fviews">
+  <svg viewBox="0 0 760 290" role="img" aria-label={t.label}>
+    <defs><marker id="fviews-tip" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="tip" d="M0 0 L10 5 L0 10z" /></marker></defs>
+    <text x="85" y="28" text-anchor="middle" class="cap">{t.sources}</text>
+    {srcs.map((s, i) => (
+      <g>
+        <rect class="box" x="20" y={50 + i * 72} width="130" height="50" rx="10" />
+        <text x="85" y={80 + i * 72} text-anchor="middle" class="name">{s}</text>
+        <path class="arrow" d={`M150 ${75 + i * 72} L276 145`} />
+      </g>
+    ))}
+
+    <circle class="core" cx="340" cy="145" r="62" />
+    <text x="340" y="142" text-anchor="middle" class="big">{t.facts}</text>
+    <text x="340" y="162" text-anchor="middle" class="sub">{t.once}</text>
+
+    {t.views.map(([role, kind], i) => (
+      <g>
+        <path class="arrow" d={`M402 145 L556 ${55 + i * 62}`} />
+        <rect class:list={['box', i === 3 ? 'accent' : 'primary']} x="560" y={32 + i * 62} width="180" height="48" rx="10" />
+        <text x="574" y={52 + i * 62} class="name">{role}</text>
+        <text x="574" y={70 + i * 62} class="sub">{kind}</text>
+      </g>
+    ))}
+
+    <path class="back" d="M560 272 C 420 290, 200 290, 85 248" />
+    <text x="340" y="276" text-anchor="middle" class="sub">{t.back}</text>
+  </svg>
+</figure>
+<style>
+  .fviews { margin: 24px 0; overflow-x: auto }
+  svg { display: block; width: 100%; min-width: 560px; height: auto }
+  text { fill: var(--ink) }
+  .cap { font: 12px var(--font-body); fill: var(--muted); text-transform: uppercase; letter-spacing: .06em }
+  .big { font: 700 20px var(--font-display) }
+  .name { font: 600 14px var(--font-display) }
+  .sub { font: 12px var(--font-body); fill: var(--muted) }
+  .box { fill: var(--surface); stroke: var(--line); stroke-width: 1.5 }
+  .box.primary { fill: var(--primary-soft); stroke: var(--primary) }
+  .box.accent { fill: var(--accent-soft); stroke: var(--accent) }
+  .core { fill: var(--moss-soft); stroke: var(--moss); stroke-width: 1.5 }
+  .arrow { stroke: var(--muted); stroke-width: 1.6; fill: none; marker-end: url(#fviews-tip) }
+  .back { stroke: var(--muted); stroke-width: 1.4; fill: none; stroke-dasharray: 5 4; marker-end: url(#fviews-tip) }
+  .tip { fill: var(--muted) }
+</style>

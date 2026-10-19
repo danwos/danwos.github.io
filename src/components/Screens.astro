@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+// Two or three screenshots side by side (MDX pages): saves height compared to one full-width picture.
+// All share one aspect ratio and are cropped to it; the lightbox shows each one uncropped.
+interface Props { images: { src: ImageMetadata; alt: string }[]; caption?: string }
+const { images, caption } = Astro.props;
+---
+<figure class:list={['screens', `n${images.length}`]}>
+  <div class="row">
+    {images.map(({ src, alt }) => (
+      <Image src={src} alt={alt} widths={[400, 800]} sizes={`(max-width: 560px) 100vw, ${Math.round(800 / images.length)}px`} data-full={src.src} />
+    ))}
+  </div>
+  {caption && <figcaption>{caption}</figcaption>}
+</figure>
+<style>
+  .screens { margin: 24px 0; clear: both }
+  .row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px }
+  .n3 .row { grid-template-columns: repeat(3, 1fr) }
+  .row :global(img) { width: 100%; height: auto; aspect-ratio: 16 / 10; object-fit: cover; margin: 0 }
+  figcaption { font-size: 14px; color: var(--muted); margin-top: 6px }
+  @media (max-width: 560px) { .row, .n3 .row { grid-template-columns: 1fr } }
+</style>

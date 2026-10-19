@@ -1,0 +1,72 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection, render } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import desk from '../../../assets/people/daniel-desk.webp';
+import { langOf } from '../../../lib/content';
+import { t, path, locales, type Lang } from '../../../i18n';
+
+export function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Lang;
+const s = t(lang);
+const [text] = await getCollection('about', (e) => langOf(e.id) === lang);
+const { Content } = await render(text);
+const all = await Promise.all(
+  (await getCollection('cv', (e) => langOf(e.id) === lang))
+    .sort((a, b) => a.data.order - b.data.order)
+    .map(async (e) => ({ ...e.data, Content: (await render(e)).Content })),
+);
+const lists = [
+  { title: s.about.cv, stations: all.filter((st) => st.kind === 'work') },
+  { title: s.about.volunteer, stations: all.filter((st) => st.kind === 'volunteer') },
+].filter((l) => l.stations.length);
+---
+<Base lang={lang} title={s.about.title} description={s.about.text[0]}>
+  <section class="section">
+    <div class="wrap narrow">
+      <h1>{s.about.title}</h1>
+      <figure class="desk">
+        <Image src={desk} alt={s.about.deskAlt} widths={[800, 1200, 1600]} sizes="(max-width: 860px) 100vw, 820px" loading="eager" />
+      </figure>
+      <div class="prose"><Content /></div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap narrow">
+      {lists.map((l) => (
+        <>
+          <h2>{l.title}</h2>
+          <ol class="timeline">
+            {l.stations.map((st) => (
+              <li>
+                <span class="period">{st.period}</span>
+                <div class="station">
+                  <h3>{st.role} · <span class="org">{st.org}</span></h3>
+                  <st.Content />
+                </div>
+              </li>
+            ))}
+          </ol>
+        </>
+      ))}
+      <p class="cta"><a class="btn btn-primary" href={`${path(lang)}#contact`}>{s.about.cta}</a></p>
+    </div>
+  </section>
+</Base>
+<style>
+  .desk { margin: 16px 0 32px } .desk :global(img) { width: 100%; height: auto; border-radius: var(--radius); border: 2px solid var(--outline); box-shadow: 4px 4px 0 var(--shadow) }
+  .narrow { max-width: 820px }
+  .timeline { list-style: none; padding: 0; margin: 24px 0 40px; border-left: 4px solid; border-image: var(--stripe) 4 }
+  .timeline li { display: grid; grid-template-columns: 110px 1fr; gap: 16px; padding: 0 0 28px 24px; position: relative }
+  .timeline li::before { content: ""; position: absolute; left: -12px; top: 6px; width: 16px; height: 16px; border-radius: 50%;
+    background: var(--surface); border: 3px solid var(--primary) }
+  .period { font: 600 15px var(--font-mono); color: var(--primary); padding-top: 2px }
+  .station h3 { font-size: 20px; margin: 0 0 4px }
+  .org { color: var(--muted); font-weight: 600 }
+  .station :global(p) { margin: 0; color: var(--muted) }
+  .cta { margin-top: 24px }
+  @media (max-width: 760px) { .timeline li { grid-template-columns: 1fr; gap: 2px } }
+</style>

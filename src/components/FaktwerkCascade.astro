@@ -1,0 +1,69 @@
+---
+import type { Lang } from '../i18n';
+
+// Cascade: a change at the bottom creates a proposal beside the fact above it; once a human promotes it, the next level follows (faktwerk tool page).
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = {
+  de: {
+    label: 'Drei Ebenen übereinander: unten der Pull Request, darüber die Features, oben die Zusammenfassung. Ändert sich der Pull Request, legt faktwerk neben dem Feature darüber einen Vorschlag ab. Ein Mensch prüft ihn und übernimmt oder verwirft ihn. Erst ein übernommenes Feature erzeugt den nächsten Vorschlag für die Zusammenfassung.',
+    live: 'gültig', cand: 'Vorschlag', review: 'Mensch prüft',
+    levels: [['Ebene 2', 'Zusammenfassung', 'Release-Bericht'], ['Ebene 1', 'Features', 'Login per Passkey'], ['Ebene 0', 'Quelle', 'Pull Request #128']],
+    changed: 'geändert', promote: 'übernehmen',
+  },
+  en: {
+    label: 'Three levels stacked: the pull request at the bottom, the features above it, the summary on top. When the pull request changes, faktwerk puts a proposal beside the feature above it. A human reviews it and promotes or drops it. Only a promoted feature creates the next proposal for the summary.',
+    live: 'live', cand: 'proposal', review: 'human reviews',
+    levels: [['Level 2', 'summary', 'release report'], ['Level 1', 'features', 'passkey login'], ['Level 0', 'source', 'pull request #128']],
+    changed: 'changed', promote: 'promote',
+  },
+}[lang];
+const y = (i: number) => 30 + i * 80;
+---
+<figure class="fcascade">
+  <svg viewBox="0 0 760 270" role="img" aria-label={t.label}>
+    <defs><marker id="fcascade-tip" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="tip" d="M0 0 L10 5 L0 10z" /></marker></defs>
+    <text x="250" y="18" text-anchor="middle" class="cap">{t.live}</text>
+    <text x="490" y="18" text-anchor="middle" class="cap">{t.cand}</text>
+
+    {t.levels.map(([lvl, kind, ex], i) => (
+      <g>
+        <text x="20" y={y(i) + 26} class="lvl">{lvl}</text>
+        <text x="20" y={y(i) + 44} class="sub">{kind}</text>
+        <rect class:list={['box', i === 2 ? 'accent' : 'primary']} x="160" y={y(i)} width="180" height="56" rx="10" />
+        <text x="250" y={y(i) + 25} text-anchor="middle" class="name">{ex}</text>
+        <text x="250" y={y(i) + 43} text-anchor="middle" class="sub">{i === 2 ? t.changed : t.live}</text>
+        {i < 2 && (
+          <g>
+            <rect class="box cand" x="400" y={y(i)} width="180" height="56" rx="10" />
+            <text x="490" y={y(i) + 25} text-anchor="middle" class="name">{ex}</text>
+            <text x="490" y={y(i) + 43} text-anchor="middle" class="sub">{t.cand}</text>
+            <path class="arrow" d={`M340 ${y(i + 1) + 20} L420 ${y(i) + 60}`} />
+            <path class="arrow dashed" d={`M580 ${y(i) + 28} L630 ${y(i) + 28}`} />
+          </g>
+        )}
+      </g>
+    ))}
+
+    <rect class="box moss" x="634" y="40" width="110" height="130" rx="10" />
+    <text x="689" y="96" text-anchor="middle" class="name">{t.review}</text>
+    <text x="689" y="116" text-anchor="middle" class="sub">{t.promote}</text>
+  </svg>
+</figure>
+<style>
+  .fcascade { margin: 24px 0; overflow-x: auto }
+  svg { display: block; width: 100%; min-width: 560px; height: auto }
+  text { fill: var(--ink) }
+  .cap { font: 12px var(--font-body); fill: var(--muted); text-transform: uppercase; letter-spacing: .06em }
+  .lvl { font: 700 15px var(--font-display); fill: var(--accent) }
+  .name { font: 600 14px var(--font-display) }
+  .sub { font: 12px var(--font-body); fill: var(--muted) }
+  .box { fill: var(--surface); stroke: var(--line); stroke-width: 1.5 }
+  .box.primary { fill: var(--primary-soft); stroke: var(--primary) }
+  .box.accent { fill: var(--accent-soft); stroke: var(--accent) }
+  .box.moss { fill: var(--moss-soft); stroke: var(--moss) }
+  .box.cand { stroke-dasharray: 5 4 }
+  .arrow { stroke: var(--muted); stroke-width: 1.6; fill: none; marker-end: url(#fcascade-tip) }
+  .arrow.dashed { stroke-dasharray: 4 3 }
+  .tip { fill: var(--muted) }
+</style>

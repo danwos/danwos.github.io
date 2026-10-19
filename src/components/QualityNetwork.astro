@@ -1,0 +1,230 @@
+---
+import { t, type Lang } from '../i18n';
+import { discsFor, random } from '../lib/quality';
+import QualityRoll from './QualityRoll.astro';
+
+// Many pull requests as a 3D network (MDX pages): every node is a small quality roll, lines are
+// dependencies. Four layers of a product, each a grid of 4 × 3 pull requests. Most are green,
+// three are in trouble. A click on a node shows its roll large in a dialog. Data is made up.
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const s = t(lang).views;
+
+const layers = lang === 'de' ? ['App', 'Service', 'Bibliothek', 'Plattform'] : ['App', 'Service', 'Library', 'Platform'];
+const COLS = 4, ROWS = 3;
+const troubled = [6, 21, 39];
+const rnd = random(11);
+const between = (a: number, b: number) => Math.round(a + rnd() * (b - a));
+const nodes = layers.flatMap((layer, l) =>
+  Array.from({ length: COLS * ROWS }, (_, k) => {
+    const i = l * COLS * ROWS + k;
+    const bad = troubled.includes(i);
+    const discs = discsFor(lang, () =>
+      bad ? (rnd() < 0.8 ? between(25, 72) : between(80, 92)) : (rnd() < 0.025 ? between(66, 79) : between(84, 100)));
+    return { id: `PR #${1401 + i}`, layer, l, col: k % COLS, row: Math.floor(k / COLS), discs };
+  }),
+);
+// each pull request depends on one or two neighbours in the layer below, now and then on one beside it
+const links: [number, number][] = [];
+nodes.forEach((n, i) => {
+  if (n.l < layers.length - 1) {
+    const below = nodes.filter((m) => m.l === n.l + 1 && Math.abs(m.col - n.col) <= 1 && Math.abs(m.row - n.row) <= 1);
+    const count = rnd() < 0.5 ? 1 : 2;
+    for (let c = 0; c < count; c++) links.push([i, nodes.indexOf(below[Math.floor(rnd() * below.length)])]);
+  }
+  const right = nodes.findIndex((m) => m.l === n.l && m.row === n.row && m.col === n.col + 1);
+  if (right >= 0 && rnd() < 0.2) links.push([i, right]);
+});
+const lowest = (n: (typeof nodes)[number]) =>
+  n.discs.flatMap((d) => d.parts.map((p) => ({ name: `${d.name} · ${p.name}`, v: p.v }))).sort((a, b) => a.v - b.v)[0];
+---
+<figure class="qnet" data-nodes={JSON.stringify(nodes)} data-links={JSON.stringify(links)} data-layers={JSON.stringify(layers)}
+  data-lowest={s.netLowest}>
+  <div class="stage" role="img" aria-label={s.netAlt}>
+    <div class="tip" hidden></div>
+  </div>
+  <div class="bar">
+    <ul class="legend">
+      <li><i class="good"></i>{s.rollGood} ≥ 80</li>
+      <li><i class="fair"></i>{s.rollFair} 60–79</li>
+      <li><i class="bad"></i>{s.rollBad} &lt; 60</li>
+    </ul>
+  </div>
+  <figcaption>{s.netHint}</figcaption>
+  <ul class="sr">
+    {nodes.map((n) => <li>{n.id}, {n.layer}: {s.netLowest} {lowest(n).name} {lowest(n).v}</li>)}
+  </ul>
+</figure>
+
+<dialog class="qnet-modal" aria-labelledby="qnet-title">
+  <div class="head">
+    <h3 id="qnet-title"></h3>
+    <button class="close" type="button" aria-label={s.netClose}>×</button>
+  </div>
+  <QualityRoll lang={lang} manual />
+</dialog>
+
+<script>
+  import { buildRoll, band, loadThree, mountRoll, onTap, placeTip, still, type Disc } from '../lib/roll3d';
+  type Node = { id: string; layer: string; l: number; col: number; row: number; discs: Disc[] };
+
+  async function mount(fig: HTMLElement) {
+    const { THREE, OrbitControls, CSS2DRenderer, CSS2DObject } = await loadThree();
+    const nodes: Node[] = JSON.parse(fig.dataset.nodes!);
+    const links: [number, number][] = JSON.parse(fig.dataset.links!);
+    const layers: string[] = JSON.parse(fig.dataset.layers!);
+    const stage = fig.querySelector<HTMLElement>('.stage')!;
+    const tip = fig.querySelector<HTMLElement>('.tip')!;
+    const calm = still();
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+    stage.prepend(renderer.domElement);
+    const labels = new CSS2DRenderer();
+    labels.domElement.className = 'labels';
+    stage.append(labels.domElement);
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(30, 1, 0.1, 200);
+    camera.position.set(9, 6, 16);
+    scene.add(new THREE.AmbientLight('#ffffff', 1.6));
+    const sun = new THREE.DirectionalLight('#ffffff', 2.2);
+    sun.position.set(4, 6, 5);
+    scene.add(sun);
+
+    // layers one behind the other, each a grid of columns and rows
+    const SX = 2.4, SY = 2, SZ = 3.4;
+    const cols = Math.max(...nodes.map((n) => n.col)) + 1, rows = Math.max(...nodes.map((n) => n.row)) + 1;
+    const at = (n: Node) => new THREE.Vector3((n.col - (cols - 1) / 2) * SX, ((rows - 1) / 2 - n.row) * SY, (n.l - (layers.length - 1) / 2) * -SZ);
+    const pickable: THREE.Mesh[] = [];
+    const groups = nodes.map((n, i) => {
+      const roll = buildRoll(THREE, n.discs, { R: 0.42, T: 0.15 });
+      roll.group.position.copy(at(n));
+      roll.pickable.forEach((m) => { m.userData.node = i; pickable.push(m); });
+      scene.add(roll.group);
+      return roll.group;
+    });
+
+    const linkColor = getComputedStyle(fig).getPropertyValue('--link').trim();
+    const points = links.flatMap(([a, b]) => [at(nodes[a]), at(nodes[b])]);
+    scene.add(new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(points),
+      new THREE.LineBasicMaterial({ color: linkColor, transparent: true, opacity: 0.7 })));
+
+    layers.forEach((name, l) => {
+      const el = document.createElement('span');
+      el.className = 'label';
+      el.textContent = name;
+      const label = new CSS2DObject(el);
+      label.position.set(-((cols - 1) / 2) * SX - 1.6, ((rows - 1) / 2) * SY + 0.6, (l - (layers.length - 1) / 2) * -SZ);
+      scene.add(label);
+    });
+
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.enableZoom = false;
+    controls.enablePan = false;
+    controls.autoRotate = !calm;
+    controls.autoRotateSpeed = 0.6;
+    controls.addEventListener('start', () => (controls.autoRotate = false));
+    renderer.domElement.style.touchAction = 'pan-y';
+
+    const fit = () => {
+      const w = stage.clientWidth, h = stage.clientHeight;
+      renderer.setSize(w, h);
+      labels.setSize(w, h);
+      camera.aspect = w / h;
+      camera.position.setLength(22.5 * Math.max(1, 1.5 / camera.aspect));
+      camera.updateProjectionMatrix();
+    };
+    new ResizeObserver(fit).observe(stage);
+
+    const ray = new THREE.Raycaster();
+    const ndc = new THREE.Vector2();
+    const hit = (e: PointerEvent) => {
+      const r = renderer.domElement.getBoundingClientRect();
+      ndc.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
+      ray.setFromCamera(ndc, camera);
+      const h = ray.intersectObjects(pickable, false)[0];
+      return h ? (h.object.userData.node as number) : -1;
+    };
+    let hover = -1;
+    renderer.domElement.addEventListener('pointermove', (e) => {
+      hover = hit(e);
+      renderer.domElement.style.cursor = hover >= 0 ? 'pointer' : 'grab';
+      if (hover < 0) return void (tip.hidden = true);
+      const n = nodes[hover];
+      const low = n.discs.flatMap((d) => d.parts.map((p) => ({ name: `${d.name} · ${p.name}`, v: p.v }))).sort((a, b) => a.v - b.v)[0];
+      tip.textContent = `${n.id} · ${n.layer} – ${fig.dataset.lowest} ${low.name}: ${low.v}`;
+      tip.className = `tip ${band(low.v)}`;
+      placeTip(tip, stage, e);
+    });
+    renderer.domElement.addEventListener('pointerleave', () => { hover = -1; tip.hidden = true; });
+
+    // a click on a node shows its roll large in the dialog
+    const dialog = document.querySelector<HTMLDialogElement>('dialog.qnet-modal')!;
+    const big = dialog.querySelector<HTMLElement>('.qroll')!;
+    let unmount: (() => void) | null = null;
+    dialog.querySelector('.close')!.addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', (e) => e.target === dialog && dialog.close());
+    dialog.addEventListener('close', () => { unmount?.(); unmount = null; });
+    onTap(renderer.domElement, async (e) => {
+      const i = hit(e);
+      if (i < 0) return;
+      tip.hidden = true;
+      dialog.querySelector('h3')!.textContent = `${nodes[i].id} · ${nodes[i].layer}`;
+      dialog.showModal();
+      unmount = await mountRoll(big, nodes[i].discs);
+    });
+
+    let visible = false;
+    new IntersectionObserver(([e]) => (visible = e.isIntersecting)).observe(stage);
+    fit();
+    renderer.setAnimationLoop(() => {
+      if (!visible || dialog.open) return;
+      groups.forEach((g, i) => g.scale.setScalar(g.scale.x + ((i === hover ? 1.3 : 1) - g.scale.x) * (calm ? 1 : 0.2)));
+      controls.update();
+      renderer.render(scene, camera);
+      labels.render(scene, camera);
+    });
+  }
+
+  document.querySelectorAll<HTMLElement>('.qnet').forEach((fig) => {
+    const io = new IntersectionObserver(([e]) => {
+      if (!e.isIntersecting) return;
+      io.disconnect();
+      mount(fig).catch((err) => console.error('QualityNetwork', err));
+    }, { rootMargin: '200px' });
+    io.observe(fig);
+  });
+</script>
+
+<style>
+  .qnet { --good: #2A9D8F; --fair: #E0A43A; --bad: #D7381E; --link: #8A96A3;
+    margin: 24px 0; padding: 0; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); overflow: hidden; clear: both }
+  .stage { position: relative; aspect-ratio: 16 / 10; max-height: 560px; width: 100%; background: var(--stage); touch-action: pan-y }
+  .stage :global(canvas) { display: block; cursor: grab }
+  .stage :global(.labels) { position: absolute; inset: 0; pointer-events: none }
+  .stage :global(.label) { font: 600 13px var(--font-body); color: var(--muted); text-transform: uppercase; letter-spacing: .06em; white-space: nowrap }
+  .tip { position: absolute; pointer-events: none; font: 600 13px var(--font-body); color: var(--ink); background: var(--surface);
+    border: 1px solid var(--line); border-left: 5px solid var(--good); border-radius: 8px; padding: 4px 10px; white-space: nowrap; z-index: 2 }
+  .tip.fair { border-left-color: var(--fair) } .tip.bad { border-left-color: var(--bad) }
+  .bar { padding: 12px 16px 0 }
+  .legend { list-style: none; display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 0; padding: 0; font-size: 13px; color: var(--muted) }
+  .legend li { margin: 0; display: flex; align-items: center; gap: 6px }
+  .legend i { width: 12px; height: 12px; border-radius: 3px; border: 1px solid var(--outline) }
+  .legend .good { background: var(--good) } .legend .fair { background: var(--fair) } .legend .bad { background: var(--bad) }
+  figcaption { font-size: 14px; color: var(--muted); padding: 6px 16px 14px }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap }
+  @media (max-width: 560px) { .stage { aspect-ratio: 3 / 4 } }
+  @media (prefers-color-scheme: dark) { :global(:root:not([data-theme="light"])) .qnet { --link: #5B6E84 } }
+  :global(:root[data-theme="dark"]) .qnet { --link: #5B6E84 }
+
+  .qnet-modal { width: min(1040px, 96vw); max-height: 94vh; padding: 16px; border: 2px solid var(--outline); border-radius: 18px;
+    background: var(--bg); color: var(--ink); box-shadow: 6px 6px 0 var(--shadow) }
+  .qnet-modal::backdrop { background: rgba(10, 18, 28, .72) }
+  .qnet-modal .head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px }
+  .qnet-modal h3 { margin: 0; font-size: 22px }
+  .qnet-modal .close { font-size: 28px; line-height: 1; width: 40px; height: 40px; border: 0; border-radius: 10px; background: transparent; color: var(--ink); cursor: pointer }
+  .qnet-modal .close:hover { background: var(--stage) }
+  .qnet-modal :global(.qroll) { margin: 0 }
+</style>

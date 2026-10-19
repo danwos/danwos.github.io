@@ -1,0 +1,52 @@
+---
+import { Image } from 'astro:assets';
+import { monster } from '../lib/monsters';
+import { t, path, type Lang } from '../i18n';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const s = t(lang);
+// The group appears only on danwos-level pages: danwos in front, the current tools around it.
+const crew = [
+  { name: 'monsterbrain', cls: 'm1' }, { name: 'deciwa', cls: 'm2' },
+  { name: 'quawa', cls: 'm3' }, { name: 'faktwerk', cls: 'm4' }, { name: 'danwos', cls: 'lead' },
+];
+---
+<section class="hero">
+  <div class="wrap grid2">
+    <div class="text">
+      <p class="eyebrow">{s.hero.eyebrow}</p>
+      <h1>{s.hero.title}</h1>
+      <p class="lead">{s.hero.lead}</p>
+      <div class="actions">
+        <a class="btn btn-primary" href={`${path(lang)}#tools`}>{s.hero.primary}</a>
+        <a class="btn btn-secondary" href={`${path(lang)}#contact`}>{s.hero.secondary}</a>
+      </div>
+    </div>
+    <div class="crew" role="img" aria-label={s.hero.crewAlt}>
+      {crew.map((m) => <Image src={monster(m.name)} alt="" class={m.cls} widths={[240, 480]} sizes="(max-width: 760px) 40vw, 240px" loading="eager" />)}
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero { position: relative; padding: 56px 0 72px; overflow: hidden }
+  .hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 10px; background: var(--stripe) }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center }
+  .eyebrow { font: 600 14px var(--font-body); text-transform: uppercase; letter-spacing: .08em; color: var(--primary); margin: 0 }
+  h1 { font-size: 56px; margin: .15em 0 .3em }
+  .actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 24px }
+  .crew { position: relative; aspect-ratio: 1.15 / 1 }
+  .crew :global(img) { position: absolute; width: 34%; height: auto; filter: drop-shadow(0 6px 10px #0002) }
+  .crew :global(.lead) { width: 50%; left: 25%; bottom: 0; z-index: 3 }
+  .crew :global(.m1) { left: 2%; top: 4% }
+  .crew :global(.m2) { right: 2%; top: 0; transform: scaleX(-1) } /* deciwa faces the group */
+  .crew :global(.m3) { left: 0; bottom: 2%; z-index: 2 }
+  .crew :global(.m4) { right: -1%; bottom: 0; z-index: 2; width: 48% } /* faktwerk is wider than tall – shown a bit bigger than quawa */
+  @media (max-width: 760px) {
+    .hero { padding: 32px 0 56px }
+    .grid2 { grid-template-columns: 1fr }
+    h1 { font-size: 38px }
+    .crew { max-width: 420px; width: 100%; margin: 0 auto }
+  }
+</style>

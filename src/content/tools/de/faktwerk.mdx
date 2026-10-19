@@ -1,0 +1,132 @@
+---
+title: "faktwerk"
+subtitle: "Ein Fakt, viele Sichten"
+summary: "Wissen einmal pflegen und für jede Rolle passend darstellen – immer konsistent."
+era: "current"
+status: "concept"
+monster: "faktwerk"
+role: [created]
+order: 40
+---
+
+import ToolLinks from '../../../components/ToolLinks.astro';
+import FaktwerkViews from '../../../components/FaktwerkViews.astro';
+import FaktwerkCascade from '../../../components/FaktwerkCascade.astro';
+
+## Warum faktwerk
+
+Je mehr KI ein Team einsetzt, desto mehr Ergebnisse entstehen: Entwürfe,
+Zusammenfassungen, Erklärungen zu Code, zerlegte Tickets, Risikoschätzungen.
+Sie wachsen schneller, als jemand sie lesen kann. Wer den Überblick behalten
+will, muss wissen, woher jede Aussage stammt, ob sie noch stimmt und was eine
+Änderung weiter oben bedeutet.
+
+Am schwersten trifft es die, die nicht aus dem Fach kommen. Das Marketing will
+wissen, was drei Dutzend Pull Requests für die nächste Kampagne heißen – ohne
+den Code zu lesen. Die Geschäftsführung braucht eine Seite, die Entwicklung
+alle Details. Am Ende gibt es drei Dokumente, und keiner weiß, ob die Zahlen
+darin noch zueinander passen.
+
+faktwerk dreht das um: **Jede Aussage gibt es genau einmal, als Fakt. Alles
+andere ist nur eine Sicht darauf.**
+
+## Ein Fakt, viele Sichten
+
+Ein Fakt ist die kleinste Einheit Wissen – eine Beschreibung, eine Kennzahl,
+ein Feature aus einem Pull Request. Er weiß, aus welchem System er kommt und
+wie man dorthin zurückfindet. Fakten entstehen aus den Werkzeugen, die ein Team
+ohnehin nutzt: GitHub, GitLab, Jira oder freie Dokumente.
+
+Eine Sicht stellt Fakten für eine Rolle oder einen Arbeitsablauf zusammen, wie
+ein Inhaltsverzeichnis. Dieselben Fakten erscheinen in vielen Sichten, jeweils
+anders sortiert, gruppiert und unterschiedlich tief. Als Bericht zum Lesen, als
+Tabelle mit Kennzahlen und später als räumliches Modell für eine Brille.
+
+<FaktwerkViews lang="de" />
+
+Ändert sich ein Fakt, zeigt jede Sicht sofort den neuen Stand. Kopiert wird
+nichts.
+
+## Hineinzoomen statt alles lesen
+
+Fakten liegen auf Ebenen. Ganz unten steht die Quelle, etwa ein Pull Request
+oder ein Ticket. Darüber stehen Fakten, die daraus abgeleitet sind: die
+einzelnen Features, ihre fachliche und technische Beschreibung. Ganz oben eine
+Zusammenfassung, die die Ebenen darunter in wenigen Sätzen erklärt.
+
+Jede Sicht startet oben und bleibt verständlich. Wer mehr wissen will, zoomt
+hinein – muss aber nicht. Und jeder Fakt kennt seine Eltern: Von jeder
+Zusammenfassung führt ein Weg zurück bis zur Zeile im Quellsystem.
+
+## Wenn sich unten etwas ändert
+
+Ein Pull Request wird nachgebessert, und plötzlich stimmt der Release-Bericht
+nicht mehr. Heute merkt das niemand. faktwerk überschreibt dann nichts, sondern
+legt neben jeden betroffenen Fakt einen Vorschlag. Ein Mensch vergleicht,
+übernimmt oder verwirft ihn. Erst ein übernommener Vorschlag wandert eine Ebene
+weiter nach oben.
+
+<FaktwerkCascade lang="de" />
+
+So bleibt die Zusammenfassung ehrlich, ohne dass jemand suchen muss, was alles
+angepasst werden muss.
+
+## Wie sich das anfühlt
+
+1. **Fakten entstehen.** Ein neuer Pull Request kommt herein. faktwerk zerlegt
+   ihn in einzelne Features und beschreibt jedes fachlich und technisch, mit
+   Kennzahlen wie geänderten Zeilen oder geschätztem Risiko.
+2. **Ein Mensch prüft.** In einem Formular der passenden Sicht wird der Entwurf
+   gelesen und korrigiert. Ungeprüftes geht nicht weiter.
+3. **Die Sichten sind fertig.** Jede Rolle sieht dieselben Fakten in ihrer
+   eigenen Zusammenstellung.
+4. **Entscheidungen gehen zurück.** Eine Freigabe oder ein Kommentar in der
+   Sicht landet wieder im Quellsystem, zum Beispiel am Pull Request.
+
+## KI entwirft, Menschen entscheiden
+
+KI hilft in faktwerk nur beim Entwerfen. Jeder Entwurf ist ein Vorschlag, bis
+ihn jemand freigibt. Danach ist alles fest: Sichten und Rückmeldungen an die
+Quelle entstehen aus denselben Daten immer gleich, nachvollziehbar und
+prüfbar. Nichts wird ungeprüft in ein anderes System zurückgeschrieben.
+
+## Woraus faktwerk besteht
+
+Ein kleiner Satz klar getrennter Bausteine um eine einzige Datenquelle:
+
+- **Ein Kern** hält alle Fakten in einem festen Datenmodell. Ein Ticket aus
+  GitHub sieht dort genauso aus wie eins aus Jira und lässt sich direkt
+  vergleichen.
+- **Importer**, einer pro Quellsystem, übersetzen die Daten in dieses Modell.
+  Eine neue Quelle braucht nur einen neuen Importer.
+- **Arbeitsabläufe** beschreiben Schritte: was gezeigt wird, was automatisch
+  passiert und wo ein Mensch entscheidet. Eine Workflow-Engine führt sie aus und
+  wartet, bis jemand gehandelt hat.
+- **Eine Oberfläche** zeigt jede Sicht und jedes Formular, ohne eigenen Code
+  pro Arbeitsablauf.
+
+Das feste Datenmodell ist Absicht: Niemand muss vorher ein Schema für sein
+Projekt bauen, faktwerk soll ohne Konfiguration starten.
+
+## Für wen
+
+Für alle, die mit KI in komplexen Systemen arbeiten und viele KI-Ergebnisse
+im Blick behalten müssen. Zuerst Software-Teams, die mit der Review-Last von
+KI-Pull-Requests kämpfen. Dann Produkt- und Projektmanagement, die eine
+gemeinsame Wahrheit für alle Rollen brauchen. Und Branchen, in denen jede
+Aussage eine nachweisbare Herkunft und eine Freigabe braucht.
+
+## faktwerk, monsterbrain und deciwa
+
+monsterbrain ordnet das Wissen einer Person oder eines Teams in Ordnern und
+Markdown-Dateien. faktwerk ist eine Datenbank für sehr viele Objekte aus vielen
+Quellsystemen. deciwa macht einzelne KI-Änderungen sichtbar und bewertbar.
+
+<ToolLinks lang="de" tools={['monsterbrain', 'deciwa']} />
+
+## Stand
+
+Ein Konzept. Die Architektur ist durchgeplant, gebaut ist noch nichts. Bevor
+es losgeht, will ich wissen, wo der Schmerz am größten ist: in Gesprächen mit
+Teams, die viele KI-Pull-Requests prüfen müssen. "faktwerk" ist ein
+Arbeitstitel.

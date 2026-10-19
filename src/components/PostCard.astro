@@ -1,0 +1,37 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import { slugOf } from '../lib/content';
+import { monster } from '../lib/monsters';
+import { formatDate } from '../lib/format';
+import { t, path, type Lang } from '../i18n';
+
+interface Props { lang: Lang; entry: CollectionEntry<'blog'> }
+const { lang, entry } = Astro.props;
+const s = t(lang);
+const d = entry.data;
+---
+<a class="post" href={path(lang, `blog/${slugOf(entry.id)}/`)}>
+  {d.cover
+    ? <Image src={d.cover} alt="" widths={[400, 800]} sizes="(max-width: 760px) 100vw, 360px" class="cover" />
+    : <div class="cover stage"><Image src={monster('danwos-sitting')} alt="" widths={[240]} sizes="160px" /></div>}
+  <div class="body">
+    <time datetime={d.date.toISOString()}>{formatDate(d.date, lang)}</time>
+    <h3>{d.title}</h3>
+    <p>{d.summary}</p>
+    <span class="more">{s.blog.read} →</span>
+  </div>
+</a>
+<style>
+  .post { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--primary);
+    border-radius: var(--radius); overflow: hidden; color: inherit; text-decoration: none; transition: transform .1s, box-shadow .1s }
+  .post:hover { transform: translateY(-2px); box-shadow: 4px 4px 0 var(--shadow) }
+  .post :global(.cover) { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-bottom: 1px solid var(--line) }
+  .stage { background: var(--stage); display: flex; align-items: center; justify-content: center }
+  .stage :global(img) { height: 82%; width: auto }
+  .body { padding: 16px; display: flex; flex-direction: column; flex: 1 }
+  time { font-size: 13px; color: var(--muted) }
+  h3 { font-size: 20px; margin: 6px 0 }
+  p { color: var(--muted); font-size: 15px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden }
+  .more { margin-top: auto; color: var(--primary); font-weight: 600 }
+</style>

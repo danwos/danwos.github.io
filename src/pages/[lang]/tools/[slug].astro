@@ -1,0 +1,67 @@
+---
+import { Image } from 'astro:assets';
+import { getCollection, render } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import { monster } from '../../../lib/monsters';
+import { langOf, slugOf } from '../../../lib/content';
+import { t, path, type Lang } from '../../../i18n';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('tools');
+  return entries.map((entry) => ({ params: { lang: langOf(entry.id), slug: slugOf(entry.id) }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const lang = Astro.params.lang as Lang;
+const s = t(lang);
+const d = entry.data;
+// Archived tools all share the grandma; a current tool shows only its own monster.
+const art = d.era === 'archive' ? 'grandma' : d.monster;
+const { Content } = await render(entry);
+const empty = !entry.body?.trim();
+---
+<Base lang={lang} title={d.title} description={d.summary}>
+  <section class="head">
+    <div class="wrap split">
+      <div class="img">{art && <Image src={monster(art)} alt="" widths={[260, 520]} sizes="260px" loading="eager" />}</div>
+      <div>
+        <a class="back" href={path(lang, `tools/${d.era === 'archive' ? '#archive' : ''}`)}>← {s.tool.back}</a>
+        <h1>{d.title}</h1>
+        {d.subtitle && <p class="subtitle">{d.subtitle}</p>}
+        <p class="lead">{d.summary}</p>
+        <p class="meta">
+          {d.pictures && <span class="muted">{s.tool.status}</span>}
+          <span class={`tag ${d.status}`}>{s.status[d.status]}</span>
+          {d.pictures && <span class="muted">{s.tool.pictures}</span>}
+          {d.pictures && <span class="tag pictures">{s.stage[d.pictures]}</span>}
+          {d.era === 'archive' && d.role.length > 0 && <span class="muted">{s.tool.role}: {d.role.map((r) => s.role[r]).join(', ')}</span>}
+          {d.period && <span class="muted">{d.period}</span>}
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap prose">
+      {empty ? <p class="wip">{s.tool.wip}</p> : <Content />}
+      {d.links.length > 0 && (
+        <>
+          <h2>{s.tool.links}</h2>
+          <ul>{d.links.map((l) => <li><a href={l.url}>{l.label}</a></li>)}</ul>
+        </>
+      )}
+      <p class="cta"><a class="btn btn-primary" href={`${path(lang)}#contact`}>{s.tool.cta}</a></p>
+    </div>
+  </section>
+</Base>
+<style>
+  .head { padding: 40px 0 48px; border-bottom: 10px solid; border-image: var(--stripe) 10 }
+  .back { font-weight: 600; text-decoration: none }
+  h1:has(+ .subtitle) { margin-bottom: 0 }
+  .subtitle { margin: 2px 0 14px; font: 600 20px var(--font-mono); color: var(--primary) }
+  .meta { display: flex; gap: 12px; flex-wrap: wrap; align-items: center }
+  .meta .muted + .tag { margin-left: -6px }
+  .tag.pictures { background: #D8C3A540; color: var(--ink) }
+  .prose h2 { font-size: 28px; margin-top: 40px }
+  .wip { padding: 12px 16px; border-left: 5px solid var(--primary); background: var(--primary-soft); border-radius: 12px }
+  .cta { margin-top: 40px }
+</style>
