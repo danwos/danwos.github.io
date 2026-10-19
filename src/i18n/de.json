@@ -27,6 +27,7 @@
   "status": {
     "idea": "Idee",
     "concept": "Konzept",
+    "prototype": "Prototyp",
     "alpha": "Alpha",
     "beta": "Beta",
     "done": "Fertig",

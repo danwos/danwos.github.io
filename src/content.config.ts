@@ -15,7 +15,7 @@ const tools = defineCollection({
     pictures: z.enum(['sketch', 'mockup', 'prototype', 'product']).optional(), // how far along the screenshots on the page are
     summary: z.string(),
     era: z.enum(['current', 'archive']),
-    status: z.enum(['idea', 'concept', 'alpha', 'beta', 'done', 'cancelled']),
+    status: z.enum(['idea', 'concept', 'prototype', 'alpha', 'beta', 'done', 'cancelled']),
     monster: z.string().optional(),
     role: z.array(z.enum(['created', 'maintained', 'hired'])).default([]),
     period: z.string().optional(),
