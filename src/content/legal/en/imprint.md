@@ -1,6 +1,6 @@
 ---
 title: "Imprint"
-translated_from: "b6da9515434f"
+translated_from: "b56204ec7e6a"
 ---
 <!-- Research, not legal advice. Translation; the German version is binding. -->
 
@@ -13,7 +13,7 @@ Germany
 
 ## Contact
 
-Email: [daniel.woste@useblocks.com](mailto:daniel.woste@useblocks.com)
+Email: [daniel.woste@gmail.com](mailto:daniel.woste@gmail.com)
 
 ## Responsible for the content according to § 18 (2) MStV
 

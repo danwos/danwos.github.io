@@ -8,7 +8,7 @@ Kurz gesagt: Diese Seite setzt keine Cookies, zählt keine Besuche und bindet ni
 ## Verantwortlich
 
 Daniel Woste, Deutschland  
-E-Mail: [daniel.woste@useblocks.com](mailto:daniel.woste@useblocks.com)
+E-Mail: [daniel.woste@gmail.com](mailto:daniel.woste@gmail.com)
 
 ## Hosting über GitHub Pages
 
