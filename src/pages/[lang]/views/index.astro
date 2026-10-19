@@ -17,7 +17,7 @@ const { Content } = entry ? await render(entry) : { Content: null };
 ---
 <Base lang={lang} title={s.views.title} description={s.views.lead}>
   <section class="section head">
-    <div class="wrap">
+    <div class="wrap narrow">
       <Split monster="danwos-bricks" alt={s.views.alt}>
         <h1>{s.views.title}</h1>
         <p class="lead">{s.views.lead}</p>
@@ -26,10 +26,12 @@ const { Content } = entry ? await render(entry) : { Content: null };
   </section>
   {Content && (
     <section class="section">
-      <div class="wrap prose"><Content /></div>
+      <div class="wrap narrow prose"><Content /></div>
     </section>
   )}
 </Base>
 <style>
   .head { padding-bottom: 32px }
+  /* one centred reading column like blog posts and the about page: pictures end where the text ends */
+  .narrow { max-width: 820px }
 </style>
