@@ -1,0 +1,55 @@
+---
+import type { Lang } from '../i18n';
+
+// How quawa could grow: four stages as rising steps, from the pull request watcher to more protection layers (quawa tool page).
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = {
+  de: {
+    label: 'Vier Ausbaustufen als Treppe: 1 Wächter im Pull Request, 2 mehr Muster und Sprachen, 3 wirksame Abdeckung im Dashboard, 4 weitere Schutzschichten.',
+    stages: [
+      ['PR-Wächter', 'GitHub Action', 'TypeScript/JS'],
+      ['Mehr Muster', 'UI-Tests, BDD', 'Python, Java'],
+      ['Wirksame Abdeckung', 'Dashboard', 'Trends, Hotspots'],
+      ['Schutzschichten', 'Agenten-Regeln', 'Typen, Scanner'],
+    ],
+  },
+  en: {
+    label: 'Four stages as steps: 1 pull request watcher, 2 more patterns and languages, 3 effective coverage in a dashboard, 4 more protection layers.',
+    stages: [
+      ['PR watcher', 'GitHub Action', 'TypeScript/JS'],
+      ['More patterns', 'UI tests, BDD', 'Python, Java'],
+      ['Effective coverage', 'dashboard', 'trends, hotspots'],
+      ['Protection layers', 'agent rules', 'types, scanners'],
+    ],
+  },
+}[lang];
+const base = 230, w = 176, gap = 8, step = 38;
+---
+<figure class="qstages">
+  <svg viewBox="0 0 760 240" role="img" aria-label={t.label}>
+    {t.stages.map(([name, a, b], i) => {
+      const x = 20 + i * (w + gap), h = 100 + i * step, y = base - h;
+      return (
+        <g>
+          <rect class:list={['box', i === 0 ? 'primary' : 'plain']} x={x} y={y} width={w} height={h} rx="10" />
+          <text x={x + 14} y={y + 28} class="num">{i + 1}</text>
+          <text x={x + 14} y={y + 52} class="name">{name}</text>
+          <text x={x + 14} y={y + 72} class="sub">{a}</text>
+          <text x={x + 14} y={y + 90} class="sub">{b}</text>
+        </g>
+      );
+    })}
+  </svg>
+</figure>
+<style>
+  .qstages { margin: 24px 0; overflow-x: auto }
+  svg { display: block; width: 100%; min-width: 560px; height: auto }
+  text { fill: var(--ink) }
+  .num { font: 700 18px var(--font-display); fill: var(--accent) }
+  .name { font: 600 15px var(--font-display) }
+  .sub { font: 12px var(--font-body); fill: var(--muted) }
+  .box { stroke-width: 1.5 }
+  .box.primary { fill: var(--primary-soft); stroke: var(--primary) }
+  .box.plain { fill: var(--surface); stroke: var(--line); stroke-dasharray: 5 4 }
+</style>

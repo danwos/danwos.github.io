@@ -1,0 +1,130 @@
+---
+title: "faktwerk"
+subtitle: "One fact, many views"
+summary: "Maintain knowledge once and show it the right way for every role – always consistent."
+era: "current"
+status: "concept"
+monster: "faktwerk"
+role: [created]
+order: 40
+translated_from: "3204e789ed56"
+---
+
+import ToolLinks from '../../../components/ToolLinks.astro';
+import FaktwerkViews from '../../../components/FaktwerkViews.astro';
+import FaktwerkCascade from '../../../components/FaktwerkCascade.astro';
+
+## Why faktwerk
+
+The more AI a team uses, the more results pile up: drafts, summaries,
+explanations of code, broken-down tickets, risk estimates. They grow faster
+than anyone can read them. Keeping the overview means knowing where every
+statement comes from, whether it still holds and what a change further up
+means.
+
+It hits hardest those who are not experts in the field. Marketing wants to know
+what three dozen pull requests mean for the next campaign – without reading the
+code. Management needs one page, engineering every detail. In the end there are
+three documents, and nobody knows whether their numbers still match.
+
+faktwerk turns this around: **every statement exists exactly once, as a fact.
+Everything else is just a view of it.**
+
+## One fact, many views
+
+A fact is the smallest unit of knowledge – a description, a metric, a feature
+from a pull request. It knows which system it comes from and how to find the
+way back. Facts come from the tools a team already uses: GitHub, GitLab, Jira
+or plain documents.
+
+A view puts facts together for one role or workflow, like a table of contents.
+The same facts appear in many views, each sorted, grouped and detailed
+differently. As a report to read, as a table of metrics and later as a spatial
+model for a headset.
+
+<FaktwerkViews lang="en" />
+
+When a fact changes, every view shows the new state right away. Nothing is
+copied.
+
+## Zoom in instead of reading everything
+
+Facts sit on levels. At the bottom is the source, such as a pull request or a
+ticket. Above it are facts derived from it: the single features, their
+functional and technical description. At the top a summary that explains the
+levels below in a few sentences.
+
+Every view starts at the top and stays understandable. Whoever wants more zooms
+in – but doesn't have to. And every fact knows its parents: from any summary
+there is a way back to the line in the source system.
+
+## When something changes at the bottom
+
+A pull request gets reworked, and suddenly the release report is wrong. Today
+nobody notices. faktwerk overwrites nothing in that case – it puts a proposal
+beside every affected fact. A human compares, then promotes or drops it. Only a
+promoted proposal moves one level further up.
+
+<FaktwerkCascade lang="en" />
+
+That keeps the summary honest without anyone hunting for what else needs to
+change.
+
+## How it feels
+
+1. **Facts emerge.** A new pull request comes in. faktwerk breaks it into
+   single features and describes each functionally and technically, with
+   metrics such as changed lines or estimated risk.
+2. **A human reviews.** The draft is read and corrected in a form of the
+   matching view. Nothing unreviewed moves on.
+3. **The views are ready.** Every role sees the same facts in its own
+   compilation.
+4. **Decisions flow back.** An approval or a comment in the view lands back in
+   the source system, for example on the pull request.
+
+## AI drafts, humans decide
+
+In faktwerk, AI only helps with drafting. Every draft is a proposal until
+someone approves it. After that everything is fixed: views and feedback to the
+source come out of the same data the same way every time, traceable and
+verifiable. Nothing is written back to another system unreviewed.
+
+## What faktwerk is made of
+
+A small set of clearly separated building blocks around one single data
+source:
+
+- **A core** holds all facts in one fixed data model. A ticket from GitHub
+  looks just like one from Jira there and can be compared directly.
+- **Importers**, one per source system, translate the data into this model. A
+  new source only needs a new importer.
+- **Workflows** describe steps: what is shown, what happens automatically and
+  where a human decides. A workflow engine runs them and waits until someone has
+  acted.
+- **One interface** shows every view and every form, without its own code per
+  workflow.
+
+The fixed data model is on purpose: nobody has to build a schema for their
+project first, faktwerk is meant to start without configuration.
+
+## Who it is for
+
+For everyone who works with AI in complex systems and has to keep track of many
+AI results. First software teams struggling with the review load of AI pull
+requests. Then product and project management, who need one shared truth for
+all roles. And industries where every statement needs a traceable origin and an
+approval.
+
+## faktwerk, monsterbrain and deciwa
+
+monsterbrain organises the knowledge of one person or team in folders and
+Markdown files. faktwerk is a database for very many objects from many source
+systems. deciwa makes single AI changes visible and ratable.
+
+<ToolLinks lang="en" tools={['monsterbrain', 'deciwa']} />
+
+## Status
+
+A concept. The architecture is planned through, nothing is built yet. Before it
+starts I want to know where the pain is greatest: in talks with teams that have
+to review many AI pull requests. "faktwerk" is a working title.

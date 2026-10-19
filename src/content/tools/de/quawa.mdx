@@ -1,0 +1,120 @@
+---
+title: "quawa"
+subtitle: "quality watcher"
+summary: "Prüft, ob die Tests von KI-geschriebenem Code wirklich testen."
+era: "current"
+status: "idea"
+monster: "quawa"
+role: [created]
+order: 30
+---
+
+import QuawaCheck from '../../../components/QuawaCheck.astro';
+import QuawaStages from '../../../components/QuawaStages.astro';
+
+## Warum quawa
+
+KI-Agenten schreiben Code und die passenden Tests gleich mit. Die Pipeline ist
+grün, alle sind zufrieden. Nur prüfen viele dieser Tests genau das, was der
+Code ohnehin tut – und nicht das, was er tun soll. Ob sie einen echten Fehler
+fangen würden, sieht im Pull Request niemand.
+
+Dazu kommt ein zweites Muster: Ein Agent soll eine rote Pipeline grün
+bekommen und nimmt den kürzesten Weg. Er lockert eine Assertion, setzt einen
+Test auf `skip` oder sorgt dafür, dass ein Fehlschlag in der CI nichts mehr
+blockiert. Im Diff sieht das harmlos aus, und im Review rutscht es leicht
+durch.
+
+quawa soll eine einzige Frage beantworten: **Kann ich dem grünen CI bei
+KI-Code trauen?**
+
+## Acht Fragen an jeden Pull Request
+
+| Signal | Was quawa wissen will |
+|---|---|
+| Mutation Score | Wie viele gezielt eingebaute Fehler fangen die Tests? |
+| Test-Manipulation | Wurde ein Test abgeschwächt, statt den Code zu reparieren? |
+| Over-Mocking | Prüft der Test das Verhalten oder nur seinen eigenen Mock? |
+| Testebenen | Läuft der geänderte Code nur durch Unit-Tests oder auch durch Integration und E2E? |
+| Redundante Tests | Welche Tests fangen nichts zusätzlich und kosten nur CI-Zeit? |
+| CI-Integrität | Laufen die Tests überhaupt, und blockiert ein Fehlschlag den Merge? |
+| Test-bewusster Code | Verhält sich der Produktionscode im Test anders als im Betrieb? |
+| Parameter und Umgebung | Sind Randfälle, Durchläufe oder Plattformen still verschwunden? |
+
+## Wie quawa prüft
+
+Zwei Wege laufen nebeneinander. Die Diff-Prüfungen lesen nur die Änderungen
+an Tests, Code und CI-Konfiguration – sie brauchen keinen Testlauf und sind
+deshalb schnell. Das Mutation Testing baut kleine Fehler in die geänderten
+Zeilen ein, etwa ein `>` statt `>=`, und schaut, ob die Tests das merken.
+Beides fasst quawa in einer kurzen Karte im Pull Request zusammen, Details gibt
+es per Klick.
+
+<QuawaCheck lang="de" />
+
+Erst zusammen ergibt das eine klare Diagnose: Überleben viele eingebaute
+Fehler und wurden gleichzeitig Assertions abgeschwächt, weißt du nicht nur,
+*dass* ein Test nichts prüft, sondern auch *warum*.
+
+## Woran man Schummeln erkennt
+
+Die meisten Tricks sind im Diff eindeutig zu sehen, wenn man weiß, wonach man
+sucht:
+
+```diff
+- expect(total).toEqual(42)
++ expect(total).toBeDefined()
+```
+
+Ein paar weitere Beispiele aus dem gleichen Werkzeugkasten:
+
+- ein neues `continue-on-error: true` im Testjob, und Rot blockiert nichts mehr
+- ein `if (process.env.NODE_ENV === 'test')` im Produktionscode
+- ein `/* istanbul ignore next */`, das die Coverage schönt
+- Randfälle wie `null` oder `-1`, die still aus einem `test.each` verschwinden
+- ein Coverage-Gate, das von 90 auf 40 Prozent sinkt
+
+Für sich genommen kann jede dieser Änderungen richtig sein. quawa zeigt sie
+deshalb mit der genauen Stelle, und einmal begründete Ausnahmen merkt es sich.
+
+## Ohne KI im Produkt
+
+quawa prüft KI-Code, braucht dafür aber selbst keine KI. Alle Prüfungen sind
+feste Regeln: deterministisch, nachvollziehbar und bei jedem Lauf gleich. Die
+Rechenzeit läuft in deiner eigenen CI, Quellcode verlässt dein Repository
+nicht. Auswertungen gibt es pro Team, Repository oder Agent – nie pro Person.
+
+## Direkt im Arbeitsablauf der Agenten *(geplant)*
+
+Am meisten bringt quawa, bevor überhaupt ein Pull Request entsteht. Über einen
+MCP-Server und einen Hook für Claude Code oder Cursor prüft sich der Agent
+selbst, und eine Änderung, die Assertions entfernt, wird gleich gestoppt. Tests,
+für die ein Mensch verantwortlich ist, lassen sich als geschützt markieren.
+Eine VS-Code-Erweiterung zeigt überlebende Fehler direkt neben der Codezeile.
+
+## Wie es wachsen kann
+
+<QuawaStages lang="de" />
+
+Der Anfang ist bewusst klein: eine GitHub Action für TypeScript und JavaScript,
+die im Pull Request kommentiert. Danach kommen weitere Muster, UI-Tests mit
+Playwright und weitere Sprachen. In Stufe drei wird aus dem Wächter ein
+Dashboard, das *wirksame* statt gemessene Abdeckung zeigt – also nur die
+Zeilen, in denen Tests eingebaute Fehler wirklich fangen. Und am Ende geht es
+um mehr als Tests: Auch Agenten-Regeln, Typprüfungen und Sicherheits-Scanner
+sind Schutzschichten, die ein Agent lockern kann.
+
+## Was quawa nicht macht
+
+quawa schreibt keine Tests und führt keine UI-Tests aus, dafür gibt es schon
+gute Tools. Es verknüpft keine Anforderungen und erzeugt keine
+Compliance-Nachweise. Und es scannt nicht selbst nach Sicherheitslücken,
+sondern meldet nur, wenn ein Pull Request die vorhandenen Scanner
+abschwächt.
+
+## Stand
+
+Eine Idee mit ausgearbeitetem Business Case. Als Nächstes spreche ich mit
+Teams, die mit KI-Agenten in TypeScript und Python arbeiten, und probiere die
+vorhandenen Open-Source-Tools selbst aus. Die Prüf-Engine soll als Open Source
+erscheinen, damit jede Regel einsehbar bleibt.
