@@ -3,21 +3,24 @@ title: "deciwa"
 subtitle: "decision watcher"
 summary: "Feedback and approvals right on your docs, websites and code – so it's clear what is confirmed and what the AI still has to do."
 era: "current"
-status: "alpha"
+status: "prototype"
 pictures: "prototype"
 monster: "deciwa"
 role: [created]
 order: 10
-translated_from: "1f2a965d22db"
+links:
+  - label: "Try deciwa live – in the deciwa docs"
+    url: "https://deciwa.danwos.dev"
+translated_from: "8a3a29651fbe"
 ---
 
 import Scene from '../../../components/Scene.astro';
 import Screen from '../../../components/Screen.astro';
-import website from '../../../assets/tools/deciwa/website.png';
-import card from '../../../assets/tools/deciwa/detail-card.png';
-import list from '../../../assets/tools/deciwa/detail-list.png';
-import docs from '../../../assets/tools/deciwa/docs.png';
-import code from '../../../assets/tools/deciwa/code.png';
+import review from '../../../assets/tools/deciwa/review.webp';
+import question from '../../../assets/tools/deciwa/question.webp';
+import panel from '../../../assets/tools/deciwa/panel.webp';
+import stale from '../../../assets/tools/deciwa/stale.webp';
+import guided from '../../../assets/tools/deciwa/guided.webp';
 
 ## Why deciwa
 
@@ -34,101 +37,110 @@ it – and that remembers what I confirmed.
 
 <video src="/videos/deciwa-product-en.mp4" poster="/videos/deciwa-product-en.jpg" autoplay muted loop playsinline controls preload="metadata"></video>
 
+You can try deciwa right away: the [deciwa docs](https://deciwa.danwos.dev) can
+be reviewed with deciwa itself. Your review stays in your browser.
+
 ## Feedback right on the result
 
-You review what comes out at the end: the built docs, the finished website.
-Move the mouse over it and deciwa outlines the element under the cursor – a
-paragraph, a card, a requirement. Hold Alt to jump one level up. If you only
-want a single word, select it.
+You review what comes out at the end: the built docs, later the finished
+website too. Turn on review and deciwa outlines the element under the cursor –
+a paragraph, a table row, a picture, a requirement. A click opens its card. If
+you only want a few words, select them first.
 
-<Screen src={website} alt="deciwa on a website: on a feature card the AI asks whether freeze should be mentioned there too. The answer is in the comment field." />
+Next to every element with feedback, a colored bar shows where it stands:
+approved, rejected, frozen, changed after approval, or with an open question.
+
+<Screen src={review} alt="A docs page under review: colored bars next to the reviewed elements, the deciwa button with its counters at the bottom right." />
 
 ## Three ways to work with deciwa
 
-### Give feedback
+### Decide
 
-Feedback says what should happen to a spot. **Approve** confirms the
-statement, **Reject** says it is wrong. **Rephrase**, **More details** and
-**Delete** are jobs for the AI: reword, expand, remove. **Freeze** protects a
-spot from any change, and **Note** just keeps a thought. One click is enough;
-a comment is optional.
+A verdict says what should happen to a spot. **Approve** confirms the
+statement, **Reject** says it is wrong, **Approve & freeze** confirms it and
+protects it from any change, **Delete** is the job to remove it. What exactly
+should change you simply write in the comment – it goes along with the
+verdict. **Comment only** just keeps a thought. One click is enough, and every
+button has a key.
 
 ### Rate the quality
 
-The one to five stars are separate from that. With them you quickly say how
-good you think a spot is – without deciding anything or giving a job. A
-statement can be correct and still get only two stars because it is clumsily
-written. Later you see where the weak spots are and put your time exactly
-there.
+The zero to five stars are separate from that. With them you quickly say how
+good you think a spot is – without deciding anything. A statement can be
+correct and still get only two stars because it is clumsily written. Later you
+see where the weak spots are.
 
 ### Talk to the AI
 
 If the AI – Claude, for example – is unsure about a spot, it asks you a
-question right there instead of guessing. The question shows up in deciwa on
-the element it is about. You answer with one click, where Approve means "yes,
-that's fine", or you write an answer. The AI reads it and carries on.
+question right there instead of guessing. You answer with **Yes**, **No** or in
+a few words, and the AI carries on.
 
-You find all three on the card: the AI's question at the top, the stars below
-it, then the feedback buttons and the comment field.
-
-<Screen src={card} alt="The feedback card up close: the AI's question, four stars, the buttons and your answer in the comment field." />
+<Screen src={question} alt="The card on a requirement: Claude's question with Yes, No and an answer field at the top, then comment, verdicts and stars." />
 
 ## Everything at a glance
 
-<Screen src={list} float alt="The side panel with all feedback on the file: approved, changes requested, question open, note and frozen." />
+<Screen src={panel} float alt="The panel for a page: share with a verdict and with stars, the review rule, open, rejected, changed and approved elements." />
 
-Next to the page, deciwa lists all feedback on the file: what is approved, what
-should change, where a question from the AI is open and what is frozen, each
-with your stars. You find the same colors on the edge of the page, right next
-to the parts they belong to.
+The panel shows all feedback – for the page or for the whole project. At the
+top you see how many of the elements you have to approve already have a
+verdict and how many got stars. You decide what must be approved: all
+Sphinx-Needs requirements, for example, all table rows, or everything. These
+elements carry a gray dashed line until you have decided.
 
-At the top you see how much of the file is already covered by an approval. A
-click on an entry jumps to that spot – so you go through a file from top to
-bottom without missing anything.
+A click on an entry jumps to that spot, on another page too.
 
 ## Approved stays approved – until the text changes
 
 An approval is tied to exactly the element you confirmed, not to a line
 number. If someone changes the text later, deciwa notices. The element is
-marked "stale", you see what changed, and you decide again. That way it is
-always clear which statements are really confirmed right now.
+marked "stale", you see the changed words, and you decide again. That way it
+is always clear which statements are really confirmed right now.
 
-<Screen src={docs} alt="A Sphinx-Needs requirement was changed after its approval: 90 days became 30. deciwa shows the difference." />
+<Screen src={stale} alt="A requirement was changed after its approval: the card shows “stale” and, in its history, the old and the new word." />
 
 ## Freeze: hands off
 
 <Scene monster="deciwa-furious" alt="deciwa, furious with raised fists" left />
 
 Some parts must stay exactly as they are: legal text, an agreed requirement, a
-constant in code. Mark them with **Freeze**. The AI leaves them alone – and if
-the text changes anyway, deciwa raises the alarm and shows you what was there
-before.
+constant in code. Mark them with **Approve & freeze**. The AI leaves them
+alone – and if the text changes anyway, deciwa raises the alarm and shows you
+what was there before.
 
-<Screen src={code} alt="A frozen constant in Python code was changed anyway. deciwa reports “frozen, but changed!” and shows the old value." />
+## Go through it without missing anything
+
+The **guided review** walks you through everything that has no verdict yet:
+the card opens on the first open element, and after each decision it moves on
+to the next – first on the page, then on the following pages.
+
+<Screen src={guided} alt="Guided review: the panel shows the open elements, the card is already on the next requirement." />
 
 ## The AI works through your feedback
 
 <Scene monster="deciwa-high-five" alt="deciwa and danwos giving each other a high five" />
 
-Every piece of feedback is a clear instruction: Rephrase means reword it, More
-details means expand it, Delete means remove it, Freeze means hands off. The
-AI fetches the open list, works through it and then asks you to look at the
-changed parts again.
+Every piece of feedback is a clear instruction: the comment says what should
+change, Reject means fix it, Delete means remove it, Freeze means hands off.
+The AI fetches the open list from the command line, works through it, checks
+each item off and asks its questions right at the element.
 
 deciwa itself never changes text. It collects your feedback, evaluates it and
 shows what is still missing. The work is done by the AI or by you.
 
 ## Where you use deciwa
 
-- **VS Code** – in the editor and in the preview of your docs
-- **Chrome** – on any rendered page, docs or website
-- **Claude** – you go through a file together with the AI in the chat, and
-  Claude asks its questions right in deciwa
+- **Sphinx** – now: on the built docs, with Sphinx-Needs, Markdown and
+  reStructuredText
+- **VS Code** – in the editor and in the preview of your docs (planned)
+- **Chrome** – on any rendered page, docs or website (planned)
+- **Claude** – you go through a file together with the AI, and Claude asks its
+  questions right in deciwa
 - **Desktop app** – for everyone who doesn't use a development environment
+  (later)
 
-deciwa understands Markdown, reStructuredText with Sphinx-Needs, AsciiDoc,
-HTML, plain text and code in Python, C, JavaScript and TypeScript. Everywhere
-you get the same buttons and the same states.
+Everywhere you get the same buttons, the same states and the same data.
+Review works on a phone too: tap instead of point.
 
 ## Where your data lives
 
@@ -137,12 +149,16 @@ Your feedback never ends up in your files. deciwa stores everything in a
 several repositories together. The format is openly documented and versioned
 with Git, like the rest of your project.
 
-For teams there is a hosted service. Data lives there centrally, and you get a
-task list per person, an overview of how much is already confirmed, an
-evaluation of your stars that shows the weak spots, comparisons between
-versions and a report for audits: who approved which wording when.
+Without a server, the review runs in the browser. You export what you rated
+there as one file and bring it into the repository later.
+
+For teams there will be a hosted service. Data lives there centrally, and you
+get a task list per person, an evaluation of your stars that shows the weak
+spots, comparisons between versions and a report for audits: who approved
+which wording when.
 
 ## Status
 
-deciwa is in the concept phase. The pictures here come from a clickable
-prototype. The tool will be free to use; the hosted service for teams is paid.
+deciwa runs as a prototype for Sphinx docs – the pictures here come straight
+from it, taken on the [deciwa docs](https://deciwa.danwos.dev). The tool will
+be free to use; the hosted service for teams is paid.
