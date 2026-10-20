@@ -16,18 +16,18 @@ const d = entry.data;
     {d.monster && <Image src={monster(d.monster)} alt="" widths={[240, 480]} sizes="240px" />}
   </div>
   <div class="body">
-    <div class="top">
-      <span class={`tag ${d.status}`}>{s.status[d.status]}</span>
+    <span class={`tag ${d.status}`}>{s.status[d.status]}</span>
+    <h3><a class="main" href={path(lang, `tools/${slugOf(entry.id)}/`)}>{d.title}</a></h3>
+    <p>{d.summary}</p>
+    <div class="foot">
       {(d.docs || d.demo) && (
         <span class="ext">
           {d.docs && <a href={d.docs} target="_blank" rel="noopener">{s.tool.docs} ↗</a>}
           {d.demo && <a href={d.demo} target="_blank" rel="noopener">{s.tool.demo} ↗</a>}
         </span>
       )}
+      <span class="more">{s.tools.more} →</span>
     </div>
-    <h3><a class="main" href={path(lang, `tools/${slugOf(entry.id)}/`)}>{d.title}</a></h3>
-    <p>{d.summary}</p>
-    <span class="more">{s.tools.more} →</span>
   </div>
 </article>
 <style>
@@ -38,14 +38,15 @@ const d = entry.data;
   .art { position: relative; background: var(--stage); aspect-ratio: 4 / 3; border-bottom: 1px solid var(--line) }
   .art :global(img) { position: absolute; inset: 7%; width: 86%; height: 86%; object-fit: contain }
   .body { padding: 16px; display: flex; flex-direction: column; flex: 1 }
-  .top { display: flex; align-items: center; justify-content: space-between; gap: 8px }
+  .tag { align-self: flex-start }
   h3 { margin: 8px 0 4px }
   p { color: var(--muted); font-size: 16px }
   .main { color: inherit; text-decoration: none }
   .main::after { content: ''; position: absolute; inset: 0 }
   .pcard:has(.main:focus-visible) { outline: 2px solid var(--primary); outline-offset: 2px }
   .main:focus-visible { outline: none }
-  .more { margin-top: auto; color: var(--primary); font-weight: 600 }
+  .foot { margin-top: auto; display: flex; flex-direction: column; gap: 6px }
+  .more { color: var(--primary); font-weight: 600 }
   .ext { position: relative; z-index: 1; display: flex; gap: 10px; font-size: 13px }
   .ext a { color: var(--muted); text-decoration: none }
   .ext a:hover { color: var(--primary); text-decoration: underline }
