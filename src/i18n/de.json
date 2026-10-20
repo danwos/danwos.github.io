@@ -95,7 +95,8 @@
   "contact": {
     "title": "Lass uns reden",
     "lead": "Du hast ein Problem, das zu einem dieser Projekte passt, oder eine Idee, die nach einem Monster ruft? Schreib mir.",
-    "alt": "Das Monster mit zwei Köpfen steht für Kontakt"
+    "alt": "Das Monster mit zwei Köpfen steht für Kontakt",
+    "email": "E-Mail"
   },
   "footer": {
     "imprint": "Impressum",

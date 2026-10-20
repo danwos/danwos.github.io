@@ -111,7 +111,8 @@ const flip = () => side++ % 2 === 0;
         <h2>{s.contact.title}</h2>
         <p class="lead">{s.contact.lead}</p>
         <div class="actions">
-          <a class="btn btn-primary" href="https://www.linkedin.com/in/daniel-woste-362b6252/">LinkedIn</a>
+          <a class="btn btn-primary" href="mailto:daniel.woste@gmail.com">{s.contact.email}</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/daniel-woste-362b6252/">LinkedIn</a>
           <a class="btn btn-secondary" href="https://github.com/danwos">GitHub</a>
         </div>
       </Split>
@@ -131,6 +132,6 @@ const flip = () => side++ % 2 === 0;
   .pteaser p { color: var(--muted); font-size: 15px }
   .pteaser .more { margin-top: auto; color: var(--primary); font-weight: 600 }
   .posts { margin-top: 32px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) }
-  .portrait :global(img) { max-width: 300px; max-height: 300px }
+  .portrait :global(img) { width: min(100%, 300px); max-height: 300px }
   .actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 20px }
 </style>

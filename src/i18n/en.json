@@ -96,7 +96,8 @@
   "contact": {
     "title": "Let's talk",
     "lead": "You have a problem that fits one of these projects, or an idea that calls for a monster? Write to me.",
-    "alt": "The two-headed monster stands for contact"
+    "alt": "The two-headed monster stands for contact",
+    "email": "Email"
   },
   "footer": {
     "imprint": "Imprint",
