@@ -10,27 +10,43 @@ const { lang, entry } = Astro.props;
 const s = t(lang);
 const d = entry.data;
 ---
-<a class="pcard" href={path(lang, `tools/${slugOf(entry.id)}/`)}>
+<!-- The whole card links to the tool page (stretched link); docs and demo sit above it as small links of their own. -->
+<article class="pcard">
   <div class="art">
     {d.monster && <Image src={monster(d.monster)} alt="" widths={[240, 480]} sizes="240px" />}
   </div>
   <div class="body">
-    <span class={`tag ${d.status}`}>{s.status[d.status]}</span>
-    <h3>{d.title}</h3>
+    <div class="top">
+      <span class={`tag ${d.status}`}>{s.status[d.status]}</span>
+      {(d.docs || d.demo) && (
+        <span class="ext">
+          {d.docs && <a href={d.docs} target="_blank" rel="noopener">{s.tool.docs} ↗</a>}
+          {d.demo && <a href={d.demo} target="_blank" rel="noopener">{s.tool.demo} ↗</a>}
+        </span>
+      )}
+    </div>
+    <h3><a class="main" href={path(lang, `tools/${slugOf(entry.id)}/`)}>{d.title}</a></h3>
     <p>{d.summary}</p>
     <span class="more">{s.tools.more} →</span>
   </div>
-</a>
+</article>
 <style>
-  .pcard { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column;
+  .pcard { position: relative; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column;
     color: inherit; text-decoration: none; transition: transform .1s, box-shadow .1s }
   .pcard:hover { transform: translateY(-2px); box-shadow: 4px 4px 0 var(--shadow) }
   /* fixed stage height, so title and text line up across cards whatever the monster's shape */
   .art { position: relative; background: var(--stage); aspect-ratio: 4 / 3; border-bottom: 1px solid var(--line) }
   .art :global(img) { position: absolute; inset: 7%; width: 86%; height: 86%; object-fit: contain }
   .body { padding: 16px; display: flex; flex-direction: column; flex: 1 }
-  .tag { align-self: flex-start }
+  .top { display: flex; align-items: center; justify-content: space-between; gap: 8px }
   h3 { margin: 8px 0 4px }
   p { color: var(--muted); font-size: 16px }
+  .main { color: inherit; text-decoration: none }
+  .main::after { content: ''; position: absolute; inset: 0 }
+  .pcard:has(.main:focus-visible) { outline: 2px solid var(--primary); outline-offset: 2px }
+  .main:focus-visible { outline: none }
   .more { margin-top: auto; color: var(--primary); font-weight: 600 }
+  .ext { position: relative; z-index: 1; display: flex; gap: 10px; font-size: 13px }
+  .ext a { color: var(--muted); text-decoration: none }
+  .ext a:hover { color: var(--primary); text-decoration: underline }
 </style>
