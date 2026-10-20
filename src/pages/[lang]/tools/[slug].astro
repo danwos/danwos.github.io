@@ -36,6 +36,8 @@ const empty = !entry.body?.trim();
           {d.pictures && <span class="tag pictures">{s.stage[d.pictures]}</span>}
           {d.docs && <span class="muted">{s.tool.docs}</span>}
           {d.docs && <a class="tag open" href={d.docs} target="_blank" rel="noopener" title={d.docs.replace(/^https?:\/\//, '')}>{s.tool.open} ↗</a>}
+          {d.demo && <span class="muted">{s.tool.demo}</span>}
+          {d.demo && <a class="tag open" href={d.demo} target="_blank" rel="noopener" title={d.demo.replace(/^https?:\/\//, '')}>{s.tool.open} ↗</a>}
           {d.live && <span class="muted">{s.tool.live}</span>}
           {d.live && <a class="tag open" href={d.live} target="_blank" rel="noopener" title={d.live.replace(/^https?:\/\//, '')}>{s.tool.open} ↗</a>}
           {d.era === 'archive' && d.role.length > 0 && <span class="muted">{s.tool.role}: {d.role.map((r) => s.role[r]).join(', ')}</span>}

@@ -23,6 +23,7 @@ const tools = defineCollection({
     links: z.array(z.object({ label: z.string(), url: z.url() })).default([]),
     docs: z.url().optional(), // the tool's documentation – shown in the page head
     live: z.url().optional(), // where the tool runs live – shown in the page head
+    demo: z.url().optional(), // a page to try the tool on – shown in the page head
     translated_from: z.string().optional(),
   }),
 });
