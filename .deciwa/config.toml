@@ -1,0 +1,8 @@
+author = "daniel"
+
+[web]
+# page address -> source file; the first rule whose file exists wins
+sources = [
+  { url = "/*/tools/*", file = "src/content/tools/*/*.mdx" },
+  { url = "/*/tools/*", file = "src/content/tools/*/*.md" },
+]

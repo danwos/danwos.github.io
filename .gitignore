@@ -30,3 +30,6 @@ dist/
 
 # Feedback from the dev toolbar (read by agents, not published)
 .feedback/
+
+# deciwa: time of the last change, local only
+.deciwa/updated
