@@ -115,6 +115,8 @@
     "status": "Stand",
     "role": "Rolle",
     "pictures": "Bilder",
+    "live": "Live",
+    "open": "Öffnen",
     "cta": "Interesse an diesem Tool? Lass uns reden."
   },
   "views": {
