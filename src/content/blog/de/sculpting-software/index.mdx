@@ -1,0 +1,76 @@
+---
+title: "Bildhauen statt Drucken: Software bauen mit AI"
+date: 2026-10-20
+summary: "Früher habe ich Software Schicht für Schicht gebaut und gehofft, dass die ersten fünf Prozent schon jemand kaufen will. Mit Vibe Coding steht der ganze Block von Anfang an da – und aus der Suche nach dem MVP wird die Suche nach dem richtigen Kunden."
+tags: [ai, vibe-coding, product, tools]
+cover: ../../../../assets/blog/sculpting-software/danwos-sculptor.webp
+---
+import Scene from '../../../../components/Scene.astro';
+
+Es gibt diesen einen Moment in jedem Produkt-Workshop. Das Whiteboard ist voll, die Ideen sind gut, alle nicken. Dann fragt jemand: „Und was davon bauen wir zuerst?“ Und plötzlich wird es still im Raum.
+
+Diese Stille kenne ich gut. Ich habe viele Jahre Tools für große Engineering-Projekte gebaut, vor allem im Automotive- und Safety-Umfeld – für Projekte, in denen jede Anforderung nachvollziehbar, jeder Test dokumentiert und jede Änderung freigegeben sein muss. Dort lernt man, sauber zu bauen. Man lernt aber auch, wie teuer jedes fertige Stück Software ist – und dass man sich gut überlegen muss, welches Stück man zuerst fertig macht.
+
+## Software aus dem 3D-Drucker
+
+<Scene monster="danwos-3d-printer" alt="Das danwos-Monster vor einem 3D-Drucker, auf dem erst die untersten Schichten gedruckt sind" wide />
+
+Lange habe ich Software so gebaut, wie ein 3D-Drucker druckt: Schicht für Schicht. Jede Schicht ist präzise, getestet und fertig. Nur: Nach den ersten Schichten sieht man noch nicht, was das Ganze einmal werden soll. Man hält ein perfekt glattes Stück in der Hand und hofft, dass schon diese ersten fünf Prozent für jemanden interessant sind.
+
+Man kann es auch als Puzzle sehen. Ein paar Teile sind gelegt, ein kleiner Ausschnitt des Bildes ist zu erkennen. Dieser Ausschnitt muss reichen, um Interesse zu wecken. Der Rest ist ein Versprechen.
+
+Genau deshalb ist die Suche nach dem MVP, dem Minimum Viable Product, so wichtig. Nur mit dem Teil, der schon fertig ist, lässt sich Geld verdienen. Und nicht jede Funktion eignet sich dafür. Manche Teile sind technisch das Fundament, aber niemand zahlt für ein Fundament. Andere würden Brieftaschen öffnen, bauen aber auf allem anderen auf.
+
+Alle, die schon einmal ein Produkt gestartet haben, kennen das Ergebnis: Die ganze Kommunikation mit Kunden schrumpft auf diesen einen Ausschnitt. Ich frage nicht mehr „Was brauchst du?“, sondern „Würdest du hierfür zahlen?“. Mein Blick auf das eigentliche Problem des Kunden wird enger, weil ich ihm nur einen kleinen Teil zeigen kann.
+
+## Dann kam Vibe Coding
+
+Kurz erklärt: Beim Vibe Coding beschreibe ich einer AI, was die Software tun soll, und sie schreibt den Code. Ich schaue auf das Ergebnis, nicht auf jede Zeile. Viele sehen darin vor allem ein Qualitätsrisiko. Für Software, die in einem Steuergerät läuft, stimmt das auch.
+
+<Scene monster="danwos-sketching" alt="Das danwos-Monster skizziert eifrig auf einem Block" left />
+
+Für mich ist Vibe Coding aber vor allem etwas anderes: das beste Werkzeug zur Produktdefinition, mit dem ich je gearbeitet habe. Aus Produktsicht konnte ich noch nie so schnell und so sauber arbeiten. Statt mich auf den einen Ausschnitt zu konzentrieren, skizziere ich das ganze, große Paket – mit allen Funktionen, die ich im Kopf habe. Und zwar nicht auf Folien, sondern als laufende Software, die jemand ausprobieren kann.
+
+Die Qualität ist dabei nicht perfekt. Aber sie ist oft gut genug, dass jemand damit arbeiten, Feedback geben und sagen kann: „Das hier brauche ich, das da nicht.“ Das ist mehr, als ich aus einem Puzzle-Ausschnitt je herausbekommen habe.
+
+## Nicht das MVP finden, sondern den Kunden
+
+Damit dreht sich die Frage aus dem Workshop um. Ich muss nicht mehr den Teil der Funktionen finden, der sich schon allein verkaufen lässt. Ich muss den Kunden finden, dessen Umfeld mit der schlechteren Qualität klarkommt.
+
+Das sind Kunden, bei denen die Software in unkritischen, sicheren Umgebungen läuft: ein internes Tool, ein Review-Prozess für Dokumentation, ein Prototyp für die Vorentwicklung. Dort ist ein Fehler ärgerlich, aber kein Sicherheitsproblem. Dort lässt sich das ganze Produkt früh einsetzen, auch wenn es an vielen Stellen noch grob ist.
+
+Und hier passiert etwas Spannendes: Jeder Kunde, der sich darauf einlässt, ist auch ein Beweis. Wer bereit ist, Abstriche bei der Qualität hinzunehmen, nur um eine Lösung früher zu haben, hat einen echten Schmerz. Je mehr solcher Kunden ich finde, desto klarer sehe ich, wo es wirklich wehtut – und wie sehr. Die Akzeptanz von Abstrichen wird zur Messgröße für den Bedarf.
+
+## Wie ein Bildhauer
+
+Wenn der 3D-Drucker das alte Bild ist, dann ist das neue ein Bildhauer.
+
+Ein Bildhauer sieht von Anfang an den ganzen Steinblock vor sich. Mit den ersten groben Schlägen werden Umfang und Oberfläche sichtbar. Man erahnt die Figur, lange bevor sie fertig ist. Danach arbeitet er die Details Stück für Stück heraus – und zwar selten an einer Stelle bis zur Perfektion, sondern von grob bis fein über die ganze Figur. Jeder Durchgang macht alles ein bisschen besser.
+
+Genau so fühlt sich die Entwicklung mit AI für mich an. Alle Funktionen sind von Anfang an da, wenn auch grob. Mit jeder Runde wird das Ganze besser: Die Teile, die Kunden wirklich nutzen, bekommen zuerst den Feinschliff. Teile, die niemand anfasst, bleiben grob oder fallen wieder weg – ohne dass ich vorher Monate in ihre Perfektion gesteckt habe.
+
+## Wo der Meißel abrutscht
+
+So schön das Bild ist: Ein Bildhauer weiß zu jedem Zeitpunkt, wo seine Figur noch roh ist. Er sieht es einfach. Bei Software sehe ich das nicht. Ein AI-generiertes Feature sieht fertig aus, auch wenn es das nicht ist. Tests laufen grün, obwohl sie wenig prüfen. Entscheidungen, die ich vor drei Runden getroffen habe, sind im Code längst wieder verschwunden.
+
+Ohne einen klaren Blick auf den Stand wird aus dem Bildhauen schnell ein Haufen Steinsplitter. Wer grob über das Ganze arbeitet, braucht deshalb mehr Überblick als jemand, der Schicht für Schicht druckt – nicht weniger. Ich muss wissen, was bestätigt ist, was offen ist und was sich seit meinem letzten Blick verändert hat. Und ich muss meinen Kunden ehrlich sagen können, wo die Figur noch grob ist.
+
+## Die Werkzeuge für den Bildhauer
+
+<Scene monster="deciwa-high-five" alt="deciwa und danwos geben sich ein High Five" />
+
+Genau hier setzen meine danwos-Tools an. Sie sollen diese Arbeitsweise unterstützen – und in Projekten mit echten Qualitätsanforderungen überhaupt erst möglich machen.
+
+[deciwa](/de/tools/deciwa/) hält Feedback und Entscheidungen an genau dem Element fest, um das es geht – in der Doku, auf der Website oder im Code. Es merkt, wenn sich dieses Element ändert, und zeigt, was bestätigt, offen oder eingefroren ist. Die Arbeit selbst macht deciwa nicht, das bleibt Aufgabe der AI oder des Entwicklungsteams. Aber es zeigt mir, wo die Figur schon fein ist und wo noch nicht.
+
+Andere Tools sind noch Ideen: [quawa](/de/tools/quawa/) soll prüfen, ob die Tests von AI-geschriebenem Code wirklich testen. [faktwerk](/de/tools/faktwerk/) soll Wissen als Fakten an einer Stelle halten und daraus Sichten für verschiedene Rollen erzeugen. Und [monsterbrain](/de/tools/monsterbrain/) ist das Setup, in dem ich mit AI-Agenten arbeite – auch dieser Beitrag ist darin entstanden.
+
+## Der Beweis liegt im Stein
+
+Bleibt die Frage, ob das alles funktioniert. Die ehrliche Antwort: Ich finde es gerade selbst heraus. Denn ich baue meine Tools genau so, wie ich es hier beschreibe.
+
+deciwa ist das beste Beispiel. Statt mit einer kleinen Kernfunktion zu starten, stand schon nach wenigen Tagen das ganze Paket da: Produktbeschreibung, Sphinx-Extension mit Review-Overlay, lokaler Server, CLI und ein Offline-Modus im Browser. Vieles davon ist noch grob. Aber alles ist da, alles lässt sich ausprobieren, und ich nutze es bereits für meine eigene Arbeit – ein Umfeld, das mit Abstrichen gut leben kann.
+
+Das ist ein Zirkelschluss mit Ansage: Wenn die Tools mit dieser Methode erfolgreich entstehen, beweisen sie, dass die Methode funktioniert. Und weil sie genau für diese Methode gebaut sind, beweisen sie damit auch ihren eigenen Nutzen. Und wenn nicht, sehe ich das zumindest früh – an der ganzen Figur und nicht erst nach der fünften Schicht.
+
+Wenn du dich das nächste Mal im Workshop fragst, was ihr zuerst baut, probier eine andere Frage: Wer kann heute schon mit der groben Figur leben? Wenn du darüber sprechen willst – oder deciwa an deinem eigenen Projekt ausprobieren möchtest: [Lass uns reden](/de/#contact).

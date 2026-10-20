@@ -1,0 +1,77 @@
+---
+title: "Sculpting, Not Printing: Building Software with AI"
+date: 2026-10-20
+summary: "I used to build software layer by layer and hope that the first five percent was already worth buying. With vibe coding, the whole block is there from day one – and the hunt for the MVP turns into a hunt for the right customer."
+tags: [ai, vibe-coding, product, tools]
+cover: ../../../../assets/blog/sculpting-software/danwos-sculptor.webp
+translated_from: "92a4632352b9"
+---
+import Scene from '../../../../components/Scene.astro';
+
+There is this one moment in every product workshop. The whiteboard is full, the ideas are good, everyone is nodding. Then someone asks: "So which of these do we build first?" And suddenly the room goes quiet.
+
+I know that silence well. For many years I built tools for large engineering projects, mostly in automotive and safety – projects where every requirement must be traceable, every test documented and every change approved. That's where you learn to build things properly. But you also learn how expensive every finished piece of software is – and that you'd better think hard about which piece you finish first.
+
+## Software from the 3D printer
+
+<Scene monster="danwos-3d-printer" alt="The danwos monster next to a 3D printer that has printed only the bottom layers" wide />
+
+For a long time, I built software the way a 3D printer prints: layer by layer. Every layer is precise, tested and done. The catch: after the first few layers, you can't see yet what the whole thing is going to be. You hold a perfectly smooth slice in your hand and hope that these first five percent are already interesting to someone.
+
+You can also see it as a puzzle. A few pieces are in place, a small part of the picture shows. That part has to be enough to spark interest. The rest is a promise.
+
+That is exactly why the search for the MVP, the minimum viable product, matters so much. Only the finished part can make money. And not every feature is fit for that. Some parts are the technical foundation, but nobody pays for a foundation. Others would open wallets, but they build on everything else.
+
+Anyone who has launched a product knows the result: all communication with customers shrinks down to that one part. I no longer ask "What do you need?" but "Would you pay for this?". My understanding of the customer's actual problem gets narrower, because I can only show them a narrow slice.
+
+## Then came vibe coding
+
+In short: with vibe coding, I describe to an AI what the software should do, and it writes the code. I look at the result, not at every line. Many see it mainly as a quality risk. For software running in an ECU, that's true.
+
+<Scene monster="danwos-sketching" alt="The danwos monster sketching eagerly on a pad" left />
+
+For me, though, vibe coding is above all something else: the best tool for product definition I have ever worked with. From a product point of view, I have never been able to work this fast and this cleanly. Instead of focusing on that one slice, I sketch the whole big package – with every feature I have in mind. Not on slides, but as running software someone can try out.
+
+The quality isn't perfect. But it is often good enough for someone to work with it, give feedback and say: "I need this, I don't need that." That's more than I ever got out of a puzzle fragment.
+
+## Don't find the MVP – find the customer
+
+This turns the workshop question around. I no longer have to find the slice of features that sells on its own. I have to find the customer whose environment can cope with the lower quality.
+
+These are customers where the software runs in uncritical, safe environments: an internal tool, a review process for documentation, a prototype for pre-development. There, a bug is annoying, but not a safety issue. There, the whole product can be used early, even if it's still rough in many places.
+
+And here something interesting happens: every customer who goes along with it is also evidence. Anyone willing to accept compromises in quality just to get a solution sooner has a real pain. The more of these customers I find, the clearer I see where the pain really sits – and how big it is. The acceptance of compromises becomes a measure of demand.
+
+## Like a sculptor
+
+If the 3D printer is the old picture, the new one is a sculptor.
+
+A sculptor sees the whole block of stone from the start. With the first rough strikes, size and surface become visible. You can make out the figure long before it's finished. Then the sculptor works out the details bit by bit – rarely bringing one spot to perfection, but going from rough to fine across the whole figure. Every pass makes everything a little better.
+
+That's exactly how developing with AI feels to me. All features are there from the start, even if rough. With every round the whole gets better: the parts customers really use get polished first. Parts nobody touches stay rough or get dropped again – without me having spent months perfecting them.
+
+## Where the chisel slips
+
+As nice as the picture is: a sculptor knows at any moment where the figure is still raw. They simply see it. With software, I don't. An AI-generated feature looks finished even when it isn't. Tests pass even though they check little. Decisions I made three rounds ago have long vanished from the code.
+
+Without a clear view of where things stand, sculpting quickly turns into a pile of stone chips. Working roughly across the whole thing therefore needs more overview than printing layer by layer – not less. I need to know what is confirmed, what is open and what has changed since I last looked. And I need to be able to tell my customers honestly where the figure is still rough.
+
+## Tools for the sculptor
+
+<Scene monster="deciwa-high-five" alt="deciwa and danwos high-fiving" />
+
+This is where my danwos tools come in. They are meant to support this way of working – and, in projects with real quality requirements, to make it possible in the first place.
+
+[deciwa](/en/tools/deciwa/) ties feedback and decisions to exactly the element they are about – in the docs, on the website or in the code. It notices when that element changes and shows what is confirmed, open or frozen. deciwa doesn't do the work itself; that stays the job of the AI or the development team. But it shows me where the figure is already fine and where it isn't yet.
+
+Other tools are still ideas: [quawa](/en/tools/quawa/) is meant to check whether the tests of AI-written code really test. [faktwerk](/en/tools/faktwerk/) is meant to keep knowledge as facts in one place and generate views for different roles from them. And [monsterbrain](/en/tools/monsterbrain/) is the setup in which I work with AI agents – this post was written in it, too.
+
+## The proof is in the stone
+
+That leaves the question of whether all this works. The honest answer: I'm finding out myself right now. Because I build my tools exactly the way I describe here.
+
+deciwa is the best example. Instead of starting with a small core feature, the whole package was there after a few days: product description, Sphinx extension with review overlay, local server, CLI and an offline mode in the browser. Much of it is still rough. But everything is there, everything can be tried out, and I already use it for my own work – an environment that can live with compromises.
+
+It's a circular argument, and I say so openly: if the tools are built successfully with this method, they prove that the method works. And since they are built for exactly this method, they prove their own value at the same time. If not, at least I'll see it early – on the whole figure, not only after the fifth layer.
+
+Next time you're in a workshop wondering what to build first, try a different question: who can already live with the rough figure today? If you want to talk about it – or try deciwa on your own project: [Let's talk](/en/#contact).
