@@ -14,7 +14,6 @@ Requirements: Git, Node.js 22 or newer (tested with 24), npm.
 ```bash
 git clone git@github.com:danwos/danwos.github.io.git
 cd danwos.github.io
-git switch danwos_new
 npm install
 npm run dev        # dev server with hot reload: http://localhost:4321
 ```
