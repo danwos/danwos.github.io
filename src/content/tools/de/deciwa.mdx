@@ -3,20 +3,24 @@ title: "deciwa"
 subtitle: "decision watcher"
 summary: "Feedback und Freigaben direkt auf deinen Docs, Websites und deinem Code – damit klar ist, was bestätigt ist und was die KI noch tun soll."
 era: "current"
-status: "alpha"
+status: "prototype"
 pictures: "prototype"
 monster: "deciwa"
 role: [created]
 order: 10
+docs: "https://deciwa.danwos.dev"
+links:
+  - label: "deciwa-Doku"
+    url: "https://deciwa.danwos.dev"
 ---
 
 import Scene from '../../../components/Scene.astro';
 import Screen from '../../../components/Screen.astro';
-import website from '../../../assets/tools/deciwa/website.png';
-import card from '../../../assets/tools/deciwa/detail-card.png';
-import list from '../../../assets/tools/deciwa/detail-list.png';
-import docs from '../../../assets/tools/deciwa/docs.png';
-import code from '../../../assets/tools/deciwa/code.png';
+import review from '../../../assets/tools/deciwa/review.webp';
+import question from '../../../assets/tools/deciwa/question.webp';
+import panel from '../../../assets/tools/deciwa/panel.webp';
+import stale from '../../../assets/tools/deciwa/stale.webp';
+import guided from '../../../assets/tools/deciwa/guided.webp';
 
 ## Warum deciwa
 
@@ -35,105 +39,113 @@ bestätigt habe.
 
 <video src="/videos/deciwa-product-de.mp4" poster="/videos/deciwa-product-de.jpg" autoplay muted loop playsinline controls preload="metadata"></video>
 
+Du kannst deciwa direkt ausprobieren: Die [deciwa-Doku](https://deciwa.danwos.dev)
+ist selbst mit deciwa reviewbar. Dein Review bleibt dabei in deinem Browser.
+
 ## Feedback direkt auf dem Ergebnis
 
-Du prüfst das, was am Ende rauskommt: die gebaute Doku, die fertige Website.
-Fährst du mit der Maus darüber, rahmt deciwa das Element unter dem Mauszeiger
-ein – einen Absatz, eine Karte, ein Requirement. Mit gedrückter Alt-Taste
-springst du eine Ebene höher. Willst du nur ein einzelnes Wort, markierst du
-es.
+Du prüfst das, was am Ende rauskommt: die gebaute Doku, später auch die
+fertige Website. Schaltest du den Review ein, rahmt deciwa das Element unter
+dem Mauszeiger ein – einen Absatz, eine Tabellenzeile, ein Bild, ein
+Requirement. Ein Klick öffnet die Karte dazu. Willst du nur ein paar Wörter,
+markierst du sie vorher.
 
-<Screen src={website} alt="deciwa auf einer Website: Zu einer Feature-Karte fragt die KI, ob dort auch Freeze erwähnt werden soll. Die Antwort steht im Kommentarfeld." />
+Neben jedem Element mit Feedback zeigt ein farbiger Balken, wo es steht:
+bestätigt, abgelehnt, eingefroren, nach der Freigabe geändert oder mit einer
+offenen Frage.
+
+<Screen src={review} alt="Eine Doku-Seite im Review: farbige Balken neben den bewerteten Elementen, unten rechts der deciwa-Knopf mit den Zählern." />
 
 ## Drei Arten, mit deciwa zu arbeiten
 
-### Feedback geben
+### Entscheiden
 
-Mit Feedback sagst du, was mit einer Stelle passieren soll. **Approve**
-bestätigt die Aussage, **Reject** sagt, dass sie falsch ist. **Rephrase**,
-**More details** und **Delete** sind Aufträge an die KI: umformulieren,
-ausbauen, streichen. **Freeze** schützt eine Stelle vor jeder Änderung, und mit
-**Note** hältst du nur einen Gedanken fest. Ein Klick genügt, ein Kommentar
-ist optional.
+Mit einem Verdict sagst du, was mit einer Stelle passieren soll. **Approve**
+bestätigt die Aussage, **Reject** sagt, dass sie falsch ist, **Approve &
+freeze** bestätigt sie und schützt sie vor jeder Änderung, **Delete** ist der
+Auftrag, sie zu streichen. Was genau anders werden soll, schreibst du einfach
+in den Kommentar – er geht mit dem Verdict mit. Mit **Comment only** speicherst
+du nur einen Gedanken. Ein Klick genügt, jeder Button hat ein Tastenkürzel.
 
 ### Qualität einschätzen
 
-Die ein bis fünf Sterne sind davon getrennt. Mit ihnen sagst du schnell, wie
-gut du eine Stelle findest – ohne etwas zu entscheiden oder in Auftrag zu
-geben. Eine Aussage kann stimmen und trotzdem nur zwei Sterne bekommen, weil
-sie umständlich geschrieben ist. Später siehst du, wo die schwachen Stellen
-liegen, und steckst deine Zeit genau dort hinein.
+Die null bis fünf Sterne sind davon getrennt. Mit ihnen sagst du schnell, wie
+gut du eine Stelle findest – ohne etwas zu entscheiden. Eine Aussage kann
+stimmen und trotzdem nur zwei Sterne bekommen, weil sie umständlich
+geschrieben ist. So siehst du später, wo die schwachen Stellen liegen.
 
 ### Mit der KI sprechen
 
 Ist die KI – zum Beispiel Claude – bei einer Stelle unsicher, stellt sie dir
-eine Frage genau dort, statt zu raten. Die Frage taucht in deciwa an dem
-Element auf, um das es geht. Du antwortest mit einem Klick, Approve heißt dann
-„ja, passt so“, oder du schreibst eine Antwort. Die KI liest sie und macht
-weiter.
+eine Frage genau dort, statt zu raten. Du antwortest mit **Yes**, **No** oder
+in ein paar Worten, und die KI macht weiter.
 
-Auf der Karte findest du alle drei wieder: oben die Frage der KI, darunter die
-Sterne, dann die Buttons für dein Feedback und das Kommentarfeld.
-
-<Screen src={card} alt="Die Feedback-Karte aus der Nähe: Frage der KI, vier Sterne, die Buttons und deine Antwort im Kommentarfeld." />
+<Screen src={question} alt="Die Karte an einem Requirement: oben Claudes Frage mit Yes, No und einem Antwortfeld, darunter Kommentar, Verdicts und Sterne." />
 
 ## Alles auf einen Blick
 
-<Screen src={list} float alt="Die Seitenleiste mit allen Rückmeldungen zur Datei: bestätigt, Änderung gewünscht, Frage offen, Notiz und eingefroren." />
+<Screen src={panel} float alt="Das Panel für eine Seite: Anteil mit Verdict und mit Sternen, die Pflicht-Regel, offene, abgelehnte, geänderte und bestätigte Elemente." />
 
-Neben der Seite listet deciwa alle Rückmeldungen zur Datei: was bestätigt ist,
-was geändert werden soll, wo eine Frage der KI offen ist und was eingefroren
-ist, jeweils mit deinen Sternen. Dieselben Farben findest du am Rand der Seite
-wieder, direkt neben den Stellen, um die es geht.
+Das Panel zeigt alle Rückmeldungen – für die Seite oder fürs ganze Projekt.
+Oben steht, wie viele der Elemente, die du freigeben musst, schon ein Verdict
+haben und wie viele Sterne bekommen haben. Was freigegeben werden muss,
+legst du selbst fest: zum Beispiel alle Sphinx-Needs-Requirements, alle
+Tabellenzeilen oder alles. Diese Elemente tragen eine graue, gestrichelte
+Linie, bis du entschieden hast.
 
-Oben steht, wie viel der Datei schon durch eine Freigabe abgedeckt ist. Ein
-Klick auf einen Eintrag springt zur Stelle – so gehst du eine Datei von oben
-nach unten durch, ohne etwas zu übersehen.
+Ein Klick auf einen Eintrag springt zur Stelle, auch auf einer anderen Seite.
 
 ## Bestätigt bleibt bestätigt – bis sich der Text ändert
 
 Eine Freigabe hängt an genau dem Element, das du bestätigt hast, nicht an
 einer Zeilennummer. Ändert jemand den Text später, merkt deciwa das. Das
-Element wird als „stale“ markiert, du siehst, was sich geändert hat, und
-kannst neu entscheiden. So ist jederzeit klar, welche Aussagen gerade wirklich
+Element wird als „stale“ markiert, du siehst die geänderten Wörter und kannst
+neu entscheiden. So ist jederzeit klar, welche Aussagen gerade wirklich
 bestätigt sind.
 
-<Screen src={docs} alt="Eine Sphinx-Needs-Anforderung wurde nach der Freigabe geändert: aus 90 wurden 30 Tage. deciwa zeigt den Unterschied." />
+<Screen src={stale} alt="Ein Requirement wurde nach der Freigabe geändert: Die Karte zeigt „stale“ und im Verlauf das alte und das neue Wort." />
 
 ## Freeze: Hier fasst keiner was an
 
 <Scene monster="deciwa-furious" alt="deciwa, wütend mit erhobenen Fäusten" left />
 
 Manche Stellen müssen genau so bleiben, wie sie sind: Rechtstexte, eine
-abgestimmte Anforderung, eine Konstante im Code. Mit **Freeze** markierst du
-sie. Die KI lässt sie in Ruhe – und ändert sich der Text trotzdem, schlägt
-deciwa Alarm und zeigt dir, was vorher dort stand.
+abgestimmte Anforderung, eine Konstante im Code. Mit **Approve & freeze**
+markierst du sie. Die KI lässt sie in Ruhe – und ändert sich der Text
+trotzdem, schlägt deciwa Alarm und zeigt dir, was vorher dort stand.
 
-<Screen src={code} alt="Eine eingefrorene Konstante in Python-Code wurde trotzdem geändert. deciwa meldet „frozen, but changed!“ und zeigt den alten Wert." />
+## Durchgehen, ohne etwas zu übersehen
+
+Der **Guided review** führt dich durch alles, was noch kein Verdict hat: Die
+Karte öffnet sich am ersten offenen Element, und nach jeder Entscheidung geht
+es zum nächsten – erst auf der Seite, dann auf den folgenden Seiten.
+
+<Screen src={guided} alt="Guided review: Das Panel zeigt die offenen Elemente, die Karte steht schon am nächsten Requirement." />
 
 ## Die KI arbeitet dein Feedback ab
 
 <Scene monster="deciwa-high-five" alt="deciwa und danwos geben sich ein High Five" />
 
-Jedes Feedback ist eine klare Anweisung: Rephrase heißt umformulieren, More
-details heißt ausbauen, Delete heißt weg damit, Freeze heißt Finger weg. Die
-KI holt sich die offene Liste, setzt alles um und bittet dich danach, die
-geänderten Stellen noch einmal anzuschauen.
+Jedes Feedback ist eine klare Anweisung: Der Kommentar sagt, was anders
+werden soll, Reject heißt korrigieren, Delete heißt weg damit, Freeze heißt
+Finger weg. Die KI holt sich die offene Liste über die Kommandozeile, setzt
+alles um, hakt es ab und stellt ihre Rückfragen direkt am Element.
 
 deciwa selbst ändert keinen Text. Es sammelt dein Feedback, wertet es aus und
 zeigt, was noch fehlt. Die Arbeit macht die KI oder du.
 
 ## Wo du deciwa nutzt
 
-- **VS Code** – im Editor und in der Vorschau deiner Doku
-- **Chrome** – auf jeder gerenderten Seite, ob Doku oder Website
-- **Claude** – du gehst eine Datei gemeinsam mit der KI im Chat durch, und
-  Claude stellt seine Fragen direkt in deciwa
-- **Desktop-App** – für alle, die keine Entwicklungsumgebung nutzen
+- **Sphinx** – jetzt: auf der gebauten Doku, mit Sphinx-Needs, Markdown und
+  reStructuredText
+- **VS Code** – im Editor und in der Vorschau deiner Doku (geplant)
+- **Chrome** – auf jeder gerenderten Seite, ob Doku oder Website (geplant)
+- **Claude** – du gehst eine Datei gemeinsam mit der KI durch, und Claude
+  stellt seine Fragen direkt in deciwa
+- **Desktop-App** – für alle, die keine Entwicklungsumgebung nutzen (später)
 
-deciwa versteht Markdown, reStructuredText mit Sphinx-Needs, AsciiDoc, HTML,
-Text und Code in Python, C, JavaScript und TypeScript. Überall gibt es
-dieselben Buttons und dieselben Zustände.
+Überall gibt es dieselben Buttons, dieselben Zustände und dieselben Daten.
+Auch auf dem Handy funktioniert der Review: antippen statt zeigen.
 
 ## Wo deine Daten liegen
 
@@ -142,14 +154,16 @@ Ordner `.deciwa` – in deinem Repository oder in einem Ordner darüber, wenn du
 mehrere Repositories gemeinsam prüfst. Das Format ist offen beschrieben und
 wird mit Git versioniert, so wie der Rest deines Projekts.
 
-Für Teams gibt es einen gehosteten Dienst. Dort liegen die Daten zentral, und
-du bekommst eine Aufgabenliste pro Person, eine Übersicht, wie viel schon
-bestätigt ist, eine Auswertung deiner Sterne, die die schwachen Stellen
-zeigt, Vergleiche zwischen Versionen und einen Bericht für Audits: wer
-welchen Wortlaut wann freigegeben hat.
+Ohne Server läuft der Review im Browser. Was du dort bewertest, exportierst du
+als eine Datei und spielst es später ins Repository ein.
+
+Für Teams wird es einen gehosteten Dienst geben. Dort liegen die Daten
+zentral, und du bekommst eine Aufgabenliste pro Person, eine Auswertung
+deiner Sterne, die die schwachen Stellen zeigt, Vergleiche zwischen Versionen
+und einen Bericht für Audits: wer welchen Wortlaut wann freigegeben hat.
 
 ## Stand
 
-deciwa ist gerade im Konzept. Die Bilder hier kommen aus einem klickbaren
-Prototyp. Das Tool wird kostenlos nutzbar sein, der gehostete Dienst für Teams
-kostet.
+deciwa läuft als Prototyp für Sphinx-Doku – die Bilder hier kommen direkt aus
+ihm, aufgenommen auf der [deciwa-Doku](https://deciwa.danwos.dev). Das Tool
+wird kostenlos nutzbar sein, der gehostete Dienst für Teams kostet.

@@ -21,6 +21,8 @@ const tools = defineCollection({
     period: z.string().optional(),
     order: z.number().default(100),
     links: z.array(z.object({ label: z.string(), url: z.url() })).default([]),
+    docs: z.url().optional(), // the tool's documentation – shown in the page head
+    live: z.url().optional(), // where the tool runs live – shown in the page head
     translated_from: z.string().optional(),
   }),
 });

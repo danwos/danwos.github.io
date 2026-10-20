@@ -34,6 +34,10 @@ const empty = !entry.body?.trim();
           <span class={`tag ${d.status}`}>{s.status[d.status]}</span>
           {d.pictures && <span class="muted">{s.tool.pictures}</span>}
           {d.pictures && <span class="tag pictures">{s.stage[d.pictures]}</span>}
+          {d.docs && <span class="muted">{s.tool.docs}</span>}
+          {d.docs && <a class="tag open" href={d.docs} target="_blank" rel="noopener" title={d.docs.replace(/^https?:\/\//, '')}>{s.tool.open} ↗</a>}
+          {d.live && <span class="muted">{s.tool.live}</span>}
+          {d.live && <a class="tag open" href={d.live} target="_blank" rel="noopener" title={d.live.replace(/^https?:\/\//, '')}>{s.tool.open} ↗</a>}
           {d.era === 'archive' && d.role.length > 0 && <span class="muted">{s.tool.role}: {d.role.map((r) => s.role[r]).join(', ')}</span>}
           {d.period && <span class="muted">{d.period}</span>}
         </p>
@@ -61,6 +65,8 @@ const empty = !entry.body?.trim();
   .meta { display: flex; gap: 12px; flex-wrap: wrap; align-items: center }
   .meta .muted + .tag { margin-left: -6px }
   .tag.pictures { background: #D8C3A540; color: var(--ink) }
+  .tag.open { background: var(--primary); color: var(--primary-ink, #fff); text-decoration: none; font-weight: 700 }
+  .tag.open:hover { background: var(--accent, #E2725B); color: #fff }
   .prose h2 { font-size: 28px; margin-top: 40px }
   .wip { padding: 12px 16px; border-left: 5px solid var(--primary); background: var(--primary-soft); border-radius: 12px }
   .cta { margin-top: 40px }

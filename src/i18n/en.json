@@ -1,5 +1,5 @@
 {
-  "_translated_from": "ca33fb15cf45",
+  "_translated_from": "5e3095e9e7eb",
   "meta": {
     "title": "danwos – Daniel Woste",
     "description": "Daniel Woste builds SW tools for large teams: docs-as-code, AI, test quality, decisions and knowledge."
@@ -115,6 +115,9 @@
     "links": "Links",
     "status": "Status",
     "role": "Role",
+    "docs": "Docs",
+    "live": "Live",
+    "open": "Open",
     "pictures": "Pictures",
     "cta": "Interested in this tool? Let's talk."
   },
