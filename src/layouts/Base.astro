@@ -10,6 +10,8 @@ const { lang, title, description } = Astro.props;
 const s = t(lang);
 const pageTitle = title ? `${title} – danwos` : s.meta.title;
 const site = Astro.site!;
+// deciwa review overlay: only with ?deciwa in the address; PUBLIC_DECIWA_SRC points to a local build
+const deciwaSrc = import.meta.env.PUBLIC_DECIWA_SRC ?? 'https://deciwa.danwos.dev/js/0.2/deciwa.js';
 ---
 <!doctype html>
 <html lang={lang}>
@@ -27,6 +29,7 @@ const site = Astro.site!;
     <script is:inline>
       try { const t = localStorage.getItem('theme'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
     </script>
+    <script is:inline src={deciwaSrc} defer data-activate="param"></script>
   </head>
   <body>
     <a class="skip" href="#main">{s.nav.skip}</a>
