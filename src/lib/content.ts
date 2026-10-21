@@ -15,11 +15,6 @@ export async function projectsFor(lang: Lang) {
   return all.sort((a, b) => a.data.order - b.data.order);
 }
 
-export async function ideasFor(lang: Lang) {
-  const all = await getCollection('ideas', (e) => langOf(e.id) === lang);
-  return all.sort((a, b) => a.data.order - b.data.order);
-}
-
 export async function postsFor(lang: Lang) {
   const all = await getCollection('blog', (e) => langOf(e.id) === lang && (import.meta.env.DEV || !e.data.draft));
   return all.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());

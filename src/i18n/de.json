@@ -5,7 +5,6 @@
   },
   "nav": {
     "projects": "Projekte",
-    "ideas": "Ideen",
     "blog": "Blog",
     "about": "Über mich",
     "contact": "Kontakt",
@@ -37,23 +36,6 @@
     "created": "erstellt",
     "maintained": "gepflegt",
     "hired": "beauftragt"
-  },
-  "ideas": {
-    "title": "Ideen",
-    "lead": "Dinge, die ich gern bauen würde – noch nicht begonnen, aber schon durchdacht. Es geht um Probleme, die mir immer wieder begegnen: Doku, die nicht zum Code passt, Kennzahlen, die niemand sieht, Architektur und Anforderungen, die nichts voneinander wissen. Wenn dich etwas davon reizt, lass uns reden.",
-    "alt": "Das danwos-Monster skizziert eine Idee",
-    "all": "Zur Ideensammlung",
-    "pageLead": "Dinge, die ich gern bauen würde – noch nicht begonnen, aber schon durchdacht. Wenn dich eine Idee reizt, lass uns reden.",
-    "toc": "Inhalt",
-    "problem": "Problem",
-    "solution": "Lösung",
-    "tech": "Tech",
-    "statusLabel": "Umsetzung",
-    "status": {
-      "unlikely": "eher nicht",
-      "likely": "wahrscheinlich",
-      "definitely": "auf jeden Fall"
-    }
   },
   "blog": {
     "title": "Blog",

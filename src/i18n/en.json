@@ -6,7 +6,6 @@
   },
   "nav": {
     "projects": "Projects",
-    "ideas": "Ideas",
     "blog": "Blog",
     "about": "About",
     "contact": "Contact",
@@ -38,23 +37,6 @@
     "created": "created",
     "maintained": "maintained",
     "hired": "hired"
-  },
-  "ideas": {
-    "title": "Ideas",
-    "lead": "Things I'd like to build – not started yet, but thought through. They're about problems I keep running into: docs that don't match the code, metrics nobody sees, architecture and requirements that know nothing about each other. If any of it catches your eye, let's talk.",
-    "alt": "The danwos monster sketching an idea",
-    "all": "Browse the ideas",
-    "pageLead": "Things I'd like to build – not started yet, but thought through. If an idea catches your eye, let's talk.",
-    "toc": "Contents",
-    "problem": "Problem",
-    "solution": "Solution",
-    "tech": "Tech",
-    "statusLabel": "Will I build it?",
-    "status": {
-      "unlikely": "probably not",
-      "likely": "likely",
-      "definitely": "definitely"
-    }
   },
   "blog": {
     "title": "Blog",

@@ -82,16 +82,6 @@ const flip = () => side++ % 2 === 0;
     </div>
   </section>
 
-  <section id="ideas" class="section">
-    <div class="wrap">
-      <Split monster="danwos-sketching" alt={s.ideas.alt} reverse={flip()}>
-        <h2>{s.ideas.title}</h2>
-        <p class="lead">{s.ideas.lead}</p>
-        <a class="btn btn-secondary" href={path(lang, 'ideas/')}>{s.ideas.all} →</a>
-      </Split>
-    </div>
-  </section>
-
   <section id="about" class="section">
     <div class="wrap">
       <div class:list={['split', { rev: flip() }]}>
