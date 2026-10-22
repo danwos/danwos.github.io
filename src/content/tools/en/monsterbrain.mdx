@@ -4,18 +4,24 @@ subtitle: "A brain for you and your AI agents"
 summary: "A brain for people and AI agents: knowledge, concepts and results in one clear folder structure."
 era: "current"
 status: "prototype"
-pictures: "mockup"
+pictures: "prototype"
 monster: "monsterbrain"
 role: [created]
 order: 20
-translated_from: "396086f8fcf6"
+docs: "https://monsterbrain.danwos.dev"
+links:
+  - label: "monsterbrain docs"
+    url: "https://monsterbrain.danwos.dev"
+translated_from: "57c3cd97e579"
 ---
 
 import Scene from '../../../components/Scene.astro';
 import Screen from '../../../components/Screen.astro';
 import ToolLinks from '../../../components/ToolLinks.astro';
 import KnowledgeFlow from '../../../components/KnowledgeFlow.astro';
-import viewer from '../../../assets/tools/monsterbrain/viewer.png';
+import files from '../../../assets/tools/monsterbrain/app-files.webp';
+import changes from '../../../assets/tools/monsterbrain/app-changes.webp';
+import concepts from '../../../assets/tools/monsterbrain/app-concepts.webp';
 import welcome from '../../../assets/tools/monsterbrain/viewer-readme.png';
 
 ## Why monsterbrain
@@ -61,6 +67,11 @@ facts, finished files into the outputs, the concept into the archive.
 
 <KnowledgeFlow lang="en" />
 
+In the app you see every concept with everything that came out of it – even
+once it has long moved into the facts or the outputs.
+
+<Screen src={concepts} alt="The concepts view of monsterbrain: open and closed concepts on the left, one expanded with its results, the concept itself in the middle." />
+
 Every fact lives in exactly one place. When two statements contradict each
 other, the agent reports it instead of guessing.
 
@@ -92,15 +103,30 @@ anything getting mixed up.
 ## See how it all connects
 
 Folders and files are ideal for agents, but tiring for people in the long run.
-So monsterbrain gets a viewer: the file tree on the left, the rendered file in
-the middle. Top right, a graph shows what the file links to and what links to
-it, with its metadata below – status, tags, layer, last commit.
+So monsterbrain also comes as a desktop app: the file tree on the left, the
+file in the middle the way it is meant to be read – Markdown rendered, HTML
+live, translations as a table. Top right, a graph shows what the file links to
+and what links to it, below it its metadata and what to check: a broken link,
+a missing summary, an outdated date.
 
-<Screen src={viewer} alt="The monsterbrain viewer with the project garden-app: file tree on the left, the README in the middle, the graph with all links and the metadata on the right." />
+<Screen src={files} alt="The monsterbrain app: the file tree with the changed files on the left, a rendered company profile in the middle, the graph with all links, a check note and the metadata on the right." />
 
 One click on a link or a node in the graph and you are in the next file. The
 colours show the layer, so you see at a glance whether a fact is properly
 backed and which concept is working on it right now.
+
+## See what the agents changed
+
+After one round with Claude, a dozen files have quickly changed: a fact, a web
+page, a translation, a picture. The change view lists them all, and every
+change shows the way it is meant to be read – the web page before and after
+side by side, the changed paragraphs marked in Markdown, only the changed
+entries of a translation.
+
+<Screen src={changes} alt="The change view: the five changed files on the left, a web page before and after side by side in the middle – new price, new text." />
+
+Claude steers the app along the way: it opens the file it is talking about,
+highlights the passage and shows what it changed at the end.
 
 ## Together with deciwa
 
@@ -145,5 +171,7 @@ separate folder with their own licence and stay protected.
 <Scene monster="monsterbrain-sitting" alt="monsterbrain sitting relaxed on the floor" />
 
 The brain itself runs every day on my side – this website was planned and
-built in it. The repository to get started, the viewer and the connection to
-deciwa will follow. In blog posts I will explain the parts one by one.
+built in it. The desktop app runs as a prototype, together with deciwa; how it
+works is in the [monsterbrain docs](https://monsterbrain.danwos.dev). The
+repository to get started will follow, and in blog posts I will explain the
+parts one by one.

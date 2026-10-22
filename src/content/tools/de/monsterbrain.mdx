@@ -4,17 +4,23 @@ subtitle: "Ein Gehirn für dich und deine KI-Agenten"
 summary: "Ein Gehirn für Menschen und KI-Agenten: Wissen, Konzepte und Ergebnisse in einer klaren Ordnerstruktur."
 era: "current"
 status: "prototype"
-pictures: "mockup"
+pictures: "prototype"
 monster: "monsterbrain"
 role: [created]
 order: 20
+docs: "https://monsterbrain.danwos.dev"
+links:
+  - label: "monsterbrain-Doku"
+    url: "https://monsterbrain.danwos.dev"
 ---
 
 import Scene from '../../../components/Scene.astro';
 import Screen from '../../../components/Screen.astro';
 import ToolLinks from '../../../components/ToolLinks.astro';
 import KnowledgeFlow from '../../../components/KnowledgeFlow.astro';
-import viewer from '../../../assets/tools/monsterbrain/viewer.png';
+import files from '../../../assets/tools/monsterbrain/app-files.webp';
+import changes from '../../../assets/tools/monsterbrain/app-changes.webp';
+import concepts from '../../../assets/tools/monsterbrain/app-concepts.webp';
 import welcome from '../../../assets/tools/monsterbrain/viewer-readme.png';
 
 ## Warum monsterbrain
@@ -61,6 +67,11 @@ wandern in die Fakten, fertige Dateien in die Outputs, das Konzept ins Archiv.
 
 <KnowledgeFlow lang="de" />
 
+In der App siehst du jedes Konzept mit allem, was daraus entstanden ist –
+auch wenn es längst in den Fakten oder bei den Outputs liegt.
+
+<Screen src={concepts} alt="Die Konzeptansicht von monsterbrain: links die offenen und abgeschlossenen Konzepte, eines aufgeklappt mit seinen Ergebnissen, in der Mitte das Konzept selbst." />
+
 Jeder Fakt steht an genau einer Stelle. Widersprechen sich zwei Aussagen,
 meldet der Agent das, statt zu raten.
 
@@ -94,16 +105,31 @@ dass sich irgendetwas vermischt.
 ## Sehen, wie alles zusammenhängt
 
 Ordner und Dateien sind für Agenten ideal, für Menschen auf Dauer etwas
-mühsam. Deshalb bekommt monsterbrain einen Viewer: links der Dateibaum, in der
-Mitte die gerenderte Datei. Rechts oben zeigt ein Graph, worauf die Datei
-verweist und wer auf sie verweist, darunter stehen ihre Metadaten – Status,
-Tags, Schicht, letzter Commit.
+mühsam. Deshalb gibt es monsterbrain auch als Desktop-App: links der
+Dateibaum, in der Mitte die Datei so, wie sie gemeint ist – Markdown
+gerendert, HTML live, Übersetzungen als Tabelle. Rechts oben zeigt ein Graph,
+worauf die Datei verweist und wer auf sie verweist, darunter stehen ihre
+Metadaten und was zu prüfen ist: ein kaputter Link, eine fehlende
+Zusammenfassung, ein veraltetes Datum.
 
-<Screen src={viewer} alt="Der monsterbrain-Viewer mit dem Projekt garden-app: links der Dateibaum, in der Mitte die README, rechts der Graph mit allen Links und die Metadaten." />
+<Screen src={files} alt="Die monsterbrain-App: links der Dateibaum mit den geänderten Dateien, in der Mitte ein gerendertes Firmenprofil, rechts der Graph mit allen Links, ein Prüfhinweis und die Metadaten." />
 
 Ein Klick auf einen Link oder einen Knoten im Graphen, und du bist in der
 nächsten Datei. Die Farben zeigen die Schicht, so siehst du auf einen Blick,
 ob ein Fakt sauber belegt ist und welches Konzept gerade daran arbeitet.
+
+## Sehen, was die Agenten geändert haben
+
+Nach einer Runde mit Claude haben sich schnell ein Dutzend Dateien geändert:
+ein Fakt, eine Webseite, eine Übersetzung, ein Bild. Die Änderungsansicht
+listet sie alle auf, und jede Änderung erscheint so, wie sie gemeint ist – die
+Webseite vorher und nachher nebeneinander, im Markdown die geänderten Absätze
+markiert, bei der Übersetzung nur die geänderten Einträge.
+
+<Screen src={changes} alt="Die Änderungsansicht: links die fünf geänderten Dateien, in der Mitte eine Webseite vorher und nachher nebeneinander – neuer Preis, neuer Text." />
+
+Claude steuert die App dabei mit: Es öffnet die Datei, über die es gerade
+spricht, markiert die Stelle und zeigt am Ende selbst, was es geändert hat.
 
 ## Zusammen mit deciwa
 
@@ -148,6 +174,8 @@ eigenen Ordner mit eigener Lizenz und bleiben geschützt.
 <Scene monster="monsterbrain-sitting" alt="monsterbrain sitzt entspannt auf dem Boden" />
 
 Das Gehirn selbst läuft bei mir jeden Tag – diese Website ist darin geplant
-und gebaut worden. Das Repository zum Loslegen, der Viewer und die
-Verbindung mit deciwa folgen. In Blogbeiträgen erkläre ich nach und nach die
-einzelnen Teile.
+und gebaut worden. Die Desktop-App läuft als Prototyp, zusammen mit deciwa;
+wie sie funktioniert, steht in der
+[monsterbrain-Doku](https://monsterbrain.danwos.dev). Das Repository zum
+Loslegen folgt, und in Blogbeiträgen erkläre ich nach und nach die einzelnen
+Teile.
