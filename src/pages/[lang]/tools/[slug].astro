@@ -20,7 +20,7 @@ const art = d.era === 'archive' ? 'grandma' : d.monster;
 const { Content } = await render(entry);
 const empty = !entry.body?.trim();
 ---
-<Base lang={lang} title={d.title} description={d.summary}>
+<Base lang={lang} title={d.title} description={d.summary} og={`tools/${slugOf(entry.id)}`}>
   <section class="head">
     <div class="wrap split">
       <div class="img">{art && <Image src={monster(art)} alt="" widths={[260, 520]} sizes="260px" loading="eager" />}</div>

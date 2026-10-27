@@ -21,7 +21,7 @@ const { Content } = await render(entry);
 // A German translation of an English original links back to it.
 const showOriginal = lang === 'de' && d.original === 'en';
 ---
-<Base lang={lang} title={d.title} description={d.summary}>
+<Base lang={lang} title={d.title} description={d.summary} og={`blog/${slug}`} article={{ published: d.date, tags: d.tags }}>
   <article>
     <header class="wrap narrow">
       <a class="back" href={path(lang, 'blog/')}>← {s.blog.back}</a>
