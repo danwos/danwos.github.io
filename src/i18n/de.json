@@ -135,9 +135,9 @@
     "matRegression": "Regression – war im letzten Lauf grün",
     "matTarget": "Ziel",
     "matHint": "Blöcke, die nach vorn stehen, sind erreicht. Ziehen dreht die Ringe, ein Klick zieht die Stufen auseinander. Fährst du über einen Block, siehst du seinen Wert. Die Werte sind ein Beispiel.",
-    "matAlt": "3D-Modell der Reife von deciwa: fünf Ringe um das Monster, einer pro Reifegrad, je acht Blöcke, einer pro Bereich, farbig nach Wert. Auseinandergezogen zeigt jeder Block seine Maßnahmen dahinter.",
+    "matAlt": "3D-Modell der Reife von quawa: fünf Ringe um das Monster, einer pro Reifegrad, je acht Blöcke, einer pro Bereich, farbig nach Wert. Auseinandergezogen zeigt jeder Block seine Maßnahmen dahinter.",
     "matRoomHint": "Ziehen dreht den Blick, ein Klick auf ein Tool holt es heran und öffnet es. Die Werte sind ein Beispiel.",
-    "matRoomAlt": "Sechs Tools nebeneinander in einem Raum – deciwa, monsterbrain, quawa, faktwerk, Horus und danwos.dev –, jedes mit seinen Reifegrad-Ringen."
+    "matRoomAlt": "Sechs Tools nebeneinander in einem Raum – quawa, deciwa, monsterbrain, faktwerk, Horus und danwos.dev –, jedes mit seinen Reifegrad-Ringen."
   },
   "projects": {
     "title": "Projekte",

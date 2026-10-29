@@ -136,9 +136,9 @@
     "matRegression": "regression – was green in the last run",
     "matTarget": "target",
     "matHint": "Blocks that stand out to the front are reached. Drag to turn the rings, click them to pull the levels apart. Hover over a block to see its score. The values are an example.",
-    "matAlt": "3D model of the maturity of deciwa: five rings around the monster, one per maturity level, eight blocks each, one per area, colored by score. Pulled apart, every block shows its measures behind it.",
+    "matAlt": "3D model of the maturity of quawa: five rings around the monster, one per maturity level, eight blocks each, one per area, colored by score. Pulled apart, every block shows its measures behind it.",
     "matRoomHint": "Drag to look around, click a tool to step closer and open it. The values are an example.",
-    "matRoomAlt": "Six tools side by side in one room – deciwa, monsterbrain, quawa, faktwerk, Horus and danwos.dev –, each with its maturity rings."
+    "matRoomAlt": "Six tools side by side in one room – quawa, deciwa, monsterbrain, faktwerk, Horus and danwos.dev –, each with its maturity rings."
   },
   "projects": {
     "title": "Projects",

@@ -84,8 +84,8 @@ function generate(seed: number, reach: number[], final: number): Raw[][][] {
 }
 
 const U = 'ud';
-// deciwa: the example of the blog post "How Immature Is Your Software?", one regression added
-const deciwa: Raw[][][] = [
+// quawa: the example of the blog post "How Immature Is Your Software?", one regression added
+const example: Raw[][][] = [
   [[100, 100], [80, 40, 60], ['nd', 'nd', 'nd', 'nd'], [], []],
   [[100, 100], [30, 40, 25, { v: 20, regression: true }], ['nd', 'nd', 'nd', 'nd', 'nd', 'nd'], [], []],
   [[100, 100], [100, 100, 100], [], [100, 'nd', 72, 100, 90, 'nd', 85], []],
@@ -97,10 +97,10 @@ const deciwa: Raw[][][] = [
 ];
 
 const tools: { name: string; img?: string; target: number; final: number; values: Raw[][][]; plan?: [string, string][] }[] = [
-  { name: 'deciwa', img: 'deciwa', target: 2, final: 4, values: deciwa,
+  { name: 'quawa', img: 'quawa', target: 2, final: 4, values: example,
     plan: [['', ''], ['current target', 'aktuelles Ziel'], ['from 2027-03', 'ab 2027-03'], ['from release 1.0', 'ab Release 1.0'], ['not targeted', 'nicht angestrebt']] },
+  { name: 'deciwa', img: 'deciwa', target: 3, final: 4, values: generate(11, [2, 2, 2, 3, 2, 2, 2, 2], 4) },
   { name: 'monsterbrain', img: 'monsterbrain', target: 3, final: 4, values: generate(7, [3, 3, 3, 4, 3, 3, 3, 3], 4) },
-  { name: 'quawa', img: 'quawa', target: 2, final: 4, values: generate(11, [1, 1, 2, 2, 1, 1, 1, 1], 4) },
   { name: 'faktwerk', img: 'faktwerk', target: 1, final: 3, values: generate(23, [1, 0, 0, 1, 1, 1, 1, 0], 3) },
   { name: 'Horus', target: 2, final: 3, values: generate(31, [1, 1, 1, 2, 1, 2, 2, 1], 3) },
   { name: 'danwos.dev', img: 'danwos', target: 3, final: 5, values: generate(43, [2, 3, 1, 2, 3, 3, 4, 3], 5) },
