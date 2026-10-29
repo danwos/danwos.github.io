@@ -42,7 +42,7 @@ type Labels = { CSS2DObject: new (el: HTMLElement) => Three.Object3D };
 export type Model = { group: Three.Group; pickable: Three.Mesh[]; labelObjs: Three.Object3D[]; depth: number; step: (target: number, k?: number) => number };
 
 /** Builds the 3D rings of one tool. `step(target)` moves every part towards 0 (joined) or 1 (pulled apart). */
-export function buildMaturity(THREE: typeof Three, tool: Tool, labels?: Labels): Model {
+export function buildMaturity(THREE: typeof Three, tool: Tool, labels?: Labels, anisotropy = 1): Model {
   const group = new THREE.Group();
   const pickable: Three.Mesh[] = [];
   const pulsing: Three.Mesh[] = [];
@@ -101,22 +101,34 @@ export function buildMaturity(THREE: typeof Three, tool: Tool, labels?: Labels):
     line.computeLineDistances();
     return line;
   };
-  const logoTexture = () => {
-    if (tool.img) {
-      const t = new THREE.TextureLoader().load(tool.img);
+  // the monsters are portrait cut-outs on a transparent ground: draw them centred into a square,
+  // transparent canvas at their own aspect ratio, so they are neither stretched nor smeared at the edge
+  const logoTexture = (face: Three.MeshBasicMaterial) => {
+    const c = document.createElement('canvas');
+    const done = () => {
+      const t = new THREE.CanvasTexture(c);
       t.colorSpace = THREE.SRGBColorSpace;
-      return t;
+      t.anisotropy = anisotropy;
+      face.map = t;
+      face.needsUpdate = true;
+    };
+    if (tool.img) {
+      new THREE.ImageLoader().load(tool.img, (img) => {
+        const side = Math.max(img.width, img.height), k = 0.96;
+        c.width = c.height = side;
+        const w = img.width * k, h = img.height * k;
+        c.getContext('2d')!.drawImage(img, (side - w) / 2, (side - h) / 2, w, h);
+        done();
+      });
+      return;
     }
     // a tool without a monster gets its initial
-    const c = document.createElement('canvas');
     c.width = c.height = 256;
     const g = c.getContext('2d')!;
     g.fillStyle = '#0F766E'; g.font = '700 150px "Bricolage Grotesque Variable", Inter, sans-serif';
     g.textAlign = 'center'; g.textBaseline = 'middle';
     g.fillText(tool.name[0].toUpperCase(), 128, 140);
-    const t = new THREE.CanvasTexture(c);
-    t.colorSpace = THREE.SRGBColorSpace;
-    return t;
+    done();
   };
 
   // the monster on a white disc in front
@@ -125,7 +137,9 @@ export function buildMaturity(THREE: typeof Three, tool: Tool, labels?: Labels):
   disc.position.z = 0.05;
   disc.add(new THREE.LineSegments(new THREE.EdgesGeometry(disc.geometry, 30), new THREE.LineBasicMaterial({ color: INK })));
   group.add(disc);
-  const face = new THREE.Mesh(new THREE.CircleGeometry(R0 * 0.92, 64), new THREE.MeshBasicMaterial({ map: logoTexture(), transparent: true }));
+  const faceMat = new THREE.MeshBasicMaterial({ transparent: true, opacity: 1 });
+  logoTexture(faceMat);
+  const face = new THREE.Mesh(new THREE.CircleGeometry(R0 * 0.92, 64), faceMat);
   face.position.z = 0.26;
   group.add(face, circle(R0 + 0.03, 0.25, 'bold'));
 
@@ -297,7 +311,7 @@ export async function mountRings(fig: HTMLElement, tool: Tool, s: Strings) {
   const calm = still();
   const pivot = new THREE.Group();
   v.scene.add(pivot);
-  const model = buildMaturity(THREE, tool, { CSS2DObject: v.CSS2DObject });
+  const model = buildMaturity(THREE, tool, { CSS2DObject: v.CSS2DObject }, v.renderer.capabilities.getMaxAnisotropy());
   pivot.add(model.group);
   v.camera.position.set(0, 3.6, 18);
 
@@ -347,7 +361,7 @@ export async function mountRoom(fig: HTMLElement, tools: Tool[], s: Strings) {
   const R = 24;
   let focus: (i: number) => void = () => {};
   const items = tools.map((tool, i) => {
-    const m = buildMaturity(THREE, tool, { CSS2DObject: v.CSS2DObject });
+    const m = buildMaturity(THREE, tool, { CSS2DObject: v.CSS2DObject }, v.renderer.capabilities.getMaxAnisotropy());
     const holder = new THREE.Group(), pivot = new THREE.Group();
     // a shallow arc that faces the viewer, back and front row alternate
     const th = ((-40 + i * (80 / Math.max(1, tools.length - 1))) * Math.PI) / 180;
