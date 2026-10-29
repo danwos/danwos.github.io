@@ -1,120 +1,122 @@
 ---
 title: "quawa"
 subtitle: "quality watcher"
-summary: "Prüft, ob die Tests von KI-geschriebenem Code wirklich testen."
+summary: "Zeigt, wie reif deine Software ist – gemessen, geplant und auf einen Blick."
 era: "current"
-status: "idea"
+status: "concept"
+pictures: "sketch"
 monster: "quawa"
 role: [created]
 order: 30
 ---
 
-import QuawaCheck from '../../../components/QuawaCheck.astro';
-import QuawaStages from '../../../components/QuawaStages.astro';
-
 ## Warum quawa
 
-KI-Agenten schreiben Code und die passenden Tests gleich mit. Die Pipeline ist
-grün, alle sind zufrieden. Nur prüfen viele dieser Tests genau das, was der
-Code ohnehin tut – und nicht das, was er tun soll. Ob sie einen echten Fehler
-fangen würden, sieht im Pull Request niemand.
+Mit AI entsteht Software anders: erst das Ganze grob, dann Runde für Runde
+feiner. Ein Feature, das ein Agent in einer Stunde gebaut hat, sieht fertig
+aus, und die Pipeline ist grün. Ob schon jemand anderes darauf aufbauen kann,
+ob die Lizenzen passen oder ob die Tests überhaupt etwas prüfen, sieht man
+ihm nicht an.
 
-Dazu kommt ein zweites Muster: Ein Agent soll eine rote Pipeline grün
-bekommen und nimmt den kürzesten Weg. Er lockert eine Assertion, setzt einen
-Test auf `skip` oder sorgt dafür, dass ein Fehlschlag in der CI nichts mehr
-blockiert. Im Diff sieht das harmlos aus, und im Review rutscht es leicht
-durch.
+Grün oder rot hilft da wenig. Am Anfang ist fast alles rot, und das ist in
+Ordnung – niemand verlangt in Woche zwei eine Architekturdoku. quawa misst
+deshalb immer alles, auch das, was heute noch niemand fordert, und zeigt den
+Abstand zum Ziel, das du dir für jetzt gesetzt hast. Eine Lücke ist eine
+Information, kein kaputter Build.
 
-quawa soll eine einzige Frage beantworten: **Kann ich dem grünen CI bei
-KI-Code trauen?**
+## Fünf Reifegrade
 
-## Acht Fragen an jeden Pull Request
-
-| Signal | Was quawa wissen will |
+| Stufe | Zustand |
 |---|---|
-| Mutation Score | Wie viele gezielt eingebaute Fehler fangen die Tests? |
-| Test-Manipulation | Wurde ein Test abgeschwächt, statt den Code zu reparieren? |
-| Over-Mocking | Prüft der Test das Verhalten oder nur seinen eigenen Mock? |
-| Testebenen | Läuft der geänderte Code nur durch Unit-Tests oder auch durch Integration und E2E? |
-| Redundante Tests | Welche Tests fangen nichts zusätzlich und kosten nur CI-Zeit? |
-| CI-Integrität | Laufen die Tests überhaupt, und blockiert ein Fehlschlag den Merge? |
-| Test-bewusster Code | Verhält sich der Produktionscode im Test anders als im Betrieb? |
-| Parameter und Umgebung | Sind Randfälle, Durchläufe oder Plattformen still verschwunden? |
+| 0 Vibe code | was eben da ist |
+| 1 Sketched | grob da – man sieht, was es werden soll |
+| 2 Shaped | die Form steht und hält |
+| 3 Solid | trägt Last, bereit für echte Nutzer |
+| 4 Refined | im Detail durchgearbeitet, auch an den schwierigen Stellen |
+| 5 Audited | von außen bestätigt |
 
-## Wie quawa prüft
+Die Stufen beschreiben einen Zustand, keinen Arbeitsschritt. Jede Stufe
+bringt neue Messungen dazu, und sie gilt erst als erreicht, wenn alle
+darunter erfüllt sind. So musst du nicht alles auf einmal machen – aber eine
+Stufe richtig, bevor die nächste zählt.
 
-Zwei Wege laufen nebeneinander. Die Diff-Prüfungen lesen nur die Änderungen
-an Tests, Code und CI-Konfiguration – sie brauchen keinen Testlauf und sind
-deshalb schnell. Das Mutation Testing baut kleine Fehler in die geänderten
-Zeilen ein, etwa ein `>` statt `>=`, und schaut, ob die Tests das merken.
-Beides fasst quawa in einer kurzen Karte im Pull Request zusammen, Details gibt
-es per Klick.
+## Acht Bereiche
 
-<QuawaCheck lang="de" />
+Jeder Bereich füllt die Stufen mit eigenen Messungen:
 
-Erst zusammen ergibt das eine klare Diagnose: Überleben viele eingebaute
-Fehler und wurden gleichzeitig Assertions abgeschwächt, weißt du nicht nur,
-*dass* ein Test nichts prüft, sondern auch *warum*.
+| Bereich | Zum Beispiel |
+|---|---|
+| Anforderungen | Feature-Beschreibungen, Abdeckung, Traceability bis zum Test |
+| Dokumentation | Doku für Nutzer und Entwickler, deckt jedes Feature ab |
+| Tests | Unit, Integration und E2E, Coverage, Mutationstests |
+| Code-Qualität | Formatierung, Linting, Typen, Komplexität, statische Analyse |
+| Security | keine Secrets, keine bekannten Lücken, Threat Model |
+| Recht | eigene Lizenz, Lizenzen der Abhängigkeiten, SBOM, Datenschutz |
+| Produkt und UX | danwos-Tool-Regeln, Branding, Barrierefreiheit, Übersetzungen |
+| Build und Release | baut aus dem Nichts, automatisierte, signierte Releases |
 
-## Woran man Schummeln erkennt
+## Auf einen Blick
 
-Die meisten Tricks sind im Diff eindeutig zu sehen, wenn man weiß, wonach man
-sucht:
+![Reifegrad-Ringe um das deciwa-Monster, ausgedachtes Beispiel](../../../assets/blog/quality-maturity/rings-front.png)
+
+quawa zeigt den Stand als Ringe um das Logo des Tools: ein Ring pro Stufe, ein
+Tortenstück pro Bereich. Das Beispiel ist ausgedacht.
+
+- **Der dicke Block** zeigt, was erreicht ist. Das Bild bekommt Berge und
+  Täler, und du siehst sofort, wo das Tool schwach ist.
+- **Darüber** zeigt jede weitere Stufe ihren eigenen Stand, von Rot bis Grün.
+- **Grau** zeigt, woran schon gedacht ist: dunkel, wenn die Messung
+  festgelegt ist, aber noch kein Ergebnis hat, hell gestrichelt, wenn noch
+  niemand beschrieben hat, wie gemessen wird. Rot schraffiert ist eine
+  Messung, die selbst kaputt ist.
+- **Die Linien** zeigen, was heute gilt und wohin das Projekt am Ende will.
+  Stufen dazwischen sind geplant, mit Datum oder Release.
+
+Für Karten oder ein Badge im README gibt es schlanke Varianten: nur das
+Erreichte, oder alles bis zum heutigen Ziel.
+
+## Vergleichbar durch ein festes Modell
+
+Was auf welcher Stufe gemessen wird, legt das danwos-Modell fest – zum
+Beispiel Linting und Unit-Tests ab Stufe 2. Ein Projekt sagt nur, *woher* die
+Ergebnisse kommen: welcher Testlauf, welcher Report, welches Werkzeug. Strenger
+geht, eigene Messungen gehen, schwächer nicht. Wer sich daran hält, bekommt
+die danwos-Farben, wer abweicht, ein normales Rot-Grün. So bedeutet „Stufe 3“
+bei jedem Tool dasselbe.
+
+Im Repository liegt dafür ein Verzeichnis `.quawa/` mit einer Datei pro
+Bereich, geordnet nach Stufen. Dort steht auch, ab wann eine Stufe gilt:
+„Stufe 3 ab März 2027, Stufe 4 ab Version 1.0“.
+
+## Tests, die wirklich testen
+
+Sobald Agenten auf grüne Ringe hinarbeiten, schreiben sie Tests, die nichts
+prüfen, oder nehmen den kürzesten Weg zu einer grünen Pipeline:
 
 ```diff
 - expect(total).toEqual(42)
 + expect(total).toBeDefined()
 ```
 
-Ein paar weitere Beispiele aus dem gleichen Werkzeugkasten:
-
-- ein neues `continue-on-error: true` im Testjob, und Rot blockiert nichts mehr
-- ein `if (process.env.NODE_ENV === 'test')` im Produktionscode
-- ein `/* istanbul ignore next */`, das die Coverage schönt
-- Randfälle wie `null` oder `-1`, die still aus einem `test.each` verschwinden
-- ein Coverage-Gate, das von 90 auf 40 Prozent sinkt
-
-Für sich genommen kann jede dieser Änderungen richtig sein. quawa zeigt sie
-deshalb mit der genauen Stelle, und einmal begründete Ausnahmen merkt es sich.
-
-## Ohne KI im Produkt
-
-quawa prüft KI-Code, braucht dafür aber selbst keine KI. Alle Prüfungen sind
-feste Regeln: deterministisch, nachvollziehbar und bei jedem Lauf gleich. Die
-Rechenzeit läuft in deiner eigenen CI, Quellcode verlässt dein Repository
-nicht. Auswertungen gibt es pro Team, Repository oder Agent – nie pro Person.
-
-## Direkt im Arbeitsablauf der Agenten *(geplant)*
-
-Am meisten bringt quawa, bevor überhaupt ein Pull Request entsteht. Über einen
-MCP-Server und einen Hook für Claude Code oder Cursor prüft sich der Agent
-selbst, und eine Änderung, die Assertions entfernt, wird gleich gestoppt. Tests,
-für die ein Mensch verantwortlich ist, lassen sich als geschützt markieren.
-Eine VS-Code-Erweiterung zeigt überlebende Fehler direkt neben der Codezeile.
-
-## Wie es wachsen kann
-
-<QuawaStages lang="de" />
-
-Der Anfang ist bewusst klein: eine GitHub Action für TypeScript und JavaScript,
-die im Pull Request kommentiert. Danach kommen weitere Muster, UI-Tests mit
-Playwright und weitere Sprachen. In Stufe drei wird aus dem Wächter ein
-Dashboard, das *wirksame* statt gemessene Abdeckung zeigt – also nur die
-Zeilen, in denen Tests eingebaute Fehler wirklich fangen. Und am Ende geht es
-um mehr als Tests: Auch Agenten-Regeln, Typprüfungen und Sicherheits-Scanner
-sind Schutzschichten, die ein Agent lockern kann.
+Deshalb steht das, was solche Tricks aufdeckt, fest im Modell. Mutationstests
+bauen kleine Fehler in den Code ein, etwa ein `>` statt `>=`, und schauen, ob
+die Tests das merken. AI-gestützte Bewertungen prüfen, ob die Doku wirklich
+jedes Feature abdeckt. Beides gehört zur Stufe „Refined“ – und wird trotzdem
+von Anfang an gemessen.
 
 ## Was quawa nicht macht
 
-quawa schreibt keine Tests und führt keine UI-Tests aus, dafür gibt es schon
-gute Tools. Es verknüpft keine Anforderungen und erzeugt keine
-Compliance-Nachweise. Und es scannt nicht selbst nach Sicherheitslücken,
-sondern meldet nur, wenn ein Pull Request die vorhandenen Scanner
-abschwächt.
+quawa schreibt keine Tests und ersetzt keine Werkzeuge. Linter, Testläufe,
+Scanner und Lizenzprüfungen gibt es schon – quawa ruft sie auf, sammelt ihre
+Ergebnisse und ordnet sie den Stufen zu. Nichts davon bricht einen Build,
+solange du es nicht ausdrücklich willst.
 
 ## Stand
 
-Eine Idee mit ausgearbeitetem Business Case. Als Nächstes spreche ich mit
-Teams, die mit KI-Agenten in TypeScript und Python arbeiten, und probiere die
-vorhandenen Open-Source-Tools selbst aus. Die Prüf-Engine soll als Open Source
-erscheinen, damit jede Regel einsehbar bleibt.
+Das Modell ist ausgearbeitet: Stufen, Bereiche, Messungen und die Darstellung.
+Als Nächstes entsteht die erste Umsetzung als Kommandozeile, die lokal läuft.
+Das erste Tool, das sich daran messen lässt, ist
+[deciwa](/de/tools/deciwa/), danach quawa selbst und
+[monsterbrain](/de/tools/monsterbrain/). Wie das Modell entstanden ist, steht
+in [Wie roh ist deine Software?](/de/blog/quality-maturity/). quawa soll eines
+Tages als Open Source erscheinen.

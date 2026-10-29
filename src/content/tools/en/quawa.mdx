@@ -1,116 +1,121 @@
 ---
 title: "quawa"
 subtitle: "quality watcher"
-summary: "Checks whether the tests of AI-written code really test."
+summary: "Shows how mature your software is – measured, planned and at a glance."
 era: "current"
-status: "idea"
+status: "concept"
+pictures: "sketch"
 monster: "quawa"
 role: [created]
 order: 30
-translated_from: "7854c73e6e63"
+translated_from: "275703bc0d2d"
 ---
-
-import QuawaCheck from '../../../components/QuawaCheck.astro';
-import QuawaStages from '../../../components/QuawaStages.astro';
 
 ## Why quawa
 
-AI agents write code and the matching tests along with it. The pipeline is
-green, everyone is happy. But many of those tests check exactly what the code
-already does – not what it is supposed to do. Whether they would catch a real
-bug, nobody can tell from the pull request.
+With AI, software comes about differently: the whole thing roughly first,
+then finer round by round. A feature an agent built in an hour looks
+finished, and the pipeline is green. Whether someone else can build on it
+yet, whether the licenses fit or whether the tests check anything at all –
+you can't tell by looking at it.
 
-There is a second pattern too: an agent is told to turn a red pipeline green
-and takes the shortest path. It loosens an assertion, marks a test as `skip`,
-or makes sure a failure in CI no longer blocks anything. In the diff it looks
-harmless, and in review it slips through easily.
+Green or red doesn't help much there. At the start almost everything is red,
+and that's fine – nobody asks for architecture docs in week two. So quawa
+always measures everything, including what nobody asks for today, and shows
+the distance to the target you set for now. A gap is information, not a
+broken build.
 
-quawa is meant to answer one question: **Can I trust a green CI on AI code?**
+## Five maturity levels
 
-## Eight questions for every pull request
-
-| Signal | What quawa wants to know |
+| Level | State |
 |---|---|
-| Mutation score | How many deliberately planted bugs do the tests catch? |
-| Test tampering | Was a test weakened instead of fixing the code? |
-| Over-mocking | Does the test check the behavior or only its own mock? |
-| Test levels | Is the changed code covered only by unit tests, or by integration and E2E too? |
-| Redundant tests | Which tests catch nothing extra and only cost CI time? |
-| CI integrity | Do the tests run at all, and does a failure block the merge? |
-| Test-aware code | Does the production code behave differently under test than in production? |
-| Parameters and environment | Have edge cases, runs or platforms quietly disappeared? |
+| 0 Vibe code | whatever is there |
+| 1 Sketched | roughly there – you can see what it will be |
+| 2 Shaped | the form stands and holds |
+| 3 Solid | carries load, ready for real users |
+| 4 Refined | worked through in detail, the hard parts too |
+| 5 Audited | confirmed from outside |
 
-## How quawa checks
+The levels describe a state, not a work step. Every level adds new
+measures, and it only counts as reached when all levels below are met. So
+you don't have to do everything at once – but a level properly before the
+next one counts.
 
-Two paths run side by side. The diff checks read only the changes to tests,
-code and CI configuration – they need no test run and are therefore fast.
-Mutation testing plants small bugs in the changed lines, say a `>` instead of
-`>=`, and watches whether the tests notice. quawa sums both up in a short card
-in the pull request, with details one click away.
+## Eight areas
 
-<QuawaCheck lang="en" />
+Every area fills the levels with its own measures:
 
-Only together do they give a clear diagnosis: if many planted bugs survive
-and assertions were weakened at the same time, you know not just *that* a
-test checks nothing, but also *why*.
+| Area | For example |
+|---|---|
+| Requirements | feature descriptions, coverage, traceability down to the test |
+| Documentation | docs for users and developers, covering every feature |
+| Testing | unit, integration and E2E, coverage, mutation tests |
+| Code health | formatting, linting, types, complexity, static analysis |
+| Security | no secrets, no known vulnerabilities, threat model |
+| Legal | own license, licenses of the dependencies, SBOM, privacy |
+| Product and UX | danwos tool rules, branding, accessibility, translations |
+| Build and release | builds from scratch, automated, signed releases |
 
-## How to spot cheating
+## At a glance
 
-Most tricks are plain to see in the diff once you know what to look for:
+![Maturity rings around the deciwa monster, invented example](../../../assets/blog/quality-maturity/rings-front.png)
+
+quawa shows the state as rings around the tool's logo: one ring per level,
+one slice per area. The example is invented.
+
+- **The thick block** shows what is reached. The picture gets hills and
+  valleys, and you see right away where the tool is weak.
+- **Above it**, every further level shows its own state, from red to green.
+- **Gray** shows what has already been thought of: dark when the measure is
+  defined but has no result yet, light and dashed when nobody has described
+  yet how to measure it. Red hatching is a measurement that is itself broken.
+- **The lines** show what applies today and where the project wants to end
+  up. Levels in between are planned, with a date or a release.
+
+For cards or a badge in the README there are slim variants: only what is
+reached, or everything up to today's target.
+
+## Comparable through a fixed model
+
+What is measured on which level is set by the danwos model – for example
+linting and unit tests from level 2. A project only says *where* the results
+come from: which test run, which report, which tool. Stricter is fine, own
+measures are fine, weaker is not. Stick to it and you get the danwos colors;
+deviate and you get a plain red–green. That way "level 3" means the same for
+every tool.
+
+The repository holds a directory `.quawa/` with one file per area, ordered
+by level. It also says when a level applies: "level 3 from March 2027,
+level 4 from version 1.0".
+
+## Tests that really test
+
+As soon as agents work towards green rings, they write tests that check
+nothing, or take the shortest way to a green pipeline:
 
 ```diff
 - expect(total).toEqual(42)
 + expect(total).toBeDefined()
 ```
 
-A few more from the same toolbox:
-
-- a new `continue-on-error: true` in the test job, and red no longer blocks anything
-- an `if (process.env.NODE_ENV === 'test')` in production code
-- a `/* istanbul ignore next */` that polishes coverage
-- edge cases like `null` or `-1` quietly vanishing from a `test.each`
-- a coverage gate dropping from 90 to 40 percent
-
-Any one of these changes can be right on its own. That's why quawa shows them
-with the exact location and remembers exceptions once they are justified.
-
-## No AI inside
-
-quawa checks AI code but needs no AI to do it. Every check is a fixed rule:
-deterministic, traceable and the same on every run. The compute runs in your
-own CI, and source code never leaves your repository. Reports are per team,
-repository or agent – never per person.
-
-## Right in the agents' workflow *(planned)*
-
-quawa helps most before a pull request even exists. Through an MCP server and
-a hook for Claude Code or Cursor, the agent checks itself, and a change that
-removes assertions is stopped right away. Tests a human is responsible for
-can be marked as protected. A VS Code extension shows surviving bugs right
-next to the line of code.
-
-## How it can grow
-
-<QuawaStages lang="en" />
-
-The start is deliberately small: a GitHub Action for TypeScript and
-JavaScript that comments on the pull request. After that come more patterns,
-UI tests with Playwright and more languages. In stage three the watcher
-becomes a dashboard that shows *effective* rather than measured coverage –
-only the lines where tests really catch planted bugs. And in the end it is
-about more than tests: agent rules, type checks and security scanners are
-protection layers an agent can loosen, too.
+That's why what uncovers such tricks is part of the model. Mutation tests
+plant small bugs in the code, such as a `>` instead of `>=`, and check
+whether the tests notice. AI-assisted ratings check whether the docs really
+cover every feature. Both belong to the "Refined" level – and are measured
+from the start anyway.
 
 ## What quawa doesn't do
 
-quawa doesn't write tests or run UI tests – there are good tools for that
-already. It doesn't link requirements or produce compliance evidence. And it
-doesn't scan for vulnerabilities itself; it only reports when a pull request
-weakens the scanners you already have.
+quawa writes no tests and replaces no tools. Linters, test runs, scanners
+and license checks already exist – quawa calls them, collects their results
+and maps them to the levels. None of it breaks a build unless you explicitly
+want it to.
 
 ## Status
 
-An idea with a worked-out business case. Next I'll talk to teams working with
-AI agents in TypeScript and Python and try the existing open source tools
-myself. The check engine is meant to be released as open source, so every
-rule stays visible.
+The model is worked out: levels, areas, measures and the display. Next comes
+the first implementation as a command line tool that runs locally. The first
+tool to be measured with it is [deciwa](/en/tools/deciwa/), then quawa
+itself and [monsterbrain](/en/tools/monsterbrain/). How the model came about
+is in [How Raw Is Your Software?](/en/blog/quality-maturity/). quawa is meant
+to become open source one day.
