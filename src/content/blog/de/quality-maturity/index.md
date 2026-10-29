@@ -1,5 +1,5 @@
 ---
-title: "Wie roh ist deine Software? Qualitätsreife sichtbar machen"
+title: "Wie unreif ist deine Software? Qualitätsreife sichtbar machen"
 date: 2026-10-29
 summary: "Grün oder rot reicht nicht, wenn Software grob über das Ganze wächst. Ich will auf einen Blick sehen, wo ein Tool steht, wo es hin will und woran schon gedacht ist – als Ringe um sein Logo."
 tags: [ai, vibe-coding, quality, tools]

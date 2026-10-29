@@ -84,7 +84,7 @@ function generate(seed: number, reach: number[], final: number): Raw[][][] {
 }
 
 const U = 'ud';
-// deciwa: the example of the blog post "How Raw Is Your Software?", one regression added
+// deciwa: the example of the blog post "How Immature Is Your Software?", one regression added
 const deciwa: Raw[][][] = [
   [[100, 100], [80, 40, 60], ['nd', 'nd', 'nd', 'nd'], [], []],
   [[100, 100], [30, 40, 25, { v: 20, regression: true }], ['nd', 'nd', 'nd', 'nd', 'nd', 'nd'], [], []],

@@ -1,5 +1,5 @@
 ---
-title: "How Raw Is Your Software? Making Quality Maturity Visible"
+title: "How Immature Is Your Software? Making Quality Maturity Visible"
 date: 2026-10-29
 summary: "Green or red is not enough when software grows roughly across the whole. I want to see at a glance where a tool stands, where it wants to go and what has already been thought of – as rings around its logo."
 tags: [ai, vibe-coding, quality, tools]
