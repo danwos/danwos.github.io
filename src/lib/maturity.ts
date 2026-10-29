@@ -1,4 +1,4 @@
-// Example maturity data for the views page: the danwos@1 model (areas × levels × measures) and
+// Example maturity data for the views page: the danwos model (areas × levels × measures) and
 // six tools with their results. Shown by MaturityRings and MaturityRoom; all numbers are made up.
 // The model has 1–3 measures per cell; the further measures here only show the range of a column.
 import type { Lang } from '../i18n';
