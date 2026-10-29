@@ -1,0 +1,63 @@
+---
+import type { MarkdownHeading } from 'astro';
+
+// Table of contents for a long reading column, built from its ## headings. Wide screens: sticky in the
+// free margin left of the column, so the column keeps its full width (the parent needs position: relative).
+// Narrower screens: a collapsible list above the text. The section in view is highlighted.
+interface Props { headings: MarkdownHeading[]; title: string }
+const { title } = Astro.props;
+const headings = Astro.props.headings.filter((h) => h.depth === 2);
+---
+{headings.length > 1 && (
+  <>
+    <nav class="toc-side" aria-label={title}>
+      <div class="toc-in">
+        <p class="toc-title">{title}</p>
+        <ol>{headings.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
+      </div>
+    </nav>
+    <details class="toc-top">
+      <summary>{title}</summary>
+      <ol>{headings.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
+    </details>
+  </>
+)}
+
+<script>
+  // mark the section whose heading was passed last while scrolling
+  const links = [...document.querySelectorAll<HTMLAnchorElement>('.toc-side a')];
+  const targets = links.map((a) => document.getElementById(decodeURIComponent(a.hash.slice(1))));
+  let queued = false;
+  const mark = () => {
+    queued = false;
+    let current = -1;
+    targets.forEach((h, i) => { if (h && h.getBoundingClientRect().top < 140) current = i; });
+    links.forEach((a, i) => (i === current ? a.setAttribute('aria-current', 'location') : a.removeAttribute('aria-current')));
+  };
+  if (links.length) {
+    addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(mark); } }, { passive: true });
+    mark();
+  }
+</script>
+
+<style>
+  ol { list-style: none; padding: 0 0 0 12px; margin: 0; border-left: 2px solid var(--line) }
+  li { margin: 0; padding: 4px 0; line-height: 1.35 }
+  a { color: var(--ink); font-weight: 600; text-decoration: none }
+  a:hover { color: var(--primary) }
+  .toc-title { font: 600 12px var(--font-body); text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 8px }
+
+  .toc-side { display: none }
+  @media (min-width: 1280px) {
+    .toc-side { display: block; position: absolute; top: 0; bottom: 0; right: 100%; width: 200px; margin-right: 8px }
+    .toc-in { position: sticky; top: 96px; font-size: 14px }
+    .toc-side a { color: var(--muted); font-weight: 500 }
+    .toc-side a[aria-current] { color: var(--ink); font-weight: 700 }
+    .toc-side li:has(a[aria-current]) { margin-left: -14px; padding-left: 12px; border-left: 2px solid var(--primary) }
+    .toc-top { display: none }
+  }
+
+  .toc-top { margin: 0 0 32px; padding: 10px 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); font-size: 15px }
+  .toc-top summary { cursor: pointer; font: 600 12px var(--font-body); text-transform: uppercase; letter-spacing: .06em; color: var(--muted) }
+  .toc-top ol { margin-top: 10px }
+</style>
