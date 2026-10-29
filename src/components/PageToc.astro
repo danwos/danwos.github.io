@@ -24,18 +24,20 @@ const headings = Astro.props.headings.filter((h) => h.depth === 2);
 )}
 
 <script>
-  // mark the section whose heading was passed last while scrolling
+  // mark the section whose heading last passed a reading line at 40 % of the window; at the end of
+  // the page the last heading in view wins, so short sections at the bottom get their turn too
   const links = [...document.querySelectorAll<HTMLAnchorElement>('.toc-side a')];
   const targets = links.map((a) => document.getElementById(decodeURIComponent(a.hash.slice(1))));
-  let queued = false;
   const mark = () => {
-    queued = false;
+    const atEnd = scrollY + innerHeight >= document.documentElement.scrollHeight - 4;
+    const line = atEnd ? innerHeight : innerHeight * 0.4;
     let current = -1;
-    targets.forEach((h, i) => { if (h && h.getBoundingClientRect().top < 140) current = i; });
+    targets.forEach((h, i) => { if (h && h.getBoundingClientRect().top < line) current = i; });
     links.forEach((a, i) => (i === current ? a.setAttribute('aria-current', 'location') : a.removeAttribute('aria-current')));
   };
   if (links.length) {
-    addEventListener('scroll', () => { if (!queued) { queued = true; requestAnimationFrame(mark); } }, { passive: true });
+    addEventListener('scroll', mark, { passive: true });
+    addEventListener('resize', mark);
     mark();
   }
 </script>
