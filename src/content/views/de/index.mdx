@@ -8,6 +8,7 @@ import StatusDemo from '../../../components/StatusDemo.astro';
 import ToolLinks from '../../../components/ToolLinks.astro';
 import QualityRoll from '../../../components/QualityRoll.astro';
 import QualityNetwork from '../../../components/QualityNetwork.astro';
+import MaturityRings from '../../../components/MaturityRings.astro';
 import city from '../../../assets/tools/horus/city.png';
 import select from '../../../assets/tools/horus/select.png';
 import problems from '../../../assets/tools/horus/problems.png';
@@ -129,11 +130,19 @@ sofort, auch zwischen allen anderen. Ein Klick holt dir die Rolle heran.
 
 Was für einen Pull Request gilt, gilt auch für ein ganzes Tool. Statt
 Hunderter Prüfergebnisse zeigt ein Bild, wie reif es ist: um das Logo ein
-Ring pro Reifegrad, ein Tortenstück pro Bereich. Der dicke Block zeigt, was
-erreicht ist, darüber steht, was gerade schiefläuft, und grau, woran schon
-gedacht ist.
+Ring pro Reifegrad, ein Block pro Bereich. Die Blöcke, die nach vorn
+stehen, sind erreicht, die Farbe zeigt, wie gut der Rest ist, und grau,
+woran schon gedacht ist. Ein Klick zieht die Stufen auseinander: Hinter
+jedem Block reihen sich seine Maßnahmen auf, jede mit ihrem eigenen
+Ergebnis.
 
-![Reifegrad-Ringe um das deciwa-Monster, ausgedachtes Beispiel](../../../assets/blog/quality-maturity/rings-front.png)
+<MaturityRings lang="de" view="one" />
+
+Bei mehreren Tools stehen sie nebeneinander in einem Raum. Welches weit
+ist und wo es rot wird, sieht man auf einen Blick – ein Klick holt ein
+Tool heran und öffnet es.
+
+<MaturityRings lang="de" view="room" />
 
 Noch eine Idee – wie sie funktioniert, steht in
 [Wie roh ist deine Software?](/de/blog/quality-maturity/).

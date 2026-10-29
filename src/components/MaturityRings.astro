@@ -1,0 +1,88 @@
+---
+import { t, type Lang } from '../i18n';
+import { toolsFor, reachedLevel } from '../lib/maturity';
+import deciwa from '../assets/monsters/deciwa.webp';
+import monsterbrain from '../assets/monsters/monsterbrain.webp';
+import quawa from '../assets/monsters/quawa.webp';
+import faktwerk from '../assets/monsters/faktwerk.webp';
+import danwos from '../assets/monsters/danwos.webp';
+
+// Maturity rings in 3D (MDX pages). view "one": deciwa, the example of the blog post, swinging
+// slowly; a click pulls the levels apart into columns of measures. view "room": six tools side by
+// side; a click flies to one and opens it. three.js loads only when the figure comes into view.
+interface Props { lang: Lang; view: 'one' | 'room' }
+const { lang, view } = Astro.props;
+const s = t(lang).views;
+const all = toolsFor(lang, { deciwa: deciwa.src, monsterbrain: monsterbrain.src, quawa: quawa.src, faktwerk: faktwerk.src, danwos: danwos.src });
+const tools = view === 'one' ? all.slice(0, 1) : all;
+const strings = { pull: s.rollExplode, join: s.rollJoin, back: s.matBack, nd: s.matNd, ud: s.matUd, err: s.matErr, off: s.matOff,
+  reached: s.matReached, mean: s.matMean, regression: s.matRegression, target: s.matTarget };
+---
+<figure class="qmat" data-view={view} data-tools={JSON.stringify(tools)} data-strings={JSON.stringify(strings)}>
+  <div class="stage" role="img" aria-label={view === 'one' ? s.matAlt : s.matRoomAlt}>
+    <div class="tip" hidden></div>
+    {view === 'room' && <button class="btn btn-secondary back" type="button" hidden>← {s.matBack}</button>}
+  </div>
+  <div class="bar">
+    {view === 'one' && <button class="btn btn-secondary toggle" type="button">{s.rollExplode}</button>}
+    <ul class="legend">
+      <li><i class="scale"></i>{s.matScore} 0–100</li>
+      <li><i class="nd"></i>{s.matNd}</li>
+      <li><i class="ud"></i>{s.matUd}</li>
+      <li><i class="err"></i>{s.matBroken}</li>
+    </ul>
+  </div>
+  <figcaption>{view === 'one' ? s.matHint : s.matRoomHint}</figcaption>
+  <ul class="sr">
+    {tools.map((tool) => (
+      <li>{tool.name}: {tool.areas.map((area, a) => `${area} L${reachedLevel(tool, a)}`).join(', ')}</li>
+    ))}
+  </ul>
+</figure>
+
+<script>
+  import { mountRings, mountRoom } from '../lib/maturity3d';
+
+  document.querySelectorAll<HTMLElement>('.qmat').forEach((fig) => {
+    const io = new IntersectionObserver(([e]) => {
+      if (!e.isIntersecting) return;
+      io.disconnect();
+      const tools = JSON.parse(fig.dataset.tools!), strings = JSON.parse(fig.dataset.strings!);
+      (fig.dataset.view === 'room' ? mountRoom(fig, tools, strings) : mountRings(fig, tools[0], strings))
+        .catch((err) => console.error('MaturityRings', err));
+    }, { rootMargin: '200px' });
+    io.observe(fig);
+  });
+</script>
+
+<style>
+  .qmat { margin: 24px 0; padding: 0; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); overflow: hidden; clear: both }
+  .stage { position: relative; aspect-ratio: 16 / 9; max-height: 560px; width: 100%; background: var(--stage); touch-action: pan-y }
+  .stage :global(canvas) { display: block; cursor: grab }
+  .stage :global(.labels) { position: absolute; inset: 0; pointer-events: none }
+  .stage :global(.mlabel) { font: 700 11px var(--font-body); color: #1B1A22; background: #FFFFFFD9; border-radius: 6px; padding: 0 5px;
+    white-space: nowrap; opacity: 0; transition: opacity .4s }
+  .stage :global(.mlabel.sched) { color: #5B6472 } .stage :global(.mlabel.off) { color: #A39C93 }
+  .qmat.open .stage :global(.mlabel) { opacity: 1 }
+  .stage :global(.alabel) { font: 600 12px var(--font-body); color: var(--ink); white-space: nowrap; opacity: .85 }
+  .stage :global(.tag) { font: 600 13px var(--font-body); color: var(--ink); background: var(--surface); border: 2px solid var(--outline);
+    border-radius: 8px; padding: 2px 9px; white-space: nowrap; cursor: pointer; pointer-events: auto; box-shadow: 2px 2px 0 var(--shadow) }
+  .stage :global(.tag small) { font-weight: 400; color: var(--muted) }
+  .tip { position: absolute; pointer-events: none; font: 600 13px var(--font-body); color: var(--ink); background: var(--surface);
+    border: 1px solid var(--line); border-left: 6px solid #14958B; border-radius: 8px; padding: 4px 10px; white-space: nowrap; z-index: 2 }
+  .tip :global(small) { display: block; font-weight: 400; color: var(--muted) }
+  .back { position: absolute; top: 12px; left: 12px; z-index: 3; padding: 6px 14px; font-size: 14px }
+  .back[hidden] { display: none }
+  .toggle { padding: 6px 14px; font-size: 14px }
+  .bar { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; padding: 12px 16px 0 }
+  .legend { list-style: none; display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 0; padding: 0; font-size: 13px; color: var(--muted) }
+  .legend li { margin: 0; display: flex; align-items: center; gap: 6px }
+  .legend i { width: 14px; height: 12px; border-radius: 3px; border: 1px solid var(--outline) }
+  .legend .scale { width: 80px; background: linear-gradient(90deg, #A8322A, #E2725B 35%, #E2A93B 60%, #8A9A5B 80%, #14958B) }
+  .legend .nd { background: #8B857D } .legend .ud { background: #ECE8E1; border-style: dashed }
+  .legend .err { background: repeating-linear-gradient(45deg, #C0262D 0 3px, #F7DCD8 3px 6px) }
+  figcaption { font-size: 14px; color: var(--muted); padding: 6px 16px 14px }
+  .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap }
+  @media (max-width: 560px) { .stage { aspect-ratio: 3 / 4; max-height: 560px }
+    .stage :global(.tag) { font-size: 11px; padding: 1px 6px } .stage :global(.tag small) { display: none } }
+</style>

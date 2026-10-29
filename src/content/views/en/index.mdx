@@ -9,6 +9,7 @@ import StatusDemo from '../../../components/StatusDemo.astro';
 import ToolLinks from '../../../components/ToolLinks.astro';
 import QualityRoll from '../../../components/QualityRoll.astro';
 import QualityNetwork from '../../../components/QualityNetwork.astro';
+import MaturityRings from '../../../components/MaturityRings.astro';
 import city from '../../../assets/tools/horus/city.png';
 import select from '../../../assets/tools/horus/select.png';
 import problems from '../../../assets/tools/horus/problems.png';
@@ -128,11 +129,18 @@ away, even among all the others. One click brings the roll up close.
 
 What works for a pull request works for a whole tool too. Instead of
 hundreds of check results, one picture shows how mature it is: around the
-logo one ring per maturity level, one slice per area. The thick block shows
-what is reached, above it what is going wrong right now, and in gray what
-has already been thought of.
+logo one ring per maturity level, one block per area. The blocks that
+stand out to the front are reached, the color shows how good the rest is,
+and in gray what has already been thought of. One click pulls the levels
+apart: behind every block its measures line up, each with its own result.
 
-![Maturity rings around the deciwa monster, invented example](../../../assets/blog/quality-maturity/rings-front.png)
+<MaturityRings lang="en" view="one" />
+
+With several tools, they stand side by side in one room. Which one is far
+along and where it turns red shows at a glance – one click brings a tool
+up close and opens it.
+
+<MaturityRings lang="en" view="room" />
 
 Still an idea – how it works is in
 [How Raw Is Your Software?](/en/blog/quality-maturity/).

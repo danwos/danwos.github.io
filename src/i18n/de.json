@@ -122,7 +122,22 @@
     "netLowest": "niedrigster Wert",
     "netClose": "Schließen",
     "netHint": "Ziehen dreht das Netz, ein Klick auf eine Rolle zeigt sie groß. Fährst du über eine Rolle, siehst du ihren niedrigsten Wert. Die Daten sind ein Beispiel.",
-    "netAlt": "3D-Netz aus 48 Pull Requests in vier Schichten – App, Service, Bibliothek, Plattform –, jeder als kleine Qualitätsrolle, verbunden über ihre Abhängigkeiten. Drei davon sind an vielen Stellen rot und orange."
+    "netAlt": "3D-Netz aus 48 Pull Requests in vier Schichten – App, Service, Bibliothek, Plattform –, jeder als kleine Qualitätsrolle, verbunden über ihre Abhängigkeiten. Drei davon sind an vielen Stellen rot und orange.",
+    "matBack": "Alle Tools",
+    "matScore": "Wert",
+    "matNd": "definiert, kein Ergebnis",
+    "matUd": "noch nicht definiert",
+    "matBroken": "kaputt",
+    "matErr": "kaputt – die Prüfung konnte nicht laufen",
+    "matOff": "Stufe nicht angestrebt",
+    "matReached": "erreicht",
+    "matMean": "Mittel aus {n} Maßnahmen",
+    "matRegression": "Regression – war im letzten Lauf grün",
+    "matTarget": "Ziel",
+    "matHint": "Blöcke, die nach vorn stehen, sind erreicht. Ziehen dreht die Ringe, ein Klick zieht die Stufen auseinander. Fährst du über einen Block, siehst du seinen Wert. Die Werte sind ein Beispiel.",
+    "matAlt": "3D-Modell der Reife von deciwa: fünf Ringe um das Monster, einer pro Reifegrad, je acht Blöcke, einer pro Bereich, farbig nach Wert. Auseinandergezogen zeigt jeder Block seine Maßnahmen dahinter.",
+    "matRoomHint": "Ziehen dreht den Blick, ein Klick auf ein Tool holt es heran und öffnet es. Die Werte sind ein Beispiel.",
+    "matRoomAlt": "Sechs Tools nebeneinander in einem Raum – deciwa, monsterbrain, quawa, faktwerk, Horus und danwos.dev –, jedes mit seinen Reifegrad-Ringen."
   },
   "projects": {
     "title": "Projekte",
