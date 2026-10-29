@@ -3,7 +3,7 @@ title: "Wie roh ist deine Software? Qualitätsreife sichtbar machen"
 date: 2026-10-29
 summary: "Grün oder rot reicht nicht, wenn Software grob über das Ganze wächst. Ich will auf einen Blick sehen, wo ein Tool steht, wo es hin will und woran schon gedacht ist – als Ringe um sein Logo."
 tags: [ai, vibe-coding, quality, tools]
-cover: ../../../../assets/blog/quality-maturity/rings-front.png
+cover: ../../../../assets/blog/quality-maturity/danwos-rings.webp
 ---
 
 Ein Bildhauer sieht jederzeit, wo seine Figur noch roh ist. Bei Software sehe ich das nicht. Ein Feature, das eine AI in einer Stunde gebaut hat, sieht fertig aus. Die Tests laufen grün. Und trotzdem weiß ich nicht, ob da schon jemand anderes weiterbauen kann, ob die Lizenzen der Abhängigkeiten passen oder ob die Tests überhaupt etwas prüfen.

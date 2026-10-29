@@ -3,8 +3,8 @@ title: "How Raw Is Your Software? Making Quality Maturity Visible"
 date: 2026-10-29
 summary: "Green or red is not enough when software grows roughly across the whole. I want to see at a glance where a tool stands, where it wants to go and what has already been thought of – as rings around its logo."
 tags: [ai, vibe-coding, quality, tools]
-cover: ../../../../assets/blog/quality-maturity/rings-front.png
-translated_from: "347dd58139b8"
+cover: ../../../../assets/blog/quality-maturity/danwos-rings.webp
+translated_from: "b036b4622f2b"
 ---
 
 A sculptor always sees where the figure is still rough. With software, I don't. A feature an AI built in an hour looks finished. The tests are green. And still I don't know whether someone else can build on it yet, whether the licenses of the dependencies are fine, or whether the tests check anything at all.
