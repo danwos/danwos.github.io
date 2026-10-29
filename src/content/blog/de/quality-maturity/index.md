@@ -41,14 +41,14 @@ Acht Bereiche teilen sich das Bild: Anforderungen, Dokumentation, Tests, Code-Qu
 
 ## Der Stand auf einen Blick
 
-![Reifegrad-Ringe von deciwa](../../../../assets/blog/quality-maturity/rings-front.png)
+![Reifegrad-Ringe von quawa](../../../../assets/blog/quality-maturity/rings-front.png)
 
-So könnte das für deciwa aussehen, mein Review-Tool. Die Werte sind ein ausgedachtes Beispiel, keine echte Messung – sie zeigen alle Zustände auf einmal. In der Mitte steht das Tool, um es herum ein Ring pro Stufe, von innen nach außen. Jedes Tortenstück ist ein Bereich.
+So könnte das für quawa aussehen – das Tool, das diese Ringe später zeichnet. Die Werte sind ein ausgedachtes Beispiel, keine echte Messung – sie zeigen alle Zustände auf einmal. In der Mitte steht das Tool, um es herum ein Ring pro Stufe, von innen nach außen. Jedes Tortenstück ist ein Bereich.
 
 - **Der dicke Block** von der Mitte nach außen zeigt, was erreicht ist. Security steht bei Stufe 4, Recht bei 3, Dokumentation erst bei 1. Das Bild bekommt Berge und Täler, und ich sehe sofort, wo das Tool schwach ist.
 - **Darüber** zeigt jede weitere Stufe ihren eigenen Stand: rot, wenn die Messungen weit weg sind, orange, wenn es knapp wird. Auch Stufen weit über dem Ziel werden gemessen – die Mutationstests auf Stufe 4 laufen schon, obwohl auf Stufe 3 noch etwas fehlt.
 - **Grau** zeigt, woran schon gedacht ist. Dunkelgrau heißt, die Messung ist festgelegt, aber es gibt noch kein Ergebnis. Hellgrau gestrichelt heißt, das Modell fordert etwas, aber im Projekt ist noch nicht beschrieben, wie es gemessen wird. Rot schraffiert heißt, die Messung selbst ist kaputt.
-- **Die Linien** zeigen das Ziel: Die dicke Linie markiert, was heute gilt, die gestrichelte, wohin das Projekt am Ende will. Was dazwischen liegt, ist geplant – mit Datum oder Release: „Stufe 3 ab März 2027, Stufe 4 ab Version 1.0“. Stufe 5 ist bei deciwa gar nicht vorgesehen und bleibt ein gepunkteter Rand.
+- **Die Linien** zeigen das Ziel: Die dicke Linie markiert, was heute gilt, die gestrichelte, wohin das Projekt am Ende will. Was dazwischen liegt, ist geplant – mit Datum oder Release: „Stufe 3 ab März 2027, Stufe 4 ab Version 1.0“. Stufe 5 ist bei quawa gar nicht vorgesehen und bleibt ein gepunkteter Rand.
 
 Ein Bild beantwortet damit drei Fragen: Wo steht das Tool? Wo will es hin? Und worüber habe ich mir schon Gedanken gemacht?
 

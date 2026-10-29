@@ -42,14 +42,14 @@ Eight areas share the picture: requirements, documentation, testing, code health
 
 ## Where it stands at a glance
 
-![Maturity rings of deciwa](../../../../assets/blog/quality-maturity/rings-front.png)
+![Maturity rings of quawa](../../../../assets/blog/quality-maturity/rings-front.png)
 
-This is how it could look for deciwa, my review tool. The values are an invented example, not a real measurement – they show every state at once. The tool sits in the middle, around it one ring per level, from the inside out. Every slice of the pie is an area.
+This is how it could look for quawa – the tool that will draw these rings. The values are an invented example, not a real measurement – they show every state at once. The tool sits in the middle, around it one ring per level, from the inside out. Every slice of the pie is an area.
 
 - **The thick block** from the center outwards shows what is reached. Security is at level 4, legal at 3, documentation only at 1. The picture gets hills and valleys, and I see right away where the tool is weak.
 - **Above it**, every further level shows its own state: red when the measures are far off, orange when it gets close. Levels far above the target are measured too – the mutation tests on level 4 already run, even though something is still missing on level 3.
 - **Gray** shows what has already been thought of. Dark gray means the measure is defined but there is no result yet. Light gray and dashed means the model asks for something, but the project doesn't say yet how to measure it. Red hatching means the measurement itself is broken.
-- **The lines** show the target: the thick line marks what applies today, the dashed one where the project wants to end up. What lies in between is planned – with a date or a release: "level 3 from March 2027, level 4 from version 1.0". Level 5 isn't planned for deciwa at all and stays a dotted outline.
+- **The lines** show the target: the thick line marks what applies today, the dashed one where the project wants to end up. What lies in between is planned – with a date or a release: "level 3 from March 2027, level 4 from version 1.0". Level 5 isn't planned for quawa at all and stays a dotted outline.
 
 So one picture answers three questions: Where does the tool stand? Where does it want to go? And what have I already thought about?
 
