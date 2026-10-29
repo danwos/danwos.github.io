@@ -142,6 +142,9 @@ export function buildMaturity(THREE: typeof Three, tool: Tool, labels?: Labels, 
   const face = new THREE.Mesh(new THREE.CircleGeometry(R0 * 0.92, 64), faceMat);
   face.position.z = 0.26;
   group.add(face, circle(R0 + 0.03, 0.25, 'bold'));
+  // the monster opens and closes the rings too, it only has no tooltip
+  disc.userData = face.userData = { tool: tool.name, logo: true };
+  pickable.push(disc, face);
 
   // depth of each opened level: head block + its longest column; a level not targeted has no column
   const levelDepth = [0, 1, 2, 3, 4].map((l) => (l + 1 > tool.final ? DSEG
@@ -328,7 +331,7 @@ export async function mountRings(fig: HTMLElement, tool: Tool, s: Strings) {
   v.renderer.domElement.addEventListener('pointermove', (e) => {
     const h = v.hit(e, model.pickable);
     v.renderer.domElement.style.cursor = h ? 'pointer' : 'grab';
-    if (!h) return void (v.tip.hidden = true);
+    if (!h || h.object.userData.logo) return void (v.tip.hidden = true);
     showTip(v.tip, v.stage, e, h.object.userData, s);
   });
 
@@ -428,7 +431,7 @@ export async function mountRoom(fig: HTMLElement, tools: Tool[], s: Strings) {
   v.renderer.domElement.addEventListener('pointermove', (e) => {
     const h = v.hit(e, all);
     v.renderer.domElement.style.cursor = h ? 'pointer' : 'grab';
-    if (!h) return void (v.tip.hidden = true);
+    if (!h || h.object.userData.logo) return void (v.tip.hidden = true);
     showTip(v.tip, v.stage, e, h.object.userData, s, `${h.object.userData.tool} · `);
   });
 
