@@ -24,13 +24,13 @@ jobs:
         env:
           MAINTENANCE: ${{ vars.MAINTENANCE }}
       - uses: actions/upload-pages-artifact@v3
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         with:
           path: dist
 
-  # Publishes only from main. Pull requests are built, never deployed.
+  # Publishes only from main, on push or a manual run (gh workflow run website). Pull requests are built, never deployed.
   deploy:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
     permissions:
