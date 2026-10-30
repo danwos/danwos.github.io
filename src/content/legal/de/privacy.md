@@ -10,6 +10,10 @@ Kurz gesagt: Diese Seite setzt keine Cookies und zählt Besuche nur anonym mit G
 Daniel Woste, Deutschland  
 E-Mail: [daniel.woste@gmail.com](mailto:daniel.woste@gmail.com)
 
+## Geltungsbereich
+
+Diese Erklärung gilt für danwos.dev und für die Dokumentationen unter [deciwa.danwos.dev](https://deciwa.danwos.dev), [monsterbrain.danwos.dev](https://monsterbrain.danwos.dev) und [quawa.danwos.dev](https://quawa.danwos.dev). Sie werden genauso betrieben wie diese Seite.
+
 ## Hosting über GitHub Pages
 
 Die Seite liegt bei GitHub Pages, einem Dienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA. Wenn du die Seite aufrufst, verarbeitet GitHub technisch notwendige Daten, etwa deine IP-Adresse, Datum und Uhrzeit sowie die aufgerufene Adresse, um die Seite auszuliefern und vor Angriffen zu schützen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO: Ich habe ein berechtigtes Interesse daran, die Seite sicher und zuverlässig anzubieten.
@@ -18,7 +22,7 @@ Dabei können Daten in die USA übertragen werden. GitHub ist nach dem EU-US Dat
 
 ## Besucherstatistik mit GoatCounter
 
-Damit ich sehe, welche Seiten gelesen werden und woher die Besucher kommen, zähle ich Seitenaufrufe mit GoatCounter. Der Dienst wird von Martin Tournoij in Irland betrieben, die Daten liegen bei Hetzner Online GmbH in Deutschland und Finnland. Beim Aufruf einer Seite lädt dein Browser ein kleines Skript von GoatCounter und übermittelt die aufgerufene Adresse, den Seitentitel, die Seite, von der du kommst, und die Bildschirmbreite. Dabei erhält GoatCounter technisch auch deine IP-Adresse und die Kennung deines Browsers.
+Damit ich sehe, welche Seiten gelesen werden und woher die Besucher kommen, zähle ich Seitenaufrufe mit GoatCounter, für jede Dokumentation getrennt. Der Dienst wird von Martin Tournoij in Irland betrieben, die Daten liegen bei Hetzner Online GmbH in Deutschland und Finnland. Beim Aufruf einer Seite lädt dein Browser ein kleines Skript von GoatCounter und übermittelt die aufgerufene Adresse, den Seitentitel, die Seite, von der du kommst, und die Bildschirmbreite. Dabei erhält GoatCounter technisch auch deine IP-Adresse und die Kennung deines Browsers.
 
 GoatCounter speichert weder deine IP-Adresse noch die vollständige Browserkennung und setzt keine Cookies. Aus der IP-Adresse wird nur das Land bestimmt, aus der Browserkennung Browser und Betriebssystem. Um mehrfache Aufrufe derselben Person zu erkennen, hält GoatCounter für höchstens acht Stunden eine zufällige Kennung im Arbeitsspeicher, die nicht auf die Festplatte geschrieben wird. Gespeichert werden nur zusammengefasste Zahlen pro Tag oder Stunde, die sich keiner Person zuordnen lassen.
 
