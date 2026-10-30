@@ -1,12 +1,12 @@
 ---
 title: "Privacy"
-translated_from: "0b3454c35519"
+translated_from: "5b1c5fc83385"
 ---
 <!-- Research, not legal advice. Translation; the German version is binding. -->
 
 The German version of this page is legally binding.
 
-In short: this site sets no cookies, counts no visits and embeds nothing from third parties. What still happens is described here.
+In short: this site sets no cookies and counts visits only anonymously with GoatCounter. What happens there and otherwise is described here.
 
 ## Controller
 
@@ -19,9 +19,15 @@ The site is hosted on GitHub Pages, a service of GitHub, Inc., 88 Colin P. Kelly
 
 Data may be transferred to the USA. GitHub is certified under the EU-US Data Privacy Framework. More in [GitHub's privacy statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
 
-## No cookies, no analytics
+## Visit statistics with GoatCounter
 
-I set no cookies and use no analytics or tracking.
+To see which pages are read and where visitors come from, I count page views with GoatCounter. The service is operated by Martin Tournoij in Ireland; the data is stored at Hetzner Online GmbH in Germany and Finland. When you open a page, your browser loads a small script from GoatCounter and sends the requested address, the page title, the page you came from and the screen width. GoatCounter technically also receives your IP address and your browser's identifier.
+
+GoatCounter stores neither your IP address nor the full browser identifier and sets no cookies. The IP address is only used to determine the country, the browser identifier only for browser and operating system. To recognise repeated views by the same person, GoatCounter keeps a random identifier in memory for at most eight hours; it is never written to disk. Only aggregated numbers per day or hour are stored, which cannot be linked to a person.
+
+The legal basis is Art. 6 (1) (f) GDPR: I have a legitimate interest in knowing which content is read in order to improve the site. You can object by using an extension that blocks such scripts; the site works the same without it. More in [GoatCounter's privacy policy](https://www.goatcounter.com/help/privacy).
+
+Otherwise I use no tracking.
 
 ## Light/dark and language
 

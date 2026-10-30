@@ -3,7 +3,7 @@ title: "Datenschutz"
 ---
 <!-- Research, not legal advice. -->
 
-Kurz gesagt: Diese Seite setzt keine Cookies, zählt keine Besuche und bindet nichts von Dritten ein. Was trotzdem passiert, steht hier.
+Kurz gesagt: Diese Seite setzt keine Cookies und zählt Besuche nur anonym mit GoatCounter. Was dabei und sonst passiert, steht hier.
 
 ## Verantwortlich
 
@@ -16,9 +16,15 @@ Die Seite liegt bei GitHub Pages, einem Dienst der GitHub, Inc., 88 Colin P. Kel
 
 Dabei können Daten in die USA übertragen werden. GitHub ist nach dem EU-US Data Privacy Framework zertifiziert. Mehr dazu in der [Datenschutzerklärung von GitHub](https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement).
 
-## Keine Cookies, keine Statistik
+## Besucherstatistik mit GoatCounter
 
-Ich setze keine Cookies, nutze keine Besucherstatistik und kein Tracking.
+Damit ich sehe, welche Seiten gelesen werden und woher die Besucher kommen, zähle ich Seitenaufrufe mit GoatCounter. Der Dienst wird von Martin Tournoij in Irland betrieben, die Daten liegen bei Hetzner Online GmbH in Deutschland und Finnland. Beim Aufruf einer Seite lädt dein Browser ein kleines Skript von GoatCounter und übermittelt die aufgerufene Adresse, den Seitentitel, die Seite, von der du kommst, und die Bildschirmbreite. Dabei erhält GoatCounter technisch auch deine IP-Adresse und die Kennung deines Browsers.
+
+GoatCounter speichert weder deine IP-Adresse noch die vollständige Browserkennung und setzt keine Cookies. Aus der IP-Adresse wird nur das Land bestimmt, aus der Browserkennung Browser und Betriebssystem. Um mehrfache Aufrufe derselben Person zu erkennen, hält GoatCounter für höchstens acht Stunden eine zufällige Kennung im Arbeitsspeicher, die nicht auf die Festplatte geschrieben wird. Gespeichert werden nur zusammengefasste Zahlen pro Tag oder Stunde, die sich keiner Person zuordnen lassen.
+
+Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO: Ich habe ein berechtigtes Interesse daran zu wissen, welche Inhalte gelesen werden, um die Seite zu verbessern. Du kannst widersprechen, indem du eine Erweiterung nutzt, die solche Skripte blockiert; die Seite funktioniert ohne sie genauso. Mehr in der [Datenschutzerklärung von GoatCounter](https://www.goatcounter.com/help/privacy).
+
+Sonst nutze ich kein Tracking.
 
 ## Hell/Dunkel und Sprache
 
