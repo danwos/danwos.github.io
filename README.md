@@ -71,6 +71,25 @@ The site is `https://danwos.dev` (`public/CNAME`); `www.danwos.dev` points to
 it. A sitemap (`/sitemap-index.xml`) is built with every deploy and named in
 `public/robots.txt`.
 
+## Maintenance mode
+
+The repository variable `MAINTENANCE` (Settings → Secrets and variables →
+Actions → Variables) switches the published site to a maintenance page:
+danwos monster, a short note in German and English, email and LinkedIn.
+
+```bash
+gh variable set MAINTENANCE --body 1   # on
+gh variable set MAINTENANCE --body 0   # off – the site is back as built from main
+gh workflow run website                # deploy now
+```
+
+With `MAINTENANCE=1`, `scripts/maintenance.mjs` copies the page built from
+`src/pages/maintenance.astro` over every HTML file in `dist/` after the build.
+Imprint and privacy stay, as do the link preview images (`/og/`), favicon,
+`CNAME` and `robots.txt`; the RSS feeds go. The page carries `noindex` and
+no visit counter. Pushes to `main` keep deploying the maintenance page while
+the variable is `1`. Locally: `MAINTENANCE=1 npm run build`.
+
 ## Open after release
 
 - postal address in `src/content/legal/` (imprint, privacy)

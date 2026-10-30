@@ -19,7 +19,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run check:translations
+      # Repository variable MAINTENANCE=1 publishes the maintenance page instead of the site (scripts/maintenance.mjs).
       - run: npm run build
+        env:
+          MAINTENANCE: ${{ vars.MAINTENANCE }}
       - uses: actions/upload-pages-artifact@v3
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         with:

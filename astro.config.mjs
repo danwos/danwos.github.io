@@ -10,8 +10,8 @@ export default defineConfig({
   site: 'https://danwos.dev',
   integrations: [
     mdx(),
-    // "/" only picks the language, so it stays out of the sitemap.
-    sitemap({ filter: (page) => page !== 'https://danwos.dev/' }),
+    // "/" only picks the language, so it stays out of the sitemap; the maintenance page is never published itself.
+    sitemap({ filter: (page) => page !== 'https://danwos.dev/' && !page.startsWith('https://danwos.dev/maintenance/') }),
     legacyRedirects(),
     feedback(),
   ],
