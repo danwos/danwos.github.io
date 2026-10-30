@@ -3,11 +3,11 @@ title: "imwa"
 subtitle: "impact watcher"
 summary: "Shows me every day how far my work reaches – stars, visitors and where they come from."
 era: "internal"
-status: "concept"
+status: "prototype"
 monster: "imwa"
 role: [created]
 order: 10
-translated_from: "af46a5061ab6"
+translated_from: "36f1d04941d4"
 ---
 
 ## Why imwa

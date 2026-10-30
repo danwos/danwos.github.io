@@ -3,7 +3,7 @@ title: "imwa"
 subtitle: "impact watcher"
 summary: "Zeigt mir jeden Tag, wie weit meine Arbeit reicht – Sterne, Besucher und woher sie kommen."
 era: "internal"
-status: "concept"
+status: "prototype"
 monster: "imwa"
 role: [created]
 order: 10
