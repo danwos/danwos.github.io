@@ -15,6 +15,7 @@ const s = t(lang);
 const tools = await toolsFor(lang);
 const current = tools.filter((p) => p.data.era === 'current');
 const archive = tools.filter((p) => p.data.era === 'archive');
+const internal = tools.filter((p) => p.data.era === 'internal');
 ---
 <Base lang={lang} title={s.tools.title} description={s.tools.pageLead}>
   <section class="section">
@@ -37,6 +38,17 @@ const archive = tools.filter((p) => p.data.era === 'archive');
       </div>
     </div>
   </section>
+  {internal.length > 0 && (
+    <section id="internal" class="section">
+      <div class="wrap">
+        <h2>{s.internal.title}</h2>
+        <p class="lead">{s.internal.lead}</p>
+        <div class="grid cards">
+          {internal.map((entry) => <ToolCard lang={lang} entry={entry} />)}
+        </div>
+      </div>
+    </section>
+  )}
 </Base>
 <style>
   .cards { margin-top: 32px; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)) }

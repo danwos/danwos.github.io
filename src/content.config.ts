@@ -6,7 +6,7 @@ import { z } from 'astro/zod';
 // German files are the master; translations carry `translated_from`,
 // the hash of the German file they were made from.
 
-// Tools: what Daniel builds – current ones and the archive.
+// Tools: what Daniel builds – current ones, the archive, and internal ones that are never published.
 const tools = defineCollection({
   loader: glob({ pattern: '*/*.{md,mdx}', base: './src/content/tools' }),
   schema: z.object({
@@ -14,7 +14,7 @@ const tools = defineCollection({
     subtitle: z.string().optional(), // e.g. what the name stands for
     pictures: z.enum(['sketch', 'mockup', 'prototype', 'product']).optional(), // how far along the screenshots on the page are
     summary: z.string(),
-    era: z.enum(['current', 'archive']),
+    era: z.enum(['current', 'archive', 'internal']),
     status: z.enum(['idea', 'concept', 'prototype', 'alpha', 'beta', 'done', 'cancelled']),
     monster: z.string().optional(),
     role: z.array(z.enum(['created', 'maintained', 'hired'])).default([]),

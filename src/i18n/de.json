@@ -74,6 +74,10 @@
     "lead": "Ältere Projekte. Einige laufen bis heute, andere haben ihren Dienst getan – die Oma hat sie alle gesehen.",
     "alt": "Die Oma, Hüterin des Archivs"
   },
+  "internal": {
+    "title": "Intern",
+    "lead": "Kleine Tools, die ich nur für danwos selbst baue. Sie laufen bei mir, sind genau auf meine Arbeit zugeschnitten und werden nicht veröffentlicht."
+  },
   "contact": {
     "title": "Lass uns reden",
     "lead": "Du hast ein Problem, das zu einem dieser Projekte passt, oder eine Idee, die nach einem Monster ruft? Schreib mir.",
@@ -92,6 +96,7 @@
     "pageLead": "Was ich baue – und was ich gebaut habe."
   },
   "tool": {
+    "internal": "Internes Tool – wird nicht veröffentlicht",
     "back": "Alle Tools",
     "wip": "Diese Seite entsteht gerade. Hier folgen das Problem, meine Motivation und wie es funktioniert.",
     "links": "Links",

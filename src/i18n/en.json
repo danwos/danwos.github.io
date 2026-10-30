@@ -75,6 +75,10 @@
     "lead": "Older projects. Some still run today, others have done their job – grandma has seen them all.",
     "alt": "Grandma, keeper of the archive"
   },
+  "internal": {
+    "title": "Internal",
+    "lead": "Small tools I build only for danwos itself. They run on my machine, fit my own work exactly and won't be published."
+  },
   "contact": {
     "title": "Let's talk",
     "lead": "You have a problem that fits one of these projects, or an idea that calls for a monster? Write to me.",
@@ -93,6 +97,7 @@
     "pageLead": "What I build – and what I've built."
   },
   "tool": {
+    "internal": "Internal tool – won't be published",
     "back": "All tools",
     "wip": "This page is in the making. The problem, my motivation and how it works follow here.",
     "links": "Links",
