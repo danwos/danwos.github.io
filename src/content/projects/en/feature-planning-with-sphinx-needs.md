@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Feature planning with Sphinx-Needs"
 summary: "At useblocks, demand planning for product features runs in Sphinx-Needs – from customer wish to problem to feature, roadmap and the tasks of the development teams."
 industry: "Software tools, useblocks (internal)"

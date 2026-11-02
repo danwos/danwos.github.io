@@ -1,5 +1,6 @@
 ---
 # Facts from Daniel (2026-10-17), wording by Claude.
+draft: true
 title: "Docs-as-Code für ein ADAS-Projekt"
 summary: "Im zentralen Team eines Tier-1-Zulieferers habe ich Docs-as-Code in einem ADAS-Projekt für einen OEM eingeführt – von der Datenmigration über Tooling und CI bis zu Prozessen, Monitoring und Training."
 industry: "Automotive, Tier-1-Zulieferer und OEM, Fahrerassistenzsysteme (ADAS)"

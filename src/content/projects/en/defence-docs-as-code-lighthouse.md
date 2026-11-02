@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "A docs-as-code lighthouse project in defence"
 summary: "At a Tier-1 defence supplier, a software team of 40 showed that docs-as-code works and makes the work more efficient – with Sphinx-Needs, ubCode, CI and the company's own branding."
 industry: "Defence, Tier-1 supplier, software development"

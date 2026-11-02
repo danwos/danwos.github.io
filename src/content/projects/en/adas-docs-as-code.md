@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Docs-as-code for an ADAS project"
 summary: "In the central team of a Tier-1 supplier, I introduced docs-as-code in an ADAS project for an OEM – from data migration, tooling and CI to processes, monitoring and training."
 industry: "Automotive, Tier-1 supplier and OEM, advanced driver assistance systems (ADAS)"

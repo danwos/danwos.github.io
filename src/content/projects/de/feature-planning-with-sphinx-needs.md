@@ -1,5 +1,6 @@
 ---
 # Facts from Daniel (2026-10-17), wording by Claude.
+draft: true
 title: "Feature-Planung mit Sphinx-Needs"
 summary: "Bei useblocks läuft die Bedarfsplanung für Produkt-Features in Sphinx-Needs – vom Kundenwunsch über das Problem bis zum Feature, zur Roadmap und zu den Aufgaben der Entwicklungsteams."
 industry: "Software-Tools, useblocks (intern)"

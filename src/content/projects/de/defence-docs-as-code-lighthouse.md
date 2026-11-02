@@ -1,5 +1,6 @@
 ---
 # Facts from Daniel (2026-10-17), wording by Claude.
+draft: true
 title: "Leuchtturmprojekt Docs-as-Code im Defence-Bereich"
 summary: "Bei einem Tier-1-Zulieferer im Defence-Bereich hat ein Software-Team mit 40 Leuten gezeigt, dass Docs-as-Code funktioniert und die Arbeit effizienter macht – mit Sphinx-Needs, ubCode, CI und eigenem Firmen-Branding."
 industry: "Defence, Tier-1-Zulieferer, Software-Entwicklung"

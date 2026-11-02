@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Moving legacy data to docs-as-code"
 summary: "A proof of concept at a Tier-1 supplier: requirements, specifications, code and tests of an ECU project in a docs-as-code toolchain – the model was later rolled out across the whole company."
 industry: "Automotive, Tier-1 supplier, ECU development"

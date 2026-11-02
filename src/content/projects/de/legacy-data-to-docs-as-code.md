@@ -1,5 +1,6 @@
 ---
 # Facts from Daniel (2026-10-17), wording by Claude.
+draft: true
 title: "Bestandsdaten in Docs-as-Code überführt"
 summary: "Machbarkeitsnachweis bei einem Tier-1-Zulieferer: Anforderungen, Spezifikationen, Code und Tests eines Steuergeräte-Projekts laufen in einer Docs-as-Code-Toolchain – und das Modell wurde danach im ganzen Unternehmen ausgerollt."
 industry: "Automotive, Tier-1-Zulieferer, Steuergeräte-Entwicklung"
